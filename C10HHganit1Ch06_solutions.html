@@ -1,0 +1,813 @@
+﻿<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>कक्षा 10 गणित भाग-I — अध्याय 6 : सांख्यिकी — संपूर्ण समाधान</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#f3f5f7;color:#222;font-family:"Noto Sans Devanagari","Nirmala UI",Arial,sans-serif;line-height:1.75}
+.container{max-width:1200px;margin:24px auto;background:#fff;padding:34px;border-radius:14px;box-shadow:0 4px 24px rgba(0,0,0,.08)}
+h1{color:#17365d;border-bottom:3px solid #17365d;padding-bottom:12px}
+h2{color:#244f7a;margin-top:42px;border-bottom:1px solid #ddd;padding-bottom:8px}
+h3{color:#345f82;margin-top:28px}
+h4{color:#466b86;margin-top:22px}
+p,li,td,th{font-size:16px}
+.question{border:1px solid #d9e0e7;border-radius:10px;margin:18px 0;padding:17px;background:#fff}
+.qtitle{font-weight:700;color:#17365d}
+.answer{margin-top:10px;background:#f8fbfd;padding:14px;border-radius:7px}
+.formula{font-family:"Times New Roman","Noto Sans Devanagari",serif;background:#f5f7f9;border:1px solid #ddd;border-radius:7px;padding:9px 14px;margin:9px 0;font-size:18px;text-align:center}
+.set{font-family:"Times New Roman","Noto Sans Devanagari",serif;background:#fafafa;border:1px solid #ddd;padding:10px;border-radius:6px;overflow:auto}
+.note{background:#fff8e8;border-left:5px solid #d6a100;padding:12px 16px;border-radius:7px;margin:14px 0}
+.source{background:#eef6ff;border-left:5px solid #3c78b5;padding:12px 16px;border-radius:7px;margin:14px 0}
+.warning{background:#fff1f1;border-left:5px solid #b64b4b;padding:12px 16px;border-radius:7px;margin:14px 0}
+.success{background:#eff9f1;border-left:5px solid #4c8a59;padding:12px 16px;border-radius:7px;margin:14px 0}
+table{width:100%;border-collapse:collapse;margin:14px 0}
+th,td{border:1px solid #ddd;padding:9px;text-align:left;vertical-align:top}
+th{background:#eef3f7}
+.toc a{color:#244f7a;text-decoration:none}
+.toc li{margin:5px 0}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.badge{display:inline-block;background:#17365d;color:#fff;padding:3px 9px;border-radius:20px;font-size:13px}
+.footer{margin-top:45px;border-top:1px solid #ddd;padding-top:18px;color:#777;font-size:13px}
+.center{text-align:center}
+@media(max-width:800px){
+ .container{margin:0;padding:18px;border-radius:0}
+ .two{grid-template-columns:1fr}
+ p,li,td,th{font-size:15px}
+ table{display:block;overflow-x:auto}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<h1>अध्याय 6 : सांख्यिकी</h1>
+<p><b>कक्षा 10वीं — गणित भाग-I — संपूर्ण अध्ययन, उदाहरण और प्रश्नसंग्रह समाधान</b></p>
+
+
+<div class="toc">
+<h2>विषय-सूची</h2>
+<ol>
+<li><a href="#intro">अध्याय परिचय</a></li>
+<li><a href="#mean">माध्य (Mean)</a></li>
+<li><a href="#direct">प्रत्यक्ष पद्धति</a></li>
+<li><a href="#assumed">अनुमानित माध्य पद्धति</a></li>
+<li><a href="#step">सोपान विचलन पद्धति</a></li>
+<li><a href="#q61">प्रश्नसंग्रह 6.1</a></li>
+<li><a href="#median">माध्यिका (Median)</a></li>
+<li><a href="#q62">प्रश्नसंग्रह 6.2</a></li>
+<li><a href="#mode">बहुलक (Mode)</a></li>
+<li><a href="#q63">प्रश्नसंग्रह 6.3</a></li>
+<li><a href="#graphs">सांख्यिकीय आँकड़ों का आलेखीय प्रस्तुतीकरण</a></li>
+<li><a href="#hist">आयतालेख</a></li>
+<li><a href="#q64">प्रश्नसंग्रह 6.4</a></li>
+<li><a href="#poly">बारंबारता बहुभुज</a></li>
+<li><a href="#q65">प्रश्नसंग्रह 6.5</a></li>
+<li><a href="#pie">वृत्तालेख</a></li>
+<li><a href="#q66">प्रश्नसंग्रह 6.6</a></li>
+<li><a href="#misc">प्रकीर्ण प्रश्नसंग्रह 6</a></li>
+<li><a href="#revision">Quick Revision</a></li>
+</ol>
+</div>
+
+<h2 id="intro">1. अध्याय परिचय</h2>
+<p>सांख्यिकी आँकड़ों के संग्रहण, वर्गीकरण, विश्लेषण और व्याख्या से संबंधित है।
+पुस्तक के अनुसार सांख्यिकी का उपयोग कृषि, विज्ञान, अर्थशास्त्र, वाणिज्य,
+औषध विज्ञान, शिक्षा, समाज विज्ञान और व्यवस्थापन जैसे अनेक क्षेत्रों में होता है।</p>
+
+<p>इस अध्याय में किसी समूह के आँकड़ों की केंद्रीय प्रवृत्ति समझने के लिए
+<b>माध्य (Mean), माध्यिका (Median) और बहुलक (Mode)</b> तथा आँकड़ों के
+चित्रात्मक/आलेखीय प्रस्तुतीकरण का अध्ययन किया जाता है।</p>
+
+<h2 id="mean">2. माध्य (Mean)</h2>
+<p>सभी प्राप्तांकों के योगफल को कुल प्राप्तांकों की संख्या से भाग देने पर
+माध्य प्राप्त होता है।</p>
+<div class="formula">X̄ = Σxᵢ / N</div>
+<p>वर्गीकृत बारंबारता सारणी में प्रत्येक वर्ग के लिए वर्ग मध्य xᵢ और बारंबारता
+fᵢ का उपयोग किया जाता है।</p>
+
+<h3>वर्ग मध्य (Class Mark)</h3>
+<div class="formula">xᵢ = (निम्न वर्ग सीमा + उच्च वर्ग सीमा) / 2</div>
+
+<h2 id="direct">3. प्रत्यक्ष पद्धति (Direct Method)</h2>
+<div class="formula">X̄ = Σ(fᵢxᵢ) / Σfᵢ</div>
+
+<div class="question">
+<div class="qtitle">पुस्तक उदाहरण — मजदूरों को कार्य पूर्ण करने में लगने वाला समय</div>
+<table>
+<tr><th>समय (घंटे)</th><th>वर्ग मध्य xᵢ</th><th>fᵢ</th><th>xᵢfᵢ</th></tr>
+<tr><td>15–19</td><td>17</td><td>10</td><td>170</td></tr>
+<tr><td>20–24</td><td>22</td><td>15</td><td>330</td></tr>
+<tr><td>25–29</td><td>27</td><td>12</td><td>324</td></tr>
+<tr><td>30–34</td><td>32</td><td>8</td><td>256</td></tr>
+<tr><td>35–39</td><td>37</td><td>5</td><td>185</td></tr>
+<tr><th>कुल</th><th></th><th>50</th><th>1265</th></tr>
+</table>
+<div class="formula">X̄ = 1265 / 50 = <b>25.3 घंटे</b></div>
+</div>
+
+<div class="question">
+<div class="qtitle">पुस्तक उदाहरण — 50 विद्यार्थियों के प्रतिशत अंक</div>
+<table>
+<tr><th>प्रतिशत</th><th>xᵢ</th><th>fᵢ</th><th>xᵢfᵢ</th></tr>
+<tr><td>0–20</td><td>10</td><td>3</td><td>30</td></tr>
+<tr><td>20–40</td><td>30</td><td>7</td><td>210</td></tr>
+<tr><td>40–60</td><td>50</td><td>15</td><td>750</td></tr>
+<tr><td>60–80</td><td>70</td><td>20</td><td>1400</td></tr>
+<tr><td>80–100</td><td>90</td><td>5</td><td>450</td></tr>
+<tr><th>कुल</th><th></th><th>50</th><th>2840</th></tr>
+</table>
+<div class="formula">X̄ = 2840 / 50 = <b>56.8%</b></div>
+</div>
+
+<div class="question">
+<div class="qtitle">पुस्तक उदाहरण — महाराष्ट्र के 30 शहरों का अधिकतम तापमान</div>
+<table>
+<tr><th>तापमान °C</th><th>xᵢ</th><th>fᵢ</th><th>xᵢfᵢ</th></tr>
+<tr><td>24–28</td><td>26</td><td>4</td><td>104</td></tr>
+<tr><td>28–32</td><td>30</td><td>5</td><td>150</td></tr>
+<tr><td>32–36</td><td>34</td><td>7</td><td>238</td></tr>
+<tr><td>36–40</td><td>38</td><td>8</td><td>304</td></tr>
+<tr><td>40–44</td><td>42</td><td>6</td><td>252</td></tr>
+</table>
+<div class="formula">X̄ = 1048 / 30 = <b>34.93°C</b> (लगभग)</div>
+</div>
+
+<h2 id="assumed">4. अनुमानित माध्य पद्धति (Assumed Mean Method)</h2>
+<div class="formula">dᵢ = xᵢ − A</div>
+<div class="formula">d̄ = Σ(fᵢdᵢ) / Σfᵢ</div>
+<div class="formula">X̄ = A + d̄</div>
+
+<div class="question">
+<div class="qtitle">पुस्तक उदाहरण — 40, 42, 43, 45, 47, 48</div>
+<p>A = 40 लेने पर विचलन 0, 2, 3, 5, 7, 8 है।</p>
+<div class="formula">d̄ = (0+2+3+5+7+8)/6 = 25/6</div>
+<div class="formula">X̄ = 40 + 25/6 = <b>44 1/6</b></div>
+</div>
+
+<div class="question">
+<div class="qtitle">पुस्तक उदाहरण — 100 सब्जी विक्रेताओं की दैनिक बिक्री</div>
+<table>
+<tr><th>बिक्री</th><th>xᵢ</th><th>dᵢ=xᵢ−2250</th><th>fᵢ</th><th>fᵢdᵢ</th></tr>
+<tr><td>1000–1500</td><td>1250</td><td>−1000</td><td>15</td><td>−15000</td></tr>
+<tr><td>1500–2000</td><td>1750</td><td>−500</td><td>20</td><td>−10000</td></tr>
+<tr><td>2000–2500</td><td>2250</td><td>0</td><td>35</td><td>0</td></tr>
+<tr><td>2500–3000</td><td>2750</td><td>500</td><td>30</td><td>15000</td></tr>
+<tr><th>कुल</th><th></th><th></th><th>100</th><th>−10000</th></tr>
+</table>
+<div class="formula">d̄ = −10000/100 = −100</div>
+<div class="formula">X̄ = 2250−100 = <b>₹2150</b></div>
+</div>
+
+<div class="question">
+<div class="qtitle">पुस्तक उदाहरण — 50 कर्मचारियों का दैनिक वेतन</div>
+<p>A=300, Σf=50 और Σfd=320.</p>
+<div class="formula">d̄ = 320/50 = 6.4</div>
+<div class="formula">X̄ = 300+6.4 = <b>₹306.40</b></div>
+</div>
+
+<h2 id="step">5. सोपान विचलन पद्धति (Step Deviation Method)</h2>
+<div class="formula">uᵢ = (xᵢ − A)/g = dᵢ/g</div>
+<div class="formula">ū = Σ(fᵢuᵢ)/Σfᵢ</div>
+<div class="formula">X̄ = A + ūg</div>
+
+<div class="question">
+<div class="qtitle">पुस्तक उदाहरण — 100 परिवारों की स्वास्थ्य बीमा निवेश राशि</div>
+<p>A=2200 और g=400 लिया गया। पुस्तक की सारणी में Σf=100 तथा Σfu=−15.</p>
+<div class="formula">ū = −15/100 = −0.15</div>
+<div class="formula">X̄ = 2200 + (−0.15)(400) = <b>₹2140</b></div>
+</div>
+
+<div class="question">
+<div class="qtitle">पुस्तक उदाहरण — 50 विद्यार्थियों की निधि</div>
+<p>पुस्तक में संलग्न वर्गों को मिलाकर वर्ग 0–1000, 1000–1500, 1500–2000 और
+2000–3000 बनाए गए हैं। A=1250, g=250 और Σfu=28.</p>
+<div class="formula">ū = 28/50 = 0.56</div>
+<div class="formula">X̄ = 1250 + (0.56)(250) = <b>₹1390</b></div>
+</div>
+
+<h2 id="q61">6. प्रश्नसंग्रह 6.1 — माध्य</h2>
+
+<div class="question">
+<div class="qtitle">प्रश्न 1 — 50 विद्यार्थियों का दैनिक अध्ययन समय</div>
+<table><tr><th>समय</th><th>मध्य</th><th>f</th><th>fx</th></tr>
+<tr><td>0–2</td><td>1</td><td>7</td><td>7</td></tr>
+<tr><td>2–4</td><td>3</td><td>18</td><td>54</td></tr>
+<tr><td>4–6</td><td>5</td><td>12</td><td>60</td></tr>
+<tr><td>6–8</td><td>7</td><td>10</td><td>70</td></tr>
+<tr><td>8–10</td><td>9</td><td>3</td><td>27</td></tr>
+<tr><th>कुल</th><th></th><th>50</th><th>218</th></tr></table>
+<div class="formula">X̄ = 218/50 = <b>4.36 घंटे</b></div>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 2 — टोल नाके पर जमा कर</div>
+<p>वर्ग मध्य: 350, 450, 550, 650, 750. A=550.</p>
+<div class="formula">Σf=420</div>
+<div class="formula">Σfd = 80(−200)+110(−100)+120(0)+70(100)+40(200)=−12000</div>
+<div class="formula">d̄ = −12000/420 = −28.5714</div>
+<div class="formula">X̄ = 550−28.5714 = <b>₹521.43</b> (लगभग)</div>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 3 — दूध वितरण</div>
+<div class="formula">वर्ग मध्य = 1.5, 2.5, 3.5, 4.5, 5.5</div>
+<div class="formula">Σf=50, Σfx=141</div>
+<div class="formula">X̄ = 141/50 = <b>2.82 लीटर</b></div>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 4 — संतरे का उत्पादन</div>
+<div class="formula">वर्ग मध्य = 27.5, 32.5, 37.5, 42.5, 47.5</div>
+<div class="formula">Σf=80, Σfx=2825</div>
+<div class="formula">X̄ = 2825/80 = <b>35.3125 हजार रुपये</b> ≈ <b>35.31 हजार रुपये</b></div>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 5 — 120 कर्मचारियों की जमा राशि, सोपान विचलन</div>
+<p>A=1250, g=500. u = −2, −1, 0, 1, 2.</p>
+<div class="formula">Σfu = 35(−2)+28(−1)+32(0)+15(1)+10(2)=−63</div>
+<div class="formula">ū = −63/120 = −0.525</div>
+<div class="formula">X̄ = 1250 + (−0.525)(500) = <b>₹987.50</b></div>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 6 — 150 कर्मचारियों का साप्ताहिक वेतन, सोपान विचलन</div>
+<p>A=3500, g=1000. u = −2, −1, 0, 1.</p>
+<div class="formula">Σfu = 25(−2)+45(−1)+50(0)+30(1)=−65</div>
+<div class="formula">ū = −65/150 = −13/30</div>
+<div class="formula">X̄ = 3500 + (−13/30)(1000) = <b>₹3066.67</b> (लगभग)</div>
+</div>
+
+<h2 id="median">7. माध्यिका (Median)</h2>
+<p>आरोही या अवरोही क्रम में रखी सामग्री को दो समान भागों में विभाजित करने
+वाली मध्य की संख्या माध्यिका कहलाती है।</p>
+
+<h3>अवर्गीकृत सामग्री</h3>
+<ul>
+<li>यदि n विषम है: माध्यिका = (n+1)/2 वाँ पद।</li>
+<li>यदि n सम है: माध्यिका = n/2 वें और (n/2+1) वें पद का औसत।</li>
+</ul>
+
+<h3>वर्गीकृत बारंबारता वितरण</h3>
+<div class="formula">Median = L + [(N/2 − cf)/f] × h</div>
+<table>
+<tr><th>चिह्न</th><th>अर्थ</th></tr>
+<tr><td>L</td><td>माध्यिका वर्ग की निम्न वर्ग सीमा</td></tr>
+<tr><td>N</td><td>कुल बारंबारता</td></tr>
+<tr><td>cf</td><td>माध्यिका वर्ग से पहले की संचयी बारंबारता</td></tr>
+<tr><td>f</td><td>माध्यिका वर्ग की बारंबारता</td></tr>
+<tr><td>h</td><td>माध्यिका वर्ग का वर्गांतर</td></tr>
+</table>
+
+<div class="question">
+<div class="qtitle">पुस्तक उदाहरण — 100 विद्यार्थियों के परीक्षा अंक</div>
+<p>बारंबारताएँ 4, 20, 30, 40, 6 हैं। संचयी बारंबारता 4, 24, 54, 94, 100.</p>
+<p>N/2=50, इसलिए माध्यिका वर्ग 40–60 है। L=40, cf=24, f=30, h=20.</p>
+<div class="formula">Median = 40 + [(50−24)/30]×20 = <b>57 1/3</b></div>
+</div>
+
+<div class="question">
+<div class="qtitle">पुस्तक उदाहरण — 60 बसों की दैनिक दूरी</div>
+<p>सतत वर्ग बनाने पर माध्यिका वर्ग 219.5–229.5 है। L=219.5, cf=18, f=26, h=10,
+N=60.</p>
+<div class="formula">Median = 219.5 + [(30−18)/26]×10 = <b>224.12 km</b> (लगभग)</div>
+</div>
+
+<div class="question">
+<div class="qtitle">पुस्तक उदाहरण — संग्रहालय में आने वाले व्यक्तियों की आयु</div>
+<p>‘से कम’ संचयी बारंबारता को वर्गों में बदलने पर 30–40 माध्यिका वर्ग मिलता है।
+N=71, N/2=35.5, L=30, cf=22, f=18, h=10.</p>
+<div class="formula">Median = 30 + [(35.5−22)/18]×10 = <b>37.5 वर्ष</b></div>
+</div>
+
+<h2 id="q62">8. प्रश्नसंग्रह 6.2 — माध्यिका</h2>
+
+<div class="question">
+<div class="qtitle">प्रश्न 1 — Software company के दैनिक कार्य के घंटे</div>
+<p>f = 150, 500, 300, 50; N=1000. संचयी f = 150, 650, 950, 1000.
+N/2=500, अतः 10–12 माध्यिका वर्ग.</p>
+<div class="formula">Median = 10 + [(500−150)/500]×2 = <b>11.4 घंटे</b></div>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 2 — आम के पेड़ और आमों की संख्या</div>
+<p>f = 33, 30, 90, 80, 17; N=250. संचयी f = 33, 63, 153, 233, 250.
+N/2=125, इसलिए 150–200 माध्यिका वर्ग.</p>
+<div class="formula">Median = 150 + [(125−63)/90]×50 = <b>184.44</b> (लगभग)</div>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 3 — मुंबई-पुणे द्रुतगति मार्ग पर वाहनों की गति</div>
+<p>N=200 और N/2=100. संचयी f = 10, 44, 99, 184, 194, 200.
+माध्यिका वर्ग 75–79 है। सतत सीमा 74.5–79.5.</p>
+<div class="formula">Median = 74.5 + [(100−99)/85]×5 = <b>74.56 km/h</b> (लगभग)</div>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 4 — विभिन्न कारखानों में बने दीयों का उत्पादन</div>
+<p>f = 12,35,20,15,8,7,8; N=105. N/2=52.5. संचयी f = 12,47,67,...
+माध्यिका वर्ग 50–60 है।</p>
+<div class="formula">Median = 50 + [(52.5−47)/20]×10 = <b>52.75 हजार</b></div>
+</div>
+
+<h2 id="mode">9. बहुलक (Mode)</h2>
+<p>दिए गए आँकड़ों में सबसे अधिक बार आने वाला प्राप्तांक बहुलक कहलाता है।
+वर्गीकृत बारंबारता वितरण में सबसे अधिक बारंबारता वाले वर्ग को बहुलक वर्ग कहते हैं।</p>
+
+<div class="formula">Mode = L + [(f₁−f₀)/(2f₁−f₀−f₂)] × h</div>
+<table>
+<tr><th>चिह्न</th><th>अर्थ</th></tr>
+<tr><td>L</td><td>बहुलक वर्ग की निम्न सीमा</td></tr>
+<tr><td>f₁</td><td>बहुलक वर्ग की बारंबारता</td></tr>
+<tr><td>f₀</td><td>बहुलक वर्ग के पहले वर्ग की बारंबारता</td></tr>
+<tr><td>f₂</td><td>बहुलक वर्ग के बाद वाले वर्ग की बारंबारता</td></tr>
+<tr><td>h</td><td>बहुलक वर्ग का वर्गांतर</td></tr>
+</table>
+
+<div class="question">
+<div class="qtitle">पुस्तक उदाहरण — खेल के मैदान पर खेलने वाले लड़कों की आयु</div>
+<p>बहुलक वर्ग 10–12, f₁=70, f₀=58, f₂=42, L=10, h=2.</p>
+<div class="formula">Mode = 10 + [(70−58)/(140−58−42)]×2 = <b>10.6 वर्ष</b></div>
+</div>
+
+<div class="question">
+<div class="qtitle">पुस्तक उदाहरण — वाहनों में भरा गया पेट्रोल</div>
+<p>सतत वर्गों में बहुलक वर्ग 3.5–6.5 है। L=3.5, h=3, f₁=40, f₀=33, f₂=27.</p>
+<div class="formula">Mode = 3.5 + [(40−33)/(80−33−27)]×3 = <b>4.55 लीटर</b></div>
+</div>
+
+<h2 id="q63">10. प्रश्नसंग्रह 6.3 — बहुलक</h2>
+
+<div class="question">
+<div class="qtitle">प्रश्न 1 — दूध में वसा</div>
+<p>बहुलक वर्ग 4–5, L=4, h=1, f₁=80, f₀=70, f₂=60.</p>
+<div class="formula">Mode = 4 + (10/30)×1 = <b>4.33%</b> (लगभग)</div>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 2 — परिवारों का विद्युत उपभोग</div>
+<p>बहुलक वर्ग 60–80; L=60, h=20, f₁=100, f₀=70, f₂=80.</p>
+<div class="formula">Mode = 60 + (30/50)×20 = <b>72 यूनिट</b></div>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 3 — 100 होटलों को आपूर्ति किया गया दूध</div>
+<p>बहुलक वर्ग 9–11; L=9, h=2, f₁=35, f₀=20, f₂=18.</p>
+<div class="formula">Mode = 9 + (15/32)×2 = <b>9.94 लीटर</b> (लगभग)</div>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 4 — 200 मरीजों की आयु</div>
+<p>बहुलक वर्ग 10–14 है। सतत वर्ग सीमा 9.5–14.5 लें। L=9.5, h=5,
+f₁=50, f₀=32, f₂=36.</p>
+<div class="formula">Mode = 9.5 + [(50−32)/(100−32−36)]×5 = <b>12.31 वर्ष</b> (लगभग)</div>
+</div>
+
+<h2 id="graphs">11. सांख्यिकीय आँकड़ों का आलेखीय प्रस्तुतीकरण</h2>
+<p>पुस्तक में सांख्यिकीय सामग्री को सारणीकरण, चित्ररूप और आलेख पद्धति से
+प्रस्तुत करने की चर्चा है। अध्याय में विशेष रूप से <b>आयतालेख (Histogram),
+बारंबारता बहुभुज (Frequency Polygon) और वृत्तालेख (Pie Diagram)</b> का
+अध्ययन किया गया है।</p>
+
+<h2 id="hist">12. आयतालेख (Histogram)</h2>
+<ul>
+<li>यदि वर्ग असतत हों तो उन्हें सतत/विस्तारित वर्गों में बदलें।</li>
+<li>X-अक्ष पर सतत वर्ग और Y-अक्ष पर बारंबारता लें।</li>
+<li>हर वर्ग के ऊपर उसकी बारंबारता के बराबर ऊँचाई का आयत बनाएँ।</li>
+<li>आयतों के बीच सामान्यतः अंतर नहीं रखा जाता।</li>
+</ul>
+
+<div class="question">
+<div class="qtitle">पुस्तक उदाहरण — Mutual Fund NAV</div>
+<table>
+<tr><th>मूल वर्ग</th><th>विस्तारित वर्ग</th><th>बारंबारता</th></tr>
+<tr><td>8–9</td><td>7.5–9.5</td><td>20</td></tr>
+<tr><td>10–11</td><td>9.5–11.5</td><td>40</td></tr>
+<tr><td>12–13</td><td>11.5–13.5</td><td>30</td></tr>
+<tr><td>14–15</td><td>13.5–15.5</td><td>25</td></tr>
+<tr><td>16–17</td><td>15.5–17.5</td><td>15</td></tr>
+</table>
+<p>आयतालेख में X-अक्ष पर विस्तारित वर्ग और Y-अक्ष पर संबंधित बारंबारताएँ
+लेकर पाँच सटे हुए आयत बनाए जाएँगे।</p>
+</div>
+
+<h2 id="q64">13. प्रश्नसंग्रह 6.4 — आयतालेख</h2>
+
+<div class="question">
+<div class="qtitle">प्रश्न 1 — विद्यार्थियों की ऊँचाई</div>
+<div class="formula">सतत वर्ग: 134.5–139.5, 139.5–144.5, 144.5–149.5, 149.5–154.5</div>
+<p>इनकी ऊँचाइयाँ क्रमशः 4, 12, 16, 8 रहेंगी। इन्हीं ऊँचाइयों के आयत बनाकर
+आयतालेख तैयार करें।</p>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 2 — ज्वार का उत्पादन</div>
+<div class="formula">विस्तारित वर्ग: 1.5–3.5, 3.5–5.5, 5.5–7.5, 7.5–9.5, 9.5–11.5</div>
+<p>बारंबारताएँ: <b>30, 50, 55, 40, 20</b>.</p>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 3 — 210 परिवारों का वार्षिक निवेश</div>
+<div class="formula">सतत वर्ग: 9.5–14.5, 14.5–19.5, 19.5–24.5, 24.5–29.5, 29.5–34.5</div>
+<p>बारंबारताएँ: <b>30, 50, 60, 55, 15</b>.</p>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 4 — परीक्षा की तैयारी का समय</div>
+<div class="formula">सतत वर्ग: 59.5–79.5, 79.5–99.5, 99.5–119.5, 119.5–139.5, 139.5–159.5</div>
+<p>बारंबारताएँ: <b>14, 20, 24, 22, 16</b>.</p>
+</div>
+
+<h2 id="poly">14. बारंबारता बहुभुज (Frequency Polygon)</h2>
+<p>आयतालेख की सहायता से या सीधे वर्ग मध्य और बारंबारता के निर्देशांकों की
+सहायता से बारंबारता बहुभुज बनाया जाता है।</p>
+<p>उदाहरण के लिए यदि वर्ग मध्य x और बारंबारता f है तो बिंदु
+<b>(x,f)</b> लिया जाता है। बहुभुज को बंद करने के लिए दोनों सिरों पर
+शून्य बारंबारता वाले काल्पनिक वर्ग/बिंदु लिए जाते हैं।</p>
+
+<div class="question">
+<div class="qtitle">पुस्तक उदाहरण — Mutual Fund का बारंबारता बहुभुज</div>
+<p>मुख्य बिंदु:</p>
+<div class="set">(8.5,20), (10.5,40), (12.5,30), (14.5,25), (16.5,15)</div>
+<p>बंद करने के लिए:</p>
+<div class="set">(6.5,0), (18.5,0)</div>
+</div>
+
+<div class="question">
+<div class="qtitle">पुस्तक उदाहरण — लड़कों का वजन</div>
+<div class="set">(18.5,4), (19.5,13), (20.5,15), (21.5,19), (22.5,17), (23.5,6)</div>
+<p>इन बिंदुओं को क्रम से मिलाकर बारंबारता बहुभुज बनाया जाता है।</p>
+</div>
+
+<h2 id="q65">15. प्रश्नसंग्रह 6.5 — बारंबारता बहुभुज</h2>
+
+<div class="question">
+<div class="qtitle">प्रश्न 1 — दिए गए बहुभुज का वाचन</div>
+<p>पुस्तक की आकृति 6.6 के अनुसार बिंदु हैं:
+(35,20), (45,40), (55,50), (65,60), (75,35), (85,15), तथा सिरों पर शून्य बारंबारता।</p>
+<table>
+<tr><th>उपप्रश्न</th><th>उत्तर</th></tr>
+<tr><td>सबसे अधिक विद्यार्थी किस वर्ग में?</td><td><b>60–70</b>, क्योंकि वर्ग मध्य 65 पर बारंबारता 60 है।</td></tr>
+<tr><td>शून्य बारंबारता वाला वर्ग</td><td><b>0–10 और 90–100</b></td></tr>
+<tr><td>50 विद्यार्थियों वाले वर्ग का वर्ग मध्य</td><td><b>55</b></td></tr>
+<tr><td>वर्ग मध्य 85 वाले वर्ग की सीमाएँ</td><td><b>80–90</b></td></tr>
+<tr><td>80–90 अंक प्राप्त करने वाले विद्यार्थी</td><td><b>15</b></td></tr>
+</table>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 2 — विद्युत बिल</div>
+<p>वर्ग मध्य और बारंबारता:</p>
+<div class="set">(100,240), (300,300), (500,450), (700,350), (900,160)</div>
+<p>बहुभुज को बंद करने के लिए अतिरिक्त शून्य बिंदु:
+<b>(−100,0)</b> और <b>(1100,0)</b>.</p>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 3 — परीक्षा परिणाम प्रतिशत</div>
+<div class="set">
+(35,7), (45,33), (55,45), (65,65), (75,47), (85,18), (95,5)
+</div>
+<p>बंद करने के लिए बिंदु: <b>(25,0)</b> और <b>(105,0)</b>.</p>
+</div>
+
+<h2 id="pie">16. वृत्तालेख (Pie Diagram)</h2>
+<p>वृत्तालेख में संपूर्ण वृत्त को आँकड़ों के अनुपात में विभिन्न द्वैत्रिज्य
+(sectors) में विभाजित किया जाता है।</p>
+
+<div class="formula">केंद्रीय कोण θ = (घटक की संख्या / कुल संख्या) × 360°</div>
+<p>यदि जानकारी प्रतिशत में हो तो:</p>
+<div class="formula">θ = प्रतिशत × 3.6°</div>
+
+<div class="question">
+<div class="qtitle">पुस्तक उदाहरण — विभिन्न रंगों की दुपहिया वाहनों की माँग</div>
+<table>
+<tr><th>रंग</th><th>माँग</th><th>केंद्रीय कोण</th></tr>
+<tr><td>सफेद</td><td>10</td><td>100°</td></tr>
+<tr><td>काला</td><td>9</td><td>90°</td></tr>
+<tr><td>नीला</td><td>6</td><td>60°</td></tr>
+<tr><td>भूरा</td><td>7</td><td>70°</td></tr>
+<tr><td>लाल</td><td>4</td><td>40°</td></tr>
+<tr><th>कुल</th><th>36</th><th>360°</th></tr>
+</table>
+</div>
+
+<div class="question">
+<div class="qtitle">पुस्तक उदाहरण — गाँव में विद्युत आपूर्ति</div>
+<table>
+<tr><th>स्थान</th><th>हजार इकाई</th><th>केंद्रीय कोण</th></tr>
+<tr><td>कारखाना</td><td>24</td><td>144°</td></tr>
+<tr><td>घर</td><td>14</td><td>84°</td></tr>
+<tr><td>सड़कें</td><td>7</td><td>42°</td></tr>
+<tr><td>दुकान</td><td>5</td><td>30°</td></tr>
+<tr><td>कार्यालय</td><td>6</td><td>36°</td></tr>
+<tr><td>अन्य</td><td>4</td><td>24°</td></tr>
+<tr><th>कुल</th><th>60</th><th>360°</th></tr>
+</table>
+</div>
+
+<h2 id="q66">17. प्रश्नसंग्रह 6.6 — वृत्तालेख</h2>
+
+<div class="question">
+<div class="qtitle">कृति — परिवार का मासिक खर्च</div>
+<table>
+<tr><th>मद</th><th>प्रतिशत</th><th>केंद्रीय कोण</th></tr>
+<tr><td>अन्न</td><td>40%</td><td>144°</td></tr>
+<tr><td>कपड़ा</td><td>20%</td><td>72°</td></tr>
+<tr><td>किराया</td><td>15%</td><td>54°</td></tr>
+<tr><td>शिक्षा</td><td>20%</td><td>72°</td></tr>
+<tr><td>अन्य खर्च</td><td>5%</td><td>18°</td></tr>
+</table>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 1 — 200 व्यक्तियों का रक्तदान</div>
+<table><tr><th>आयु गट</th><th>व्यक्ति</th><th>कोण</th></tr>
+<tr><td>20–25</td><td>80</td><td>144°</td></tr>
+<tr><td>25–30</td><td>60</td><td>108°</td></tr>
+<tr><td>30–35</td><td>35</td><td>63°</td></tr>
+<tr><td>35–40</td><td>25</td><td>45°</td></tr>
+</table>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 2 — विषयवार अंक</div>
+<table><tr><th>विषय</th><th>अंक</th><th>कोण</th></tr>
+<tr><td>अंग्रेजी</td><td>50</td><td>45°</td></tr>
+<tr><td>मराठी</td><td>70</td><td>63°</td></tr>
+<tr><td>विज्ञान</td><td>80</td><td>72°</td></tr>
+<tr><td>गणित</td><td>90</td><td>81°</td></tr>
+<tr><td>स. शास्त्र</td><td>60</td><td>54°</td></tr>
+<tr><td>हिंदी</td><td>50</td><td>45°</td></tr>
+</table>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 3 — कक्षा 5वीं से 10वीं द्वारा लगाए पेड़</div>
+<table><tr><th>कक्षा</th><th>पेड़</th><th>कोण</th></tr>
+<tr><td>5वीं</td><td>40</td><td>40°</td></tr>
+<tr><td>6वीं</td><td>50</td><td>50°</td></tr>
+<tr><td>7वीं</td><td>75</td><td>75°</td></tr>
+<tr><td>8वीं</td><td>50</td><td>50°</td></tr>
+<tr><td>9वीं</td><td>70</td><td>70°</td></tr>
+<tr><td>10वीं</td><td>75</td><td>75°</td></tr>
+</table>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 4 — फलों की माँग</div>
+<table><tr><th>फल</th><th>प्रतिशत</th><th>कोण</th></tr>
+<tr><td>आम</td><td>30%</td><td>108°</td></tr>
+<tr><td>मोसंबी</td><td>15%</td><td>54°</td></tr>
+<tr><td>सेब</td><td>25%</td><td>90°</td></tr>
+<tr><td>चीकू</td><td>20%</td><td>72°</td></tr>
+<tr><td>संतरा</td><td>10%</td><td>36°</td></tr>
+</table>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 5 — आकृति 6.13: गाँव के व्यवसाय</div>
+<p>आकृति में केंद्रीय कोण: अन्न 48°, निर्माण कार्य 72°, होटल 72°, उत्पादन 90°,
+प्रशासन 36°, विद्युत 18°, कृषि 24°.</p>
+<p><b>(1) कुल व्यवसायी 10,000 हों तो निर्माण कार्य क्षेत्र में:</b></p>
+<div class="formula">10000 × 72/360 = <b>2000 व्यवसायी</b></div>
+<p><b>(2) प्रशासन क्षेत्र:</b></p>
+<div class="formula">10000 × 36/360 = <b>1000 व्यवसायी</b></div>
+<p><b>(3) उत्पादन क्षेत्र का प्रतिशत:</b></p>
+<div class="formula">(90/360)×100 = <b>25%</b></div>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 6 — आकृति 6.14: परिवार का वार्षिक निवेश</div>
+<p>आकृति में शेयर 60°, डाकघर 30°, बैंक में साधी जमा 90°, म्युच्युअल फंड
+60° और स्थानीय मालमत्ता 120° है।</p>
+<p><b>(1) शेयरों में ₹2000 = 60°:</b></p>
+<div class="formula">कुल निवेश = 2000 × 360/60 = <b>₹12,000</b></div>
+<p><b>(2) बैंक में जमा:</b></p>
+<div class="formula">12000 × 90/360 = <b>₹3,000</b></div>
+<p><b>(3) शेयरों की अपेक्षा म्युच्युअल फंड:</b></p>
+<div class="formula">दोनों के कोण 60° हैं ⇒ अंतर = <b>₹0</b></div>
+<p><b>(4) डाकघर:</b></p>
+<div class="formula">12000 × 30/360 = <b>₹1,000</b></div>
+</div>
+
+<h2 id="misc">18. प्रकीर्ण प्रश्नसंग्रह 6</h2>
+
+<h3>MCQ — प्रश्न 1</h3>
+<div class="question">
+<p><b>(1)</b> O− रक्त समूह 40% हो तो केंद्रीय कोण?</p>
+<div class="formula">40% × 360° = 144°</div>
+<p><b>उत्तर: (D) 144°</b></p>
+</div>
+
+<div class="question">
+<p><b>(2)</b> सीमेंट का खर्च 75° और राशि ₹45,000 है। कुल खर्च:</p>
+<div class="formula">कुल = 45000 × 360/75 = <b>₹2,16,000</b></div>
+<p><b>उत्तर: (A) ₹2,16,000</b></p>
+</div>
+
+<div class="question">
+<p><b>(3)</b> संचयी बारंबारता का उपयोग मुख्यतः किसे ज्ञात करने के लिए?</p>
+<p><b>उत्तर: (B) माध्यिका</b></p>
+</div>
+
+<div class="question">
+<p><b>(4)</b> Step deviation में uᵢ = ?</p>
+<div class="formula">uᵢ = (xᵢ−A)/g</div>
+<p><b>उत्तर: (C) (xᵢ−A)/g</b></p>
+</div>
+
+<div class="question">
+<p><b>(5)</b> कार की दूरी के दिए आँकड़ों में माध्यिका किस वर्ग में है?</p>
+<p>कुल वाहन = 50, N/2=25. संचयी f = 11, 23, 43, 50; इसलिए 25वाँ
+प्राप्तांक <b>16–18</b> वर्ग में है।</p>
+<p><b>उत्तर: (C) 16–18</b></p>
+</div>
+
+<div class="question">
+<p><b>(6)</b> 4–6 वर्ग में विद्यार्थियों की संख्या 8 है और वर्ग मध्य 5 है।</p>
+<div class="formula">निर्देशांक = (5,8)</div>
+<p><b>उत्तर: (C) (5,8)</b></p>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 2 — अंगूर उत्पादन का माध्य</div>
+<p>वर्ग मध्य = 25,35,45,55,65,75 और f = 10,11,15,16,18,14.</p>
+<div class="formula">Σf=84, Σfx=4410</div>
+<div class="formula">X̄ = 4410/84 = <b>52.5 हजार रुपये</b></div>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 3 — बैंक द्वारा तालाब के लिए दिया गया कर्ज</div>
+<p>वर्ग मध्य = 45,55,65,75,85; f=13,20,24,36,7.</p>
+<div class="formula">Σf=100, Σfx=6540</div>
+<div class="formula">X̄ = 6540/100 = <b>65.4 हजार रुपये</b></div>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 4 — 120 मजदूरों का साप्ताहिक वेतन</div>
+<p>वर्ग मध्य = 1000,3000,5000,7000; f=15,35,50,20.</p>
+<div class="formula">Σfx = 510000</div>
+<div class="formula">X̄ = 510000/120 = <b>₹4250</b></div>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 5 — 50 परिवारों को सहायता</div>
+<p>वर्ग मध्य = 55,65,75,85,95; f=7,13,20,6,4.</p>
+<div class="formula">Σfx=3620, Σf=50</div>
+<div class="formula">X̄ = 3620/50 = <b>72.4 हजार रुपये</b></div>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 6 — 250 सार्वजनिक बसों की दैनिक दूरी की माध्यिका</div>
+<p>सतत वर्ग लेने पर माध्यिका वर्ग 219.5–229.5 है। N/2=125, cf=100,
+f=80, h=10.</p>
+<div class="formula">Median = 219.5 + [(125−100)/80]×10 = <b>222.625 km</b></div>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 7 — वस्तुओं की कीमत की माध्यिका</div>
+<p>‘20 से कम’ = 140, फिर 20–40 में 100, 40–60 में 80, 60–80 में 60,
+80–100 में 20. N=400 और N/2=200.</p>
+<p>माध्यिका वर्ग 20–40: L=20, cf=140, f=100, h=20.</p>
+<div class="formula">Median = 20 + [(200−140)/100]×20 = <b>32 रुपये</b></div>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 8 — मिठाई के वजन की माँग का बहुलक</div>
+<p>बहुलक वर्ग 250–500; L=250, h=250, f₁=60, f₀=10, f₂=25.</p>
+<div class="formula">Mode = 250 + [(60−10)/(120−10−25)]×250</div>
+<div class="formula">Mode ≈ <b>397.06 ग्राम</b></div>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 9 — विद्युत उपभोग का आयतालेख</div>
+<p>सभी वर्ग सतत हैं। X-अक्ष पर 50–70, 70–90, 90–110, 110–130,
+130–150, 150–170 और Y-अक्ष पर क्रमशः 150, 400, 460, 540, 600, 350
+की ऊँचाई वाले सटे आयत बनाएँ।</p>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 10 — हथकरघा कारखाने का बारंबारता बहुभुज</div>
+<div class="set">(9,5), (11,16), (13,30), (15,40), (17,35), (19,14)</div>
+<p>बंद करने के लिए: <b>(7,0)</b> और <b>(21,0)</b>.</p>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 11 — प्रयोग में लगने वाला समय: आयतालेख + बहुभुज</div>
+<p>आयतालेख की वर्ग-बारंबारताएँ 8,16,22,18,14,12 हैं।</p>
+<div class="set">बहुभुज के मुख्य बिंदु: (21,8), (23,16), (25,22), (27,18), (29,14), (31,12)</div>
+<p>बंद करने के लिए: <b>(19,0)</b> और <b>(33,0)</b>.</p>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 12 — रक्तदाताओं की आयु का बहुभुज</div>
+<div class="set">(22,38), (27,46), (32,35), (37,24), (42,15), (47,12)</div>
+<p>सतत वर्ग-मध्य लेकर बिंदुओं को क्रम से मिलाएँ और दोनों सिरों पर शून्य
+बारंबारता के बिंदु जोड़ें।</p>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 13 — 150 गाँवों की औसत वर्षा का बहुभुज</div>
+<div class="set">(10,14), (30,12), (50,36), (70,48), (90,40)</div>
+<p>बंद करने के लिए: <b>(−10,0)</b> और <b>(110,0)</b>.</p>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 14 — वाहनों का वृत्तालेख</div>
+<p>आकृति 6.15 में प्रतिशत: दुपहिया 40%, कार 30%, टेम्पो 12%,
+बस 8%, रिक्षा 10%.</p>
+<table><tr><th>वाहन</th><th>प्रतिशत</th><th>केंद्रीय कोण</th></tr>
+<tr><td>कार</td><td>30%</td><td>108°</td></tr>
+<tr><td>टेम्पो</td><td>12%</td><td>43.2°</td></tr>
+<tr><td>बस</td><td>8%</td><td>28.8°</td></tr>
+<tr><td>रिक्षा</td><td>10%</td><td>36°</td></tr>
+<tr><td>दुपहिया</td><td>40%</td><td>144°</td></tr>
+</table>
+<p><b>दुपहिया वाहन 1200 हों:</b></p>
+<div class="formula">कुल = 1200/0.40 = <b>3000 वाहन</b></div>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 15 — ध्वनि प्रदूषण फैलाने वाले घटक</div>
+<table><tr><th>घटक</th><th>प्रतिशत</th><th>केंद्रीय कोण</th></tr>
+<tr><td>निर्माण कार्य</td><td>10%</td><td>36°</td></tr>
+<tr><td>यातायात</td><td>50%</td><td>180°</td></tr>
+<tr><td>हवाई जहाज की उड़ानें</td><td>9%</td><td>32.4°</td></tr>
+<tr><td>उद्योग</td><td>20%</td><td>72°</td></tr>
+<tr><td>रेल गाड़ी</td><td>11%</td><td>39.6°</td></tr>
+<tr><th>कुल</th><th>100%</th><th>360°</th></tr>
+</table>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 16 — 1000 विद्यार्थियों की खेल पसंद</div>
+<p>आकृति 6.16 के कोण: क्रिकेट 81°, फुटबॉल 63°, हॉकी 54°, कबड्डी 72°,
+खो-खो 45°, अन्य 45°.</p>
+<div class="formula">क्रिकेट = 1000×81/360 = <b>225 विद्यार्थी</b></div>
+<div class="formula">फुटबॉल = 1000×63/360 = <b>175 विद्यार्थी</b></div>
+<div class="formula">अन्य = 1000×45/360 = <b>125 विद्यार्थी</b></div>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 17 — 180 महिलाओं की स्वास्थ्य जाँच</div>
+<p>हीमोग्लोबीन कमी = 50, मोतियाबिंद = 10, साँस का विकार = 25.</p>
+<div class="formula">स्वस्थ = 180−50−10−25 = <b>95</b></div>
+<table><tr><th>घटक</th><th>संख्या</th><th>केंद्रीय कोण</th></tr>
+<tr><td>हीमोग्लोबीन की कमी</td><td>50</td><td>100°</td></tr>
+<tr><td>मोतियाबिंद</td><td>10</td><td>20°</td></tr>
+<tr><td>साँस का विकार</td><td>25</td><td>50°</td></tr>
+<tr><td>स्वस्थ</td><td>95</td><td>190°</td></tr>
+</table>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 18 — विद्यालय में लगाए गए 120 वृक्ष</div>
+<table><tr><th>वृक्ष</th><th>संख्या</th><th>केंद्रीय कोण</th></tr>
+<tr><td>आम</td><td>20</td><td>60°</td></tr>
+<tr><td>गुड़हल</td><td>28</td><td>84°</td></tr>
+<tr><td>पीपल</td><td>24</td><td>72°</td></tr>
+<tr><td>बबूल</td><td>22</td><td>66°</td></tr>
+<tr><td>नीम</td><td>26</td><td>78°</td></tr>
+<tr><th>कुल</th><th>120</th><th>360°</th></tr>
+</table>
+</div>
+
+<h2 id="revision">19. Quick Revision — परीक्षा के लिए</h2>
+<table>
+<tr><th>विषय</th><th>सूत्र / मुख्य बात</th></tr>
+<tr><td>वर्ग मध्य</td><td>xᵢ=(निम्न सीमा+उच्च सीमा)/2</td></tr>
+<tr><td>प्रत्यक्ष माध्य</td><td>X̄=Σfx/Σf</td></tr>
+<tr><td>अनुमानित माध्य</td><td>X̄=A+Σfd/Σf</td></tr>
+<tr><td>Step Deviation</td><td>X̄=A+(Σfu/Σf)g</td></tr>
+<tr><td>माध्यिका</td><td>L+[(N/2−cf)/f]h</td></tr>
+<tr><td>बहुलक</td><td>L+[(f₁−f₀)/(2f₁−f₀−f₂)]h</td></tr>
+<tr><td>Pie chart angle</td><td>θ=(घटक/कुल)×360°</td></tr>
+<tr><td>प्रतिशत से कोण</td><td>θ=प्रतिशत×3.6°</td></tr>
+<tr><td>Polygon point</td><td>(वर्ग मध्य, बारंबारता)</td></tr>
+</table>
+
+<h3>परीक्षा में ध्यान रखें</h3>
+<ul>
+<li>माध्यिका के लिए पहले <b>संचयी बारंबारता</b> बनाएँ।</li>
+<li>N/2 जिस वर्ग में आता है वही <b>माध्यिका वर्ग</b> है।</li>
+<li>बहुलक के लिए सर्वाधिक बारंबारता वाला <b>बहुलक वर्ग</b> चुनें।</li>
+<li>असतत वर्ग जैसे 200–209, 210–219 हों तो आवश्यकतानुसार सतत सीमा
+199.5–209.5, 209.5–219.5 करें।</li>
+<li>Histogram में आयतों के बीच gap न रखें।</li>
+<li>Frequency polygon में वर्ग मध्य को X-अक्ष पर और बारंबारता को Y-अक्ष पर रखें।</li>
+<li>Pie chart में सभी केंद्रीय कोणों का योग <b>360°</b> होना चाहिए।</li>
+<li>उत्तर के साथ उपयुक्त मात्रक जरूर लिखें — घंटे, km, रुपये, लीटर, ग्राम आदि।</li>
+</ul>
+
+<div class="success">
+<b>अध्याय का सार:</b> इस अध्याय में किसी बड़े आँकड़ा-संग्रह को एक प्रतिनिधि
+संख्या (माध्य/माध्यिका/बहुलक) या आलेख के रूप में संक्षेप में प्रस्तुत करना
+सीखा जाता है। प्रश्न के प्रकार को पहचानना समाधान की पहली सीढ़ी है।
+</div>
+
+</div>
+</body>
+</html>

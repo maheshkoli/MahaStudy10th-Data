@@ -1,0 +1,711 @@
+﻿<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>कक्षा 10 गणित — अध्याय 4 — आर्थिक नियोजन — संपूर्ण समाधान</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#f3f5f7;color:#222;font-family:"Noto Sans Devanagari","Nirmala UI",Arial,sans-serif;line-height:1.75}
+.container{max-width:1180px;margin:24px auto;background:#fff;padding:34px;border-radius:14px;box-shadow:0 4px 24px rgba(0,0,0,.08)}
+h1{color:#17365d;border-bottom:3px solid #17365d;padding-bottom:10px}
+h2{color:#244f7a;margin-top:42px;border-bottom:1px solid #ddd;padding-bottom:8px}
+h3{color:#345f82;margin-top:28px}
+h4{color:#466b86;margin-top:22px}
+p,li,td,th{font-size:16px}
+.question{border:1px solid #d9e0e7;border-radius:10px;margin:18px 0;padding:17px;background:#fff}
+.qtitle{font-weight:700;color:#17365d}
+.answer{margin-top:10px;background:#f8fbfd;padding:14px;border-radius:7px}
+.formula{font-family:"Times New Roman","Noto Sans Devanagari",serif;background:#f5f7f9;border:1px solid #ddd;border-radius:7px;padding:10px 14px;margin:10px 0;font-size:19px;text-align:center}
+.note{background:#fff8e8;border-left:5px solid #d6a100;padding:12px 16px;border-radius:7px;margin:14px 0}
+.source{background:#eef6ff;border-left:5px solid #3c78b5;padding:12px 16px;border-radius:7px;margin:14px 0}
+.warning{background:#fff1f1;border-left:5px solid #b64b4b;padding:12px 16px;border-radius:7px;margin:14px 0}
+table{width:100%;border-collapse:collapse;margin:14px 0}
+th,td{border:1px solid #ddd;padding:9px;text-align:left;vertical-align:top}
+th{background:#eef3f7}
+.small{font-size:14px;color:#666}
+.footer{margin-top:45px;border-top:1px solid #ddd;padding-top:18px;color:#777;font-size:13px}
+.badge{display:inline-block;background:#17365d;color:#fff;padding:3px 9px;border-radius:20px;font-size:13px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:800px){.container{margin:0;padding:18px;border-radius:0}.two{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="container">
+
+<h1>अध्याय 4: आर्थिक नियोजन</h1>
+<p><b>कक्षा 10वीं — गणित भाग-I — संपूर्ण अध्ययन, उदाहरण और प्रश्नसंग्रह समाधान</b></p>
+
+<div class="source">
+<b>स्रोत:</b> आपके द्वारा अपलोड किया गया <b>C10HHganit1Ch04.pdf</b> तथा
+<b>chapter_4_solutions(3).html</b>। PDF में अध्याय के चार प्रमुख भाग—GST,
+कर बीजक/ITC, शेयर्स तथा म्यूचुअल फंड/SIP—दिए गए हैं। मौजूदा HTML में भी
+GST, CGST/SGST, Tax Invoice, ITC और निवेश के मूल विषय दिए गए थे।
+</div>
+
+<div class="warning">
+<b>महत्त्वपूर्ण:</b> GST दरों और कुछ नियमों को पाठ्यपुस्तक में दिए गए समय/उदाहरण
+के संदर्भ में रखा गया है। स्वयं पुस्तक भी बताती है कि शासन द्वारा निर्धारित दरों
+में परिवर्तन हो सकता है। इसलिए यह दस्तावेज़ <b>पाठ्यपुस्तक-अध्ययन और परीक्षा
+तैयारी</b> के लिए है, वर्तमान कर-कानून की सलाह नहीं।
+</div>
+
+<h2>1. अध्याय का परिचय</h2>
+<p>अध्याय 4 में GST की अवधारणा, CGST और SGST, GSTIN, HSN/SAC, Tax Invoice,
+GST की गणना, Input Tax Credit (ITC), B2B/B2C व्यवहार, Composition Scheme,
+IGST तथा इसके बाद Shares, Dividend, Face Value, Market Value, Brokerage,
+GST on brokerage, Mutual Fund, NAV और SIP का अध्ययन किया गया है। PDF का
+पहला पृष्ठ इन्हीं प्रमुख विषयों की रूपरेखा देता है।</p>
+
+<h2>2. GST — वस्तु एवं सेवा कर</h2>
+
+<h3>GST क्या है?</h3>
+<p>GST का पूरा नाम <b>Goods and Services Tax</b> अर्थात वस्तु एवं सेवा कर है।
+पुस्तक के अनुसार यह जुलाई 2017 से लागू हुई कर-पद्धति है और इसे “एक देश, एक कर,
+एक बाजार” के रूप में प्रस्तुत किया गया है।</p>
+
+<h3>GST के दो भाग</h3>
+<table>
+<tr><th>कर</th><th>पूरा नाम</th><th>किसे प्राप्त होता है</th></tr>
+<tr><td>CGST</td><td>Central Goods and Services Tax</td><td>केंद्र सरकार</td></tr>
+<tr><td>SGST</td><td>State Goods and Services Tax</td><td>राज्य सरकार</td></tr>
+</table>
+
+<p>एक ही राज्य के भीतर के व्यवहार में, पाठ्यपुस्तक के उदाहरणों में GST को
+समान रूप से CGST और SGST में बाँटा गया है। उदाहरण के लिए 18% GST में
+CGST 9% और SGST 9% होता है।</p>
+
+<h3>GSTIN</h3>
+<p>GSTIN अर्थात GST Identification Number. पुस्तक के उदाहरण में GSTIN को
+15 अंकों/अक्षरों वाला व्यापारी पहचान क्रमांक बताया गया है। महाराष्ट्र के
+उदाहरण में राज्य कोड <b>27</b> है।</p>
+
+<h3>HSN और SAC</h3>
+<ul>
+<li><b>HSN:</b> वस्तुओं के वर्गीकरण का विशिष्ट क्रमांक — Harmonized System of Nomenclature.</li>
+<li><b>SAC:</b> सेवाओं के वर्गीकरण का विशिष्ट क्रमांक — Service Accounting Code.</li>
+</ul>
+
+<h2>3. GST की पाठ्यपुस्तक में दी गई नमूना दरें</h2>
+<table>
+<tr><th>श्रेणी</th><th>दर</th><th>पुस्तक के उदाहरण</th></tr>
+<tr><td>Nil rated</td><td>0%</td><td>कुछ जीवनावश्यक वस्तुएँ, कुछ सेवाएँ</td></tr>
+<tr><td>निम्न दर</td><td>5%</td><td>LPG, चाय, तेल, मसाले आदि के नमूना उदाहरण</td></tr>
+<tr><td>प्रमाण दर I</td><td>12%</td><td>मक्खन, घी, मोबाइल आदि के नमूना उदाहरण</td></tr>
+<tr><td>प्रमाण दर II</td><td>18%</td><td>कंप्यूटर, प्रिंटर, CCTV, कूरियर आदि के नमूना उदाहरण</td></tr>
+<tr><td>उच्चतम दर</td><td>28%</td><td>कुछ विलासिता/विशिष्ट वस्तु एवं सेवाएँ</td></tr>
+</table>
+
+<h2>4. GST की गणना के मूल सूत्र</h2>
+<div class="formula">GST = करपात्र मूल्य × GST दर / 100</div>
+<div class="formula">CGST = GST का आधा &nbsp;&nbsp; और &nbsp;&nbsp; SGST = GST का आधा</div>
+<div class="formula">कुल बिल = करपात्र मूल्य + GST</div>
+
+<p>यदि GST सहित मूल्य दिया हो:</p>
+<div class="formula">करपात्र मूल्य = GST सहित मूल्य × 100 / (100 + GST दर)</div>
+
+<h2>5. हल किए गए उदाहरण — GST</h2>
+
+<div class="question">
+<div class="qtitle">उदाहरण 1 — ₹545 के LPG सिलेंडर पर 5% GST</div>
+<div class="answer">
+<div class="formula">CGST = 545 × 2.5/100 = ₹13.625 ≈ ₹13.63</div>
+<div class="formula">SGST = ₹13.63</div>
+<div class="formula">कुल भुगतान = 545 + 13.63 + 13.63 = <b>₹572.26</b></div>
+</div>
+</div>
+
+<div class="question">
+<div class="qtitle">उदाहरण 2 — ₹500 करपात्र मूल्य पर 18% GST</div>
+<div class="answer">
+<div class="formula">CGST = 9% of 500 = ₹45</div>
+<div class="formula">SGST = 9% of 500 = ₹45</div>
+<div class="formula">कुल GST = <b>₹90</b></div>
+</div>
+</div>
+
+<div class="question">
+<div class="qtitle">उदाहरण 3 — ₹50,000 लैपटॉप, 10% छूट, GST 18%</div>
+<div class="answer">
+<div class="formula">छूट = 50,000 × 10% = ₹5,000</div>
+<div class="formula">करपात्र मूल्य = 50,000 − 5,000 = ₹45,000</div>
+<div class="formula">CGST = 45,000 × 9% = ₹4,050</div>
+<div class="formula">SGST = ₹4,050</div>
+<div class="formula">कुल कीमत = 45,000 + 4,050 + 4,050 = <b>₹53,100</b></div>
+</div>
+</div>
+
+<h2>6. प्रश्नसंग्रह 4.1 — GST</h2>
+
+<div class="question"><div class="qtitle">प्रश्न 1</div>
+<p>GST दर 12% है। CGST तथा SGST की दर?</p>
+<div class="answer"><div class="formula">CGST = 12/2 = <b>6%</b>; SGST = <b>6%</b></div></div></div>
+
+<div class="question"><div class="qtitle">प्रश्न 2</div>
+<p>CGST की दर 9% हो तो SGST तथा GST?</p>
+<div class="answer"><div class="formula">SGST = <b>9%</b>; GST = 9% + 9% = <b>18%</b></div></div></div>
+
+<div class="question"><div class="qtitle">प्रश्न 3</div>
+<p>₹2800 करपात्र मूल्य के 2 पेंट डिब्बे, GST 28%.</p>
+<div class="answer">
+<div class="formula">कुल करपात्र मूल्य = 2 × 2800 = ₹5,600</div>
+<div class="formula">कुल GST = 5600 × 28% = ₹1,568</div>
+<div class="formula">CGST = ₹784; SGST = ₹784</div>
+</div></div>
+
+<div class="question"><div class="qtitle">प्रश्न 4</div>
+<p>घड़ी बेल्ट का करपात्र मूल्य ₹586 और GST 18%.</p>
+<div class="answer">
+<div class="formula">GST = 586 × 18% = ₹105.48</div>
+<div class="formula">CGST = SGST = ₹52.74</div>
+<div class="formula">ग्राहक का भुगतान = <b>₹691.48</b></div>
+</div></div>
+
+<div class="question"><div class="qtitle">प्रश्न 5</div>
+<p>GST सहित कुल कीमत ₹1770, GST 18%. CGST तथा SGST ज्ञात करें।</p>
+<div class="answer">
+<div class="formula">करपात्र मूल्य = 1770 × 100/118 = ₹1,500</div>
+<div class="formula">कुल GST = 1770 − 1500 = ₹270</div>
+<div class="formula">CGST = SGST = <b>₹135</b></div>
+</div></div>
+
+<div class="question"><div class="qtitle">प्रश्न 6</div>
+<p>GST सहित AC की कीमत ₹51,000 तथा CGST दर 14%.</p>
+<div class="answer">
+<div class="formula">SGST = <b>14%</b>; GST = <b>28%</b></div>
+<div class="formula">करपात्र मूल्य = 51,000 × 100/128 = ₹39,843.75</div>
+<div class="formula">कुल GST = ₹11,156.25</div>
+<div class="formula">CGST = SGST = ₹5,578.125 ≈ <b>₹5,578.13</b></div>
+</div></div>
+
+<div class="question"><div class="qtitle">प्रश्न 7</div>
+<p>₹40,000 की washing machine पर 5% छूट और 28% GST.</p>
+<div class="answer">
+<div class="formula">छूट = ₹2,000</div>
+<div class="formula">करपात्र मूल्य = ₹38,000</div>
+<div class="formula">GST = 38,000 × 28% = ₹10,640</div>
+<div class="formula">CGST = ₹5,320; SGST = ₹5,320</div>
+<div class="formula">कुल कीमत = <b>₹48,640</b></div>
+</div></div>
+
+<h2>7. व्यवसाय श्रृंखला, B2B, B2C और ITC</h2>
+
+<p>पुस्तक के उदाहरण में ₹200 → ₹300 → ₹400 की घड़ी बिक्री-श्रृंखला और 12%
+GST लिया गया है। अंतिम ग्राहक को ₹448 की कीमत मिलती है। प्रत्येक व्यापारी
+अपने Output Tax में से Input Tax Credit घटाकर शेष GST जमा करता है।</p>
+
+<div class="formula">देय GST = Output Tax − Input Tax Credit (ITC)</div>
+
+<table>
+<tr><th>व्यापारी</th><th>Output GST</th><th>ITC</th><th>देय GST</th></tr>
+<tr><td>उत्पादक</td><td>₹24</td><td>₹0</td><td>₹24</td></tr>
+<tr><td>थोक व्यापारी</td><td>₹36</td><td>₹24</td><td>₹12</td></tr>
+<tr><td>खुदरा व्यापारी</td><td>₹48</td><td>₹36</td><td>₹12</td></tr>
+<tr><td><b>कुल</b></td><td></td><td></td><td><b>₹48</b></td></tr>
+</table>
+
+<p><b>B2B:</b> Business to Business — दो GSTIN धारक व्यापारियों के बीच व्यवहार।</p>
+<p><b>B2C:</b> Business to Consumer — व्यवसाय से अंतिम ग्राहक तक का व्यवहार।</p>
+
+<h2>8. प्रश्नसंग्रह 4.2 — ITC</h2>
+
+<div class="question"><div class="qtitle">प्रश्न 1</div>
+<p>खरीदारी पर ₹1,00,500 GST और बिक्री पर ₹1,22,500 GST.</p>
+<div class="answer">
+<div class="formula">ITC = ₹1,00,500</div>
+<div class="formula">देय GST = 1,22,500 − 1,00,500 = <b>₹22,000</b></div>
+<div class="formula">CGST = SGST = <b>₹11,000</b></div>
+</div></div>
+
+<div class="question"><div class="qtitle">प्रश्न 2</div>
+<p>खरीदारी पर ₹12,500 GST तथा बिक्री पर ₹14,750 GST.</p>
+<div class="answer">
+<div class="formula">ITC = <b>₹12,500</b></div>
+<div class="formula">देय GST = 14,750 − 12,500 = <b>₹2,250</b></div>
+<div class="formula">CGST = SGST = <b>₹1,125</b></div>
+</div></div>
+
+<div class="question"><div class="qtitle">प्रश्न 3</div>
+<p>खरीदते समय GST ₹3,800 और बिक्री के समय GST ₹4,100.</p>
+<div class="answer">
+<div class="formula">ITC = ₹3,800</div>
+<div class="formula">देय GST = 4,100 − 3,800 = <b>₹300</b></div>
+<div class="formula">CGST = SGST = <b>₹150</b></div>
+</div></div>
+
+<div class="question"><div class="qtitle">प्रश्न 4</div>
+<p>Chandigarh में ₹24,500 की खरीद और ₹26,500 की बिक्री; GST 5%.</p>
+<div class="answer">
+<div class="formula">Input GST = 24,500 × 5% = ₹1,225</div>
+<div class="formula">Output GST = 26,500 × 5% = ₹1,325</div>
+<div class="formula">देय GST = ₹100</div>
+<div class="formula">CGST = UTGST = <b>₹50</b></div>
+</div></div>
+
+<div class="question"><div class="qtitle">प्रश्न 5</div>
+<p>₹6,000 पर 18% GST देकर खरीदा और ₹10,000 में बेचा।</p>
+<div class="answer">
+<div class="formula">ITC = 6000 × 18% = ₹1,080</div>
+<div class="formula">Output GST = 10000 × 18% = ₹1,800</div>
+<div class="formula">देय GST = 1800 − 1080 = ₹720</div>
+<div class="formula">CGST = SGST = <b>₹360</b></div>
+</div></div>
+
+<div class="question"><div class="qtitle">प्रश्न 6 — B2C Tax Invoice</div>
+<p>मोबाइल बैटरी ₹200, GST 12%; हेडफोन ₹750, GST 18%.</p>
+<table>
+<tr><th>वस्तु</th><th>करपात्र मूल्य</th><th>CGST</th><th>SGST</th><th>कुल</th></tr>
+<tr><td>मोबाइल बैटरी</td><td>₹200</td><td>₹12</td><td>₹12</td><td>₹224</td></tr>
+<tr><td>हेडफोन</td><td>₹750</td><td>₹67.50</td><td>₹67.50</td><td>₹885</td></tr>
+<tr><td><b>कुल</b></td><td><b>₹950</b></td><td><b>₹79.50</b></td><td><b>₹79.50</b></td><td><b>₹1,109</b></td></tr>
+</table></div>
+
+<div class="question"><div class="qtitle">प्रश्न 7 — B2B Tax Invoice</div>
+<p>100 pencil boxes × ₹20, GST 12%; 50 jigsaw puzzles × ₹100, GST 12%.</p>
+<div class="formula">Pencil boxes = ₹2,000; Jigsaw puzzles = ₹5,000</div>
+<div class="formula">करपात्र मूल्य = ₹7,000</div>
+<div class="formula">CGST = ₹420; SGST = ₹420</div>
+<div class="formula">Grand Total = <b>₹7,840</b></div>
+</div>
+
+<h2>9. IGST — Inter-State व्यवहार</h2>
+<p>पुस्तक के उदाहरण में महाराष्ट्र के व्यापारी M ने पंजाब से ₹20,000 के scooter
+parts खरीदे और 28% के अनुसार ₹5,600 IGST दिया। बाद में ₹25,000 में बेचने पर
+₹7,000 GST संकलित किया। पुस्तक में ITC को पहले IGST, फिर CGST और उसके बाद
+SGST के लिए उपयोग करने का उदाहरण दिया है। इस उदाहरण में CGST देय ₹0 और
+SGST देय <b>₹1,400</b> आता है।</p>
+
+<h2>10. Composition Scheme</h2>
+<p>पुस्तक में Composition Scheme का परिचय दिया गया है। इसमें ग्राहकों से अलग
+से GST संकलित नहीं किया जाता, Tax Invoice के स्थान पर Bill of Supply का उपयोग
+बताया गया है और ITC का लाभ नहीं मिलता। पुस्तक में दिए गए पाठ्यपुस्तक-समय के
+दर/सीमाएँ यथावत रखी गई हैं।</p>
+
+<h2>11. शेयर्स — मूल संकल्पना</h2>
+<p>कंपनी की कुल पूँजी के छोटे समान भागों को <b>Shares</b> कहा जाता है। Share
+खरीदने वाला व्यक्ति shareholder होता है।</p>
+
+<table>
+<tr><th>शब्द</th><th>अर्थ</th></tr>
+<tr><td>Face Value (FV)</td><td>शेयर सर्टिफिकेट पर छपा अंकित मूल्य</td></tr>
+<tr><td>Market Value (MV)</td><td>जिस मूल्य पर शेयर बाजार में खरीदा/बेचा जाता है</td></tr>
+<tr><td>Dividend</td><td>कंपनी के लाभ में से शेयरधारक को मिलने वाला हिस्सा</td></tr>
+</table>
+
+<h3>अंकित मूल्य और बाजार मूल्य</h3>
+<ul>
+<li>MV &gt; FV → शेयर <b>अधिमूल्य (Premium)</b> पर।</li>
+<li>MV = FV → शेयर <b>सममूल्य (At Par)</b> पर।</li>
+<li>MV &lt; FV → शेयर <b>अवमूल्य (Discount)</b> पर।</li>
+</ul>
+
+<div class="formula">Premium = MV − FV</div>
+<div class="formula">Discount = FV − MV</div>
+<div class="formula">कुल निवेश = Shares की संख्या × एक शेयर का MV</div>
+<div class="formula">प्राप्त Dividend = Shares × FV × Dividend% / 100</div>
+<div class="formula">Return Rate = कुल Dividend / कुल निवेश × 100</div>
+
+<h2>12. हल किए गए Share उदाहरण</h2>
+
+<div class="question"><div class="qtitle">उदाहरण — FV ₹100, MV ₹120, Dividend 15%</div>
+<div class="answer">
+<div class="formula">प्रति शेयर Dividend = ₹100 × 15% = ₹15</div>
+<div class="formula">Return Rate = 15/120 × 100 = <b>12.5%</b></div>
+</div></div>
+
+<div class="question"><div class="qtitle">उदाहरण — FV ₹100, Premium ₹65</div>
+<div class="answer"><div class="formula">MV = 100 + 65 = <b>₹165</b></div></div></div>
+
+<div class="question"><div class="qtitle">उदाहरण — तीन कंपनियों में निवेश</div>
+<div class="answer">
+<p>कंपनी A: 350 shares, FV ₹10, premium ₹7 → MV ₹17 → निवेश ₹5,950.</p>
+<p>कंपनी B: 2750 shares, MV ₹4 → निवेश ₹11,000.</p>
+<p>कंपनी C: 50 shares, MV ₹150 → निवेश ₹7,500.</p>
+<div class="formula">कुल निवेश = 5950 + 11000 + 7500 = <b>₹24,450</b></div>
+</div></div>
+
+<div class="question"><div class="qtitle">उदाहरण — ₹10 FV, MV ₹25, 50 shares, Dividend 30%</div>
+<div class="answer">
+<div class="formula">निवेश = 50 × 25 = ₹1,250</div>
+<div class="formula">Dividend/share = 10 × 30% = ₹3</div>
+<div class="formula">कुल Dividend = 50 × 3 = ₹150</div>
+<div class="formula">Return = 150/1250 × 100 = <b>12%</b></div>
+</div></div>
+
+<h2>13. प्रश्नसंग्रह 4.3 — Shares</h2>
+
+<div class="question"><div class="qtitle">प्रश्न 1 — तालिका</div>
+<table>
+<tr><th>FV</th><th>स्थिति</th><th>MV</th></tr>
+<tr><td>₹100</td><td>सममूल्य</td><td><b>₹100</b></td></tr>
+<tr><td><b>₹75</b></td><td>अधिमूल्य ₹500</td><td>₹575</td></tr>
+<tr><td>₹10</td><td><b>अवमूल्य</b></td><td>₹5</td></tr>
+</table></div>
+
+<div class="question"><div class="qtitle">प्रश्न 2 — Amol</div>
+<p>FV ₹100, MV ₹80, Dividend 20%.</p>
+<div class="answer">
+<div class="formula">Dividend/share = ₹100 × 20% = ₹20</div>
+<div class="formula">Return = 20/80 × 100 = <b>25%</b></div>
+</div></div>
+
+<div class="question"><div class="qtitle">प्रश्न 3 — Joseph का कुल निवेश</div>
+<div class="answer">
+<div class="formula">A: MV = 2 + 18 = ₹20; निवेश = 200 × 20 = ₹4,000</div>
+<div class="formula">B: निवेश = 45 × 500 = ₹22,500</div>
+<div class="formula">C: निवेश = ₹10,540</div>
+<div class="formula">कुल = 4000 + 22500 + 10540 = <b>₹37,040</b></div>
+</div></div>
+
+<div class="question"><div class="qtitle">प्रश्न 4 — Deshpande</div>
+<p>₹20,000 निवेश; FV ₹5; premium ₹20.</p>
+<div class="answer">
+<div class="formula">MV = 5 + 20 = ₹25</div>
+<div class="formula">Shares = 20,000/25 = <b>800 shares</b></div>
+</div></div>
+
+<div class="question"><div class="qtitle">प्रश्न 5 — Shantilal</div>
+<p>150 shares, FV ₹100, MV ₹120, Dividend 7%.</p>
+<div class="answer">
+<div class="formula">निवेश = 150 × 120 = ₹18,000</div>
+<div class="formula">Dividend/share = 100 × 7% = ₹7</div>
+<div class="formula">कुल Dividend = 150 × 7 = ₹1,050</div>
+<div class="formula">Return = 1050/18000 × 100 = <b>5.83%</b> (लगभग)</div>
+</div></div>
+
+<div class="question"><div class="qtitle">प्रश्न 6 — दो निवेशों की तुलना</div>
+<p>कंपनी A: MV ₹80, Dividend 16%; कंपनी B: MV ₹120, Dividend 20%; FV समान.</p>
+<div class="answer">
+<div class="formula">A का Return = 16/80 × 100 = <b>20%</b></div>
+<div class="formula">B का Return = 20/120 × 100 = <b>16.67%</b> (लगभग)</div>
+<p>पाठ्यपुस्तक के दिए हुए Return Rate के आधार पर दोनों की तुलना करने पर A का
+प्रतिफल दर 20% और B का 16.67% है।</p>
+</div></div>
+
+<h2>14. Brokerage और Brokerage पर GST</h2>
+<p>पुस्तक के अनुसार शेयर खरीदते/बेचते समय दलाल द्वारा बाजार मूल्य पर लिया गया
+अतिरिक्त शुल्क <b>दलाली (Brokerage)</b> है। पुस्तक के इस अध्याय में brokerage
+service पर GST दर <b>18%</b> ली गई है।</p>
+
+<div class="formula">खरीदते समय कुल मूल्य = MV + Brokerage</div>
+<div class="formula">बेचते समय प्राप्त मूल्य = MV − Brokerage</div>
+<div class="formula">Brokerage GST = Brokerage × 18%</div>
+
+<div class="question"><div class="qtitle">उदाहरण — 100 shares, MV ₹150, Brokerage 0.5%</div>
+<div class="answer">
+<div class="formula">Brokerage/share = 150 × 0.5% = ₹0.75</div>
+<div class="formula">खरीद मूल्य/share = 150 + 0.75 = ₹150.75</div>
+<div class="formula">100 shares खरीद = <b>₹15,075</b></div>
+<div class="formula">100 shares बिक्री = 100 × (150 − 0.75) = <b>₹14,925</b></div>
+</div></div>
+
+<div class="question"><div class="qtitle">उदाहरण — ₹40 MV, 100 shares, Brokerage 0.5%</div>
+<div class="answer">
+<div class="formula">Brokerage = ₹20</div>
+<div class="formula">Brokerage GST = 20 × 18% = ₹3.60</div>
+<div class="formula">कुल खर्च = 4000 + 20 + 3.60 = <b>₹4,023.60</b></div>
+</div></div>
+
+<div class="question"><div class="qtitle">उदाहरण — ₹1,25,295 निवेश</div>
+<div class="answer">
+<p>MV ₹125, brokerage 0.2%, brokerage GST 18%.</p>
+<div class="formula">Brokerage/share = ₹0.25</div>
+<div class="formula">GST/share = 0.25 × 18% = ₹0.045</div>
+<div class="formula">कुल/share = 125 + 0.25 + 0.045 = ₹125.295</div>
+<div class="formula">Shares = 1,25,295 / 125.295 = <b>1,000</b></div>
+<div class="formula">Brokerage = ₹250; GST = ₹45</div>
+</div></div>
+
+<h2>15. प्रश्नसंग्रह 4.4 — Brokerage / Shares</h2>
+
+<div class="question"><div class="qtitle">प्रश्न 1 — 100 shares, MV ₹200, खरीद brokerage 0.3%</div>
+<div class="answer"><div class="formula">Brokerage = ₹0.60/share</div><div class="formula">क्रय मूल्य/share = <b>₹200.60</b></div></div></div>
+
+<div class="question"><div class="qtitle">प्रश्न 2 — MV ₹1000, बिक्री brokerage 0.1%</div>
+<div class="answer"><div class="formula">Brokerage = ₹1</div><div class="formula">बिक्री के बाद प्राप्त = <b>₹999</b></div></div></div>
+
+<div class="question"><div class="qtitle">प्रश्न 3 — Share transaction table</div>
+<table>
+<tr><th>स्थिति</th><th>Shares</th><th>MV</th><th>Market Total</th><th>Brokerage 0.2%</th><th>CGST 9%</th><th>SGST 9%</th><th>Net/Total</th></tr>
+<tr><td>Buy (B)</td><td>100</td><td>₹45</td><td>₹4,500</td><td>₹9</td><td>₹0.81</td><td>₹0.81</td><td><b>₹4,510.62</b></td></tr>
+<tr><td>Sell (S)</td><td>75</td><td>₹200</td><td>₹15,000</td><td>₹30</td><td>₹2.70</td><td>₹2.70</td><td><b>₹14,964.60</b></td></tr>
+</table></div>
+
+<div class="question"><div class="qtitle">प्रश्न 4 — Desai</div>
+<p>FV ₹100, MV ₹50, बिक्री के बाद प्राप्त ₹4,988.20; brokerage 0.2%, brokerage GST 18%.</p>
+<div class="answer">
+<div class="formula">Net/share = 50 − 0.10 − 0.018 = ₹49.882</div>
+<div class="formula">Shares = 4,988.20 / 49.882 = <b>100 shares</b></div>
+</div></div>
+
+<div class="question"><div class="qtitle">प्रश्न 5 — D'Souza</div>
+<p>FV ₹50, 200 shares, ₹100 premium → MV ₹150; dividend 50%; फिर 100 shares ₹10 discount और 100 shares ₹75 premium पर बेचे। प्रत्येक व्यवहार में ₹20 brokerage.</p>
+<div class="answer">
+<div class="formula">खरीद कीमत = 200 × 150 = ₹30,000</div>
+<div class="formula">Dividend = 200 × 50 × 50% = ₹5,000</div>
+<div class="formula">पहली बिक्री = 100 × 40 = ₹4,000; net after brokerage = ₹3,980</div>
+<div class="formula">दूसरी बिक्री = 100 × 125 = ₹12,500; net after brokerage = ₹12,480</div>
+<div class="formula">खरीद brokerage = ₹20; कुल लागत = ₹30,020</div>
+<div class="formula">कुल प्राप्त = 5,000 + 3,980 + 12,480 = ₹21,460</div>
+<div class="formula">परिणाम = 21,460 − 30,020 = <b>₹8,560 की हानि</b></div>
+</div></div>
+
+<h2>16. Mutual Fund</h2>
+<p>पुस्तक के अनुसार Mutual Fund में अनेक निवेशकों की राशि एकत्र करके उसे
+विभिन्न प्रकार के निवेशों में लगाया जाता है। विविधीकरण के कारण जोखिम को
+विभिन्न निवेशों में बाँटने की अवधारणा समझाई गई है। निवेशकों को shares की जगह
+<b>units</b> मिलती हैं।</p>
+
+<h3>NAV</h3>
+<div class="formula">एक Unit का NAV × Units की संख्या = Mutual Fund का कुल निवेश मूल्य</div>
+<div class="formula">Units = निवेश राशि / प्रति Unit NAV</div>
+
+<div class="question"><div class="qtitle">NAV उदाहरण 1</div>
+<p>Fund का कुल मूल्य ₹200 करोड़ और कुल 8 करोड़ units.</p>
+<div class="answer"><div class="formula">NAV = 200 करोड़ / 8 करोड़ = <b>₹25 प्रति unit</b></div></div></div>
+
+<div class="question"><div class="qtitle">NAV उदाहरण 2</div>
+<p>₹10,000 निवेश और NAV ₹25.</p>
+<div class="answer"><div class="formula">Units = 10,000/25 = <b>400 units</b></div></div></div>
+
+<h2>17. SIP — Systematic Investment Plan</h2>
+<p>यदि एक साथ बड़ी राशि Mutual Fund में निवेश करना संभव न हो तो छोटी नियमित
+किस्तों में निवेश करने की योजना SIP है। पुस्तक में मासिक या त्रैमासिक निवेश,
+नियमित बचत की आदत और दीर्घ अवधि के निवेश की अवधारणा समझाई गई है।</p>
+
+<ul>
+<li>SIP = Systematic Investment Plan</li>
+<li>नियमित अंतराल पर निश्चित/निर्धारित राशि निवेश करने की अवधारणा।</li>
+<li>पुस्तक में Mutual Fund निवेश को market risk से जुड़ा बताया गया है।</li>
+</ul>
+
+<h2>18. प्रकीर्ण प्रश्नसंग्रह 4 A — GST</h2>
+
+<h3>MCQ — उत्तर</h3>
+<table>
+<tr><th>प्रश्न</th><th>सही विकल्प</th><th>कारण</th></tr>
+<tr><td>1. जीवनावश्यक वस्तुओं पर GST</td><td><b>(C) 0%</b></td><td>पुस्तक की तालिका में Nil rated.</td></tr>
+<tr><td>2. केंद्र का कर</td><td><b>(B) CGST</b></td><td>Central GST.</td></tr>
+<tr><td>3. GST लागू</td><td><b>(D) 1 जुलाई 2017</b></td><td>पुस्तक का उल्लेख.</td></tr>
+<tr><td>4. GST 18% में SGST</td><td><b>(B) 9%</b></td><td>18% का आधा.</td></tr>
+<tr><td>5. GSTIN</td><td><b>(A) 15</b></td><td>पुस्तक में 15 अंकों/अक्षरों का उदाहरण.</td></tr>
+<tr><td>6. Registered dealer to registered dealer</td><td><b>(B) B2B</b></td><td>Business to Business.</td></tr>
+</table>
+
+<div class="question"><div class="qtitle">प्रश्न 2 — ₹25,000, 10% discount, GST 28%</div>
+<div class="answer">
+<div class="formula">छूट = ₹2,500</div>
+<div class="formula">करपात्र मूल्य = ₹22,500</div>
+<div class="formula">GST = 22,500 × 28% = ₹6,300</div>
+<div class="formula">CGST = SGST = ₹3,150</div>
+<div class="formula">कुल बिल = <b>₹28,800</b></div>
+</div></div>
+
+<div class="question"><div class="qtitle">प्रश्न 3 — ₹1,000 dress, 5% discount, GST 5%</div>
+<div class="answer">
+<div class="formula">करपात्र मूल्य = 1000 − 50 = ₹950</div>
+<div class="formula">GST = ₹47.50</div>
+<div class="formula">कुल कीमत = <b>₹997.50</b></div>
+</div></div>
+
+<div class="question"><div class="qtitle">प्रश्न 4 — ₹2.5 लाख taxable value, GST 5%</div>
+<div class="answer"><div class="formula">GST = 2,50,000 × 5% = <b>₹12,500</b></div><div class="formula">CGST = SGST = ₹6,250</div></div></div>
+
+<div class="question"><div class="qtitle">प्रश्न 5 — ₹85,000 में खरीद, ₹90,000 में बिक्री, GST 5%</div>
+<div class="answer">
+<div class="formula">ITC = 85,000 × 5% = <b>₹4,250</b></div>
+<div class="formula">Output GST = 90,000 × 5% = ₹4,500</div>
+<div class="formula">देय GST = 4,500 − 4,250 = <b>₹250</b></div>
+<div class="formula">CGST = SGST = ₹125</div>
+</div></div>
+
+<div class="question"><div class="qtitle">प्रश्न 6 — Security service</div>
+<div class="answer">
+<div class="formula">Output GST = 64,500 × 18% = ₹11,610</div>
+<div class="formula">ITC = <b>₹1,550</b></div>
+<div class="formula">देय GST = 11,610 − 1,550 = <b>₹10,060</b></div>
+<div class="formula">CGST = SGST = <b>₹5,030</b></div>
+</div></div>
+
+<div class="question"><div class="qtitle">प्रश्न 7 — GST सहित ₹84,000 Walkie-Talkie set, GST 12%</div>
+<div class="answer">
+<div class="formula">करपात्र मूल्य = 84,000 × 100/112 = <b>₹75,000</b></div>
+<div class="formula">GST = ₹9,000</div>
+<div class="formula">CGST = SGST = <b>₹4,500</b></div>
+</div></div>
+
+<div class="question"><div class="qtitle">प्रश्न 8 — ₹1,50,000 → ₹1,80,000 → ₹2,20,000, GST 18%</div>
+<div class="answer">
+<table>
+<tr><th>व्यापारी</th><th>Output GST</th><th>ITC</th><th>देय GST</th><th>देय CGST</th><th>देय SGST</th></tr>
+<tr><td>थोक</td><td>₹32,400</td><td>₹27,000</td><td>₹5,400</td><td>₹2,700</td><td>₹2,700</td></tr>
+<tr><td>खुदरा</td><td>₹39,600</td><td>₹32,400</td><td>₹7,200</td><td>₹3,600</td><td>₹3,600</td></tr>
+</table>
+<p>थोक → खुदरा invoice पर CGST/SGST = ₹16,200 + ₹16,200; खुदरा → ग्राहक
+invoice पर CGST/SGST = ₹19,800 + ₹19,800.</p>
+</div></div>
+
+<div class="question"><div class="qtitle">प्रश्न 9 — Thane से Vasai, दोनों Maharashtra</div>
+<div class="answer">
+<div class="formula">पहली बिक्री: ₹14,000 × 28% = ₹3,920 GST; CGST = SGST = ₹1,960</div>
+<div class="formula">दूसरी बिक्री: ₹16,800 × 28% = ₹4,704 GST; CGST = SGST = ₹2,352</div>
+<div class="formula">Vasai व्यापारी का देय GST = 4,704 − 3,920 = ₹784</div>
+<div class="formula">देय CGST = SGST = <b>₹392</b></div>
+</div></div>
+
+<div class="question"><div class="qtitle">प्रश्न 10 — ₹5,000 → ₹6,000 → ₹6,500, GST 12%</div>
+<div class="answer">
+<table>
+<tr><th>स्तर</th><th>Taxable Value</th><th>Output GST</th><th>ITC</th><th>देय GST</th><th>CGST</th><th>SGST</th></tr>
+<tr><td>निर्माता</td><td>₹5,000</td><td>₹600</td><td>₹0</td><td>₹600</td><td>₹300</td><td>₹300</td></tr>
+<tr><td>वितरक</td><td>₹6,000</td><td>₹720</td><td>₹600</td><td>₹120</td><td>₹60</td><td>₹60</td></tr>
+<tr><td>रिटेलर</td><td>₹6,500</td><td>₹780</td><td>₹720</td><td>₹60</td><td>₹30</td><td>₹30</td></tr>
+</table>
+<div class="formula">ग्राहक का कुल भुगतान = 6,500 + 780 = <b>₹7,280</b></div>
+<p>Tax Invoice I और II = <b>B2B</b>; Tax Invoice III = <b>B2C</b>.</p>
+</div></div>
+
+<h2>19. प्रकीर्ण प्रश्नसंग्रह 4 B — Shares / Mutual Fund</h2>
+
+<h3>MCQ — उत्तर</h3>
+<table>
+<tr><th>प्रश्न</th><th>उत्तर</th><th>गणना</th></tr>
+<tr><td>1</td><td><b>(B)</b></td><td>FV ₹100, MV ₹75 ⇒ ₹25 discount.</td></tr>
+<tr><td>2</td><td><b>(B) ₹5</b></td><td>₹10 × 50% = ₹5.</td></tr>
+<tr><td>3</td><td><b>(A) ₹5,325</b></td><td>10.65 × 500.</td></tr>
+<tr><td>4</td><td><b>(C) 18%</b></td><td>पुस्तक में brokerage GST 18%.</td></tr>
+<tr><td>5</td><td><b>(B) घटाना</b></td><td>बिक्री पर brokerage और GST घटते हैं.</td></tr>
+</table>
+
+<div class="question"><div class="qtitle">प्रश्न 2 — FV ₹100, Premium ₹30, Brokerage 0.3%</div>
+<div class="answer">
+<div class="formula">MV = 100 + 30 = ₹130</div>
+<div class="formula">Brokerage = 130 × 0.3% = ₹0.39</div>
+<div class="formula">क्रय मूल्य/share = <b>₹130.39</b></div>
+</div></div>
+
+<div class="question"><div class="qtitle">प्रश्न 3 — Prashant</div>
+<p>FV ₹100, 50 shares, MV ₹180, Dividend 40%.</p>
+<div class="answer">
+<div class="formula">निवेश = 50 × 180 = ₹9,000</div>
+<div class="formula">Dividend = 50 × (100 × 40%) = ₹2,000</div>
+<div class="formula">Return Rate = 2,000/9,000 × 100 = <b>22.22%</b> (लगभग)</div>
+</div></div>
+
+<div class="question"><div class="qtitle">प्रश्न 4 — 300 shares, FV ₹100, Discount ₹30</div>
+<div class="answer">
+<div class="formula">MV = 100 − 30 = ₹70</div>
+<div class="formula">प्राप्त रकम = 300 × 70 = <b>₹21,000</b></div>
+</div></div>
+
+<div class="question"><div class="qtitle">प्रश्न 5 — ₹60,000 निवेश, MV ₹120</div>
+<div class="answer"><div class="formula">Shares = 60,000/120 = <b>500 shares</b></div></div></div>
+
+<div class="question"><div class="qtitle">प्रश्न 6 — Meeta Agarwal</div>
+<p>₹10,200 में ₹100 MV के shares खरीदे; 60 shares ₹125 पर और शेष ₹90 पर बेचे; प्रत्येक व्यवहार में brokerage 0.1%.</p>
+<div class="answer">
+<div class="formula">खरीदे shares = 10,200/100 = 102</div>
+<div class="formula">खरीद brokerage = ₹10.20; कुल लागत = ₹10,210.20</div>
+<div class="formula">पहली बिक्री = 60×125 = ₹7,500; net = ₹7,492.50</div>
+<div class="formula">दूसरी बिक्री = 42×90 = ₹3,780; net = ₹3,776.22</div>
+<div class="formula">कुल बिक्री से प्राप्त = ₹11,268.72</div>
+<div class="formula">लाभ = 11,268.72 − 10,210.20 = <b>₹1,058.52</b></div>
+</div></div>
+
+<div class="question"><div class="qtitle">प्रश्न 7 — दो कंपनियों का Return</div>
+<div class="answer">
+<div class="formula">Company A = 12/132 × 100 = <b>9.09%</b></div>
+<div class="formula">Company B = 16/144 × 100 = <b>11.11%</b></div>
+<p>दिए गए आंकड़ों पर Return Rate की तुलना के लिए यही गणना उपयोग करें।</p>
+</div></div>
+
+<div class="question"><div class="qtitle">प्रश्न 8 — Aditya Sanghvi</div>
+<p>₹50,118 निवेश, FV ₹100, MV ₹50, brokerage 0.2%, brokerage GST 18%.</p>
+<div class="answer">
+<div class="formula">Brokerage/share = ₹0.10</div>
+<div class="formula">GST/share = 0.10 × 18% = ₹0.018</div>
+<div class="formula">कुल लागत/share = 50 + 0.10 + 0.018 = ₹50.118</div>
+<div class="formula">Shares = 50,118 / 50.118 = <b>1,000 shares</b></div>
+</div></div>
+
+<div class="question"><div class="qtitle">प्रश्न 9 — Batliwala</div>
+<p>एक दिन ₹30,350 shares बेचे और ₹69,650 shares खरीदे; कुल कारोबार पर brokerage 0.1% और brokerage GST 18%.</p>
+<div class="answer">
+<div class="formula">कुल कारोबार = 30,350 + 69,650 = ₹1,00,000</div>
+<div class="formula">Brokerage = 1,00,000 × 0.1% = <b>₹100</b></div>
+<div class="formula">GST on brokerage = 100 × 18% = <b>₹18</b></div>
+<div class="formula">कुल brokerage-related खर्च = <b>₹118</b></div>
+</div></div>
+
+<div class="question"><div class="qtitle">प्रश्न 10 — Aruna Thakkar</div>
+<p>100 shares, MV ₹1,200, brokerage 0.3%, brokerage GST 18%.</p>
+<div class="answer">
+<div class="formula">कुल निवेश = 100 × 1,200 = <b>₹1,20,000</b></div>
+<div class="formula">Brokerage = 1,20,000 × 0.3% = <b>₹360</b></div>
+<div class="formula">GST = 360 × 18% = <b>₹64.80</b></div>
+<div class="formula">कुल खर्च = 1,20,000 + 360 + 64.80 = <b>₹1,20,424.80</b></div>
+</div></div>
+
+<div class="question"><div class="qtitle">प्रश्न 11 — Anagha Doshi</div>
+<p>FV ₹100, MV ₹660, 22 shares खरीदे; Dividend 20%; बाद में MV ₹650 पर बेचे; प्रत्येक व्यवहार में brokerage 0.1%.</p>
+<div class="answer">
+<div class="formula">खरीद कीमत = 22 × 660 = ₹14,520</div>
+<div class="formula">खरीद brokerage = ₹14.52 → कुल लागत = ₹14,534.52</div>
+<div class="formula">Dividend = 22 × 100 × 20% = ₹440</div>
+<div class="formula">बिक्री कीमत = 22 × 650 = ₹14,300</div>
+<div class="formula">बिक्री brokerage = ₹14.30 → net sale = ₹14,285.70</div>
+<div class="formula">कुल प्राप्त = 14,285.70 + 440 = ₹14,725.70</div>
+<div class="formula">लाभ = 14,725.70 − 14,534.52 = <b>₹191.18</b></div>
+<div class="formula">लाभ% = 191.18 / 14,534.52 × 100 ≈ <b>1.32%</b></div>
+</div></div>
+
+<h2>20. Quick Revision — सभी मुख्य सूत्र</h2>
+<table>
+<tr><th>विषय</th><th>सूत्र</th></tr>
+<tr><td>GST</td><td>करपात्र मूल्य × GST% / 100</td></tr>
+<tr><td>CGST/SGST</td><td>समान राज्य व्यवहार में पुस्तक के उदाहरणों के अनुसार GST/2</td></tr>
+<tr><td>GST सहित मूल्य से Taxable Value</td><td>Total × 100/(100+GST%)</td></tr>
+<tr><td>ITC</td><td>खरीद पर चुकाया गया Input Tax</td></tr>
+<tr><td>देय GST</td><td>Output Tax − ITC</td></tr>
+<tr><td>Premium</td><td>MV − FV</td></tr>
+<tr><td>Discount</td><td>FV − MV</td></tr>
+<tr><td>कुल निवेश</td><td>Shares × MV</td></tr>
+<tr><td>Dividend</td><td>Shares × FV × Dividend% / 100</td></tr>
+<tr><td>Return Rate</td><td>Dividend / Investment × 100</td></tr>
+<tr><td>Brokerage</td><td>Market Value × Brokerage% / 100</td></tr>
+<tr><td>Buy price</td><td>MV + Brokerage (+ brokerage GST, यदि पूछा हो)</td></tr>
+<tr><td>Sell proceeds</td><td>MV − Brokerage (− brokerage GST, यदि पूछा हो)</td></tr>
+<tr><td>Mutual Fund NAV</td><td>Total Fund Value / Units</td></tr>
+<tr><td>Units</td><td>Investment / NAV</td></tr>
+</table>
+
+<h2>21. परीक्षा के लिए महत्वपूर्ण बातें</h2>
+<ul>
+<li>GST सहित कीमत दी हो तो पहले Taxable Value निकालें।</li>
+<li>18% GST का अर्थ एक ही राज्य के पुस्तक-उदाहरण में CGST 9% + SGST 9% है।</li>
+<li>ITC वाले प्रश्न में हमेशा <b>Output Tax − Input Tax</b> करें।</li>
+<li>Share dividend हमेशा दिए गए <b>Face Value</b> पर निकालें, Market Value पर नहीं।</li>
+<li>Return Rate निकालते समय निवेश के रूप में Market Value आधारित कुल निवेश लें।</li>
+<li>Premium में MV > FV और Discount में MV < FV.</li>
+<li>खरीद में brokerage जोड़ें; बिक्री में brokerage घटाएँ।</li>
+<li>Brokerage पर GST पूछा हो तो brokerage पर ही GST लगाएँ।</li>
+<li>Mutual Fund में NAV से units = Investment/NAV.</li>
+<li>पुस्तक में दिए गए tax rates को परीक्षा के प्रश्न के अनुसार प्रयोग करें।</li>
+</ul>
+
+<div class="warning">
+<b>OCR/स्रोत नोट:</b> PDF के कुछ स्थानों पर OCR में गणितीय चिन्ह और देवनागरी
+अक्षर विकृत हैं। जहाँ प्रश्न/संख्या स्पष्ट थी, उसे मूल पृष्ठ के दृश्य और पाठ
+के आधार पर सामान्य गणितीय notation में प्रस्तुत किया गया है। पृष्ठ 31 के
+Tax Invoice III वाले चित्र में ₹5,000 → ₹6,000 → ₹6,500 taxable values स्पष्ट
+दिखती हैं; उसी आधार पर प्रश्न 10 का समाधान किया गया है।
+</div>
+
+<div class="footer">
+कक्षा 10 गणित — अध्याय 4: आर्थिक नियोजन<br>
+Prepared from the supplied C10HHganit1Ch04.pdf and chapter_4_solutions(3).html.
+</div>
+
+</div>
+</body>
+</html>

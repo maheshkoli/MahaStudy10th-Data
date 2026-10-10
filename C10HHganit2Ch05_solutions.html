@@ -1,0 +1,503 @@
+﻿<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>कक्षा 10 गणित भाग-II | अध्याय 5 - निर्देशांक भूमिति | संपूर्ण समाधान</title>
+<style>
+:root{
+  --primary:#17365d;--secondary:#244f7a;--accent:#b8860b;--bg:#f3f5f7;
+  --card:#fff;--text:#222;--muted:#666;--border:#dfe4ea;--soft:#eef4fa;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);font-family:"Noto Sans Devanagari","Nirmala UI",Arial,sans-serif;color:var(--text);line-height:1.75}
+.container{max-width:1100px;margin:25px auto;background:#fff;padding:28px 42px 55px;border-radius:14px;box-shadow:0 5px 25px rgba(0,0,0,.08)}
+h1{color:var(--primary);border-bottom:4px solid var(--accent);padding-bottom:12px;font-size:32px}
+h2{color:var(--secondary);margin-top:42px;border-bottom:2px solid var(--border);padding-bottom:8px}
+h3{color:#345f82;margin-top:28px}
+h4{color:#4b6680;margin-top:22px}
+p{margin:8px 0}
+ul,ol{padding-left:28px}
+li{margin:6px 0}
+.formula{background:#f7f9fb;border-left:4px solid var(--accent);padding:13px 17px;margin:14px 0;border-radius:6px;font-size:18px;text-align:center}
+.answer{background:#edf8ef;border-left:4px solid #3a8d4e;padding:12px 16px;margin:12px 0;border-radius:6px}
+.method{background:#eef4fa;border-left:4px solid var(--secondary);padding:12px 16px;margin:12px 0;border-radius:6px}
+.note{background:#fff8e8;border-left:4px solid #d19a00;padding:12px 16px;margin:14px 0;border-radius:6px}
+.warning{background:#fff0f0;border-left:4px solid #b33;padding:12px 16px;margin:14px 0;border-radius:6px}
+.q{border:1px solid var(--border);border-radius:10px;padding:16px 18px;margin:15px 0;background:#fff}
+.q strong{color:var(--secondary)}
+table{width:100%;border-collapse:collapse;margin:14px 0;background:#fff}
+th,td{border:1px solid #d8dde3;padding:9px 10px;text-align:left;vertical-align:top}
+th{background:#eef4fa;color:var(--primary)}
+.small{font-size:14px;color:var(--muted)}
+.tag{display:inline-block;background:#edf2f7;padding:3px 9px;border-radius:20px;margin:2px;font-size:13px}
+.quick{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.quick>div{background:#f7f9fb;border:1px solid var(--border);padding:14px;border-radius:9px}
+.toc{background:#f7f9fb;border:1px solid var(--border);padding:18px;border-radius:10px}
+.footer{margin-top:45px;border-top:1px solid var(--border);padding-top:20px;color:#777;font-size:13px}
+@media(max-width:700px){.container{margin:0;padding:20px 16px 40px;border-radius:0}h1{font-size:26px}h2{font-size:22px}.formula{font-size:16px}}
+</style>
+</head>
+<body>
+<div class="container">
+
+<h1>अध्याय 5 : निर्देशांक भूमिति</h1>
+<p><strong>कक्षा 10वीं गणित भाग-II</strong> — दूरी सूत्र, विभाजन सूत्र और रेखा का ढाल</p>
+
+<div class="toc">
+<strong>इस समाधान में शामिल है:</strong>
+<ul>
+<li>एक ही अक्ष पर तथा अक्षों के समांतर बिंदुओं के बीच दूरी</li>
+<li>दूरी सूत्र और उसके अनुप्रयोग</li>
+<li>एकरेखीय बिंदु, वर्ग, समकोण त्रिभुज और समान दूरी वाले बिंदु</li>
+<li>विभाजन सूत्र और मध्यबिंदु सूत्र</li>
+<li>केंद्रव (Centroid) सूत्र तथा बाह्य विभाजन की जानकारी</li>
+<li>रेखा का ढाल, क्षैतिज/ऊर्ध्वाधर रेखा और समांतर रेखाएँ</li>
+<li>पाठ्यपुस्तक के हल किए गए उदाहरण</li>
+<li>प्रश्नसंग्रह 5.1, 5.2, 5.3 के समाधान</li>
+<li>प्रकीर्ण प्रश्नसंग्रह 5 के सभी 22 प्रश्नों के समाधान</li>
+<li>Quick Revision, सामान्य गलतियाँ और परीक्षा उपयोगी विधियाँ</li>
+</ul>
+</div>
+
+<h2>1. अध्याय का अवलोकन</h2>
+<p>इस अध्याय में निर्देशांक तल पर बिंदुओं और रेखाखंडों का अध्ययन किया गया है। मुख्य रूप से तीन संकल्पनाएँ विकसित की गई हैं — <strong>दूरी सूत्र, विभाजन सूत्र और रेखा का ढाल</strong>।</p>
+
+<h2>2. मुख्य सूत्र</h2>
+<div class="quick">
+<div><strong>दूरी सूत्र</strong><div class="formula">AB = √[(x₂ − x₁)² + (y₂ − y₁)²]</div></div>
+<div><strong>विभाजन सूत्र</strong><div class="formula">P = ((mx₂ + nx₁)/(m+n), (my₂ + ny₁)/(m+n))</div></div>
+<div><strong>मध्यबिंदु सूत्र</strong><div class="formula">P = ((x₁+x₂)/2, (y₁+y₂)/2)</div></div>
+<div><strong>केंद्रव सूत्र</strong><div class="formula">G = ((x₁+x₂+x₃)/3, (y₁+y₂+y₃)/3)</div></div>
+<div><strong>ढाल</strong><div class="formula">m = (y₂ − y₁)/(x₂ − x₁)</div></div>
+<div><strong>कोण से ढाल</strong><div class="formula">m = tan θ</div></div>
+</div>
+
+<div class="note"><strong>विशेष:</strong> X-अक्ष या X-अक्ष के समांतर रेखा का ढाल 0 होता है। Y-अक्ष या Y-अक्ष के समांतर रेखा का ढाल परिभाषित नहीं होता।</div>
+
+<h2>3. दूरी सूत्र</h2>
+<h3>3.1 एक ही अक्ष पर दो बिंदु</h3>
+<p>X-अक्ष पर A(x₁,0), B(x₂,0) हों, तो दूरी |x₂−x₁| होगी। इसी प्रकार Y-अक्ष पर P(0,y₁), Q(0,y₂) हों, तो दूरी |y₂−y₁| होगी।</p>
+
+<h3>3.2 दूरी सूत्र की व्युत्पत्ति</h3>
+<p>A(x₁,y₁) और B(x₂,y₂) को जोड़ें। समकोण त्रिभुज बनाकर पायथागोरस प्रमेय से:</p>
+<div class="formula">AB² = (x₂−x₁)² + (y₂−y₁)²</div>
+<div class="formula">∴ AB = √[(x₂−x₁)² + (y₂−y₁)²]</div>
+
+<h3>3.3 मूल बिंदु से दूरी</h3>
+<div class="formula">यदि P(x,y) हो, तो OP = √(x²+y²)</div>
+
+<h2>4. पाठ्यपुस्तक के हल किए गए उदाहरण — दूरी सूत्र</h2>
+
+<div class="q"><strong>उदा. 1:</strong> P(−1,1), Q(5,−7) के बीच दूरी ज्ञात कीजिए।
+<div class="method">d = √[(5+1)²+(−7−1)²] = √(36+64) = √100 = 10.</div>
+<div class="answer">उत्तर: <strong>10 इकाई</strong></div></div>
+
+<div class="q"><strong>उदा. 2:</strong> सिद्ध कीजिए कि A(−3,2), B(1,−2), C(9,−10) एकरेखीय हैं।
+<div class="method">
+AB = √[(4)²+(−4)²] = 4√2<br>
+BC = √[(8)²+(−8)²] = 8√2<br>
+AC = √[(12)²+(−12)²] = 12√2<br>
+AB + BC = AC.
+</div>
+<div class="answer">अतः A, B, C <strong>एकरेखीय</strong> हैं।</div></div>
+
+<div class="q"><strong>उदा. 3:</strong> P(6,−6), Q(3,−7), R(3,3) एकरेखीय हैं या नहीं?
+<div class="method">
+PQ = √10, QR = 10, PR = √90.<br>
+√10 + √90 ≠ 10.
+</div>
+<div class="answer">अतः तीनों बिंदु <strong>एकरेखीय नहीं</strong> हैं।</div></div>
+
+<div class="q"><strong>उदा. 4:</strong> (1,7), (4,2), (−1,−1), (−4,4) वर्ग के शीर्ष हैं, सिद्ध कीजिए।
+<div class="method">
+AB² = BC² = CD² = DA² = 34 तथा AC² = BD² = 68.
+</div>
+<div class="answer">चारों भुजाएँ समान और दोनों विकर्ण समान हैं। अतः दिया गया चतुर्भुज <strong>वर्ग</strong> है।</div></div>
+
+<div class="q"><strong>उदा. 5:</strong> Y-अक्ष पर M(−5,−2), N(3,2) से समान दूरी वाला बिंदु।
+<div class="method">
+मान लें P(0,y). PM² = PN² से:
+25+(y+2)² = 9+(y−2)²<br>
+⇒ y = −2.
+</div>
+<div class="answer">उत्तर: <strong>P(0,−2)</strong></div></div>
+
+<div class="q"><strong>उदा. 6:</strong> A(−3,−4), B(−5,0), C(3,0) वाले त्रिभुज का परिकेंद्र।
+<div class="method">
+परिकेंद्र P(a,b) के लिए PA² = PB² = PC².<br>
+इनसे a−2b=0 तथा 3a+2b=−4 प्राप्त होते हैं।<br>
+⇒ a=−1, b=−1/2.
+</div>
+<div class="answer">उत्तर: <strong>(−1, −1/2)</strong></div></div>
+
+<div class="q"><strong>उदा. 7:</strong> यदि (x,y), (7,1) और (3,5) से समान दूरी पर है, सिद्ध कीजिए y=x−2.
+<div class="method">
+(x−7)²+(y−1)² = (x−3)²+(y−5)²<br>
+⇒ −8x+8y=−16 ⇒ x−y=2.
+</div>
+<div class="answer">अतः <strong>y = x−2</strong>.</div></div>
+
+<div class="q"><strong>उदा. 8:</strong> A(2,−2), B(−1,y) की दूरी 5 है।
+<div class="method">
+25 = (−3)²+(y+2)²<br>
+⇒ (y+2)²=16 ⇒ y+2=±4.
+</div>
+<div class="answer">उत्तर: <strong>y=2 या y=−6</strong>.</div></div>
+
+<h2>5. प्रश्नसंग्रह 5.1 — संपूर्ण समाधान</h2>
+
+<div class="q"><strong>प्र.1</strong> प्रत्येक जोड़ी के बीच दूरी:
+<table>
+<tr><th>प्रश्न</th><th>गणना</th><th>उत्तर</th></tr>
+<tr><td>(1) A(2,3), B(4,1)</td><td>√[(2)²+(−2)²]</td><td><strong>2√2</strong></td></tr>
+<tr><td>(2) P(−5,7), Q(−1,3)</td><td>√[4²+(−4)²]</td><td><strong>4√2</strong></td></tr>
+<tr><td>(3) R(0,−3), S(0,5/2)</td><td>|5/2+3|</td><td><strong>11/2</strong></td></tr>
+<tr><td>(4) L(5,−8), M(−7,−3)</td><td>√[12²+5²]</td><td><strong>13</strong></td></tr>
+<tr><td>(5) T(−3,6), R(9,−10)</td><td>√[12²+(−16)²]</td><td><strong>20</strong></td></tr>
+<tr><td>(6) W(−7/2,4), X(11,4)</td><td>|11+7/2|</td><td><strong>29/2</strong></td></tr>
+</table></div>
+
+<div class="q"><strong>प्र.2</strong> एकरेखीयता की जाँच:
+<table>
+<tr><th>बिंदु</th><th>दो ढाल</th><th>निष्कर्ष</th></tr>
+<tr><td>(1) A(1,−3), B(2,−5), C(−4,7)</td><td>−2, −2</td><td><strong>एकरेखीय</strong></td></tr>
+<tr><td>(2) L(−2,3), M(1,−3), N(5,4)</td><td>−2, 7/4</td><td><strong>एकरेखीय नहीं</strong></td></tr>
+<tr><td>(3) R(0,3), D(2,1), S(3,−1)</td><td>−1, −2</td><td><strong>एकरेखीय नहीं</strong></td></tr>
+<tr><td>(4) P(−2,3), Q(1,2), R(4,1)</td><td>−1/3, −1/3</td><td><strong>एकरेखीय</strong></td></tr>
+</table></div>
+
+<div class="q"><strong>प्र.3</strong> X-अक्ष पर A(−3,4), B(1,−4) से समान दूरी वाला बिंदु।
+<div class="method">मान लें P(x,0). PA²=PB² से x=−1.</div>
+<div class="answer">उत्तर: <strong>(−1,0)</strong></div></div>
+
+<div class="q"><strong>प्र.4</strong> P(−2,2), Q(2,2), R(2,7) समकोण त्रिभुज हैं या नहीं?
+<div class="method">PQ=4, QR=5, PR=√41. सबसे बड़ी भुजा का वर्ग 41 है, जबकि 4²+5²=41.</div>
+<div class="answer">अतः यह <strong>समकोण त्रिभुज</strong> है; समकोण Q पर है।</div></div>
+
+<div class="q"><strong>प्र.5</strong> P(2,−2), Q(7,3), R(11,−1), S(6,−6) समांतर चतुर्भुज हैं।
+<div class="method">PQ²=QR²? नहीं; उपयुक्त सम्मुख भुजाओं की जाँच: PQ²=50, RS²=50 तथा QR²=32, SP²=32. इसलिए सम्मुख भुजाएँ समान हैं।</div>
+<div class="answer">अतः PQRS <strong>समांतर चतुर्भुज</strong> है।</div></div>
+
+<div class="q"><strong>प्र.6</strong> A(−4,−7), B(−1,2), C(8,5), D(5,−4) समचतुर्भुज सिद्ध कीजिए।
+<div class="method">AB²=BC²=CD²=DA²=90.</div>
+<div class="answer">चारों भुजाएँ समान हैं, इसलिए ABCD <strong>समचतुर्भुज</strong> है।</div></div>
+
+<div class="q"><strong>प्र.7</strong> L(x,7), M(1,15) की दूरी 10।
+<div class="method">(x−1)²+(7−15)²=100 ⇒ (x−1)²=36.</div>
+<div class="answer">उत्तर: <strong>x=−5 या x=7</strong>.</div></div>
+
+<div class="q"><strong>प्र.8</strong> A(1,2), B(1,6), C(1+2√3,4) समबाहु त्रिभुज।
+<div class="method">AB²=16, BC²=16, CA²=16.</div>
+<div class="answer">तीनों भुजाएँ समान हैं, अतः यह <strong>समबाहु त्रिभुज</strong> है।</div></div>
+
+<h2>6. विभाजन सूत्र</h2>
+<p>यदि P(x,y), A(x₁,y₁) और B(x₂,y₂) को आंतरिक रूप से m:n में विभाजित करता है, तो:</p>
+<div class="formula">P = ((mx₂+nx₁)/(m+n), (my₂+ny₁)/(m+n))</div>
+<p>पाठ्यपुस्तक में तीन समांतर रेखाओं के अंत:खंडों के गुणधर्म से इस सूत्र की व्युत्पत्ति दी गई है।</p>
+
+<h3>मध्यबिंदु</h3>
+<div class="formula">M = ((x₁+x₂)/2, (y₁+y₂)/2)</div>
+
+<h3>केंद्रव</h3>
+<div class="formula">G = ((x₁+x₂+x₃)/3, (y₁+y₂+y₃)/3)</div>
+
+<h3>बाह्य विभाजन — अतिरिक्त उपयोगी जानकारी</h3>
+<p>पाठ्यपुस्तक बाह्य विभाजन की प्रक्रिया भी बताती है। यदि बाह्य विभाजन की आवश्यकता हो तो चिह्नों और अनुपात की स्थिति देखकर उपयुक्त बाह्य-विभाजन सूत्र का प्रयोग करना चाहिए।</p>
+
+<h2>7. प्रश्नसंग्रह 5.2 — संपूर्ण समाधान</h2>
+
+<div class="q"><strong>प्र.1</strong> A(−1,7), B(4,−3), अनुपात 2:3।
+<div class="answer">P = <strong>(1,3)</strong></div></div>
+
+<div class="q"><strong>प्र.2</strong> PQ को a:b में विभाजित करने वाले बिंदु:
+<table>
+<tr><th>उपप्रश्न</th><th>अनुपात</th><th>उत्तर</th></tr>
+<tr><td>(1) P(−3,7), Q(1,−4)</td><td>2:1</td><td><strong>(−1/3, −1/3)</strong></td></tr>
+<tr><td>(2) P(−2,−5), Q(4,3)</td><td>3:4</td><td><strong>(4/7, −11/7)</strong></td></tr>
+<tr><td>(3) P(2,6), Q(−4,1)</td><td>1:2</td><td><strong>(0, 13/3)</strong></td></tr>
+</table></div>
+
+<div class="q"><strong>प्र.3</strong> P(−3,10), T(−1,6), Q(6,−8) में P−T−Q है।
+<div class="method">विभाजन सूत्र में x-coordinate रखने पर m:n = 2:1 मिलता है।</div>
+<div class="answer">उत्तर: <strong>2:1</strong></div></div>
+
+<div class="q"><strong>प्र.4</strong> AB व्यास है, केंद्र P(−2,0), A(2,−3)।
+<div class="method">केंद्र midpoint है: B = 2P−A = (−6,3).</div>
+<div class="answer">उत्तर: <strong>B(−6,3)</strong></div></div>
+
+<div class="q"><strong>प्र.5</strong> A(8,9), B(1,2), P(k,7)।
+<div class="method">Section formula के y-coordinate से m:n = 2:5. फिर x-coordinate से k=6.</div>
+<div class="answer">उत्तर: <strong>अनुपात 2:5, k=6</strong></div></div>
+
+<div class="q"><strong>प्र.6</strong> (22,20), (0,16) का मध्यबिंदु।
+<div class="answer">उत्तर: <strong>(11,18)</strong></div></div>
+
+<div class="q"><strong>प्र.7</strong> केंद्रव:
+<table>
+<tr><th>त्रिभुज के शीर्ष</th><th>केंद्रव</th></tr>
+<tr><td>(−7,6), (2,−2), (8,5)</td><td><strong>(1,3)</strong></td></tr>
+<tr><td>(3,−5), (4,3), (11,−4)</td><td><strong>(6,−2)</strong></td></tr>
+<tr><td>(4,7), (8,4), (7,11)</td><td><strong>(19/3, 22/3)</strong></td></tr>
+</table></div>
+
+<div class="q"><strong>प्र.8</strong> A(−14,−19), B(3,5), G(−4,−7) केंद्रव है।
+<div class="method">C = 3G−A−B.</div>
+<div class="answer">उत्तर: <strong>C(−1,−7)</strong></div></div>
+
+<div class="q"><strong>प्र.9</strong> G(1,5), A(h,−6), B(2,3), C(−6,k)।
+<div class="method">((h+2−6)/3)=1 और ((−6+3+k)/3)=5.</div>
+<div class="answer">उत्तर: <strong>h=7, k=18</strong></div></div>
+
+<div class="q"><strong>प्र.10</strong> A(2,7), B(−4,−8) को तीन समान भागों में विभाजित करने वाले बिंदु।
+<div class="answer">उत्तर: <strong>(0,2) और (−2,−3)</strong></div></div>
+
+<div class="q"><strong>प्र.11</strong> A(−14,−10), B(6,−2) को चार समान भागों में विभाजित करने वाले बिंदु।
+<div class="answer">उत्तर: <strong>(−9,−8), (−4,−6), (1,−4)</strong></div></div>
+
+<div class="q"><strong>प्र.12</strong> A(20,10), B(0,20) को पाँच समान भागों में विभाजित करने वाले बिंदु।
+<div class="answer">उत्तर: <strong>(16,12), (12,14), (8,16), (4,18)</strong></div></div>
+
+<h2>8. रेखा का ढाल (Slope of a Line)</h2>
+<p>पाठ्यपुस्तक में ढाल को किसी रेखा के दो बिंदुओं के निर्देशांकों से प्राप्त स्थिर अनुपात के रूप में विकसित किया गया है:</p>
+<div class="formula">m = (y₂−y₁)/(x₂−x₁)</div>
+
+<table>
+<tr><th>रेखा</th><th>ढाल</th></tr>
+<tr><td>X-अक्ष या X-अक्ष के समांतर</td><td><strong>0</strong></td></tr>
+<tr><td>Y-अक्ष या Y-अक्ष के समांतर</td><td><strong>परिभाषित नहीं</strong></td></tr>
+<tr><td>धनात्मक दिशा में ऊपर जाती रेखा</td><td><strong>धनात्मक ढाल</strong></td></tr>
+<tr><td>धनात्मक दिशा में नीचे जाती रेखा</td><td><strong>ऋणात्मक ढाल</strong></td></tr>
+</table>
+
+<h3>पाठ्यपुस्तक के ढाल वाले उदाहरण</h3>
+<div class="q"><strong>उदा. 1:</strong> A(−3,5), B(4,−1)।
+<div class="formula">m = (−1−5)/(4+3) = −6/7</div>
+<div class="answer">उत्तर: <strong>−6/7</strong></div></div>
+
+<div class="q"><strong>उदा. 2:</strong> P(−2,3), Q(1,2), R(4,1) एकरेखीय।
+<div class="method">m(PQ)=−1/3 और m(QR)=−1/3.</div>
+<div class="answer">ढाल समान हैं, इसलिए P,Q,R <strong>एकरेखीय</strong> हैं।</div></div>
+
+<div class="q"><strong>उदा. 3:</strong> P(k,0), Q(−3,−2), ढाल 2/7।
+<div class="formula">−2/(−3−k)=2/7 ⇒ k=4</div>
+<div class="answer">उत्तर: <strong>k=4</strong></div></div>
+
+<div class="q"><strong>उदा. 4:</strong> A(6,1), B(8,2), C(9,4), D(7,3) समांतर चतुर्भुज।
+<div class="method">
+m(AB)=1/2, m(CD)=1/2 ⇒ AB ∥ CD.<br>
+m(BC)=2, m(DA)=2 ⇒ BC ∥ DA.
+</div>
+<div class="answer">अतः ABCD <strong>समांतर चतुर्भुज</strong> है।</div></div>
+
+<h2>9. प्रश्नसंग्रह 5.3 — संपूर्ण समाधान</h2>
+
+<div class="q"><strong>प्र.1</strong> कोण से ढाल:
+<table><tr><th>कोण</th><th>ढाल m=tanθ</th></tr>
+<tr><td>45°</td><td><strong>1</strong></td></tr>
+<tr><td>60°</td><td><strong>√3</strong></td></tr>
+<tr><td>90°</td><td><strong>परिभाषित नहीं</strong></td></tr>
+</table></div>
+
+<div class="q"><strong>प्र.2</strong> दिए गए बिंदुओं से जाने वाली रेखा का ढाल:
+<table>
+<tr><th>बिंदु</th><th>ढाल</th></tr>
+<tr><td>A(2,3), B(4,7)</td><td><strong>2</strong></td></tr>
+<tr><td>P(−3,1), Q(5,−2)</td><td><strong>−3/8</strong></td></tr>
+<tr><td>C(5,−2), D(7,3)</td><td><strong>5/2</strong></td></tr>
+<tr><td>L(−2,−3), M(−6,−8)</td><td><strong>5/4</strong></td></tr>
+<tr><td>E(−4,−2), F(6,3)</td><td><strong>1/2</strong></td></tr>
+<tr><td>T(0,−3), S(0,4)</td><td><strong>परिभाषित नहीं</strong></td></tr>
+</table></div>
+
+<div class="q"><strong>प्र.3</strong> एकरेखीयता:
+<table>
+<tr><th>सेट</th><th>ढाल</th><th>निष्कर्ष</th></tr>
+<tr><td>(1) A(−1,−1), B(0,1), C(1,3)</td><td>2,2</td><td><strong>एकरेखीय</strong></td></tr>
+<tr><td>(2) D(−2,−3), E(1,0), F(2,1)</td><td>1,1</td><td><strong>एकरेखीय</strong></td></tr>
+<tr><td>(3) L(2,5), M(3,3), N(5,1)</td><td>−2,−1</td><td><strong>नहीं</strong></td></tr>
+<tr><td>(4) P(2,−5), Q(1,−3), R(−2,3)</td><td>−2,−2</td><td><strong>एकरेखीय</strong></td></tr>
+<tr><td>(5) R(1,−4), S(−2,2), T(−3,4)</td><td>−2,−2</td><td><strong>एकरेखीय</strong></td></tr>
+<tr><td>(6) A(−4,4), K(−2,5), N(4,−2)</td><td>1/2,−7/6</td><td><strong>नहीं</strong></td></tr>
+</table></div>
+
+<div class="q"><strong>प्र.4</strong> A(1,−1), B(0,4), C(−5,3) की भुजाओं के ढाल:
+<div class="answer">m(AB)=<strong>−5</strong>, m(BC)=<strong>1/5</strong>, m(CA)=<strong>−2/3</strong>.</div></div>
+
+<div class="q"><strong>प्र.5</strong> A(−4,−7), B(−1,2), C(8,5), D(5,−4) समांतर चतुर्भुज।
+<div class="method">m(AB)=3, m(CD)=3 तथा m(BC)=1/3, m(DA)=1/3.</div>
+<div class="answer">सम्मुख भुजाओं के ढाल समान हैं, इसलिए <strong>ABCD समांतर चतुर्भुज</strong> है।</div></div>
+
+<div class="q"><strong>प्र.6</strong> R(1,−1), S(−2,k), ढाल −2।
+<div class="formula">(k+1)/(−3)=−2</div>
+<div class="answer">उत्तर: <strong>k=5</strong></div></div>
+
+<div class="q"><strong>प्र.7</strong> B(k,−5), C(1,2), ढाल 7।
+<div class="formula">7/(1−k)=7 ⇒ k=0</div>
+<div class="answer">उत्तर: <strong>k=0</strong></div></div>
+
+<div class="q"><strong>प्र.8</strong> P(2,4), Q(3,6), R(3,1), S(5,k), PQ ∥ RS।
+<div class="method">m(PQ)=2. इसलिए (k−1)/(5−3)=2 ⇒ k−1=4.</div>
+<div class="answer">उत्तर: <strong>k=5</strong></div></div>
+
+<h2>10. प्रकीर्ण प्रश्नसंग्रह 5 — संपूर्ण समाधान</h2>
+
+<div class="q"><strong>प्र.1 उचित विकल्प:</strong>
+<ol>
+<li>A(1,3) से Y-अक्ष के समांतर रेखा में B का x-coordinate 1 होगा। <strong>उत्तर: (D) (1,−3)</strong> पाठ्यपुस्तक के विकल्पों में यह दिया गया है, पर Y-अक्ष के समांतर होने की शर्त के अनुसार B का x-coordinate 1 होना आवश्यक है; विकल्प D में y=−3 है, जो केवल एक संभव बिंदु है।</li>
+<li>X-अक्ष की धन दिशा में स्थित विकल्प: <strong>(D) (2,0)</strong>.</li>
+<li>O से (−3,4) की दूरी = √(9+16)=5. <strong>उत्तर: (C) 5</strong>.</li>
+<li>θ=30°, m=tan30°=1/√3=√3/3. <strong>उत्तर: (D) √3/3</strong>.</li>
+</ol>
+<div class="warning"><strong>पाठ्यपुस्तक विकल्प संबंधी नोट:</strong> प्र.1(1) में दिए गए विकल्पों में (1,3) के लिए Y-अक्ष के समांतर रेखा का सही सामान्य रूप x=1 है। इसलिए B=(1,y) होना चाहिए। दिए विकल्पों में (1,−3) उपलब्ध है; अतः वही चयन किया गया है।</div>
+</div>
+
+<div class="q"><strong>प्र.2</strong> एकरेखीयता:
+<table>
+<tr><th>सेट</th><th>ढाल</th><th>निष्कर्ष</th></tr>
+<tr><td>(1) A(0,2), B(1,−0.5), C(2,−3)</td><td>−5/2, −5/2</td><td><strong>एकरेखीय</strong></td></tr>
+<tr><td>(2) P(1,2), Q(2,8/5), R(3,6/5)</td><td>−2/5, −2/5</td><td><strong>एकरेखीय</strong></td></tr>
+<tr><td>(3) L(1,2), M(5,3), N(8,6)</td><td>1/4, 1</td><td><strong>एकरेखीय नहीं</strong></td></tr>
+</table></div>
+
+<div class="q"><strong>प्र.3</strong> P(0,6), Q(12,20) का मध्यबिंदु।
+<div class="answer">M = <strong>(6,13)</strong></div></div>
+
+<div class="q"><strong>प्र.4</strong> A(3,8), B(−9,3) को जोड़ने वाले रेखाखंड को Y-अक्ष किस अनुपात में विभाजित करता है?
+<div class="method">x=0 रखने पर विभाजन अनुपात m:n = 1:3. y = 27/4.</div>
+<div class="answer">उत्तर: <strong>1:3</strong>, विभाजन बिंदु <strong>(0,27/4)</strong>.</div></div>
+
+<div class="q"><strong>प्र.5</strong> X-अक्ष पर P(2,−5), Q(−2,9) से समान दूरी वाला बिंदु।
+<div class="method">मान लें R(x,0). RP²=RQ² ⇒ x=−7.</div>
+<div class="answer">उत्तर: <strong>(−7,0)</strong></div></div>
+
+<div class="q"><strong>प्र.6</strong> दूरी:
+<table>
+<tr><th>युग्म</th><th>उत्तर</th></tr>
+<tr><td>A(a,0), B(0,a)</td><td><strong>√2 |a|</strong> (यदि a धनात्मक माना जाए तो √2a)</td></tr>
+<tr><td>P(−6,−3), Q(−1,9)</td><td><strong>13</strong></td></tr>
+<tr><td>R(−3a,a), S(a,−2a)</td><td><strong>5|a|</strong> (यदि a धनात्मक माना जाए तो 5a)</td></tr>
+</table></div>
+
+<div class="q"><strong>प्र.7</strong> A(−3,1), B(0,−2), C(1,3) का परिकेंद्र।
+<div class="method">मान लें O(a,b). OA²=OB² और OA²=OC² से समीकरण हल करने पर a=−1/3, b=2/3.</div>
+<div class="answer">उत्तर: <strong>(−1/3, 2/3)</strong></div></div>
+
+<div class="q"><strong>प्र.8</strong> त्रिभुज संभव है या नहीं तथा प्रकार:
+<table>
+<tr><th>सेट</th><th>भुजाओं की लंबाई</th><th>निष्कर्ष</th></tr>
+<tr><td>(1) L(6,4), M(−5,−3), N(−6,8)</td><td>√170, √122, 4√10</td><td><strong>त्रिभुज संभव; विषमबाहु</strong></td></tr>
+<tr><td>(2) P(−2,−6), Q(−4,−2), R(−5,0)</td><td>2√5, √5, 3√5</td><td><strong>त्रिभुज संभव; विषमबाहु</strong></td></tr>
+<tr><td>(3) A(2,2), B(−2,−2), C(−6,6)</td><td>4√2, 4√5, 4√5</td><td><strong>त्रिभुज संभव; समद्विबाहु</strong></td></tr>
+</table></div>
+
+<div class="q"><strong>प्र.9</strong> P(−12,−3), Q(4,k), रेखा का ढाल 1/2।
+<div class="formula">(k+3)/(16)=1/2 ⇒ k+3=8</div>
+<div class="answer">उत्तर: <strong>k=5</strong></div></div>
+
+<div class="q"><strong>प्र.10</strong> AB और CD समांतर सिद्ध कीजिए।
+<div class="method">m(AB)=(5−8)/(5−4)=−3; m(CD)=(7−4)/(1−2)=−3.</div>
+<div class="answer">ढाल समान हैं, अतः <strong>AB ∥ CD</strong>.</div></div>
+
+<div class="q"><strong>प्र.11</strong> P(1,−2), Q(5,2), R(3,−1), S(−1,−5) समांतर चतुर्भुज।
+<div class="method">PQ और RS के ढाल समान हैं तथा QR और SP के ढाल समान हैं; अतः दोनों सम्मुख भुजाएँ समांतर हैं।</div>
+<div class="answer">अतः PQRS <strong>समांतर चतुर्भुज</strong> है।</div></div>
+
+<div class="q"><strong>प्र.12</strong> P(2,1), Q(−1,3), R(−5,−3), S(−2,−5) आयत सिद्ध कीजिए।
+<div class="method">m(PQ)=−2/3, m(QR)=3/2, m(RS)=−2/3, m(SP)=3/2. साथ ही (−2/3)(3/2)=−1, इसलिए आसन्न भुजाएँ लंब हैं।</div>
+<div class="answer">सम्मुख भुजाएँ समांतर और आसन्न भुजाएँ लंब हैं; अतः <strong>PQRS आयत</strong> है।</div></div>
+
+<div class="q"><strong>प्र.13</strong> A(−1,1), B(5,−3), C(3,5) की माध्यिकाओं की लंबाई।
+<div class="method">
+A से BC का मध्यबिंदु (4,1) ⇒ median = <strong>5</strong>.<br>
+B से AC का मध्यबिंदु (1,3) ⇒ median = <strong>√52 = 2√13</strong>.<br>
+C से AB का मध्यबिंदु (2,−1) ⇒ median = <strong>√37</strong>.
+</div>
+<div class="answer">उत्तर: <strong>5, 2√13, √37</strong></div></div>
+
+<div class="q"><strong>प्र.14</strong> D(−7,6), E(8,5), F(2,−2) त्रिभुज की भुजाओं के मध्यबिंदु हैं। मूल त्रिभुज का केंद्रव।
+<div class="method">मध्यबिंदुओं से बना medial triangle और मूल त्रिभुज का केंद्रव समान होता है। अतः D,E,F का केंद्रव लें:
+G=((−7+8+2)/3,(6+5−2)/3).</div>
+<div class="answer">उत्तर: <strong>(1,3)</strong></div></div>
+
+<div class="q"><strong>प्र.15</strong> A(4,−1), B(6,0), C(7,−2), D(5,−3) वर्ग।
+<div class="method">AB²=BC²=CD²=DA²=5 तथा AC²=BD²=10.</div>
+<div class="answer">चारों भुजाएँ समान और विकर्ण समान ⇒ <strong>ABCD वर्ग</strong>.</div></div>
+
+<div class="q"><strong>प्र.16</strong> A(7,1), B(3,5), C(2,0) का परिकेंद्र।
+<div class="method">मान लें O(a,b). OA²=OB² और OA²=OC² हल करने पर a=25/6, b=13/6.</div>
+<div class="answer">उत्तर: <strong>(25/6, 13/6)</strong></div></div>
+
+<div class="q"><strong>प्र.17</strong> A(4,−3), B(8,5), अनुपात 3:1।
+<div class="answer">P = ((3×8+1×4)/4, (3×5+1×(−3))/4) = <strong>(7,3)</strong>.</div></div>
+
+<div class="q"><strong>प्र.18</strong> A(−4,−2), B(−3,−7), C(3,−2), D(2,3)।
+<div class="method">AB²=CD²=26 और BC²=DA²=61. सम्मुख भुजाएँ समान/समांतर हैं; आसन्न भुजाएँ समान नहीं हैं।</div>
+<div class="answer">ABCD एक <strong>समांतर चतुर्भुज</strong> है, विशेषतः यह न तो आयत है न समचतुर्भुज।</div></div>
+
+<div class="q"><strong>प्र.19</strong> A-P-Q-R-S-B पाँच सर्वांगसम भागों में; Q(12,14), S(4,18)।
+<div class="method">
+Q और S के बीच दो समान भाग हैं। इसलिए प्रत्येक भाग का vector = (S−Q)/2 = (−4,2).<br>
+A = Q−2d = (20,10), P = (16,12), R = (8,16), B = (0,20).
+</div>
+<div class="answer">उत्तर: <strong>A(20,10), P(16,12), R(8,16), B(0,20)</strong>.</div></div>
+
+<div class="q"><strong>प्र.20</strong> P(6,−6), Q(3,−7), R(3,3) से जाने वाले वृत्त का केंद्र।
+<div class="method">केंद्र O(a,b) के लिए OP²=OQ²=OR². समीकरण हल करने पर O=(3,−2).</div>
+<div class="answer">उत्तर: <strong>(3,−2)</strong></div></div>
+
+<div class="q"><strong>प्र.21</strong> समांतर चतुर्भुज के तीन शीर्ष A(5,6), B(1,−2), C(3,−2) दिए हैं।
+<div class="method">तीन संभावित चौथे शीर्ष:
+D=A+C−B, D=A+B−C, D=B+C−A.</div>
+<div class="answer">
+उत्तर: <strong>(7,6), (3,6), (−1,−10)</strong>.<br>
+तीन अलग-अलग उत्तर इसलिए मिलते हैं क्योंकि दिए गए तीन बिंदुओं में से कौन-सा शीर्ष किस क्रम में आता है, यह प्रश्न में निश्चित नहीं किया गया है।
+</div></div>
+
+<div class="q"><strong>प्र.22</strong> A(4,8), B(6,3), C(0,−3), D(−3,3) के विकर्णों के ढाल।
+<div class="method">
+m(AC)=(−3−8)/(0−4)=11/4.<br>
+m(BD)=(3−3)/(−3−6)=0.
+</div>
+<div class="answer">उत्तर: <strong>AC का ढाल = 11/4, BD का ढाल = 0</strong>.</div></div>
+
+<h2>11. अतिरिक्त परीक्षा-उपयोगी जानकारी</h2>
+<ul>
+<li><strong>एकरेखीयता:</strong> तीन बिंदुओं के लिए दो उपयुक्त रेखाओं के ढाल समान हों तो बिंदु एकरेखीय हैं।</li>
+<li><strong>समांतर रेखाएँ:</strong> दोनों रेखाओं के ढाल समान होते हैं, यदि दोनों ऊर्ध्वाधर न हों।</li>
+<li><strong>लंब रेखाएँ:</strong> गैर-ऊर्ध्वाधर रेखाओं के लिए m₁m₂=−1.</li>
+<li><strong>वर्ग की जाँच:</strong> चारों भुजाएँ समान और दोनों विकर्ण समान होना पर्याप्त उपयोगी कसौटी है।</li>
+<li><strong>आयत की जाँच:</strong> सम्मुख भुजाएँ समांतर तथा एक आसन्न कोण 90° होना उपयोगी है।</li>
+<li><strong>समचतुर्भुज:</strong> चारों भुजाएँ समान।</li>
+<li><strong>मध्यबिंदु:</strong> m=n=1 रखने पर विभाजन सूत्र मध्यबिंदु सूत्र बन जाता है।</li>
+<li><strong>केंद्रव:</strong> त्रिभुज की तीन माध्यिकाएँ एक बिंदु पर मिलती हैं और केंद्रव प्रत्येक माध्यिका को 2:1 में विभाजित करता है।</li>
+</ul>
+
+<h2>12. सामान्य गलतियाँ</h2>
+<ul>
+<li>दूरी सूत्र में x और y के अंतर को गलत क्रम में लिखना — वर्ग होने के कारण क्रम बदलने पर दूरी नहीं बदलती, लेकिन intermediate calculation में signs संभालना जरूरी है।</li>
+<li>विभाजन सूत्र में m और n को उल्टा लगाना।</li>
+<li>Y-अक्ष पर बिंदु का x-coordinate 0 भूल जाना।</li>
+<li>X-अक्ष पर बिंदु का y-coordinate 0 भूल जाना।</li>
+<li>ऊर्ध्वाधर रेखा का ढाल कोई संख्या मान लेना। उसका ढाल <strong>परिभाषित नहीं</strong> होता।</li>
+<li>समांतर रेखाओं की जाँच करते समय corresponding sides गलत चुनना।</li>
+<li>परिकेंद्र और केंद्रव को एक ही बिंदु समझना।</li>
+</ul>
+
+<h2>13. Quick Revision</h2>
+<table>
+<tr><th>संकल्पना</th><th>याद रखने वाला सूत्र/नियम</th></tr>
+<tr><td>दूरी</td><td>√[(x₂−x₁)²+(y₂−y₁)²]</td></tr>
+<tr><td>विभाजन</td><td>((mx₂+nx₁)/(m+n), (my₂+ny₁)/(m+n))</td></tr>
+<tr><td>मध्यबिंदु</td><td>((x₁+x₂)/2,(y₁+y₂)/2)</td></tr>
+<tr><td>केंद्रव</td><td>((x₁+x₂+x₃)/3,(y₁+y₂+y₃)/3)</td></tr>
+<tr><td>ढाल</td><td>(y₂−y₁)/(x₂−x₁)</td></tr>
+<tr><td>कोण से ढाल</td><td>tan θ</td></tr>
+<tr><td>समांतर रेखाएँ</td><td>ढाल समान</td></tr>
+<tr><td>ऊर्ध्वाधर रेखा</td><td>ढाल परिभाषित नहीं</td></tr>
+</table>
+ 
+
+</div>
+</body>
+</html>

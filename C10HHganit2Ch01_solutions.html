@@ -1,0 +1,432 @@
+﻿<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>कक्षा 10 गणित भाग-II | अध्याय 1 – समरूपता | संपूर्ण समाधान</title>
+<style>
+:root{
+  --primary:#7b2cbf;--secondary:#4a148c;--light:#f7f2fb;--border:#dfc9ef;
+  --text:#222;--muted:#666;--green:#e9f7ef;--yellow:#fff8df;--blue:#eef6ff;
+}
+*{box-sizing:border-box}
+body{margin:0;background:#f1f3f6;color:var(--text);
+ font-family:"Noto Sans Devanagari","Nirmala UI",Arial,sans-serif;line-height:1.75}
+.container{max-width:1100px;margin:24px auto;background:#fff;padding:32px 42px;
+ border-radius:16px;box-shadow:0 5px 25px rgba(0,0,0,.08)}
+h1{color:var(--secondary);border-bottom:3px solid var(--primary);padding-bottom:10px}
+h2{color:var(--secondary);margin-top:42px;border-left:6px solid var(--primary);
+ padding:8px 14px;background:var(--light);border-radius:6px}
+h3{color:#5b238d;margin-top:28px}
+h4{color:#333;margin-bottom:6px}
+p{margin:8px 0}
+li{margin:6px 0}
+.formula{background:#f8f8fa;border:1px solid #ddd;border-left:5px solid var(--primary);
+ padding:12px 16px;margin:12px 0;border-radius:7px;font-weight:600;overflow-x:auto}
+.answer{background:var(--green);border:1px solid #b8dfc8;padding:12px 16px;border-radius:8px;margin:10px 0}
+.note{background:var(--yellow);border:1px solid #ead58a;padding:12px 16px;border-radius:8px}
+.source{background:var(--blue);border:1px solid #c8def5;padding:12px 16px;border-radius:8px}
+table{width:100%;border-collapse:collapse;margin:14px 0}
+th,td{border:1px solid #ddd;padding:9px;vertical-align:top}
+th{background:var(--light);color:var(--secondary)}
+.badge{display:inline-block;background:var(--primary);color:#fff;padding:3px 9px;
+ border-radius:20px;font-size:.86em}
+details{border:1px solid #ddd;border-radius:8px;padding:9px 13px;margin:10px 0}
+summary{cursor:pointer;font-weight:700;color:var(--secondary)}
+.small{color:var(--muted);font-size:.92em}
+.footer{margin-top:45px;padding-top:18px;border-top:1px solid #ddd;color:#777;font-size:.9em}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:800px){.container{margin:0;padding:20px}.two{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="container">
+
+<h1>अध्याय 1 – समरूपता (Similarity)</h1>
+<div class="source">
+<strong>अभ्यास-आधार:</strong> दिलेल्या पाठ्यपुस्तकाच्या 29 पानांच्या अध्यायावर आधारित.
+ही आवृत्ती मूळ PDF मधील संकल्पना, प्रमेय, उदाहरणे आणि प्रश्नसंग्रह 1.1 ते 1.4 तसेच शेवटचा
+“प्रकीर्ण प्रश्नसंग्रह 1” एकत्र करते. अतिरिक्त “Quick Revision” आणि “Common Mistakes”
+हे स्वतंत्र अध्ययन-सहाय्य म्हणून दिले आहेत.
+</div>
+
+<h2>1. अध्यायाचा आराखडा</h2>
+<ul>
+<li>दोन त्रिभुजांच्या क्षेत्रफळांचा अनुपात</li>
+<li>समानुपाताचा मूलभूत प्रमेय (B.P.T.)</li>
+<li>समानुपाताच्या मूलभूत प्रमेयाचा विलोम</li>
+<li>त्रिभुजाच्या कोण समद्विभाजकाचा प्रमेय व त्याचा विलोम</li>
+<li>तीन समांतर रेषा व तिर्यक रेषेचा गुणधर्म</li>
+<li>त्रिभुजांची समरूपता व समरूपतेच्या कसोट्या – को-को (AA), को-को-को (AAA), भु-को-भु (SAS), भु-भु-भु (SSS)</li>
+<li>समरूप त्रिभुजांचे गुणधर्म</li>
+<li>समरूप त्रिभुजांच्या क्षेत्रफळांचा प्रमेय</li>
+</ul>
+
+<h2>2. दोन त्रिभुजांच्या क्षेत्रफळांचा अनुपात</h2>
+<p>त्रिभुजाचे क्षेत्रफळ = ½ × आधार × उंची.</p>
+<div class="formula">A(ΔABC) / A(ΔPQR) = (BC × AD) / (QR × PS)</div>
+<p>म्हणजे दोन त्रिभुजांच्या क्षेत्रफळांचा अनुपात त्यांच्या संगत आधार व संगत
+उंची यांच्या गुणाकारांच्या अनुपाताइतका असतो.</p>
+
+<h3>समान उंची</h3>
+<div class="formula">h₁ = h₂  ⇒  क्षेत्रफळांचा अनुपात = b₁ : b₂</div>
+<p><strong>गुणधर्म:</strong> समान उंची असलेल्या दोन त्रिभुजांच्या क्षेत्रफळांचा अनुपात
+त्यांच्या संगत आधारांच्या अनुपाताइतका असतो.</p>
+
+<h3>समान आधार</h3>
+<div class="formula">b₁ = b₂  ⇒  क्षेत्रफळांचा अनुपात = h₁ : h₂</div>
+<p><strong>गुणधर्म:</strong> समान आधार असलेल्या दोन त्रिभुजांच्या क्षेत्रफळांचा अनुपात
+त्यांच्या संगत उंचींच्या अनुपाताइतका असतो.</p>
+
+<h2>3. पाठ्यपुस्तकातील सुरुवातीची उदाहरणे</h2>
+<details open><summary>उदाहरण 1 – समान उंची/आधारावर क्षेत्रफळ</summary>
+<p>समान उंची किंवा समान आधार असल्यास वरील दोन गुणधर्म थेट वापरायचे.</p>
+<div class="answer">समान उंची → आधारांचे अनुपात. &nbsp; समान आधार → उंचींचे अनुपात.</div>
+</details>
+
+<details><summary>उदाहरण – AE = 4, DF = 6</summary>
+<p>समान आधार असलेल्या ΔABC व ΔDBC साठी उंची AE व DF आहेत.</p>
+<div class="formula">A(ΔABC) / A(ΔDBC) = AE / DF = 4/6 = 2/3</div>
+</details>
+
+<details><summary>उदाहरण – BC = 15, DC = 6</summary>
+<p>BD = 15 − 6 = 9. समान उंचीमुळे क्षेत्रफळे आधारांच्या प्रमाणात.</p>
+<div class="formula">
+A(ΔABD)/A(ΔABC) = 9/15 = 3/5<br>
+A(ΔABD)/A(ΔADC) = 9/6 = 3/2
+</div>
+</details>
+
+<details><summary>उदाहरण – समांतर चतुर्भुज ABCD मध्ये P हा BC वर</summary>
+<p>ΔABC व ΔBDC यांचा आधार BC समान आणि उंची समान असल्याने:</p>
+<div class="answer">A(ΔABC) = A(ΔBDC)</div>
+<p>तसेच ΔABC व ΔABD यांचा आधार AB समान आणि उंची समान असल्याने:</p>
+<div class="answer">A(ΔABC) = A(ΔABD)</div>
+</details>
+
+<details><summary>उदाहरण – AC = 16, DC = 9</summary>
+<p>AD = 16 − 9 = 7. सर्व त्रिभुजांची उंची समान असल्याने:</p>
+<div class="formula">
+A(ΔABD)/A(ΔABC) = 7/16<br>
+A(ΔBDC)/A(ΔABC) = 9/16<br>
+A(ΔABD)/A(ΔBDC) = 7/9
+</div>
+</details>
+
+<h2>4. समानुपाताचा मूलभूत प्रमेय (B.P.T.)</h2>
+<p><strong>प्रमेय:</strong> त्रिभुजाच्या एका भुजेला समांतर काढलेली रेषा इतर दोन भुजांना
+छेदत असेल, तर ती त्या दोन भुजांना समान अनुपातात विभाजित करते.</p>
+<div class="formula">ΔABC मध्ये PQ ∥ BC ⇒ AP/PB = AQ/QC</div>
+<p>पाठ्यपुस्तकातील उपपत्तीत समान उंचीच्या त्रिभुजांचे क्षेत्रफळ-अनुपात आणि
+समान आधाराच्या त्रिभुजांचे समान क्षेत्रफळ यांचा उपयोग केला आहे.</p>
+
+<h2>5. B.P.T. चा विलोम</h2>
+<p>जर एखादी रेषा त्रिभुजाच्या दोन भुजांना समान अनुपातात विभाजित करत असेल,
+तर ती रेषा तिसऱ्या भुजेला समांतर असते.</p>
+<div class="formula">AP/PB = AQ/QC ⇒ PQ ∥ BC</div>
+
+<h2>6. त्रिभुजाच्या कोण समद्विभाजकाचा प्रमेय</h2>
+<p>त्रिभुजातील कोणाचा समद्विभाजक समोरच्या भुजेला उर्वरित दोन भुजांच्या
+लांबीच्या अनुपातात विभाजित करतो.</p>
+<div class="formula">BD हे ∠ABC चे समद्विभाजक ⇒ AB/BC = AD/DC</div>
+
+<h3>कोण समद्विभाजक प्रमेयाचा विलोम</h3>
+<div class="formula">AB/AC = BD/DC ⇒ AD हे ∠BAC चे समद्विभाजक</div>
+
+<h2>7. तीन समांतर रेषा व तिर्यक रेषेचा गुणधर्म</h2>
+<p>तीन समांतर रेषांवर एका तिर्यक रेषेने तयार केलेल्या अंतःखंडांचा अनुपात
+दुसऱ्या तिर्यक रेषेवरील संबंधित अंतःखंडांच्या अनुपाताइतका असतो.</p>
+<div class="formula">l ∥ m ∥ n ⇒ AB/BC = PQ/QR</div>
+
+<h2>8. अध्यायातील महत्त्वाचे गुणधर्म</h2>
+<table>
+<tr><th>संकल्पना</th><th>लक्षात ठेवण्याचे सूत्र</th></tr>
+<tr><td>B.P.T.</td><td>PQ ∥ BC ⇒ AP/PB = AQ/QC</td></tr>
+<tr><td>B.P.T. विलोम</td><td>AP/PB = AQ/QC ⇒ PQ ∥ BC</td></tr>
+<tr><td>कोण समद्विभाजक</td><td>AB/BC = AD/DC</td></tr>
+<tr><td>कोण समद्विभाजक विलोम</td><td>AB/AC = BD/DC ⇒ AD समद्विभाजक</td></tr>
+<tr><td>तीन समांतर रेषा</td><td>AB/BC = XY/YZ</td></tr>
+<tr><td>समरूप त्रिभुज</td><td>संगत कोण समान; संगत भुजा समानुपाती</td></tr>
+<tr><td>समरूप क्षेत्रफळ</td><td>क्षेत्रफळांचा अनुपात = संगत भुजांच्या वर्गांचा अनुपात</td></tr>
+</table>
+
+<h2>9. समरूप त्रिभुज</h2>
+<p>दोन त्रिभुजांमध्ये संगत कोण सर्वांगसम आणि संगत भुजा समानुपाती असतील,
+तर ते त्रिभुज समरूप असतात. समरूपता: ΔABC ~ ΔDEF.</p>
+
+<h3>समरूपतेच्या कसोट्या</h3>
+<ol>
+<li><strong>AA / को-को कसोटी:</strong> दोन संगत कोण समान असतील.</li>
+<li><strong>AAA / को-को-को:</strong> तीनही संगत कोण समान असतील.</li>
+<li><strong>SAS / भु-को-भु:</strong> दोन संगत भुजा समानुपाती आणि त्यांतील समाविष्ट कोण समान.</li>
+<li><strong>SSS / भु-भु-भु:</strong> तीनही संगत भुजा समानुपाती.</li>
+</ol>
+
+<h3>समरूपतेचे गुणधर्म</h3>
+<ul>
+<li>परावर्तकता: ΔABC ~ ΔABC</li>
+<li>सममिती: ΔABC ~ ΔDEF ⇒ ΔDEF ~ ΔABC</li>
+<li>संक्रामकता: ΔABC ~ ΔDEF आणि ΔDEF ~ ΔGHI ⇒ ΔABC ~ ΔGHI</li>
+</ul>
+
+<h2>10. समरूप त्रिभुजांच्या क्षेत्रफळांचा प्रमेय</h2>
+<p>दोन समरूप त्रिभुजांच्या क्षेत्रफळांचा अनुपात त्यांच्या संगत भुजांच्या
+वर्गांच्या अनुपाताइतका असतो.</p>
+<div class="formula">
+ΔABC ~ ΔPQR ⇒ A(ΔABC)/A(ΔPQR)
+= AB²/PQ² = BC²/QR² = AC²/PR²
+</div>
+
+<h2>11. पाठ्यपुस्तकातील क्षेत्रफळ प्रमेयाची उदाहरणे</h2>
+<details open><summary>उदाहरण 1 – क्षेत्रफळे 16 व 25</summary>
+<div class="formula">16/25 = AB²/PQ² ⇒ AB/PQ = 4/5</div>
+</details>
+<details><summary>उदाहरण 2 – भुजा अनुपात 2:5, छोटे क्षेत्रफळ 64</summary>
+<div class="formula">क्षेत्रफळ अनुपात = 2²:5² = 4:25</div>
+<p>64 / मोठे क्षेत्रफळ = 4/25.</p>
+<div class="answer"><strong>मोठ्या त्रिभुजाचे क्षेत्रफळ = 400 चौ.सेमी.</strong></div>
+</details>
+<details><summary>उदाहरण 3 – समलंब चतुर्भुजातील क्षेत्रफळ अनुपात</summary>
+<p>AB ∥ CD आणि विकर्ण P येथे छेदतात. AA कसोटीने ΔAPB ~ ΔCPD.</p>
+<div class="answer">A(ΔAPB)/A(ΔCPD) = AB²/CD²</div>
+</details>
+
+<h2>12. प्रश्नसंग्रह 1.1 – उत्तरे</h2>
+<ol>
+<li><strong>आधार 9, उंची 5; आधार 10, उंची 6:</strong>
+<div class="answer">क्षेत्रफळ अनुपात = (9×5):(10×6) = <strong>3:4</strong>.</div></li>
+<li><strong>BC ⟂ AB, AD ⟂ AB, BC=4, AD=8:</strong>
+<div class="answer">समान आधार AB असल्याने अनुपात = 4:8 = <strong>1:2</strong>.</div></li>
+<li><strong>RQ=6, PS=6, PR=12:</strong>
+<p>एकाच त्रिभुजाचे क्षेत्रफळ दोन प्रकारे:</p>
+<div class="formula">½×RQ×PS = ½×PR×QT</div>
+<div class="answer">QT = <strong>3</strong>.</div></li>
+<li><strong>AP ⟂ BC, AD ∥ BC:</strong>
+<div class="answer">ΔABC आणि ΔBCD यांचा आधार BC समान व उंची समान ⇒ <strong>A(ΔABC):A(ΔBCD)=1:1</strong>.</div></li>
+<li><strong>PQ ⟂ BC, AD ⟂ BC:</strong>
+<table>
+<tr><th>अनुपात</th><th>उत्तर</th></tr>
+<tr><td>(i) A(ΔPQB)/A(ΔPBC)</td><td>QB/BC</td></tr>
+<tr><td>(ii) A(ΔPBC)/A(ΔABC)</td><td>PQ/AD</td></tr>
+<tr><td>(iii) A(ΔABC)/A(ΔADC)</td><td>BC/DC</td></tr>
+<tr><td>(iv) A(ΔADC)/A(ΔPQC)</td><td>(AD×DC)/(PQ×QC)</td></tr>
+</table></li>
+</ol>
+
+<h2>13. प्रश्नसंग्रह 1.2 – उत्तरे</h2>
+<ol>
+<li><strong>कोण समद्विभाजक ओळखा:</strong>
+<div class="answer">आकृती <strong>(1) आणि (3)</strong> मध्ये दिलेले अनुपात समान आहेत, म्हणून PM समद्विभाजक आहे.</div>
+<p class="small">आकृती (1): 3.5/1.5 = 7/3 = PQ/PR. आकृती (3): 4/3.6 = 10/9 = RP/PO.</p></li>
+<li><strong>PM=15, PQ=25, PR=20, NR=8:</strong>
+<p>PN = PR − NR = 12.</p>
+<div class="formula">PN/PR = 12/20 = 3/5 आणि PM/PQ = 15/25 = 3/5</div>
+<div class="answer">म्हणून <strong>NM ∥ RQ</strong> (B.P.T. विलोम).</div></li>
+<li><strong>MN=5, PN=7, MQ=2.5:</strong>
+<div class="formula">MQ/QP = MN/NP = 5/7</div>
+<div class="answer"><strong>QP = 3.5</strong>.</div></li>
+<li><strong>आकृती 1.38:</strong> 60° आणि 60° मुळे PQ ∥ BC. B.P.T. नुसार:
+<div class="answer">AP/PB = <strong>AQ/QC</strong>.</div></li>
+<li><strong>AP=15, PD=12, QC=14:</strong>
+<div class="formula">AP/PD = BQ/QC ⇒ 15/12 = BQ/14</div>
+<div class="answer"><strong>BQ = 17.5</strong>.</div></li>
+<li><strong>MN=25, NP=40, MQ=14:</strong>
+<div class="formula">MQ/QP = MN/NP = 25/40</div>
+<div class="answer"><strong>QP = 22.4</strong>.</div></li>
+<li><strong>AB ∥ CD ∥ FE, BD=8, DF=4, AC=12:</strong>
+<div class="formula">BD/DF = AC/CE ⇒ 8/4 = 12/x</div>
+<div class="answer"><strong>x = 6; AE = 12+6 = 18</strong>.</div></li>
+<li><strong>LM=6, MN=10, TN=8:</strong>
+<div class="formula">LT/TN = LM/MN = 6/10</div>
+<div class="answer"><strong>LT = 4.8</strong>.</div></li>
+<li><strong>AB=x, BC=x+5, AD=x−2, DC=x+2:</strong>
+<div class="formula">x/(x+5) = (x−2)/(x+2)</div>
+<div class="answer"><strong>x = 10</strong>.</div></li>
+<li><strong>PR ∥ DF सिद्ध करा:</strong>
+<p>ΔXDE मध्ये PQ ∥ DE ⇒ XP/PD = XQ/QE.</p>
+<p>ΔXEF मध्ये QR ∥ EF ⇒ XQ/QE = XR/RF.</p>
+<div class="formula">XP/PD = XR/RF</div>
+<div class="answer">B.P.T. विलोम ⇒ <strong>PR ∥ DF</strong>.</div></li>
+<li><strong>AB=AC, B व C चे कोण समद्विभाजक:</strong>
+<p>AD/DC = AB/BC आणि AE/EB = AC/CB. AB=AC म्हणून AD/DC = AE/EB.</p>
+<div class="answer">B.P.T. विलोम ⇒ <strong>DE ∥ BC</strong>.</div></li>
+</ol>
+
+<h2>14. प्रश्नसंग्रह 1.3 – उत्तरे</h2>
+<ol>
+<li><strong>∠ABC=75°, ∠EDC=75°:</strong>
+<div class="answer">ΔABC ~ ΔEDC, <strong>AA/को-को कसोटी</strong>. संगती: A↔E, B↔D, C↔C.</div></li>
+<li><strong>आकृती 1.56:</strong>
+<p>भुजा 6,8,10 आणि 3,4,5 या प्रमाणात आहेत.</p>
+<div class="answer">त्रिभुज <strong>SSS कसोटीनुसार समरूप</strong> आहेत; प्रमाण 2:1.</div></li>
+<li><strong>खांब 8m व 4m; छोट्या खांबाची सावली 6m:</strong>
+<div class="formula">4/6 = 8/x</div>
+<div class="answer"><strong>मोठ्या खांबाची सावली = 12m</strong>.</div></li>
+<li><strong>AP=7, BQ=8, BC=12:</strong>
+<p>ΔCPA ~ ΔCQB (AA). त्यामुळे AC/BC = AP/BQ.</p>
+<div class="formula">AC/12 = 7/8</div>
+<div class="answer"><strong>AC = 10.5</strong>.</div></li>
+<li><strong>PQ ∥ SR, AR=5AP, AS=5AQ:</strong>
+<p>ΔAPQ ~ ΔASR. संगत भुजांचे प्रमाण 1:5.</p>
+<div class="answer"><strong>SR = 5PQ</strong>.</div></li>
+<li><strong>AB=20, DC=6, OB=15:</strong>
+<div class="formula">AB/DC = OB/OD ⇒ 20/6 = 15/OD</div>
+<div class="answer"><strong>OD = 4.5</strong>.</div></li>
+<li><strong>समांतर चतुर्भुज ABCD:</strong>
+<p>ΔTEB आणि ΔDEC मध्ये AA समानता (TB ∥ DC; EB व EC एकाच रेषेवर; TE व DE एकाच रेषेवर).</p>
+<div class="formula">TE/DE = BE/CE</div>
+<div class="answer">म्हणून <strong>DE × BE = CE × TE</strong>.</div></li>
+<li><strong>AP/CP = BP/DP:</strong>
+<p>∠APB = ∠CPD (शीर्षाभिमुख). दिलेल्या भुजांच्या प्रमाणामुळे SAS कसोटी लागू.</p>
+<div class="answer"><strong>ΔABP ~ ΔCDP</strong>.</div></li>
+<li><strong>∠BAC = ∠ADC:</strong>
+<p>D हा BC वर आहे, म्हणून ∠BCA = ∠ACD. त्यामुळे ΔABC ~ ΔADC.</p>
+<div class="formula">CB/CA = CA/CD</div>
+<div class="answer"><strong>CA² = CB × CD</strong>.</div></li>
+</ol>
+
+<h2>15. प्रश्नसंग्रह 1.4 – समरूप त्रिभुजांचे क्षेत्रफळ</h2>
+<ol>
+<li>भुजांचे प्रमाण 3:5 ⇒ <div class="answer">क्षेत्रफळांचे प्रमाण = <strong>9:25</strong>.</div></li>
+<li>AB:PQ=2:3 ⇒ <div class="answer">A(ΔABC):A(ΔPQR)=<strong>4:9</strong>.</div></li>
+<li>क्षेत्रफळे 80 व 125 ⇒ 80/125=16/25.
+<div class="answer"><strong>AB/PQ = 4/5</strong>.</div></li>
+<li>9A(PQR)=16A(LMN) ⇒ A(LMN)/A(PQR)=9/16.
+भुजा अनुपात MN/QR=3/4. QR=20.
+<div class="answer"><strong>MN = 15</strong>.</div></li>
+<li>क्षेत्रफळे 225 व 81 ⇒ भुजा अनुपात √(225/81)=5/3.
+छोटी भुजा 12 असल्यास:
+<div class="answer"><strong>मोठी संगत भुजा = 20 cm</strong>.</div></li>
+<li>क्षेत्रफळ अनुपात 4:7 ⇒ भुजा अनुपात 2:√7.
+AB=4:
+<div class="answer"><strong>DE = 2√7</strong>.</div></li>
+<li>PF=2DP आणि A(ΔPQF)=20:
+<p>DP=x, PF=2x, DF=3x. ΔFDE ~ ΔFPQ.</p>
+<div class="formula">A(FDE)/A(FPQ)=9/4</div>
+<div class="answer">A(FDE)=45; म्हणून A(DPQE)=45−20=<strong>25 चौ.एकक</strong>.</div></li>
+</ol>
+
+<h2>16. प्रकीर्ण प्रश्नसंग्रह 1 – बहुपर्यायी प्रश्न</h2>
+<ol>
+<li><strong>दिलेल्या भुजांच्या अनुपातावर:</strong> ΔPQR ~ ΔCAB हा पर्याय योग्य.
+<div class="answer"><strong>उत्तर: (B)</strong></div></li>
+<li><strong>∠D=∠Q, ∠R=∠E:</strong>
+<p>दिलेल्या मजकुरानुसार अनेक पर्याय परस्पर equivalent ratios देतात. त्यामुळे प्रश्नाच्या मुद्रित पर्यायांमध्ये
+एकापेक्षा अधिक समतुल्य विधान दिसते. योग्य संगती D↔Q, E↔R, F↔P अशी घ्यावी.</p>
+<div class="answer">संगतीनुसार: EF/PR = DF/PQ = DE/QR.</div></li>
+<li><strong>दोन कोण समान आणि AB=3DE:</strong>
+<div class="answer"><strong>उत्तर: (B) – त्रिभुज समरूप पण सर्वांगसम नाहीत.</strong></div></li>
+<li><strong>समबाहु त्रिभुज, क्षेत्रफळ 1:2, AB=4:</strong>
+<div class="formula">DE/AB = √(2/1)</div>
+<div class="answer"><strong>DE = 4√2</strong>.</div></li>
+<li><strong>XY ∥ BC:</strong>
+<p>स्रोताच्या आकृतीनुसार (A) आणि (C) दोन्ही समानतेने सत्य ठरतात:</p>
+<div class="answer">AB/AC = AX/AY आणि AX/YC = AY/XB.</div>
+</li>
+</ol>
+
+<h2>17. प्रकीर्ण प्रश्नसंग्रह 1 – संख्यात्मक उत्तरे</h2>
+<ol start="2">
+<li>BD=7, BC=20 ⇒ DC=13.
+<div class="formula">
+A(ABD)/A(ADC)=7/13<br>
+A(ABD)/A(ABC)=7/20<br>
+A(ADC)/A(ABC)=13/20
+</div></li>
+<li>समान उंची, क्षेत्रफळ अनुपात 2:3, छोटा आधार 6:
+<div class="answer"><strong>मोठा आधार = 9 cm</strong>.</div></li>
+<li>AB=6, DC=8 आणि समान BC आधार:
+<div class="answer">A(ABC)/A(DCB) = <strong>3:4</strong>.</div></li>
+<li>PM=10, A(PQS)=100, A(QRS)=110:
+<p>दोन्ही त्रिभुजांचा समान आधार QS आहे. म्हणून उंचींचे अनुपात क्षेत्रफळांच्या अनुपाताइतके.</p>
+<div class="formula">10/NR = 100/110</div>
+<div class="answer"><strong>NR = 11 cm</strong>.</div></li>
+<li>समरूप त्रिभुज; शीर्षलंब 5 व 9:
+<div class="answer">क्षेत्रफळ अनुपात = <strong>25:81</strong>.</div></li>
+<li>AD=5, DC=3, BC=6.4, DE ∥ AB:
+<div class="formula">CE/CB = DC/AC = 3/(5+3)=3/8</div>
+<div class="answer">CE=2.4, म्हणून <strong>BE=4</strong>.</div></li>
+<li>AB=60, BC=70, CD=80 आणि PS=280. समांतर अंतःखंडांसाठी:
+<div class="formula">PQ/60 = QR/70 = RS/80 = 280/(60+70+80)=4/3</div>
+<div class="answer"><strong>PQ=80, QR=280/3, RS=320/3</strong>.</div></li>
+</ol>
+
+<h2>18. प्रकीर्ण प्रश्नसंग्रह 1 – सिद्धता व रिक्त चौकटी</h2>
+<h3>प्रश्न 9 – XY ∥ QR</h3>
+<div class="formula">
+PX/XQ = MP/MQ  (कोण समद्विभाजक प्रमेय)<br>
+PY/YR = MP/MR  (कोण समद्विभाजक प्रमेय)<br>
+MQ = MR ⇒ MP/MQ = MP/MR<br>
+∴ PX/XQ = PY/YR<br>
+∴ XY ∥ QR  (B.P.T. विलोम)
+</div>
+
+<h3>प्रश्न 10 – AX/XY</h3>
+<p>AB=5, AC=4, BC=6. X हे B व C च्या कोणसमद्विभाजकांचे छेदनबिंदू आहे आणि
+AX हा BC ला Y येथे छेदतो.</p>
+<p>त्रिभुज ABY मध्ये X हा A व B च्या कोणसमद्विभाजकांचा छेदनबिंदू आहे.</p>
+<div class="formula">AX/XY = AB/BY</div>
+<p>A च्या कोणसमद्विभाजक प्रमेयाने:</p>
+<div class="formula">BY/YC = AB/AC = 5/4; &nbsp; BY = 10/3</div>
+<div class="answer">AX/XY = 5/(10/3) = <strong>3:2</strong>.</div>
+
+<h3>प्रश्न 11 – समलंब चतुर्भुज</h3>
+<p>AD ∥ BC आणि AC, BD हे P येथे छेदतात. AA मुळे ΔAPD ~ ΔCPB.</p>
+<div class="answer">म्हणून <strong>AP/PD = PC/BP</strong>.</div>
+
+<h3>प्रश्न 12 – XY ∥ AC</h3>
+<p>2AX=3BX ⇒ AX/BX=3/2.</p>
+<div class="formula">AB/BX = (AX+BX)/BX = 3/2 + 1 = 5/2</div>
+<p>ΔBCA ~ ΔBYX म्हणून BA/BX = AC/XY.</p>
+<div class="formula">5/2 = AC/9</div>
+<div class="answer"><strong>AC = 45/2 = 22.5</strong>.</div>
+
+<h3>प्रश्न 13 – DE² = BD × EC</h3>
+<p>ΔGBD आणि ΔCFE विचारात घ्या. दोन्ही समकोणी आहेत. ∠GBD = ∠CFE कारण ∠A=90°.
+म्हणून ते AA कसोटीनुसार समरूप आहेत.</p>
+<div class="formula">GD/CE = BD/FE</div>
+<p>वर्गामुळे GD=FE=DE.</p>
+<div class="answer">
+DE/CE = BD/DE ⇒ <strong>DE² = BD × EC</strong>.
+</div>
+
+<h2>19. अतिरिक्त अध्ययन-सहाय्य – Quick Revision</h2>
+<table>
+<tr><th>जे दिले आहे</th><th>ताबडतोब काय वापरायचे?</th></tr>
+<tr><td>समान उंची</td><td>क्षेत्रफळ अनुपात = आधार अनुपात</td></tr>
+<tr><td>समान आधार</td><td>क्षेत्रफळ अनुपात = उंची अनुपात</td></tr>
+<tr><td>समांतर रेषा</td><td>B.P.T. / B.P.T. विलोम</td></tr>
+<tr><td>कोणाचा समद्विभाजक</td><td>Angle Bisector Theorem</td></tr>
+<tr><td>दोन कोण समान</td><td>AA similarity</td></tr>
+<tr><td>दोन भुजा अनुपाती + समाविष्ट कोण समान</td><td>SAS similarity</td></tr>
+<tr><td>तीन भुजा समानुपाती</td><td>SSS similarity</td></tr>
+<tr><td>समरूप त्रिभुजांची क्षेत्रफळे</td><td>भुजांच्या अनुपाताचा वर्ग</td></tr>
+</table>
+
+<h2>20. सामान्य चुका टाळा</h2>
+<ul>
+<li>क्षेत्रफळांच्या अनुपातात समरूप त्रिभुजांसाठी भुजांचा <strong>वर्ग</strong> घ्यायला विसरू नका.</li>
+<li>B.P.T. वापरताना संगत अंतःखंड योग्य क्रमाने लिहा.</li>
+<li>कोण समद्विभाजक प्रमेयात समोरच्या भुजेवरील दोन भागांचा अनुपात योग्य बाजूंशी जोडा.</li>
+<li>AA/SAS/SSS कसोटी वापरण्यापूर्वी त्रिभुजांची <strong>संगती</strong> निश्चित करा.</li>
+<li>समान उंची आणि समान आधार हे वेगळे गुणधर्म आहेत.</li>
+<li>स्रोतामधील काही MCQ पर्याय परस्पर समतुल्य दिसतात; अशा ठिकाणी फक्त पर्यायाचे अक्षर न पाहता
+संगत भुजा/कोणांची रचना तपासा.</li>
+</ul>
+
+<h2>21. संपूर्ण अध्यायाचा Formula Sheet</h2>
+<div class="formula">
+त्रिभुजाचे क्षेत्रफळ = ½ × आधार × उंची<br><br>
+A₁/A₂ = (b₁h₁)/(b₂h₂)<br><br>
+समान उंची ⇒ A₁/A₂ = b₁/b₂<br>
+समान आधार ⇒ A₁/A₂ = h₁/h₂<br><br>
+B.P.T. ⇒ AP/PB = AQ/QC<br>
+Angle Bisector ⇒ AB/BC = AD/DC<br>
+तीन समांतर रेषा ⇒ AB/BC = PQ/QR<br><br>
+समरूप त्रिभुज ⇒ A₁/A₂ = (संगत भुजा₁/संगत भुजा₂)²
+</div>
+
+ 
+</div>
+</body>
+</html>

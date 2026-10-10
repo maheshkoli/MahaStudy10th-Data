@@ -1,0 +1,599 @@
+﻿<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Chapter 3 - वृत्त - संपूर्ण समाधान</title>
+<style>
+:root{
+ --primary:#17365d;--secondary:#244f7a;--accent:#d89b00;
+ --bg:#f3f5f7;--card:#fff;--text:#222;--muted:#667085;
+ --border:#dfe3e8;--soft:#eef4fb;--green:#eaf7ef;--red:#fff1f0;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);font-family:'Noto Sans Devanagari','Nirmala UI',Arial,Helvetica,sans-serif;color:var(--text);line-height:1.8}
+.container{max-width:1120px;margin:28px auto;background:var(--card);padding:34px 42px;border-radius:16px;box-shadow:0 6px 28px rgba(0,0,0,.08)}
+.cover{background:linear-gradient(135deg,#17365d,#244f7a);color:#fff;padding:28px;border-radius:14px;margin-bottom:28px}
+.cover h1{margin:0 0 8px;font-size:32px;border:0;color:#fff}
+.cover p{margin:5px 0}
+h1{color:var(--primary);border-bottom:3px solid var(--primary);padding-bottom:9px;margin-top:38px}
+h2{color:var(--secondary);margin-top:30px;border-bottom:1px solid var(--border);padding-bottom:7px}
+h3{color:#345f82;margin-top:24px}
+p{margin:10px 0}
+ul,ol{padding-left:28px}
+li{margin:6px 0}
+.formula{background:var(--soft);border-left:4px solid var(--secondary);padding:12px 16px;margin:12px 0;border-radius:8px;font-size:18px;font-weight:600}
+.step{background:#fafafa;border:1px solid var(--border);padding:14px 16px;border-radius:10px;margin:10px 0}
+.answer{background:var(--green);border-left:4px solid #318451;padding:12px 16px;margin:12px 0;border-radius:8px}
+.note{background:#fff8e7;border-left:4px solid var(--accent);padding:12px 16px;border-radius:8px;margin:12px 0}
+.warning{background:var(--red);border-left:4px solid #c43d35;padding:12px 16px;border-radius:8px;margin:12px 0}
+table{width:100%;border-collapse:collapse;margin:15px 0}
+th,td{border:1px solid var(--border);padding:9px;text-align:left;vertical-align:top}
+th{background:var(--soft);color:var(--primary)}
+.small{color:var(--muted);font-size:14px}
+.q{font-weight:700;color:var(--primary)}
+.footer{margin-top:50px;border-top:1px solid var(--border);padding-top:18px;color:#777;font-size:13px}
+@media(max-width:700px){.container{margin:0;padding:18px;border-radius:0}.cover h1{font-size:25px}h1{font-size:24px}}
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="cover">
+<h1>कक्षा 10वीं गणित भाग-II</h1>
+<p><strong>अध्याय 3 — वृत्त (Circle)</strong></p>
+<p>संपूर्ण अवधारणा, प्रमेय, उपपत्तियाँ, उदाहरण तथा प्रश्नसंग्रह समाधान</p>
+</div>
+
+<div class="note">
+<strong>स्रोत-आधारित संस्करण:</strong> यह HTML आपके अपलोड किए गए <strong>C10HHganit2Ch03.pdf</strong> के अध्याय 3 के क्रम, शब्दावली, आकृतियों और प्रश्नसंग्रहों के आधार पर तैयार किया गया है। उपलब्ध अध्याय में स्पर्शरेखा, स्पर्शवृत्त, चाप, अंतर्लिखित कोण, चक्रीय चतुर्भुज, स्पर्शरेखा-छेदनरेखा कोण प्रमेय तथा जीवाओं के अंतः/बहिःछेदन प्रमेय शामिल हैं।
+</div>
+
+<h1>1. अध्याय का अवलोकन</h1>
+<p>अध्याय 3 में वृत्त के केंद्र, त्रिज्या, व्यास, जीवा, अंतःभाग और बहिर्भाग से आगे बढ़ते हुए एक, दो और तीन बिंदुओं से होकर जाने वाले वृत्त, छेदन रेखा, स्पर्शरेखा, स्पर्शवृत्त, वृत्तचाप, अंतर्लिखित कोण, चक्रीय चतुर्भुज तथा जीवाओं के प्रतिच्छेदन से जुड़े प्रमेयों का अध्ययन किया गया है। अध्याय के प्रारंभिक पृष्ठों में केंद्र से जीवा पर खींचे गए लंब और जीवाओं के गुणधर्मों की पुनरावृत्ति भी है।</p>
+
+<h1>2. एक, दो और तीन बिंदुओं से होकर जाने वाले वृत्त</h1>
+<ul>
+<li><strong>एक बिंदु:</strong> किसी एक बिंदु से होकर जाने वाले असंख्य वृत्त खींचे जा सकते हैं।</li>
+<li><strong>दो भिन्न बिंदु:</strong> दोनों बिंदुओं को जोड़ने वाले रेखाखंड की लंब समद्विभाजक पर केंद्र लेकर असंख्य वृत्त खींचे जा सकते हैं।</li>
+<li><strong>तीन नैकरेखीय/अरैखिक बिंदु:</strong> तीनों से होकर जाने वाला एक और केवल एक वृत्त होता है।</li>
+<li><strong>तीन एकरेखीय बिंदु:</strong> तीनों से होकर जाने वाला कोई वृत्त नहीं हो सकता, क्योंकि एक सीधी रेखा वृत्त को अधिकतम दो बिंदुओं पर काटती है।</li>
+</ul>
+
+<h1>3. स्पर्शरेखा और छेदन रेखा</h1>
+<h2>3.1 स्पर्शरेखा</h2>
+<p>जो रेखा वृत्त को केवल एक बिंदु पर प्रतिच्छेदित करती है, उसे वृत्त की <strong>स्पर्शरेखा</strong> कहते हैं। उस सामान्य बिंदु को <strong>स्पर्शबिंदु</strong> कहते हैं।</p>
+
+<h2>3.2 छेदन रेखा</h2>
+<p>जो रेखा वृत्त को दो भिन्न बिंदुओं पर प्रतिच्छेदित करती है, उसे <strong>छेदन रेखा</strong> कहते हैं।</p>
+
+<h2>3.3 स्पर्शरेखा-त्रिज्या प्रमेय</h2>
+<div class="formula">वृत्त के किसी भी बिंदु से होकर जाने वाली स्पर्शरेखा उस बिंदु को केंद्र से जोड़ने वाली त्रिज्या पर लंब होती है।</div>
+
+<h2>3.4 स्पर्शरेखा-त्रिज्या प्रमेय का विलोम</h2>
+<div class="formula">त्रिज्या के बाह्य सिरे से होकर जाने वाली तथा उस त्रिज्या पर लंब रेखा उस वृत्त की स्पर्शरेखा होती है।</div>
+
+<h2>3.5 स्पर्श रेखाखंड का प्रमेय</h2>
+<div class="formula">वृत्त के बाह्य भाग में स्थित एक ही बिंदु से खींचे गए दोनों स्पर्श रेखाखंड सर्वांगसम होते हैं।</div>
+
+<h1>4. स्पर्शवृत्त</h1>
+<p>एक ही प्रतल में स्थित दो वृत्त यदि एक ही बिंदु पर स्पर्श करते हैं, तो उन्हें <strong>स्पर्शवृत्त</strong> कहते हैं।</p>
+<ul>
+<li><strong>बाह्यस्पर्शी वृत्त:</strong> एक-दूसरे के बाहर रहते हुए एक बिंदु पर स्पर्श करते हैं। केंद्रों की दूरी = r₁ + r₂.</li>
+<li><strong>अंतःस्पर्शी वृत्त:</strong> एक वृत्त दूसरे के अंदर रहते हुए एक बिंदु पर स्पर्श करता है। केंद्रों की दूरी = |r₁ − r₂|.</li>
+</ul>
+
+<h2>स्पर्शवृत्त प्रमेय</h2>
+<div class="formula">दो स्पर्शवृत्तों का सामान्य स्पर्शबिंदु उनके केंद्रों को जोड़ने वाली रेखा पर स्थित होता है।</div>
+
+<h1>5. वृत्तचाप</h1>
+<ul>
+<li><strong>लघु चाप:</strong> केंद्र की ओर वाले छोटे भाग का चाप।</li>
+<li><strong>दीर्घ चाप:</strong> शेष बड़ा चाप।</li>
+<li><strong>लघु चाप का माप:</strong> उसके संगत केंद्रीय कोण के माप के बराबर।</li>
+<li><strong>दीर्घ चाप:</strong> 360° − संबंधित लघु चाप।</li>
+<li><strong>अर्धवृत्त:</strong> 180°.</li>
+<li><strong>पूर्णवृत्त:</strong> 360°.</li>
+</ul>
+
+<h1>6. चापों की सर्वांगसमता और जीवाएँ</h1>
+<ul>
+<li>एक ही वृत्त के सर्वांगसम चापों की संगत जीवाएँ सर्वांगसम होती हैं।</li>
+<li>एक ही वृत्त की सर्वांगसम जीवाओं के संगत चाप सर्वांगसम होते हैं।</li>
+<li>समान त्रिज्या तथा समान माप वाले चाप सर्वांगसम होते हैं।</li>
+</ul>
+
+<h1>7. अंतर्लिखित कोण</h1>
+<p>जिस कोण का शीर्ष वृत्त पर स्थित हो और जिसकी भुजाएँ वृत्त को काटें, वह <strong>अंतर्लिखित कोण</strong> है।</p>
+
+<h2>अंतर्लिखित कोण का प्रमेय</h2>
+<div class="formula">अंतर्लिखित कोण का माप उसके द्वारा अंतःखंडित चाप के माप का आधा होता है।</div>
+
+<h2>महत्वपूर्ण उपप्रमेय</h2>
+<ul>
+<li>एक ही चाप में अंतर्लिखित सभी कोण सर्वांगसम होते हैं।</li>
+<li>अर्धवृत्त में अंतर्लिखित कोण 90° का होता है।</li>
+</ul>
+
+<h1>8. चक्रीय चतुर्भुज</h1>
+<p>जिस चतुर्भुज के चारों शीर्ष एक ही वृत्त पर स्थित हों, वह <strong>चक्रीय चतुर्भुज</strong> कहलाता है।</p>
+
+<h2>चक्रीय चतुर्भुज का प्रमेय</h2>
+<div class="formula">चक्रीय चतुर्भुज के सम्मुख कोण परस्पर संपूरक होते हैं।<br>∠A + ∠C = 180° तथा ∠B + ∠D = 180°.</div>
+
+<h2>विलोम</h2>
+<div class="formula">यदि किसी चतुर्भुज के सम्मुख कोणों का योग 180° हो, तो वह चतुर्भुज चक्रीय होता है।</div>
+
+<h2>अन्य महत्वपूर्ण परिणाम</h2>
+<div class="formula">चक्रीय चतुर्भुज का बाह्य कोण उसके सम्मुख अंतः कोण के बराबर होता है।</div>
+
+<h1>9. स्पर्शरेखा-छेदनरेखा कोण का प्रमेय</h1>
+<div class="formula">यदि कोण का शीर्ष वृत्त पर है, एक भुजा स्पर्शरेखा और दूसरी भुजा छेदनरेखा है, तो कोण का माप उसके द्वारा अंतःखंडित चाप के माप का आधा होता है।</div>
+
+<p>वैकल्पिक रूप में: स्पर्शरेखा और स्पर्शबिंदु से खींची गई जीवा द्वारा बनाया गया कोण, उसी कोण द्वारा अंतःखंडित चाप के विपरीत चाप में अंतर्लिखित कोण के बराबर होता है।</p>
+
+<h1>10. जीवाओं के प्रतिच्छेदन के प्रमेय</h1>
+
+<h2>10.1 जीवाओं का अंतःछेदन प्रमेय</h2>
+<div class="formula">यदि दो जीवाएँ वृत्त के अंतःभाग में E पर प्रतिच्छेद करती हैं, तो<br>AE × EB = CE × ED.</div>
+
+<h2>10.2 जीवाओं का बहिःछेदन प्रमेय</h2>
+<div class="formula">यदि दो छेदन रेखाएँ वृत्त के बाह्य बिंदु E पर मिलती हैं, तो<br>EA × EB = EC × ED.</div>
+
+<h2>10.3 स्पर्शरेखा-छेदनरेखा रेखाखंड प्रमेय</h2>
+<div class="formula">बाह्य बिंदु E से खींची गई स्पर्शरेखा ET और छेदनरेखा EAB के लिए:<br>EA × EB = ET².</div>
+
+<h1>11. महत्वपूर्ण सूत्र-सारणी</h1>
+<table>
+<tr><th>विषय</th><th>सूत्र / परिणाम</th></tr>
+<tr><td>स्पर्शरेखा</td><td>OT ⟂ tangent at T</td></tr>
+<tr><td>दो बाह्यस्पर्शी वृत्त</td><td>केंद्र दूरी = r₁ + r₂</td></tr>
+<tr><td>दो अंतःस्पर्शी वृत्त</td><td>केंद्र दूरी = |r₁ − r₂|</td></tr>
+<tr><td>अंतर्लिखित कोण</td><td>∠ = ½ × अंतःखंडित चाप</td></tr>
+<tr><td>चक्रीय चतुर्भुज</td><td>सम्मुख कोणों का योग = 180°</td></tr>
+<tr><td>अंतःछेदन जीवाएँ</td><td>AE × EB = CE × ED</td></tr>
+<tr><td>स्पर्शरेखा-छेदनरेखा</td><td>ET² = EA × EB</td></tr>
+<tr><td>स्पर्शवृत्त</td><td>बाह्य: d=r₁+r₂; अंतः: d=|r₁−r₂|</td></tr>
+</table>
+
+<h1>12. प्रश्नसंग्रह 3.1 — समाधान</h1>
+
+<h2>प्रश्न 1</h2>
+<p>केंद्र C वाले वृत्त की त्रिज्या 6 सेमी है और AB, A पर स्पर्शरेखा है।</p>
+<ol>
+<li><strong>∠CAB = 90°</strong>, क्योंकि CA त्रिज्या है और AB स्पर्शरेखा है।</li>
+<li><strong>C की AB से दूरी = 6 सेमी</strong>, क्योंकि C से AB पर लंब CP स्पर्शबिंदु A पर ही जाता है और CA = 6 सेमी।</li>
+<li>यदि AB = 6 सेमी, तो ΔCAB समकोण त्रिभुज है:
+<div class="formula">BC² = CA² + AB² = 6² + 6² = 72</div>
+<strong>BC = 6√2 सेमी.</strong></li>
+<li><strong>∠ABC = 45°</strong>, क्योंकि ΔABC में ∠A=90° और AB=AC=6, अतः यह समद्विबाहु समकोण त्रिभुज है।</li>
+</ol>
+
+<h2>प्रश्न 2</h2>
+<p>O केंद्र वाले वृत्त के बाह्य बिंदु R से RM और RN स्पर्शरेखाएँ हैं। OR=10 सेमी तथा त्रिज्या=5 सेमी।</p>
+<div class="step">OM ⟂ RM और OM=5.</div>
+<div class="step">RM² = OR² − OM² = 100 − 25 = 75.</div>
+<div class="answer">RM = RN = <strong>5√3 सेमी</strong>.</div>
+<div class="step">समकोण ΔORM में sin/cos से ∠MRO = <strong>60°</strong>.</div>
+<div class="step">OR कोण MR और RN के सममित होने के कारण ∠MRN = 2×60° = <strong>120°</strong>.</div>
+
+<h2>प्रश्न 3 — सिद्ध कीजिए</h2>
+<p>RM और RN स्पर्शरेखाखंड हैं।</p>
+<div class="step">ΔOMR और ΔONR में OM=ON (त्रिज्याएँ), OR सामान्य तथा ∠OMR=∠ONR=90°.</div>
+<div class="step">अतः ΔOMR ≅ ΔONR (कर्ण-भुजा कसौटी).</div>
+<div class="answer">इससे ∠MRO = ∠ORN और ∠MOR = ∠RON. अतः OR दोनों कोणों का समद्विभाजक है।</div>
+
+<h2>प्रश्न 4</h2>
+<p>त्रिज्या 4.5 सेमी वाले वृत्त की दो स्पर्शरेखाएँ परस्पर समांतर हैं।</p>
+<div class="answer">समांतर स्पर्शरेखाओं के बीच की दूरी केंद्र से दोनों पर डाले गए समान लंबों की कुल लंबाई है: <strong>2r = 9 सेमी</strong>.</div>
+
+<h1>13. प्रश्नसंग्रह 3.2 — समाधान</h1>
+
+<h2>प्रश्न 1</h2>
+<p>अंतःस्पर्शी वृत्तों की त्रिज्याएँ 3.5 सेमी और 4.8 सेमी।</p>
+<div class="answer">केंद्र दूरी = 4.8 − 3.5 = <strong>1.3 सेमी</strong>.</div>
+
+<h2>प्रश्न 2</h2>
+<p>बाह्यस्पर्शी वृत्तों की त्रिज्याएँ 5.5 सेमी और 4.2 सेमी।</p>
+<div class="answer">केंद्र दूरी = 5.5 + 4.2 = <strong>9.7 सेमी</strong>.</div>
+
+<h2>प्रश्न 3</h2>
+<p>4 सेमी और 2.8 सेमी त्रिज्या वाले बाह्यस्पर्शी तथा अंतःस्पर्शी वृत्तों की रचना करनी है।</p>
+<div class="step"><strong>बाह्यस्पर्शी:</strong> केंद्रों की दूरी = 4+2.8=6.8 सेमी.</div>
+<div class="step"><strong>अंतःस्पर्शी:</strong> केंद्रों की दूरी = 4−2.8=1.2 सेमी.</div>
+
+<h2>प्रश्न 4</h2>
+<p>P तथा Q केंद्र वाले वृत्त R पर स्पर्श करते हैं। R से जाने वाली रेखा दोनों वृत्तों को A और B पर काटती है।</p>
+<div class="step">स्पर्शवृत्त प्रमेय से P,R,Q एकरेखीय हैं और A,R,B भी एकरेखीय हैं।</div>
+<div class="step">त्रिज्याएँ PR और QR अपने-अपने वृत्तों की हैं। समानांतरता और समरूप त्रिभुज से <strong>AP ∥ BQ</strong>.</div>
+<div class="step">AP ∥ BQ होने से तथा AR और BR एक ही रेखा पर होने से संगत कोण बराबर होते हैं; अतः <strong>ΔAPR ~ ΔRQB</strong>.</div>
+<div class="step">यदि ∠PAR=35°, तो समरूपता से ∠RQB=<strong>35°</strong>.</div>
+
+<h2>प्रश्न 5</h2>
+<p>दो वृत्त E पर बाह्य रूप से स्पर्श करते हैं। त्रिज्याएँ 4 सेमी और 6 सेमी हैं तथा सामान्य स्पर्शरेखा l, C और D पर स्पर्श करती है। CD ज्ञात कीजिए।</p>
+<div class="step">केंद्रों की दूरी = 4+6=10 सेमी.</div>
+<div class="step">स्पर्शरेखा के लंब घटक की दूरी = 6−4=2 सेमी.</div>
+<div class="formula">CD² = 10² − 2² = 100−4=96</div>
+<div class="answer">CD = <strong>4√6 सेमी</strong>.</div>
+
+<h1>14. प्रश्नसंग्रह 3.3 — समाधान</h1>
+
+<h2>प्रश्न 1</h2>
+<p>m(∠ECF)=70° और m(चाप DGF)=200°.</p>
+<div class="step">केंद्रीय कोण ECF के कारण चाप EF = 70°.</div>
+<div class="step">चाप DGF = चाप DG + चाप GF = 200°. यहाँ चाप GF=70°, इसलिए चाप DG=130°.</div>
+<div class="step">चाप DEF शेष चाप = 360−200 = <strong>160°</strong>.</div>
+<div class="step">चाप DE = 160−70 = <strong>90°</strong>.</div>
+<div class="answer"><strong>चाप DE = 90°, चाप DEF = 160°.</strong></div>
+
+<h2>प्रश्न 2</h2>
+<p>ΔQRS समबाहु त्रिभुज है।</p>
+<div class="step">तीनों जीवा QR, RS और SQ बराबर हैं। समान जीवाओं के संगत चाप बराबर होते हैं।</div>
+<div class="answer">चाप RS = चाप QS = चाप QR = <strong>120°</strong>.</div>
+<div class="answer">चाप QRS = 120°+120° = <strong>240°</strong>.</div>
+
+<h2>प्रश्न 3</h2>
+<p>जीवा AB ≅ जीवा CD.</p>
+<div class="step">एक ही वृत्त में सर्वांगसम जीवाओं के संगत चाप सर्वांगसम होते हैं, इसलिए चाप AB ≅ चाप CD.</div>
+<div class="step">पूर्णवृत्त से समान चाप हटाने पर शेष चाप AC और BD के माप समान होते हैं।</div>
+<div class="answer">अतः <strong>चाप AC ≅ चाप BD</strong>.</div>
+
+<h1>15. प्रश्नसंग्रह 3.4 — समाधान</h1>
+
+<h2>प्रश्न 1</h2>
+<p>जीवा AB की लंबाई वृत्त की त्रिज्या के बराबर है।</p>
+<div class="step">OA=OB=AB, अतः ΔAOB समबाहु है।</div>
+<div class="answer">(1) ∠AOB = <strong>60°</strong></div>
+<div class="answer">(2) ∠ACB = ½×60° = <strong>30°</strong></div>
+<div class="answer">(3) चाप AB = <strong>60°</strong></div>
+<div class="answer">(4) चाप ACB = 360−60 = <strong>300°</strong></div>
+
+<h2>प्रश्न 2</h2>
+<p>चक्रीय PQRS में PQ ≅ RQ और ∠PSR=110°.</p>
+<div class="step">सम्मुख कोणों का योग 180° ⇒ ∠PQR=180−110=<strong>70°</strong>.</div>
+<div class="step">PQ=RQ, इसलिए ΔPQR में ∠QPR=∠PRQ=(180−70)/2=<strong>55°</strong>.</div>
+<div class="step">∠PSR=110° ⇒ चाप PQR=220°.</div>
+<div class="step">∠QPR=55° ⇒ चाप QR=110°.</div>
+<div class="answer">(1) ∠PQR=<strong>70°</strong>; (2) चाप PQR=<strong>220°</strong>; (3) चाप QR=<strong>110°</strong>; (4) ∠PRQ=<strong>55°</strong>.</div>
+
+<h2>प्रश्न 3</h2>
+<p>चक्रीय MRPN में ∠R=(5x−13)° और ∠N=(4x+4)°.</p>
+<div class="formula">(5x−13)+(4x+4)=180</div>
+<div class="step">9x−9=180 ⇒ x=21.</div>
+<div class="answer">∠R = 5(21)−13 = <strong>92°</strong>; ∠N=4(21)+4=<strong>88°</strong>.</div>
+
+<h2>प्रश्न 4</h2>
+<p>RS वृत्त का व्यास है और T वृत्त के बाहर है। सिद्ध करना है कि ∠RTS न्यूनकोण है।</p>
+<div class="step">RS व्यास है। T से R और S को मिलाने पर बाह्य बिंदु से बने कोण को संबंधित चापों के अंतर के आधे के रूप में लिखा जा सकता है। संबंधित चापों का अंतर 180° से कम है।</div>
+<div class="answer">अतः ∠RTS &lt; 90°, इसलिए <strong>∠RTS न्यूनकोण</strong> है।</div>
+
+<h2>प्रश्न 5</h2>
+<p>सिद्ध कीजिए कि कोई भी आयत चक्रीय चतुर्भुज होता है।</p>
+<div class="step">आयत के सभी कोण 90° होते हैं। इसलिए किसी भी दो सम्मुख कोणों का योग 90°+90°=180°.</div>
+<div class="answer">चक्रीय चतुर्भुज के विलोम प्रमेय से <strong>हर आयत चक्रीय चतुर्भुज है</strong>.</div>
+
+<h2>प्रश्न 6</h2>
+<p>आकृति 3.59 में WZPT चक्रीय चतुर्भुज तथा X,Z,T,Y एक ही वृत्त पर सिद्ध करना है।</p>
+<div class="step">आकृति में P पर प्रतिच्छेदित रेखाओं से बने शीर्षाभिमुख कोण बराबर हैं। दिए गए कोण-संबंध को अंतर्लिखित कोण प्रमेय से जोड़ने पर W,Z,P,T के सम्मुख कोण संपूरक प्राप्त होते हैं।</div>
+<div class="answer">अतः <strong>WZPT चक्रीय चतुर्भुज</strong> और उसी कोण-संबंध से <strong>X,Z,T,Y एक ही वृत्त पर</strong> हैं।</div>
+
+<h2>प्रश्न 7</h2>
+<p>m(चाप NS)=125°, m(चाप EF)=37°. ∠NMS ज्ञात कीजिए।</p>
+<div class="formula">∠NMS = ½[125°−37°] = 44°</div>
+<div class="answer"><strong>∠NMS = 44°</strong></div>
+
+<h2>प्रश्न 8</h2>
+<p>जीवा AC और DE, B पर प्रतिच्छेद करती हैं। ∠ABE=108° और चाप AE=95°. चाप DC ज्ञात कीजिए।</p>
+<div class="formula">108° = ½(चाप AE + चाप DC)</div>
+<div class="step">216 = 95 + चाप DC ⇒ चाप DC = <strong>121°</strong>.</div>
+
+<h1>16. स्पर्शरेखा-छेदनरेखा कोण प्रमेय — विस्तृत उदाहरण</h1>
+<p>वृत्त पर स्थित शीर्ष वाले कोण में एक भुजा स्पर्शरेखा और दूसरी छेदनरेखा हो, तो:</p>
+<div class="formula">∠ = ½ × संबंधित अंतःखंडित चाप</div>
+<p>पाठ्यपुस्तक की आकृति 3.64 में केंद्र की तीन संभावित स्थितियों के आधार पर इस प्रमेय की उपपत्ति की गई है।</p>
+
+<h1>17. जीवाओं का अंतःछेदन और बहिःछेदन</h1>
+<h2>अंतःछेदन की उपपत्ति</h2>
+<div class="step">ΔCAE और ΔBDE में शीर्षाभिमुख कोण समान हैं। एक ही चाप के अंतर्लिखित कोण भी समान हैं। अतः ΔCAE ~ ΔBDE.</div>
+<div class="step">AE/DE = CE/BE.</div>
+<div class="answer">AE × EB = CE × ED.</div>
+
+<h2>बहिःछेदन</h2>
+<div class="formula">बाह्य बिंदु E से दो छेदन रेखाएँ हों तो EA×EB = EC×ED.</div>
+
+<h2>स्पर्शरेखा-छेदनरेखा रेखाखंड</h2>
+<div class="formula">ET² = EA×EB.</div>
+
+<h1>18. हल किए गए उदाहरण</h1>
+
+<h2>उदाहरण 1</h2>
+<p>P से PS स्पर्शरेखाखंड तथा PR छेदनरेखा है। PQ=3.6, QR=6.4.</p>
+<div class="formula">PS² = PQ×PR = 3.6×(3.6+6.4)=36</div>
+<div class="answer">PS=<strong>6</strong>.</div>
+
+<h2>उदाहरण 2</h2>
+<p>जीवा MN और RS, P पर प्रतिच्छेद करती हैं। PR=6, PS=4, MN=11.</p>
+<div class="formula">PN×PM = PR×PS = 24</div>
+<div class="step">मान लें PN=x, PM=11−x.</div>
+<div class="formula">x(11−x)=24 ⇒ x²−11x+24=0 ⇒ (x−3)(x−8)=0</div>
+<div class="answer">PN = <strong>3 या 8</strong> (आकृति के क्रम के अनुसार उपयुक्त मान लिया जाता है)।</div>
+
+<h2>उदाहरण 3</h2>
+<p>दो वृत्त X,Y पर प्रतिच्छेद करते हैं और M से दोनों वृत्तों पर स्पर्शरेखाएँ MP तथा MQ खींची गई हैं।</p>
+<div class="step">सामान्य छेदनरेखा MX के कारण PM² = MY×MX तथा QM² = MY×MX.</div>
+<div class="answer">PM²=QM² ⇒ <strong>PM=QM</strong>.</div>
+
+<h2>उदाहरण 4 — ज्यामितीय माध्य</h2>
+<p>PQ व्यास है और R से PQ पर लंब RS है।</p>
+<div class="step">RS को आगे बढ़ाकर वृत्त को T पर काटें। समकोण त्रिभुज और जीवाओं के अंतःछेदन प्रमेय से आवश्यक समानताएँ मिलती हैं।</div>
+<div class="answer">अंततः <strong>SR² = PS×SQ</strong>, अर्थात SR, PS और SQ का ज्यामितीय माध्य है।</div>
+
+<h1>19. प्रश्नसंग्रह 3.5 — समाधान</h1>
+
+<h2>प्रश्न 1</h2>
+<p>P बाह्य बिंदु है, PQ स्पर्शरेखाखंड, PR छेदनरेखा; PQ=12, PR=8.</p>
+<div class="formula">PQ² = PR×PS</div>
+<div class="step">144 = 8×PS ⇒ PS=18.</div>
+<div class="answer">RS=PS−PR=18−8=<strong>10</strong>.</div>
+
+<h2>प्रश्न 2(1)</h2>
+<p>RD=15, DS=4, MD=8.</p>
+<div class="formula">MD×DN = RD×DS = 15×4=60</div>
+<div class="answer">DN = 60/8 = <strong>7.5</strong>.</div>
+
+<h2>प्रश्न 2(2)</h2>
+<p>RS=18, MD=9, DN=8.</p>
+<div class="formula">MD×DN = RD×DS = 72</div>
+<div class="step">RD+DS=18 ⇒ (18−DS)DS=72.</div>
+<div class="step">DS²−18DS+72=0 ⇒ (DS−6)(DS−12)=0.</div>
+<div class="answer">स्रोत में अतिरिक्त स्थिति-निर्धारण न होने पर <strong>DS=6 सेमी या 12 सेमी</strong> दोनों बीजीय मान संभव हैं।</div>
+
+<h2>प्रश्न 3</h2>
+<p>B स्पर्शबिंदु है, AB=12, AC=8 और OE ⟂ AD.</p>
+<div class="formula">AB² = AC×AD</div>
+<div class="step">144 = 8×AD ⇒ AD=18.</div>
+<div class="answer">DC=AD−AC=18−8=<strong>10</strong>.</div>
+<div class="step">केंद्र से जीवा पर लंब जीवा को समद्विभाजित करता है, इसलिए E, AD का मध्यबिंदु है।</div>
+<div class="answer">DE=AD/2=<strong>9</strong>.</div>
+
+<h2>प्रश्न 4</h2>
+<p>P से दो छेदन रेखाएँ PST और PQR हैं। PQ=6, QR=10, PS=8.</p>
+<div class="formula">PQ×PR = PS×PT</div>
+<div class="step">6×(6+10)=8×PT ⇒ PT=12.</div>
+<div class="answer">TS=PT−PS=12−8=<strong>4</strong>.</div>
+
+<h2>प्रश्न 5</h2>
+<p>EF व्यास है, DF स्पर्शरेखाखंड है और वृत्त की त्रिज्या r है। सिद्ध करें DE×GE=4r².</p>
+<div class="step">∠DFE=90°, इसलिए DF²=DE²−EF²=DE²−4r².</div>
+<div class="step">स्पर्शरेखा-छेदनरेखा प्रमेय से DF²=DE×DG.</div>
+<div class="step">G, D और E के बीच है, इसलिए DG=DE−GE.</div>
+<div class="step">DE(DE−GE)=DE²−4r².</div>
+<div class="answer">अतः <strong>DE×GE=4r²</strong>.</div>
+
+<h1>20. प्रकीर्ण प्रश्नसंग्रह 3 — MCQ समाधान</h1>
+<table>
+<tr><th>प्रश्न</th><th>उत्तर</th><th>कारण</th></tr>
+<tr><td>1</td><td><strong>(B) 8.8</strong></td><td>बाह्यस्पर्शी वृत्त: 5.5+3.3=8.8.</td></tr>
+<tr><td>2</td><td><strong>(B) 12</strong></td><td>दोनों वृत्त एक-दूसरे के केंद्र से गुजरते हैं, इसलिए प्रत्येक त्रिज्या = केंद्र दूरी = 12.</td></tr>
+<tr><td>3</td><td><strong>(B) समचतुर्भुज</strong></td><td>स्पर्शी समांतर चतुर्भुज में विपरीत भुजाओं के योग बराबर होने से सभी भुजाएँ बराबर होती हैं।</td></tr>
+<tr><td>4</td><td><strong>(C) 7</strong></td><td>r²=12.5²−12²=12.25 ⇒ r=3.5 ⇒ व्यास=7.</td></tr>
+<tr><td>5</td><td><strong>(C) तीन</strong></td><td>दो बाह्यस्पर्शी वृत्तों की अधिकतम तीन सामान्य स्पर्शरेखाएँ होती हैं।</td></tr>
+<tr><td>6</td><td><strong>(B) 130°</strong></td><td>चाप=2×65°.</td></tr>
+<tr><td>7</td><td><strong>(A) 7</strong></td><td>5.6×10=8×ED ⇒ ED=7.</td></tr>
+<tr><td>8</td><td><strong>प्रश्न में दी गई OCR पंक्ति से निश्चित उत्तर नहीं</strong></td><td>“2A=3B” मानने पर केवल A और B का अनुपात मिलता है; C का एकमात्र मान निर्धारित नहीं होता। अतिरिक्त शर्त आवश्यक है।</td></tr>
+<tr><td>9</td><td><strong>(A) समबाहु त्रिभुज</strong></td><td>तीनों संबंधित चाप 120°, इसलिए तीनों जीवाएँ बराबर।</td></tr>
+<tr><td>10</td><td><strong>(A) सिर्फ एक</strong></td><td>व्यास के सिरों X,Z और वृत्त के अंदर Y के लिए ∠XYZ अधिक कोण होता है; दिए कथनों में केवल (1) सही है।</td></tr>
+</table>
+
+<h1>21. प्रकीर्ण प्रश्नसंग्रह 3 — प्रश्न 2 से 12</h1>
+
+<h2>प्रश्न 2</h2>
+<p>त्रिज्या 9 सेमी का वृत्त l को P पर स्पर्श करता है।</p>
+<ul>
+<li>(1) d(O,P)=<strong>9 सेमी</strong>.</li>
+<li>(2) d(O,Q)=8 सेमी होने पर Q <strong>वृत्त के अंतःभाग में</strong> होगा।</li>
+<li>(3) d(O,R)=15 सेमी होने पर R, l पर दो स्थानों पर हो सकता है। OP=9, OR=15 वाले समकोण त्रिभुज से:
+<div class="formula">PR=√(15²−9²)=√144=12 सेमी.</div>
+अतः दोनों संभावित R बिंदु P से <strong>12 सेमी</strong> दूर होंगे।</li>
+</ul>
+
+<h2>प्रश्न 3</h2>
+<p>MK=12 सेमी त्रिज्या और KL=6√3 सेमी स्पर्शरेखाखंड है।</p>
+<div class="formula">ML²=MK²−KL²=144−108=36 ⇒ ML=6.</div>
+<div class="answer">वृत्त की त्रिज्या = <strong>12 सेमी</strong>; ∠K=30° और ∠M=60°.</div>
+
+<h2>प्रश्न 4</h2>
+<p>AB और AC स्पर्शरेखाखंड हैं तथा AB=r. सिद्ध करें कि □ABOC वर्ग है।</p>
+<div class="step">OB ⟂ AB और OC ⟂ AC.</div>
+<div class="step">OB=OC=r और AB=r. इसलिए ΔABO समद्विबाहु समकोण त्रिभुज है।</div>
+<div class="step">इसी प्रकार AC=OC=r.</div>
+<div class="answer">AB=BO=OC=CA और सभी कोण 90° ⇒ <strong>ABOC एक वर्ग है</strong>.</div>
+
+<h2>प्रश्न 5</h2>
+<p>समांतर चतुर्भुज ABCD की चारों भुजाएँ एक वृत्त को स्पर्श करती हैं। AE=4.5, EB=5.5.</p>
+<div class="step">AB=AE+EB=4.5+5.5=10 सेमी.</div>
+<div class="step">स्पर्शी चतुर्भुज में विपरीत भुजाओं के योग बराबर होते हैं। समांतर चतुर्भुज में AB=CD और AD=BC, इसलिए 2AB=2AD.</div>
+<div class="answer">AD=<strong>10 सेमी</strong>.</div>
+
+<h2>प्रश्न 6</h2>
+<p>बड़े वृत्त की त्रिज्या 9 सेमी, छोटे की 2.5 सेमी; छोटे और बड़े वृत्त अंतःस्पर्शी हैं तथा बड़े वृत्त की त्रिज्या छोटे वृत्त को S पर स्पर्श करती है।</p>
+<div class="step">MN=9−2.5=6.5 सेमी.</div>
+<div class="step">NS=2.5 और MS ⟂ NS.</div>
+<div class="formula">MS²=6.5²−2.5²=42.25−6.25=36</div>
+<div class="answer">MT=9+2.5=<strong>11.5 सेमी</strong>; MN=<strong>6.5 सेमी</strong>; MS=6 और SR=9−6=3 ⇒ <strong>MS:SR=2:1</strong>; ∠NSM=<strong>90°</strong>.</div>
+
+<h2>प्रश्न 7</h2>
+<p>X और Y केंद्र वाले वृत्त Z पर बाह्य रूप से स्पर्श करते हैं। Z से जाने वाली छेदनरेखा वृत्तों को A और B पर काटती है। सिद्ध करना है XA ∥ YB.</p>
+<div class="step">स्पर्शवृत्त प्रमेय से X,Z,Y एकरेखीय हैं। तथा A,Z,B एकरेखीय हैं।</div>
+<div class="step">XA=XZ और YB=YZ, क्योंकि ये संबंधित त्रिज्याएँ हैं। अतः ΔXAZ तथा ΔYBZ समद्विबाहु हैं।</div>
+<div class="step">शीर्षाभिमुख कोण बराबर लेकर संबंधित आधार कोण बराबर मिलते हैं।</div>
+<div class="answer">समान संगत कोणों से <strong>XA ∥ YB</strong>.</div>
+
+<h2>प्रश्न 8</h2>
+<p>अंतःस्पर्शी वृत्त X और Y, Z पर स्पर्श करते हैं; बड़ी जीवा BZ छोटे वृत्त को A पर काटती है। सिद्ध करें AX ∥ BY.</p>
+<div class="step">XZ और YZ केंद्रों को जोड़ने वाली रेखा पर हैं। XZ तथा YZ संबंधित त्रिज्याएँ हैं।</div>
+<div class="step">समद्विबाहु त्रिभुजों में आधार कोण समान लेकर तथा A,Z,B की एकरेखीयता का उपयोग करके संगत कोण बराबर प्राप्त होते हैं।</div>
+<div class="answer">अतः <strong>AX ∥ BY</strong>.</div>
+
+<h2>प्रश्न 9</h2>
+<p>वृत्त की स्पर्शरेखा l, P पर स्पर्श करती है। Q, OP का मध्यबिंदु है और Q से RS || l. RS=12 सेमी.</p>
+<div class="step">O से chord RS पर डाला गया लंब OQ है। OQ=OP/2=r/2.</div>
+<div class="step">केंद्र से जीवा पर लंब जीवा को समद्विभाजित करता है, इसलिए आधी जीवा=6.</div>
+<div class="formula">r²=(r/2)²+6² ⇒ 3r²/4=36 ⇒ r²=48.</div>
+<div class="answer">वृत्त की त्रिज्या = <strong>4√3 सेमी</strong>.</div>
+
+<h2>प्रश्न 10</h2>
+<p>AB व्यास है, PQ स्पर्शरेखा है और AP ⟂ PQ, BQ ⟂ PQ. सिद्ध करें CP=CQ.</p>
+<div class="step">AP और BQ दोनों PQ पर लंब हैं, इसलिए AP ∥ BQ.</div>
+<div class="step">C केंद्र है और CT भी PQ पर लंब है। व्यास AB के सिरों A,B से tangent पर खींचे गए perpendiculars की वजह से T, PQ का मध्यबिंदु है।</div>
+<div class="answer">CT, PQ का लंब समद्विभाजक है; अतः <strong>CP=CQ</strong>.</div>
+
+<h2>प्रश्न 11</h2>
+<p>3 सेमी त्रिज्या वाले तीन वृत्त इस प्रकार बनाने हैं कि प्रत्येक वृत्त अन्य दो वृत्तों को स्पर्श करे।</p>
+<div class="step">तीनों केंद्र A,B,C को समबाहु त्रिभुज के शीर्ष लें जिसकी प्रत्येक भुजा 6 सेमी है।</div>
+<div class="answer">A,B,C केंद्रों से 3 सेमी त्रिज्या के वृत्त बनाने पर प्रत्येक जोड़ी के बीच बाह्यस्पर्श होता है।</div>
+
+<h2>प्रश्न 12</h2>
+<p>सिद्ध कीजिए कि वृत्त के कोई भी तीन बिंदु एकरेखिक नहीं होते।</p>
+<div class="answer">एक सीधी रेखा वृत्त को अधिकतम दो बिंदुओं पर काट सकती है। इसलिए वृत्त के तीन अलग-अलग बिंदु एक ही सीधी रेखा पर नहीं हो सकते।</div>
+
+<h1>22. प्रकीर्ण प्रश्नसंग्रह 3 — प्रश्न 13 से 19</h1>
+
+<h2>प्रश्न 13</h2>
+<p>PR वृत्त को Q पर स्पर्श करती है।</p>
+<ol>
+<li>∠TAQ और ∠TSQ चक्रीय चतुर्भुज ATSQ के सम्मुख कोण हैं। इसलिए योग = <strong>180°</strong>.</li>
+<li>∠AQP का सर्वांगसम कोण <strong>∠QTA</strong> है, tangent-chord theorem से।</li>
+<li>∠QTS का सर्वांगसम कोण <strong>∠QAS</strong> है, क्योंकि दोनों एक ही chord QS को subtend करते हैं।</li>
+<li>यदि ∠TAS=65°, तो चाप TS=130° और ∠TQS=65°.</li>
+<li>∠AQP=42° ⇒ ∠ATQ=42°. ∠SQR=58° ⇒ ∠QTS=58°. अतः ∠ATS=42°+58°=<strong>100°</strong>.</li>
+</ol>
+
+<h2>प्रश्न 14</h2>
+<p>PQ और RS सर्वांगसम जीवाएँ हैं। ∠POR=70° और चाप RS=80°.</p>
+<div class="step">∠POR केंद्रीय कोण है ⇒ चाप PR=<strong>70°</strong>.</div>
+<div class="step">सर्वांगसम जीवाएँ ⇒ चाप PQ=चाप RS=<strong>80°</strong>.</div>
+<div class="step">चाप QS = 360−(70+80+80)=<strong>130°</strong>.</div>
+<div class="answer">चाप QSR=QS+SR=130+80=<strong>210°</strong>.</div>
+
+<h2>प्रश्न 15</h2>
+<p>चाप WY=44°, चाप ZX=68°, तथा W-X और Y-Z जीवाएँ T पर प्रतिच्छेद करती हैं।</p>
+<div class="step">∠ZTX=½(चाप ZX+चाप WY)=½(68+44)=<strong>56°</strong>.</div>
+<div class="step">WT×TX=YT×TZ.</div>
+<div class="step">WT=4.8, TX=8, YT=6.4 ⇒ TZ=(4.8×8)/6.4=<strong>6</strong>.</div>
+<div class="step">तीसरे भाग में WX=25, YT=8, YZ=26 ⇒ TZ=18. अतः WT×TX=144 और WT+TX=25.</div>
+<div class="formula">x(25−x)=144 ⇒ x²−25x+144=0 ⇒ (x−9)(x−16)=0.</div>
+<div class="answer">आकृति के क्रम के अनुसार <strong>WT=9 सेमी</strong> और TX=16 सेमी.</div>
+
+<h2>प्रश्न 16</h2>
+<p>आकृति 3.94.</p>
+<ul>
+<li>(1) चाप CE=54° ⇒ ∠CAE=½×54°=<strong>27°</strong>.</li>
+<li>(2) बाह्य बिंदु A से दो छेदन रेखाओं के लिए AB×AC=AD×AE. AC=4.2+5.4=9.6.
+<div class="formula">AD=(4.2×9.6)/12=3.36 सेमी.</div></li>
+<li>(3) AB×AC=AD×AE ⇒ AE=(3.6×9)/5.4=<strong>6 सेमी</strong>.</li>
+</ul>
+
+<h2>प्रश्न 17</h2>
+<p>EF ∥ GH. सिद्ध करना है कि chord EG ≅ chord FH.</p>
+<div class="step">EF ∥ GH ⇒ ∠EFG = ∠FGH (alternate interior angles).</div>
+<div class="step">∠EFG=½ m(चाप EG) तथा ∠FGH=½ m(चाप FH).</div>
+<div class="answer">दोनों कोण बराबर ⇒ चाप EG=चाप FH ⇒ <strong>जीवा EG ≅ जीवा FH</strong>.</div>
+
+<h2>प्रश्न 18</h2>
+<p>P स्पर्शबिंदु है।</p>
+<div class="step">(1) बाह्य tangent-secant angle: 36°=½(चाप PR−चाप PQ).</div>
+<div class="step">72=140−चाप PQ ⇒ चाप PQ=<strong>68°</strong>.</div>
+<div class="step">(2) OP=7.2, OQ=3.2. Tangent-secant theorem: OP²=OQ×OR.</div>
+<div class="formula">OR=7.2²/3.2=51.84/3.2=<strong>16.2</strong>.</div>
+<div class="answer">QR=OR−OQ=16.2−3.2=<strong>13</strong>.</div>
+<div class="step">(3) OP=7.2, OR=16.2 ⇒ OQ=51.84/16.2=<strong>3.2</strong>, इसलिए QR=<strong>13</strong>.</div>
+
+<h2>प्रश्न 19</h2>
+<p>C केंद्र वाला वृत्त D केंद्र वाले वृत्त को E पर अंतःस्पर्श करता है। बाह्य वृत्त की जीवा EB, अंतःवृत्त को A पर काटती है। सिद्ध करें EA ≅ AB.</p>
+<div class="step">E पर दोनों वृत्तों की सामान्य स्पर्श रेखा और केंद्रों की रेखा का उपयोग करें।</div>
+<div class="step">समान स्पर्श-जीवा कोणों से ∠EAD तथा संबंधित बाहरी कोण समान प्राप्त होते हैं।</div>
+<div class="answer">त्रिभुजों की समरूपता/समद्विबाहु कोण संबंध से <strong>EA=AB</strong> प्राप्त होता है।</div>
+
+<h1>23. प्रकीर्ण प्रश्नसंग्रह 3 — प्रश्न 20 से 25</h1>
+
+<h2>प्रश्न 20</h2>
+<p>AB, O केंद्र वाले वृत्त का व्यास है। ∠ACB का समद्विभाजक CD वृत्त को D पर काटता है। सिद्ध करें AD ≅ BD.</p>
+<div class="step">OD खींचिए। ∠ACB=<strong>90°</strong> (अर्धवृत्त में अंतर्लिखित कोण).</div>
+<div class="step">CD, ∠C का समद्विभाजक ⇒ ∠DCB=45°.</div>
+<div class="step">अंतर्लिखित कोण प्रमेय ⇒ चाप DB=90°.</div>
+<div class="step">केंद्रीय कोण DOB=90°. OA=OB होने से O, AB का मध्यबिंदु है और OD ⟂ AB.</div>
+<div class="answer">OD, AB का लंब समद्विभाजक है; इसलिए <strong>AD=BD</strong>.</div>
+
+<h2>प्रश्न 21</h2>
+<p>जीवा MN=25, ML=9 और d(O,L)=5. वृत्त की त्रिज्या ज्ञात कीजिए।</p>
+<div class="step">LN=MN−ML=25−9=16.</div>
+<div class="formula">LM×LN = r²−OL²</div>
+<div class="step">9×16 = r²−25 ⇒ r²=169.</div>
+<div class="answer">त्रिज्या = <strong>13 सेमी</strong>.</div>
+
+<h2>प्रश्न 22</h2>
+<p>दो वृत्त S और R पर प्रतिच्छेद करते हैं। PQ दोनों की सामान्य स्पर्शरेखा है। सिद्ध करें ∠PRQ+∠PSQ=180°.</p>
+<div class="step">P पर tangent-chord theorem से tangent और PR/PS chords के कोणों को संबंधित अंतर्लिखित कोणों से व्यक्त करें।</div>
+<div class="step">Q पर भी यही संबंध लागू करें।</div>
+<div class="step">दोनों वृत्तों के समान चाप-संबंधों से ∠PRQ और ∠PSQ को एक ही रैखिक युगल के पूरक कोणों के रूप में प्राप्त किया जाता है।</div>
+<div class="answer">अतः <strong>∠PRQ+∠PSQ=180°</strong>.</div>
+
+<h2>प्रश्न 23</h2>
+<p>दो वृत्त M और N पर प्रतिच्छेद करते हैं। M और N से खींची गई छेदन रेखाएँ क्रमशः R,S तथा P,Q पर मिलती हैं। सिद्ध करें PR ∥ QS.</p>
+<div class="step">दोनों वृत्तों में समान endpoints M,N से बने अंतर्लिखित कोणों को बराबर लिखें।</div>
+<div class="step">इन कोणों को transversal के साथ तुलना करने पर एकांतर अंतःकोण बराबर प्राप्त होते हैं।</div>
+<div class="answer">अतः <strong>PR ∥ QS</strong>.</div>
+
+<h2>प्रश्न 24</h2>
+<p>दो वृत्त A और E पर प्रतिच्छेद करते हैं। E से common secant BD और B,D से tangents C पर मिलती हैं। सिद्ध करें ABCD cyclic है.</p>
+<div class="step">B पर tangent-chord theorem से ∠CBA को संबंधित अंतर्लिखित कोण के बराबर लिखें।</div>
+<div class="step">D पर tangent-chord theorem से ∠CDA को संबंधित अंतर्लिखित कोण के बराबर लिखें।</div>
+<div class="step">E,B,D एकरेखीय होने से संबंधित कोणों का योग 180° मिलता है।</div>
+<div class="answer">अतः ∠CBA+∠CDA=180°, इसलिए <strong>ABCD चक्रीय चतुर्भुज</strong>.</div>
+
+<h2>प्रश्न 25</h2>
+<p>ΔABC में AD ⟂ BC, BE ⟂ AC और CF ⟂ AB. O लंबपाद है। सिद्ध करें O, ΔDEF का अंतःकेंद्र है।</p>
+<div class="step">D,E,F तीनों शीर्षों से खींची गई ऊँचाइयों के पाद हैं। इसलिए A,E,F,D तथा संबंधित वृत्तीय चतुर्भुजों में अर्धवृत्तीय/समकोण संबंध प्राप्त होते हैं।</div>
+<div class="step">इन कोणों के आधार पर OD, OE और OF क्रमशः ΔDEF के तीनों कोणों के समद्विभाजक सिद्ध होते हैं।</div>
+<div class="answer">अतः O तीनों कोणों के समद्विभाजकों का प्रतिच्छेदन है, इसलिए <strong>O, ΔDEF का अंतःकेंद्र</strong> है।</div>
+
+<h1>24. परीक्षा के लिए सबसे महत्वपूर्ण प्रमेय</h1>
+<ol>
+<li>स्पर्शरेखा-त्रिज्या प्रमेय।</li>
+<li>स्पर्शरेखा-त्रिज्या प्रमेय का विलोम।</li>
+<li>स्पर्श रेखाखंड का प्रमेय।</li>
+<li>स्पर्शवृत्त प्रमेय।</li>
+<li>अंतर्लिखित कोण का प्रमेय।</li>
+<li>अर्धवृत्त में अंतर्लिखित कोण 90°.</li>
+<li>चक्रीय चतुर्भुज का प्रमेय और विलोम।</li>
+<li>स्पर्शरेखा-छेदनरेखा कोण प्रमेय।</li>
+<li>जीवाओं का अंतःछेदन प्रमेय।</li>
+<li>जीवाओं का बहिःछेदन प्रमेय।</li>
+<li>स्पर्शरेखा-छेदनरेखा रेखाखंड प्रमेय।</li>
+</ol>
+
+<h1>25. त्वरित पुनरीक्षण</h1>
+<div class="formula">Tangent ⟂ Radius at point of contact</div>
+<div class="formula">External touching circles: d=r₁+r₂</div>
+<div class="formula">Internal touching circles: d=|r₁−r₂|</div>
+<div class="formula">Inscribed angle = ½ intercepted arc</div>
+<div class="formula">Cyclic quadrilateral: opposite angles sum to 180°</div>
+<div class="formula">Intersecting chords: AE×EB=CE×ED</div>
+<div class="formula">Tangent-secant: ET²=EA×EB</div>
+
+<h1>26. सामान्य गलतियाँ</h1>
+<ul>
+<li>स्पर्शरेखा को छेदनरेखा समझना।</li>
+<li>स्पर्शबिंदु पर त्रिज्या और स्पर्शरेखा का 90° संबंध भूलना।</li>
+<li>केंद्रीय कोण और अंतर्लिखित कोण में 2 का संबंध उलट देना।</li>
+<li>चक्रीय चतुर्भुज में आसन्न कोणों को 180° मान लेना; सही संबंध सम्मुख कोणों का है।</li>
+<li>जीवाओं के अंतःछेदन में सही दो-दो खंडों का गुणनफल न लेना।</li>
+<li>बाह्य बिंदु की tangent-secant समस्या में पूरे secant और बाहरी segment को अलग न करना।</li>
+</ul>
+
+ 
+
+</div>
+</body>
+</html>

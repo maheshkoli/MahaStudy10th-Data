@@ -1,0 +1,627 @@
+﻿<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>कक्षा 10 गणित — अध्याय 3 — अंकगणितीय श्रृंखला — संपूर्ण समाधान</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#f3f5f7;color:#222;font-family:"Noto Sans Devanagari","Nirmala UI",Arial,sans-serif;line-height:1.75}
+.container{max-width:1180px;margin:24px auto;background:#fff;padding:34px;border-radius:14px;box-shadow:0 4px 24px rgba(0,0,0,.08)}
+h1{color:#17365d;border-bottom:3px solid #17365d;padding-bottom:10px}
+h2{color:#244f7a;margin-top:42px;border-bottom:1px solid #ddd;padding-bottom:8px}
+h3{color:#345f82;margin-top:28px}
+h4{color:#466b86;margin-top:22px}
+p,li,td,th{font-size:16px}
+.question{border:1px solid #d9e0e7;border-radius:10px;margin:18px 0;padding:17px;background:#fff}
+.qtitle{font-weight:700;color:#17365d}
+.answer{margin-top:10px;background:#f8fbfd;padding:14px;border-radius:7px}
+.formula{font-family:"Times New Roman","Noto Sans Devanagari",serif;background:#f5f7f9;border:1px solid #ddd;border-radius:7px;padding:10px 14px;margin:10px 0;font-size:19px;text-align:center}
+.eq{font-family:"Times New Roman",serif;font-size:19px;text-align:center;margin:12px 0}
+.note{background:#fff8e8;border-left:5px solid #d6a100;padding:12px 16px;border-radius:7px;margin:14px 0}
+.source{background:#eef6ff;border-left:5px solid #3c78b5;padding:12px 16px;border-radius:7px;margin:14px 0}
+.warning{background:#fff1f1;border-left:5px solid #b64b4b;padding:12px 16px;border-radius:7px;margin:14px 0}
+table{width:100%;border-collapse:collapse;margin:14px 0}
+th,td{border:1px solid #ddd;padding:9px;text-align:left;vertical-align:top}
+th{background:#eef3f7}
+.small{font-size:14px;color:#666}
+.footer{margin-top:45px;border-top:1px solid #ddd;padding-top:18px;color:#777;font-size:13px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.badge{display:inline-block;background:#17365d;color:#fff;padding:3px 9px;border-radius:20px;font-size:13px}
+ol li{margin:7px 0}
+@media(max-width:800px){.container{margin:0;padding:18px;border-radius:0}.two{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="container">
+
+<h1>अध्याय 3: अंकगणितीय श्रृंखला</h1>
+<p><b>कक्षा 10वीं — गणित — संपूर्ण अध्ययन व प्रश्नसंग्रह समाधान</b></p>
+
+<div class="source">
+<b>स्रोत:</b> आपके द्वारा अपलोड किया गया <b>C10HHganit1Ch03.pdf</b> तथा
+मौजूदा <b>chapter_3_solutions(3).html</b>। PDF में अध्याय अनुक्रमणिका,
+अंकगणितीय श्रृंखला, n वाँ पद और प्रथम n पदों का योग शामिल हैं। fileciteturn64file0L3-L16
+मौजूदा HTML में भी इन्हीं मुख्य सूत्रों और विषयों का प्रारंभिक सार दिया गया था। fileciteturn64file1L21-L38
+</div>
+
+<h2>1. अनुक्रमणिका (Sequence)</h2>
+<p>निश्चित क्रम में लिखी गई संख्याओं की सूची को अनुक्रमणिका कहते हैं।
+उदाहरण: 1, 2, 3, 4, ... अथवा 1, 4, 9, 16, ...। अनुक्रमणिका के पद
+t<sub>1</sub>, t<sub>2</sub>, t<sub>3</sub>, ... से दर्शाए जाते हैं। PDF के
+पृष्ठ 1–2 पर आकृतिबंधों और संख्या-सूचियों के माध्यम से यह अवधारणा समझाई गई है।</p>
+
+<h2>2. अंकगणितीय श्रृंखला (Arithmetic Progression)</h2>
+<p>यदि किसी अनुक्रमणिका में दो क्रमिक पदों का अंतर स्थिर हो, तो वह
+<b>अंकगणितीय श्रृंखला (A.P.)</b> है। स्थिर अंतर को <b>सामान्य अंतर d</b>
+कहते हैं।</p>
+<div class="formula">d = t<sub>n+1</sub> − t<sub>n</sub></div>
+<p>d धनात्मक, ऋणात्मक या शून्य हो सकता है। प्रथम पद को <b>a</b> से दर्शाते हैं।</p>
+
+<h3>सामान्य रूप</h3>
+<div class="formula">a, a+d, a+2d, a+3d, ...</div>
+
+<h3>उदाहरण</h3>
+<ul>
+<li>4, 8, 12, 16, ... → d = 4, इसलिए A.P.</li>
+<li>2, 4, 8, 16, ... → d स्थिर नहीं, इसलिए A.P. नहीं।</li>
+<li>3, 3, 3, 3, ... → d = 0, इसलिए A.P.</li>
+<li>−1, −1.5, −2, −2.5, ... → d = −0.5, इसलिए A.P.</li>
+</ul>
+
+<h2>3. A.P. के n वें पद का सूत्र</h2>
+<div class="formula">t<sub>n</sub> = a + (n − 1)d</div>
+
+<p>PDF में 5, 8, 11, 14, ... से सूत्र निकाला गया है:
+t<sub>1</sub>=a, t<sub>2</sub>=a+d, t<sub>3</sub>=a+2d और सामान्यतः
+t<sub>n</sub>=a+(n−1)d।</p>
+
+<h3>मुख्य उदाहरण</h3>
+<div class="question">
+<div class="qtitle">5, 8, 11, 14, ... का 100वाँ पद</div>
+<div class="answer">
+<div class="formula">a=5, d=3, n=100</div>
+<div class="formula">t<sub>100</sub>=5+(100−1)3=5+297=<b>302</b></div>
+</div>
+</div>
+
+<div class="question">
+<div class="qtitle">क्या 61 इस A.P. में है?</div>
+<div class="answer">
+<div class="formula">61=5+(n−1)3 ⇒ 61=3n+2</div>
+<div class="formula">3n=59 ⇒ n=59/3</div>
+<p>n पूर्णांक नहीं है, इसलिए <b>61 इस A.P. में नहीं है</b>।</p>
+</div>
+</div>
+
+<h2>4. प्रश्नसंग्रह 3.1</h2>
+
+<h3>प्रश्न 1 — कौन-सी अनुक्रमणिका A.P. है?</h3>
+<table>
+<tr><th>क्रम</th><th>अनुक्रमणिका</th><th>निष्कर्ष</th></tr>
+<tr><td>1</td><td>2, 4, 6, 8, ...</td><td>A.P.; d=2</td></tr>
+<tr><td>2</td><td>2, 5/2, 3, 7/2, ...</td><td>A.P.; d=1/2</td></tr>
+<tr><td>3</td><td>−10, −6, −2, 2, ...</td><td>A.P.; d=4</td></tr>
+<tr><td>4</td><td>0.3, 0.33, 0.0333, ...</td><td>A.P. नहीं</td></tr>
+<tr><td>5</td><td>0, −4, −8, −12, ...</td><td>A.P.; d=−4</td></tr>
+<tr><td>6</td><td>−1/5, −1/5, −1/5, ...</td><td>A.P.; d=0</td></tr>
+<tr><td>7</td><td>3, 3+√2, 3+2√2, 3+3√2, ...</td><td>A.P.; d=√2</td></tr>
+<tr><td>8</td><td>127, 132, 137, ...</td><td>A.P.; d=5</td></tr>
+</table>
+
+<h3>प्रश्न 2 — a और d से A.P. लिखिए</h3>
+<table>
+<tr><th>दिया</th><th>श्रृंखला</th></tr>
+<tr><td>a=10, d=5</td><td>10, 15, 20, 25, ...</td></tr>
+<tr><td>a=−3, d=0</td><td>−3, −3, −3, −3, ...</td></tr>
+<tr><td>a=−7, d=1/2</td><td>−7, −13/2, −6, −11/2, ...</td></tr>
+<tr><td>a=−1.25, d=3</td><td>−1.25, 1.75, 4.75, 7.75, ...</td></tr>
+<tr><td>a=6, d=−3</td><td>6, 3, 0, −3, ...</td></tr>
+<tr><td>a=−19, d=−4</td><td>−19, −23, −27, −31, ...</td></tr>
+</table>
+
+<h3>प्रश्न 3 — प्रथम पद और सामान्य अंतर</h3>
+<table>
+<tr><th>श्रृंखला</th><th>a</th><th>d</th></tr>
+<tr><td>5, 1, −3, −7, ...</td><td>5</td><td>−4</td></tr>
+<tr><td>0.6, 0.9, 1.2, 1.5, ...</td><td>0.6</td><td>0.3</td></tr>
+<tr><td>127, 135, 143, 151, ...</td><td>127</td><td>8</td></tr>
+<tr><td>1/4, 3/4, 5/4, 7/4, ...</td><td>1/4</td><td>1/2</td></tr>
+</table>
+
+<h2>5. हल किए गए उदाहरण — n वाँ पद</h2>
+
+<div class="question">
+<div class="qtitle">3, 8, 13, 18, ... का 30वाँ पद</div>
+<div class="answer">
+<div class="formula">a=3, d=5</div>
+<div class="formula">t<sub>n</sub>=3+(n−1)5=5n−2</div>
+<div class="formula">t<sub>30</sub>=150−2=<b>148</b></div>
+</div>
+</div>
+
+<div class="question">
+<div class="qtitle">2, 11, 20, 29, ... में 560 कौन-सा पद है?</div>
+<div class="answer">
+<div class="formula">560=2+(n−1)9</div>
+<div class="formula">9n=567 ⇒ <b>n=63</b></div>
+</div>
+</div>
+
+<div class="question">
+<div class="qtitle">5, 11, 17, 23, ... में 301 है या नहीं?</div>
+<div class="answer">
+<div class="formula">301=5+(n−1)6</div>
+<div class="formula">6n=302 ⇒ n=302/6</div>
+<p>n पूर्णांक नहीं है, इसलिए <b>301 इस श्रृंखला में नहीं है</b>।</p>
+</div>
+</div>
+
+<div class="question">
+<div class="qtitle">4 से विभाज्य दो अंकों की कितनी संख्याएँ हैं?</div>
+<div class="answer">
+<p>A.P.: 12, 16, 20, ..., 96.</p>
+<div class="formula">96=12+(n−1)4 ⇒ 4n=88 ⇒ <b>n=22</b></div>
+</div>
+</div>
+
+<div class="question">
+<div class="qtitle">यदि t<sub>10</sub>=25 और t<sub>18</sub>=41, तो t<sub>38</sub> तथा 99 कौन-सा पद है?</div>
+<div class="answer">
+<div class="formula">25=a+9d; &nbsp; 41=a+17d</div>
+<div class="formula">8d=16 ⇒ d=2; &nbsp; a=7</div>
+<div class="formula">t<sub>38</sub>=7+37×2=<b>81</b></div>
+<div class="formula">99=7+(n−1)2 ⇒ n=<b>47</b></div>
+</div>
+</div>
+
+<h2>6. प्रश्नसंग्रह 3.2 — n वाँ पद</h2>
+
+<h3>प्रश्न 1 — रिक्त स्थान</h3>
+<table>
+<tr><th>श्रृंखला</th><th>a</th><th>t<sub>1</sub></th><th>t<sub>2</sub></th><th>t<sub>3</sub>/t<sub>4</sub></th><th>d</th></tr>
+<tr><td>1, 8, 15, 22, ...</td><td>1</td><td>1</td><td>8</td><td>15</td><td>7</td></tr>
+<tr><td>3, 6, 9, 12, ...</td><td>3</td><td>3</td><td>6</td><td>9, 12</td><td>3</td></tr>
+<tr><td>−3, −8, −13, −18, ...</td><td>−3</td><td>−3</td><td>−8</td><td>−13, −18</td><td>−5</td></tr>
+<tr><td>70, 60, 50, 40, ...</td><td>70</td><td>70</td><td>60</td><td>50</td><td>−10</td></tr>
+</table>
+
+<div class="question">
+<div class="qtitle">प्रश्न 2: −12, −5, 2, 9, ... का 20वाँ पद</div>
+<div class="answer">
+<div class="formula">a=−12, d=7</div>
+<div class="formula">t<sub>20</sub>=−12+19×7=<b>121</b></div>
+</div>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 3: 12, 16, 20, 24, ... का 24वाँ पद</div>
+<div class="answer"><div class="formula">t<sub>24</sub>=12+23×4=<b>104</b></div></div>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 4: 7, 13, 19, 25, ... का 19वाँ पद</div>
+<div class="answer"><div class="formula">t<sub>19</sub>=7+18×6=<b>115</b></div></div>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 5: 9, 4, −1, −6, ... का 27वाँ पद</div>
+<div class="answer"><div class="formula">t<sub>27</sub>=9+26(−5)=<b>−121</b></div></div>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 6: तीन अंकों वाली कितनी प्राकृतिक संख्याएँ 5 से विभाज्य हैं?</div>
+<div class="answer">
+<p>श्रृंखला: 100, 105, 110, ..., 995.</p>
+<div class="formula">n=(995−100)/5+1=<b>180</b></div>
+</div>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 7: t<sub>11</sub>=16 और t<sub>21</sub>=29; t<sub>41</sub> ज्ञात कीजिए।</div>
+<div class="answer">
+<div class="formula">a+10d=16; &nbsp; a+20d=29</div>
+<div class="formula">10d=13 ⇒ d=13/10</div>
+<div class="formula">a=3</div>
+<div class="formula">t<sub>41</sub>=3+40(13/10)=<b>55</b></div>
+</div>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 8: 11, 8, 5, 2, ... में −151 कौन-से क्रमांक का पद है?</div>
+<div class="answer">
+<div class="formula">−151=11+(n−1)(−3)</div>
+<div class="formula">−162=−3(n−1) ⇒ n−1=54 ⇒ <b>n=55</b></div>
+</div>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 9: 10 से 250 तक 4 से विभाज्य प्राकृतिक संख्याएँ कितनी हैं?</div>
+<div class="answer">
+<p>4 से विभाज्य संख्याएँ 12, 16, ..., 248 हैं।</p>
+<div class="formula">n=(248−12)/4+1=<b>60</b></div>
+</div>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 10: 17वाँ पद 10वें पद से अधिक है।</div>
+<div class="answer">
+<div class="formula">t<sub>17</sub>−t<sub>10</sub> = 7d</div>
+<p>दिया है t<sub>17</sub> &gt; t<sub>10</sub>, इसलिए 7d&gt;0 और <b>d&gt;0</b>।</p>
+<div class="note">इस प्रश्न में केवल “अधिक” दिया गया है; किसी निश्चित अंतर का मान नहीं दिया गया है। इसलिए d का एकमात्र संख्यात्मक मान निर्धारित नहीं होता।</div>
+</div>
+</div>
+
+<h2>7. A.P. का प्रथम n पदों का योग</h2>
+<div class="formula">S<sub>n</sub> = n/2 [2a + (n−1)d]</div>
+<div class="formula">S<sub>n</sub> = n/2 (t<sub>1</sub> + t<sub>n</sub>)</div>
+
+<p>PDF में Carl Gauss की 1 से 100 तक योग करने की युक्ति से यह सूत्र निकाला गया है:
+सामने और उलटे क्रम के पदों को जोड़ने पर प्रत्येक युग्म का योग समान आता है।
+यह चर्चा PDF के पृष्ठ 68–69 में दी गई है।</p>
+
+<h3>विशेष सूत्र</h3>
+<div class="formula">1+2+3+...+n = n(n+1)/2</div>
+<div class="formula">2+4+6+...+2n = n(n+1)</div>
+<div class="formula">1+3+5+...+(2n−1) = n²</div>
+
+<h2>8. प्रश्नसंग्रह 3.3 — योगफल</h2>
+
+<div class="question">
+<div class="qtitle">प्रश्न 1: a=6, d=3, S<sub>27</sub></div>
+<div class="answer">
+<div class="formula">S<sub>27</sub>=27/2[2(6)+26(3)]</div>
+<div class="formula">=27/2(90)=<b>1215</b></div>
+</div>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 2: प्रथम 123 सम प्राकृतिक संख्याओं का योग</div>
+<div class="answer">
+<div class="formula">S=123(123+1)=123×124=<b>15252</b></div>
+</div>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 3: 1 और 350 के बीच की सभी संख्याओं का योग</div>
+<div class="answer">
+<p>1 और 350 के बीच की पूर्णांक संख्याएँ 2 से 349 तक हैं।</p>
+<div class="formula">S=(2+349)×348/2=<b>61074</b></div>
+</div>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 4: t<sub>19</sub>=52, t<sub>38</sub>=148; S<sub>56</sub> ज्ञात करें।</div>
+<div class="answer">
+<div class="formula">19d=148−52=96 ⇒ d=96/19</div>
+<div class="formula">a=52−18(96/19)=−740/19</div>
+<div class="formula">S<sub>56</sub>=28[2a+55d]</div>
+<div class="formula">=28[−1480/19+5280/19]=28×200=<b>5600</b></div>
+</div>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 5: 1 और 140 के बीच 4 से विभाज्य संख्याओं का योग</div>
+<div class="answer">
+<p>4, 8, ..., 136.</p>
+<div class="formula">136=4+(n−1)4 ⇒ n=34</div>
+<div class="formula">S<sub>34</sub>=34/2(4+136)=17×140=<b>2380</b></div>
+</div>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 6: S<sub>55</sub>=3300; t<sub>28</sub> ज्ञात करें।</div>
+<div class="answer">
+<p>55 विषम है और मध्य पद t<sub>28</sub> है।</p>
+<div class="formula">S<sub>55</sub>=55×t<sub>28</sub></div>
+<div class="formula">t<sub>28</sub>=3300/55=<b>60</b></div>
+</div>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 7: तीन क्रमिक पदों का योग 27 और गुणनफल 504</div>
+<div class="answer">
+<p>पद a−d, a, a+d.</p>
+<div class="formula">3a=27 ⇒ a=9</div>
+<div class="formula">9(9−d)(9+d)=504</div>
+<div class="formula">81−d²=56 ⇒ d²=25 ⇒ d=±5</div>
+<p>पदों का क्रम: <b>4, 9, 14</b> (या उलटे क्रम में 14, 9, 4)।</p>
+</div>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 8: चार क्रमिक पदों का योग 12; तीसरे+चौथे=14</div>
+<div class="answer">
+<p>पद a−d, a, a+d, a+2d.</p>
+<div class="formula">4a+2d=12 ⇒ 2a+d=6</div>
+<div class="formula">2a+3d=14</div>
+<div class="formula">2d=8 ⇒ d=4; a=−1</div>
+<p><b>चार पद: −5, −1, 3, 7.</b></p>
+</div>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 9: यदि t<sub>9</sub>=0, सिद्ध कीजिए t<sub>29</sub>=2t<sub>19</sub>.</div>
+<div class="answer">
+<div class="formula">a+8d=0 ⇒ a=−8d</div>
+<div class="formula">t<sub>19</sub>=a+18d=10d</div>
+<div class="formula">t<sub>29</sub>=a+28d=20d=2(10d)=<b>2t<sub>19</sub></b></div>
+</div>
+</div>
+
+<h2>9. A.P. के अनुप्रयोग — PDF के हल किए गए उदाहरण</h2>
+
+<div class="question">
+<div class="qtitle">मिक्सर उत्पादन</div>
+<p>t<sub>3</sub>=600 और t<sub>7</sub>=700.</p>
+<div class="formula">a+2d=600; a+6d=700 ⇒ d=25, a=550</div>
+<p>पहले वर्ष उत्पादन = <b>550</b>, 10वें वर्ष = <b>775</b>.</p>
+<div class="formula">S<sub>7</sub>=7/2[1100+150]=<b>4375</b></div>
+</div>
+
+<div class="question">
+<div class="qtitle">₹3,25,000 ऋण की मासिक किश्तें</div>
+<p>पहली किश्त ₹30,500 और हर महीने ₹1,500 कम।</p>
+<div class="formula">a=30500, d=−1500, S<sub>n</sub>=325000</div>
+<div class="formula">3n²−125n+1300=0</div>
+<div class="formula">(n−20)(3n−65)=0</div>
+<p>n प्राकृतिक पूर्णांक होने से <b>n=20 महीने</b>.</p>
+</div>
+
+<div class="question">
+<div class="qtitle">मासिक बचत ₹200, ₹250, ₹300, ...; ₹1000 कब और कुल बचत?</div>
+<div class="formula">1000=200+(n−1)50 ⇒ n=17</div>
+<div class="formula">S<sub>17</sub>=17/2[400+800]=<b>₹10,200</b></div>
+</div>
+
+<div class="question">
+<div class="qtitle">13 अर्धवृत्तों की वलयाकृति</div>
+<p>त्रिज्याएँ 0.5, 1, 1.5, ... cm और π=22/7.</p>
+<div class="formula">अर्धपरिधियाँ: π/2, π, 3π/2, ...</div>
+<div class="formula">a=π/2, d=π/2, n=13</div>
+<div class="formula">S<sub>13</sub>=13/2[π+6π]=91π/2=<b>143 cm</b></div>
+</div>
+
+<div class="question">
+<div class="qtitle">2010 में 4000 साक्षर; हर वर्ष 400 की वृद्धि; 2020?</div>
+<div class="formula">n=11, t<sub>11</sub>=4000+10×400=<b>8000</b></div>
+</div>
+
+<div class="question">
+<div class="qtitle">₹1,80,000 वार्षिक वेतन, हर वर्ष ₹10,000 वृद्धि; ₹2,50,000 कब?</div>
+<div class="formula">250000=180000+(n−1)10000</div>
+<div class="formula">n−1=7 ⇒ <b>n=8</b></div>
+<p>अर्थात 8वें वर्ष में वार्षिक वेतन ₹2,50,000 होगा।</p>
+</div>
+
+<h2>10. प्रश्नसंग्रह 3.4 — अनुप्रयोग</h2>
+
+<div class="question">
+<div class="qtitle">1) 1 जनवरी को ₹10, फिर प्रतिदिन ₹1 अधिक; 31 दिसंबर तक बचत</div>
+<div class="answer">
+<p>2016 लीप वर्ष है, इसलिए n=366; अंतिम बचत ₹375.</p>
+<div class="formula">S=366/2(10+375)=<b>₹70,455</b></div>
+</div>
+</div>
+
+<div class="question">
+<div class="qtitle">2) ₹8000 ऋण + ₹1360 ब्याज; 12 किश्तें, हर बार ₹40 कम</div>
+<div class="answer">
+<div class="formula">कुल भुगतान=8000+1360=9360</div>
+<div class="formula">9360=12/2[2a+11(−40)]</div>
+<div class="formula">6(2a−440)=9360 ⇒ a=1000</div>
+<div class="formula">l=a+11d=1000−440=<b>₹560</b></div>
+<p><b>पहली किश्त ₹1000, अंतिम किश्त ₹560.</b></p>
+</div>
+</div>
+
+<div class="question">
+<div class="qtitle">3) निवेश ₹5000, ₹7000, ₹9000, ...; 12 वर्ष</div>
+<div class="answer">
+<div class="formula">a=5000, d=2000, n=12</div>
+<div class="formula">S<sub>12</sub>=12/2[10000+11×2000]=<b>₹1,92,000</b></div>
+</div>
+</div>
+
+<div class="question">
+<div class="qtitle">4) 27 कतारें; 20, 22, 24, ... कुर्सियाँ</div>
+<div class="answer">
+<div class="formula">a=20,d=2,n=27</div>
+<div class="formula">t<sub>15</sub>=20+14×2=<b>48</b></div>
+<div class="formula">S<sub>27</sub>=27/2(40+52)=<b>1242</b></div>
+</div>
+</div>
+
+<div class="question">
+<div class="qtitle">5) सोमवार–शनिवार तापमान A.P.; बुधवार = −30°C</div>
+<div class="answer">
+<p>मानें तापमान a, a+d, a+2d, a+3d, a+4d, a+5d.</p>
+<div class="formula">(सोमवार+शनिवार) = (मंगलवार+शनिवार)+5</div>
+<div class="formula">2a+5d=2a+6d+5 ⇒ d=−5</div>
+<div class="formula">a+2d=−30 ⇒ a=−20</div>
+<p><b>सोम: −20°C, मंगल: −25°C, बुध: −30°C, गुरु: −35°C, शुक्र: −40°C, शनि: −45°C.</b></p>
+</div>
+</div>
+
+<div class="question">
+<div class="qtitle">6) 25 पंक्तियों में 1, 2, 3, ... पौधे</div>
+<div class="answer">
+<div class="formula">S<sub>25</sub>=25×26/2=<b>325 पौधे</b></div>
+</div>
+</div>
+
+<h2>11. प्रकीर्ण प्रश्नसंग्रह 3 — MCQ</h2>
+<table>
+<tr><th>प्रश्न</th><th>हल</th><th>उत्तर</th></tr>
+<tr><td>1</td><td>−10,−6,−2,2 में d=4</td><td><b>B</b></td></tr>
+<tr><td>2</td><td>a=−2,d=−2 ⇒ −2,−4,−6,−8</td><td><b>C</b></td></tr>
+<tr><td>3</td><td>30×31/2=465</td><td><b>B</b></td></tr>
+<tr><td>4</td><td>4=a+6(−4) ⇒ a=28</td><td><b>D</b></td></tr>
+<tr><td>5</td><td>d=0 ⇒ हर पद 3.5</td><td><b>B</b></td></tr>
+<tr><td>6</td><td>a=−3,d=7 ⇒ t21=−3+140=137</td><td><b>C</b></td></tr>
+<tr><td>7</td><td>t18−t13=5d=25</td><td><b>C</b></td></tr>
+<tr><td>8</td><td>3+6+9+12+15=45</td><td><b>A</b></td></tr>
+<tr><td>9</td><td>S10=10/2[30+9(−5)]=−75</td><td><b>A</b></td></tr>
+<tr><td>10</td><td>a=1, t_n=20 और S_n=399 ⇒ 399=21n/2 ⇒ n=38</td><td><b>B</b></td></tr>
+</table>
+
+<h2>12. प्रकीर्ण प्रश्नसंग्रह 3 — प्रश्न 2 से 14</h2>
+
+<div class="question">
+<div class="qtitle">प्रश्न 2: −11, −8, −5, ..., 49 का अंत से चौथा पद</div>
+<div class="answer">
+<p>अंतिम पद 49, अंत से दूसरा 46, तीसरा 43, चौथा <b>40</b>.</p>
+</div>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 3: t10=46 तथा t5+t7=52</div>
+<div class="answer">
+<div class="formula">a+9d=46</div>
+<div class="formula">(a+4d)+(a+6d)=52 ⇒ 2a+10d=52</div>
+<div class="formula">a=46−9d ⇒ 92−18d+10d=52</div>
+<div class="formula">d=5, a=1</div>
+<p><b>A.P.: 1, 6, 11, 16, ...</b></p>
+</div>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 4: t4=−15 और t9=−30; S10</div>
+<div class="answer">
+<div class="formula">a+3d=−15; a+8d=−30</div>
+<div class="formula">5d=−15 ⇒ d=−3; a=−6</div>
+<div class="formula">S10=10/2[−12+9(−3)]=<b>−195</b></div>
+</div>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 5: 9,7,5,... और 24,21,18,... के nवें पद समान</div>
+<div class="answer">
+<div class="formula">9+(n−1)(−2)=24+(n−1)(−3)</div>
+<div class="formula">11−2n=27−3n ⇒ <b>n=16</b></div>
+<div class="formula">t16=9−30=<b>−21</b></div>
+</div>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 6: t3+t8=7 तथा t7+t14=−3; t10?</div>
+<div class="answer">
+<div class="formula">2a+9d=7</div>
+<div class="formula">2a+19d=−3</div>
+<div class="formula">10d=−10 ⇒ d=−1; a=8</div>
+<div class="formula">t10=8+9(−1)=<b>−1</b></div>
+</div>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 7: प्रथम पद −5, अंतिम पद 45, योग 120</div>
+<div class="answer">
+<div class="formula">120=n/2(−5+45)=20n ⇒ <b>n=6</b></div>
+<div class="formula">45=−5+5d ⇒ <b>d=10</b></div>
+<p>A.P.: −5, 5, 15, 25, 35, 45.</p>
+</div>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 8: 1 से n तक का योग 36</div>
+<div class="answer">
+<div class="formula">n(n+1)/2=36</div>
+<div class="formula">n²+n−72=0 ⇒ (n−8)(n+9)=0</div>
+<p>प्राकृतिक n होने से <b>n=8</b>.</p>
+</div>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 9: 207 को तीन A.P. संख्याओं में बाँटिए; छोटी दो का गुणनफल 4623</div>
+<div class="answer">
+<p>तीन संख्याएँ 69−d, 69, 69+d.</p>
+<div class="formula">69(69−d)=4623 ⇒ 69−d=67 ⇒ d=2</div>
+<p><b>संख्याएँ: 67, 69, 71.</b></p>
+</div>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 10: 37 पद; मध्य तीन का योग 225; अंतिम तीन का योग 429</div>
+<div class="answer">
+<div class="formula">t18+t19+t20=3t19=225 ⇒ t19=75</div>
+<div class="formula">t35+t36+t37=3t36=429 ⇒ t36=143</div>
+<div class="formula">t36−t19=17d=68 ⇒ d=4</div>
+<div class="formula">t19=a+18d ⇒ a=75−72=3</div>
+<p><b>A.P.: 3, 7, 11, ..., 147.</b></p>
+</div>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 11: प्रथम पद a, दूसरा b, अंतिम c — योगफल का सूत्र सिद्ध कीजिए</div>
+<div class="answer">
+<p>दूसरा पद b=a+d, इसलिए d=b−a.</p>
+<div class="formula">c=a+(n−1)d ⇒ n−1=(c−a)/(b−a)</div>
+<div class="formula">n=(b+c−2a)/(b−a)</div>
+<div class="formula">S=n(a+c)/2</div>
+<div class="formula"><b>S = (a+c)(b+c−2a) / [2(b−a)]</b></div>
+<p>यही सिद्ध करना था।</p>
+</div>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 12: S<sub>p</sub>=S<sub>q</sub>, p≠q सिद्ध कीजिए S<sub>p+q</sub>=0</div>
+<div class="answer">
+<div class="formula">S_p=p/2[2a+(p−1)d]</div>
+<div class="formula">S_q=q/2[2a+(q−1)d]</div>
+<p>दोनों बराबर करने और विस्तार करने पर:</p>
+<div class="formula">(p−q)[2a+(p+q−1)d]=0</div>
+<p>p≠q इसलिए:</p>
+<div class="formula">2a+(p+q−1)d=0</div>
+<div class="formula">S_{p+q}=(p+q)/2[2a+(p+q−1)d]=<b>0</b></div>
+</div>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 13: m t_m = n t_n हो तो t_{m+n}=0 सिद्ध कीजिए</div>
+<div class="answer">
+<div class="formula">m[a+(m−1)d]=n[a+(n−1)d]</div>
+<div class="formula">(m−n)[a+(m+n−1)d]=0</div>
+<p>यदि m≠n, तो:</p>
+<div class="formula">a+(m+n−1)d=0</div>
+<div class="formula">t_{m+n}=<b>0</b></div>
+</div>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 14: ₹1000 पर 10% साधारण ब्याज</div>
+<div class="answer">
+<div class="formula">SI=P×R×N/100</div>
+<div class="formula">1 वर्ष: ₹100; 2 वर्ष: ₹200; 3 वर्ष: ₹300; ...</div>
+<p>अतः ब्याज की रकम 100, 200, 300, ... एक A.P. है।</p>
+<div class="formula">a=100, d=100</div>
+<div class="formula">t20=100+(20−1)100=<b>₹2000</b></div>
+<p><b>20 वर्ष के पश्चात प्राप्त ब्याज = ₹2000.</b></p>
+</div>
+</div>
+
+<h2>13. Quick Revision</h2>
+<table>
+<tr><th>अवधारणा</th><th>सूत्र</th></tr>
+<tr><td>सामान्य अंतर</td><td>d=t<sub>n+1</sub>−t<sub>n</sub></td></tr>
+<tr><td>n वाँ पद</td><td>t<sub>n</sub>=a+(n−1)d</td></tr>
+<tr><td>प्रथम n पदों का योग</td><td>S<sub>n</sub>=n/2[2a+(n−1)d]</td></tr>
+<tr><td>पहले और अंतिम पद से योग</td><td>S<sub>n</sub>=n/2(t<sub>1</sub>+t<sub>n</sub>)</td></tr>
+<tr><td>प्रथम n प्राकृतिक संख्याएँ</td><td>n(n+1)/2</td></tr>
+<tr><td>प्रथम n सम संख्याएँ</td><td>n(n+1)</td></tr>
+<tr><td>प्रथम n विषम संख्याएँ</td><td>n²</td></tr>
+</table>
+
+<h2>14. सामान्य गलतियाँ</h2>
+<ul>
+<li>d निकालते समय t<sub>2</sub>−t<sub>1</sub> की जगह उलटा अंतर न लें।</li>
+<li>t<sub>n</sub> में <b>n−1</b> भूलकर n न लिखें।</li>
+<li>ऋणात्मक d में signs सावधानी से रखें।</li>
+<li>किसी संख्या के A.P. में होने के लिए निकला n धन पूर्णांक होना चाहिए।</li>
+<li>गिनती वाले प्रश्नों में पहला और अंतिम स्वीकार्य पद सही चुनें।</li>
+<li>योगफल वाले प्रश्नों में n/2 को पूरे bracket से गुणा करें।</li>
+</ul>
+ 
+
+</div>
+</body>
+</html>

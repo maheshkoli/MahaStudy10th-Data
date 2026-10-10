@@ -1,0 +1,596 @@
+﻿<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>कक्षा 10 गणित — अध्याय 1 — दो चरांकों वाले रेखीय समीकरण — संपूर्ण समाधान</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#f3f5f7;color:#222;font-family:"Noto Sans Devanagari","Nirmala UI",Arial,sans-serif;line-height:1.75}
+.container{max-width:1180px;margin:24px auto;background:#fff;padding:34px;border-radius:14px;box-shadow:0 4px 24px rgba(0,0,0,.08)}
+h1{color:#17365d;border-bottom:3px solid #17365d;padding-bottom:10px}
+h2{color:#244f7a;margin-top:42px;border-bottom:1px solid #ddd;padding-bottom:8px}
+h3{color:#345f82;margin-top:28px}
+h4{color:#466b86;margin-top:22px}
+p,li,td,th{font-size:16px}
+.question{border:1px solid #d9e0e7;border-radius:10px;margin:18px 0;padding:17px;background:#fff}
+.qtitle{font-weight:700;color:#17365d}
+.answer{margin-top:10px;background:#f8fbfd;padding:14px;border-radius:7px}
+.formula{font-family:"Times New Roman",serif;background:#f5f7f9;border:1px solid #ddd;border-radius:7px;padding:10px 14px;margin:10px 0;font-size:19px;text-align:center}
+.eq{font-family:"Times New Roman",serif;font-size:19px;text-align:center;margin:12px 0}
+.note{background:#fff8e8;border-left:5px solid #d6a100;padding:12px 16px;border-radius:7px;margin:14px 0}
+.source{background:#eef6ff;border-left:5px solid #3c78b5;padding:12px 16px;border-radius:7px;margin:14px 0}
+.warning{background:#fff1f1;border-left:5px solid #b64b4b;padding:12px 16px;border-radius:7px;margin:14px 0}
+.diagram{background:#fafafa;border:1px dashed #aaa;padding:14px;border-radius:8px;margin:12px 0}
+pre{white-space:pre-wrap;background:#f6f7f8;border:1px solid #ddd;padding:14px;border-radius:8px;font-family:"Courier New",monospace}
+table{width:100%;border-collapse:collapse;margin:14px 0}
+th,td{border:1px solid #ddd;padding:9px;text-align:left;vertical-align:top}
+th{background:#eef3f7}
+.small{font-size:14px;color:#666}
+.footer{margin-top:45px;border-top:1px solid #ddd;padding-top:18px;color:#777;font-size:13px}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.badge{display:inline-block;background:#17365d;color:#fff;padding:3px 9px;border-radius:20px;font-size:13px}
+@media(max-width:800px){.container{margin:0;padding:18px;border-radius:0}.cols{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="container">
+
+<h1>अध्याय 1: दो चरांकों वाले रेखीय समीकरण</h1>
+<p><b>कक्षा 10वीं — गणित</b></p>
+
+<div class="source">
+<b>स्रोत-आधार:</b> आपके द्वारा दिया गया <b>C10HHganit1Ch01.pdf</b> (29 पृष्ठ)
+और मौजूदा <b>chapter_1_solutions(3).html</b>। यह revised solution
+textbook के अध्याय, उदाहरणों, प्रश्नसंग्रह 1.1–1.5 और अंतिम
+प्रकीर्ण प्रश्नसंग्रह 1 को आधार बनाकर तैयार किया गया है।
+</div>
+
+<h2>1. अध्याय का अवलोकन</h2>
+<p>इस अध्याय में दो चरांकों वाले रेखीय समीकरण, युगपत रेखीय समीकरण,
+उन्हें हल करने की विभिन्न विधियाँ, रेखीय समीकरणों के आलेख, निश्चयक
+(Determinant), क्रेमर की पद्धति, रेखीय समीकरणों में रूपांतरित किए जा सकने
+वाले समीकरण और युगपत समीकरणों के व्यावहारिक अनुप्रयोगों का अध्ययन किया गया है।</p>
+
+<h2>2. सीखने के उद्देश्य</h2>
+<ul>
+<li>दो चरांकों वाले रेखीय समीकरण पहचानना।</li>
+<li>युगपत समीकरणों को विलोपन/प्रतिस्थापन जैसी विधियों से हल करना।</li>
+<li>रेखीय समीकरणों का आलेख बनाना।</li>
+<li>आलेख विधि से युगपत समीकरणों का हल प्राप्त करना।</li>
+<li>निश्चयक का मान निकालना।</li>
+<li>क्रेमर की पद्धति से युगपत समीकरण हल करना।</li>
+<li>उचित चर परिवर्तन करके कुछ गैर-रेखीय समीकरणों को रेखीय समीकरणों में बदलना।</li>
+<li>आयु, कीमत, चाल, संख्या, मजदूरी आदि के इबारती प्रश्नों को युगपत समीकरणों में बदलना।</li>
+</ul>
+
+<h2>3. दो चरांकों वाला रेखीय समीकरण</h2>
+<p>जिस समीकरण में दो चरांकों का उपयोग किया जाता है और प्रत्येक चर वाले पद की
+घात 1 होती है, उसे दो चरांकों वाला रेखीय समीकरण कहते हैं। इसका सामान्य रूप:</p>
+<div class="formula">ax + by + c = 0</div>
+<p>जहाँ a, b, c वास्तविक संख्याएँ हैं और a तथा b एक ही समय में शून्य नहीं होते।</p>
+
+<p><b>उदाहरण:</b></p>
+<div class="formula">3x = 4y − 12 &nbsp; ⇒ &nbsp; 3x − 4y + 12 = 0</div>
+
+<h3>पाठ्यपुस्तक की प्रारंभिक कृति — रेखीय है या नहीं?</h3>
+<table>
+<tr><th>क्रमांक</th><th>समीकरण</th><th>निष्कर्ष</th></tr>
+<tr><td>1</td><td>4m + 3n = 12</td><td>रेखीय</td></tr>
+<tr><td>2</td><td>3x² − 7y = 13</td><td>रेखीय नहीं</td></tr>
+<tr><td>3</td><td>√2 x − √5 y = 16</td><td>रेखीय</td></tr>
+<tr><td>4</td><td>0x + 6y − 3 = 0</td><td>रेखीय</td></tr>
+<tr><td>5</td><td>0.3x + 0y − 36 = 0</td><td>रेखीय</td></tr>
+<tr><td>6</td><td>4/x + 5/y = 4</td><td>रेखीय नहीं</td></tr>
+<tr><td>7</td><td>4xy − 5y − 8 = 0</td><td>रेखीय नहीं</td></tr>
+</table>
+
+<h2>4. युगपत रेखीय समीकरण</h2>
+<p>जब दो चरांकों वाले दो रेखीय समीकरणों का एक ही समय पर विचार किया जाता है,
+तो उन्हें <b>युगपत समीकरण</b> कहते हैं।</p>
+
+<h3>उदाहरण 1: 5x − 3y = 8 और 3x + y = 2</h3>
+<div class="answer">
+<p><b>विधि: विलोपन</b></p>
+<div class="formula">5x − 3y = 8 … (I)</div>
+<div class="formula">3x + y = 2 … (II)</div>
+<p>(II) को 3 से गुणा:</p>
+<div class="formula">9x + 3y = 6 … (III)</div>
+<p>(I) और (III) जोड़ें:</p>
+<div class="formula">14x = 14 ⇒ x = 1</div>
+<p>(II) में x = 1:</p>
+<div class="formula">3(1) + y = 2 ⇒ y = −1</div>
+<p><b>उत्तर: (x, y) = (1, −1)</b></p>
+</div>
+
+<h3>उदाहरण 2: 3x + 2y = 29 और 5x − y = 18</h3>
+<div class="answer">
+<p>(II) को 2 से गुणा:</p>
+<div class="formula">10x − 2y = 36</div>
+<p>पहले समीकरण से जोड़ने पर:</p>
+<div class="formula">13x = 65 ⇒ x = 5</div>
+<p>अब 3x + 2y = 29 में x = 5:</p>
+<div class="formula">15 + 2y = 29 ⇒ y = 7</div>
+<p><b>उत्तर: (x, y) = (5, 7)</b></p>
+</div>
+
+<h3>उदाहरण 3: 15x + 17y = 21 और 17x + 15y = 11</h3>
+<div class="answer">
+<div class="formula">32x + 32y = 32 ⇒ x + y = 1</div>
+<div class="formula">−2x + 2y = 10 ⇒ −x + y = 5</div>
+<p>दोनों समीकरण जोड़ने पर:</p>
+<div class="formula">2y = 6 ⇒ y = 3</div>
+<div class="formula">x + 3 = 1 ⇒ x = −2</div>
+<p><b>उत्तर: (x, y) = (−2, 3)</b></p>
+</div>
+
+<h2>5. प्रश्नसंग्रह 1.1 — विलोपन विधि</h2>
+
+<div class="question">
+<div class="qtitle">1) 5x + 3y = 9 और 2x − 3y = 12</div>
+<div class="answer">
+<p>जोड़ने पर:</p>
+<div class="formula">7x = 21 ⇒ x = 3</div>
+<p>पहले समीकरण में x = 3:</p>
+<div class="formula">15 + 3y = 9 ⇒ 3y = −6 ⇒ y = −2</div>
+<p><b>उत्तर: (3, −2)</b></p>
+</div>
+</div>
+
+<table>
+<tr><th>प्रश्न</th><th>युगपत समीकरण</th><th>उत्तर</th></tr>
+<tr><td>1</td><td>3a + 5b = 26; a + 5b = 22</td><td>a = 2, b = 4</td></tr>
+<tr><td>2</td><td>x + 7y = 10; 3x − 2y = 7</td><td>x = 3, y = 1</td></tr>
+<tr><td>3</td><td>2x − 3y = 9; 2x + y = 13</td><td>x = 6, y = 1</td></tr>
+<tr><td>4</td><td>5m − 3n = 19; m − 6n = −7</td><td>m = 5, n = 2</td></tr>
+<tr><td>5</td><td>5x + 2y = −3; x + 5y = 4</td><td>x = −1, y = 1</td></tr>
+<tr><td>6</td><td>x/3 + y = 10/3; 2x + y/4 = 11/4</td><td>x = 1, y = 3</td></tr>
+<tr><td>7</td><td>99x + 101y = 499; 101x + 99y = 501</td><td>x = 3, y = 2</td></tr>
+<tr><td>8</td><td>49x − 57y = 172; 57x − 49y = 252</td><td>x = 7, y = 3</td></tr>
+</table>
+
+<h2>6. दो चरांकों वाले रेखीय समीकरणों का आलेख</h2>
+<p>किसी रेखीय समीकरण का प्रत्येक संतुष्ट करने वाला क्रमित युग्म उस रेखा पर
+एक बिंदु दर्शाता है। रेखा खींचने के लिए कम-से-कम दो बिंदु पर्याप्त हैं, लेकिन
+पाठ्यपुस्तक चार बिंदुओं के निर्देशांक लेना अधिक सुरक्षित बताती है क्योंकि
+एक निर्देशांक में गलती होने पर बाकी बिंदुओं से गलती पकड़ में आ सकती है।</p>
+
+<h3>उदाहरण: 2x − y = 4</h3>
+<table>
+<tr><th>x</th><td>0</td><td>2</td><td>3</td><td>−1</td></tr>
+<tr><th>y</th><td>−4</td><td>0</td><td>2</td><td>−6</td></tr>
+<tr><th>(x,y)</th><td>(0,−4)</td><td>(2,0)</td><td>(3,2)</td><td>(−1,−6)</td></tr>
+</table>
+<p>इन बिंदुओं को समान पैमाने पर अंकित करके सीधी रेखा खींचने पर
+2x − y = 4 का आलेख प्राप्त होता है।</p>
+
+<h3>विशेष समीकरण</h3>
+<ul>
+<li><b>y = 2:</b> X-अक्ष के समांतर रेखा।</li>
+<li><b>x = 2:</b> Y-अक्ष के समांतर रेखा।</li>
+</ul>
+
+<h2>7. आलेख विधि से युगपत समीकरण हल करना</h2>
+
+<h3>उदाहरण: x + y = 4 और 2x − y = 2</h3>
+<p>दोनों रेखाओं का प्रतिच्छेदन बिंदु (2,2) है। इसलिए:</p>
+<div class="formula">x = 2, y = 2</div>
+
+<h3>प्रश्नसंग्रह 1.2 — उत्तर</h3>
+<p>तालिका वाले उदाहरण में x + y = 3 के लिए बिंदु (3,0), (0,3) तथा
+x − y = 4 के लिए बिंदु (0,−4) आदि लिए जा सकते हैं। दोनों रेखाओं का
+प्रतिच्छेदन बिंदु (7/2, −1/2) है।</p>
+
+<table>
+<tr><th>क्रमांक</th><th>युगपत समीकरण</th><th>आलेख का प्रतिच्छेदन/हल</th></tr>
+<tr><td>1</td><td>x + y = 6; x − y = 4</td><td>(5, 1)</td></tr>
+<tr><td>2</td><td>x + y = 5; x − y = 3</td><td>(4, 1)</td></tr>
+<tr><td>3</td><td>x + y = 0; 2x − y = 9</td><td>(3, −3)</td></tr>
+<tr><td>4</td><td>3x − y = 2; 2x − y = 3</td><td>(−1, −5)</td></tr>
+<tr><td>5</td><td>3x − 4y = −7; 5x − 2y = 0</td><td>(1, 5/2)</td></tr>
+<tr><td>6</td><td>2x − 3y = 4; 3y − x = 4</td><td>(8, 4)</td></tr>
+</table>
+
+<h2>8. समान रेखाएँ, समानांतर रेखाएँ और हलों की संख्या</h2>
+<p>पाठ्यपुस्तक के उदाहरण में:</p>
+<div class="formula">x + 2y = 4</div>
+<div class="formula">3x + 6y = 12</div>
+<p>दूसरा समीकरण पहले का 3 गुना है, इसलिए दोनों समीकरणों के आलेख
+एक ही रेखा हैं और <b>अनंत हल</b> हैं।</p>
+
+<p>इसके विपरीत:</p>
+<div class="formula">x − 2y = 4, &nbsp; 2x − 4y = 12</div>
+<p>यहाँ x और y के गुणांक समान अनुपात में हैं, लेकिन अचर पद उसी अनुपात में
+नहीं है; इसलिए रेखाएँ अलग समानांतर रेखाएँ हैं और <b>कोई हल नहीं</b> है।</p>
+
+<h2>9. निश्चयक (Determinant)</h2>
+<p>दूसरे क्रम का निश्चयक:</p>
+<div class="formula">| a &nbsp; b ; c &nbsp; d | = ad − bc</div>
+
+<table>
+<tr><th>निश्चयक</th><th>मान</th></tr>
+<tr><td>|5 3; 7 9|</td><td>45 − 21 = <b>24</b></td></tr>
+<tr><td>|−8 −3; 2 4|</td><td>−32 + 6 = <b>−26</b></td></tr>
+<tr><td>|2 3 9; 2 3 3| के पाठ्यपुस्तक-प्रदर्शित 2×2 रूप का मान</td><td><b>0</b></td></tr>
+</table>
+
+<h2>10. क्रेमर की पद्धति</h2>
+<p>युगपत समीकरण:</p>
+<div class="formula">a₁x + b₁y = c₁</div>
+<div class="formula">a₂x + b₂y = c₂</div>
+
+<div class="formula">
+D = |a₁ b₁; a₂ b₂|<br>
+D<sub>x</sub> = |c₁ b₁; c₂ b₂|<br>
+D<sub>y</sub> = |a₁ c₁; a₂ c₂|
+</div>
+
+<p>यदि D ≠ 0 हो:</p>
+<div class="formula">x = D<sub>x</sub>/D &nbsp;&nbsp;&nbsp; y = D<sub>y</sub>/D</div>
+
+<div class="note">
+<b>स्तंभ याद रखने की युक्ति:</b> D में x और y के गुणांक रहते हैं।
+D<sub>x</sub> में x-गुणांक का स्तंभ हटाकर अचर पदों का स्तंभ रखा जाता है।
+D<sub>y</sub> में y-गुणांक का स्तंभ हटाकर अचर पदों का स्तंभ रखा जाता है।
+</div>
+
+<h3>क्रेमर का पाठ्यपुस्तक उदाहरण</h3>
+<p>5x + 3y = −11 और 2x + 4y = −10</p>
+<div class="formula">D = 14, &nbsp; D<sub>x</sub> = −14, &nbsp; D<sub>y</sub> = −28</div>
+<div class="formula">x = −1, &nbsp; y = −2</div>
+
+<h3>यदि D = 0</h3>
+<ul>
+<li>D = 0 तथा D<sub>x</sub> = D<sub>y</sub> = 0 होने पर सामान्यतः <b>अनंत हल</b> होते हैं और दोनों रेखाएँ एक ही रेखा होती हैं।</li>
+<li>D = 0 लेकिन D<sub>x</sub> या D<sub>y</sub> में से कोई शून्य न होने पर <b>कोई हल नहीं</b> होता और रेखाएँ समानांतर होती हैं।</li>
+</ul>
+
+<h2>11. प्रश्नसंग्रह 1.3 — निश्चयक और क्रेमर पद्धति</h2>
+
+<h3>(1) निश्चयकों के मान</h3>
+<table>
+<tr><th>प्रश्न</th><th>उत्तर</th></tr>
+<tr><td>i) |−1 7; 2 4|</td><td>−4 − 14 = <b>−18</b></td></tr>
+<tr><td>ii) |5 3; −7 0|</td><td>0 − (−21) = <b>21</b></td></tr>
+<tr><td>iii) |7/3 5/3; 3/2 1/2|</td><td>7/6 − 15/6 = <b>−4/3</b></td></tr>
+</table>
+
+<h3>(2) क्रेमर पद्धति से हल</h3>
+<table>
+<tr><th>क्रमांक</th><th>युगपत समीकरण</th><th>उत्तर</th></tr>
+<tr><td>i</td><td>3x − 4y = 10; 4x + 3y = 5</td><td>x = 2, y = −1</td></tr>
+<tr><td>ii</td><td>4x + 3y − 4 = 0; 6x = 8 − 5y</td><td>x = −2, y = 4</td></tr>
+<tr><td>iii</td><td>x + 2y = −1; 2x − 3y = 12</td><td>x = 3, y = −2</td></tr>
+<tr><td>iv</td><td>6x − 4y = −12; 8x − 3y = −2</td><td>x = 2, y = 6</td></tr>
+<tr><td>v</td><td>4m + 6n = 54; 3m + 2n = 28</td><td>m = 6, n = 5</td></tr>
+<tr><td>vi</td><td>2x + 3y = 2; x − y/2 = 1/2</td><td>x = 5/8, y = 1/4</td></tr>
+</table>
+
+<h2>12. रेखीय समीकरणों में रूपांतरित होने योग्य समीकरण</h2>
+<p>कुछ समीकरण सीधे रेखीय नहीं होते, लेकिन उचित चर परिवर्तन करने पर उन्हें
+युगपत रेखीय समीकरणों में बदला जा सकता है। पाठ्यपुस्तक में ऐसे उदाहरणों के
+लिए नए चर m, n या a, b लेने की विधि बताई गई है।</p>
+
+<h3>उदाहरण 1</h3>
+<div class="formula">4/x + 5/y = 7; &nbsp; 3/x + 4/y = 5</div>
+<p>मानें:</p>
+<div class="formula">m = 1/x, &nbsp; n = 1/y</div>
+<p>तब:</p>
+<div class="formula">4m + 5n = 7; &nbsp; 3m + 4n = 5</div>
+<p>हल करने पर m = 3, n = −1.</p>
+<div class="formula">1/x = 3 ⇒ x = 1/3; &nbsp; 1/y = −1 ⇒ y = −1</div>
+<p><b>उत्तर: (1/3, −1)</b></p>
+
+<h3>उदाहरण 2</h3>
+<div class="formula">4/(x−y) + 1/(x+y) = 3</div>
+<div class="formula">2/(x−y) − 3/(x+y) = 5</div>
+<p>मानें:</p>
+<div class="formula">a = 1/(x−y), &nbsp; b = 1/(x+y)</div>
+<p>तब:</p>
+<div class="formula">4a + b = 3; &nbsp; 2a − 3b = 5</div>
+<p>हल करने पर a = 1, b = −1.</p>
+<div class="formula">x − y = 1; &nbsp; x + y = −1</div>
+<div class="formula">x = 0, &nbsp; y = −1</div>
+<p><b>उत्तर: (0, −1)</b></p>
+
+<h2>13. प्रश्नसंग्रह 1.4 — रूपांतरित समीकरण</h2>
+
+<div class="question">
+<div class="qtitle">(1) 2/x − 3/y = 15; 8/x + 5/y = 77</div>
+<div class="answer">
+<p>m = 1/x और n = 1/y रखने पर:</p>
+<div class="formula">2m − 3n = 15; &nbsp; 8m + 5n = 77</div>
+<p>हल: m = 9, n = 1.</p>
+<div class="formula">1/x = 9 ⇒ x = 1/9; &nbsp; 1/y = 1 ⇒ y = 1</div>
+<p><b>उत्तर: (1/9, 1)</b></p>
+</div>
+</div>
+
+<div class="question">
+<div class="qtitle">(2) 10/(x+y) + 2/(x−y) = 4; 15/(x+y) − 5/(x−y) = −2</div>
+<div class="answer">
+<p>m = 1/(x+y), n = 1/(x−y).</p>
+<div class="formula">10m + 2n = 4; &nbsp; 15m − 5n = −2</div>
+<p>हल करने पर m = 1/5, n = 1.</p>
+<div class="formula">x + y = 5; &nbsp; x − y = 1</div>
+<div class="formula">x = 3, &nbsp; y = 2</div>
+<p><b>उत्तर: (3, 2)</b></p>
+</div>
+</div>
+
+<div class="question">
+<div class="qtitle">(3) 27/(x−2) + 31/(y+3) = 85; 31/(x−2) + 27/(y+3) = 89</div>
+<div class="answer">
+<p>m = 1/(x−2), n = 1/(y+3).</p>
+<div class="formula">27m + 31n = 85; &nbsp; 31m + 27n = 89</div>
+<p>हल: m = 2/9, n = 1.</p>
+<div class="formula">x − 2 = 9/2 ⇒ x = 13/2; &nbsp; y + 3 = 1 ⇒ y = −2</div>
+<p><b>उत्तर: (13/2, −2)</b></p>
+</div>
+</div>
+
+<div class="question">
+<div class="qtitle">(4) 1/(3x+y) + 1/(3x−y) = 3/4; 1/[2(3x+y)] − 1/[2(3x−y)] = −1/8</div>
+<div class="answer">
+<p>m = 1/(3x+y), n = 1/(3x−y).</p>
+<div class="formula">m + n = 3/4; &nbsp; m/2 − n/2 = −1/8</div>
+<div class="formula">m − n = −1/4</div>
+<p>इससे m = 1/4, n = 1/2.</p>
+<div class="formula">3x + y = 4; &nbsp; 3x − y = 2</div>
+<div class="formula">x = 1, &nbsp; y = 1</div>
+<p><b>उत्तर: (1, 1)</b></p>
+</div>
+</div>
+
+<h2>14. युगपत समीकरणों का उपयोग — अनुप्रयोग</h2>
+
+<h3>उदाहरण 1: आयत की लंबाई और चौड़ाई</h3>
+<p>परिमिति 40 cm है और लंबाई चौड़ाई की दोगुनी से 2 cm अधिक है।</p>
+<div class="formula">x + y = 20</div>
+<div class="formula">x − 2y = 2</div>
+<p>हल: <b>x = 14 cm, y = 6 cm</b>.</p>
+
+<div class="question">
+<div class="qtitle">उदाहरण 2: घड़ियों की कीमत</div>
+<p>पहले दिन 11 काँटेवाली और 6 डिजिटल घड़ियों से ₹4330 मिले। दूसरे दिन
+22 काँटेवाली और 5 डिजिटल घड़ियों से ₹7330 मिले।</p>
+<div class="formula">11x + 6y = 4330</div>
+<div class="formula">22x + 5y = 7330</div>
+<p>विलोपन से:</p>
+<div class="formula">y = 190; &nbsp; x = 290</div>
+<p><b>काँटेवाली घड़ी = ₹290; डिजिटल घड़ी = ₹190</b></p>
+</div>
+
+<div class="question">
+<div class="qtitle">उदाहरण 3: नाव और प्रवाह</div>
+<p>एक नाव 6 घंटे में प्रवाह के विपरीत 16 km और प्रवाह की दिशा में 24 km जाती है।
+13 घंटे में क्रमशः 36 km और 48 km जाती है।</p>
+<p>मानें स्थिर जल में नाव की चाल x और प्रवाह की चाल y km/h.</p>
+<div class="formula">16/(x−y) + 24/(x+y) = 6</div>
+<div class="formula">36/(x−y) + 48/(x+y) = 13</div>
+<p>m = 1/(x−y), n = 1/(x+y) रखने पर हल से m = 1/4, n = 1/12.</p>
+<div class="formula">x − y = 4; &nbsp; x + y = 12</div>
+<div class="formula">x = 8, &nbsp; y = 4</div>
+<p><b>स्थिर जल में नाव की चाल = 8 km/h; प्रवाह की चाल = 4 km/h</b></p>
+</div>
+
+<div class="question">
+<div class="qtitle">उदाहरण 4: रकम का वितरण</div>
+<p>यदि 10 लड़के अधिक हों तो प्रत्येक को ₹2 कम और 15 लड़के कम हों तो प्रत्येक
+को ₹6 अधिक मिलते हैं।</p>
+<p>मानें लड़कों की संख्या x और प्रत्येक की रकम y.</p>
+<div class="formula">(x+10)(y−2) = xy ⇒ −x + 5y = 10</div>
+<div class="formula">(x−15)(y+6) = xy ⇒ 2x − 5y = 30</div>
+<div class="formula">x = 40, &nbsp; y = 10</div>
+<p><b>कुल रकम = 40 × 10 = ₹400</b></p>
+</div>
+
+<div class="question">
+<div class="qtitle">उदाहरण 5: तीन अंकों वाली संख्या</div>
+<p>पाठ्यपुस्तक के अनुसार संख्या अपने अंकों के योगफल की 17 गुनी है, 198 जोड़ने
+पर उलटे क्रम की संख्या मिलती है और इकाई तथा सैकड़ा के अंकों का योगफल दहाई के
+अंक से 1 कम है। समाधान से:</p>
+<div class="formula">76x − 23y = 7; &nbsp; x − y = −2</div>
+<div class="formula">x = 1, &nbsp; y = 3</div>
+<p>दहाई का अंक = x + y + 1 = 5.</p>
+<p><b>उत्तर: 153</b></p>
+</div>
+
+<h3>आयु वाला अनुप्रयोग</h3>
+<p>यदि साथर्वाक की आयु साध्वी/साक्षी की आयु की दोगुनी से 8 वर्ष कम है और
+दोनों की आयु का योग 25 वर्ष है, तो:</p>
+<div class="formula">x = 2y − 8; &nbsp; x + y = 25</div>
+<div class="formula">x = 14, &nbsp; y = 11</div>
+<p>चार वर्ष पहले क्रमशः 10 और 7 वर्ष थे, इसलिए अंतर 3 वर्ष है।</p>
+
+<h2>15. प्रश्नसंग्रह 1.5 — इबारती प्रश्न</h2>
+<table>
+<tr><th>प्रश्न</th><th>समीकरण/संक्षिप्त समाधान</th><th>उत्तर</th></tr>
+<tr>
+<td>1. दो संख्याओं का अंतर 3 है; बड़ी का 3 गुना और छोटी का 2 गुना का योग 19 है।</td>
+<td>x−y=3; 3x+2y=19</td><td>बड़ी = 5, छोटी = 2</td>
+</tr>
+<tr>
+<td>2. आयत की दी गई भुजाएँ: 2y, x+4, 2x+y+8, 4x−y.</td>
+<td>विपरीत भुजाएँ बराबर रखने पर x = −4, y = 0 मिलता है।</td>
+<td>पाठ्यपुस्तक में छपी आकृति/दिए गए व्यंजकों के अनुसार यह degenerate परिणाम देता है; अतः प्रश्न में मुद्रण/डेटा असंगति प्रतीत होती है। इसे बिना स्रोत-संशोधन के वास्तविक आयत का धनात्मक क्षेत्रफल नहीं दिया जा सकता।</td>
+</tr>
+<tr>
+<td>3. पिता और पुत्र की आयु।</td>
+<td>F + 2S = 70; 2F + S = 95</td><td>पिता = 40 वर्ष, पुत्र = 15 वर्ष</td>
+</tr>
+<tr>
+<td>4. भिन्न का हर अंश के दुगुने से 4 अधिक; दोनों में 6 घटाने पर हर अंश का 12 गुना।</td>
+<td>d=2n+4; d−6=12(n−6)</td><td>अंश = 7, हर = 18; भिन्न = 7/18</td>
+</tr>
+<tr>
+<td>5. 10 टन ट्रक में A और B प्रकार के बक्से।</td>
+<td>150A+100B=10000; 260A+40B=10000 (kg में)</td><td>A = 30 kg, B = 55 kg</td>
+</tr>
+<tr>
+<td>6. 1900 km यात्रा: बस 60 km/h, विमान 700 km/h, कुल समय 5 घंटे।</td>
+<td>x/60 + (1900−x)/700 = 5</td><td>बस से दूरी = 150 km</td>
+</tr>
+</table>
+
+<h2>16. प्रकीर्ण प्रश्नसंग्रह 1</h2>
+
+<h3>प्रश्न 1 — MCQ उत्तर</h3>
+<table>
+<tr><th>क्रमांक</th><th>प्रश्न का सार</th><th>उत्तर</th></tr>
+<tr><td>1</td><td>4x + 5y = 19 में x = 1</td><td>y = 3 — विकल्प B</td></tr>
+<tr><td>2</td><td>D<sub>x</sub>=49, D<sub>y</sub>=−63, D=7</td><td>x = 7 — विकल्प A</td></tr>
+<tr><td>3</td><td>|5 3; −7 −4|</td><td>−20 + 21 = 1 — विकल्प D</td></tr>
+<tr><td>4</td><td>x+y=3; 3x−2y−4=0 के लिए D</td><td>−5 — विकल्प C</td></tr>
+<tr><td>5</td><td>ax+by=c; mx+ny=d और an ≠ bm</td><td>एक ही हल — विकल्प A</td></tr>
+</table>
+
+<h3>प्रश्न 2 — 2x − 6y = 3 का आलेख</h3>
+<p>तालिका पूर्ण करने के लिए:</p>
+<table>
+<tr><th>x</th><td>−5</td><td>3/2</td></tr>
+<tr><th>y</th><td>−13/6</td><td>0</td></tr>
+<tr><th>(x,y)</th><td>(−5,−13/6)</td><td>(3/2,0)</td></tr>
+</table>
+
+<h3>प्रश्न 3 — आलेख विधि से हल</h3>
+<table>
+<tr><th>क्रमांक</th><th>समीकरण</th><th>प्रतिच्छेदन/हल</th></tr>
+<tr><td>1</td><td>2x+3y=12; x−y=1</td><td>(3,2)</td></tr>
+<tr><td>2</td><td>x−3y=1; 3x−2y+4=0</td><td>(−2,−1)</td></tr>
+<tr><td>3</td><td>5x−6y+30=0; 5x+4y−20=0</td><td>(0,5)</td></tr>
+<tr><td>4</td><td>3x−y−2=0; 2x+y=8</td><td>(2,4)</td></tr>
+<tr><td>5</td><td>3x+y=10; x−y=2</td><td>(3,1)</td></tr>
+</table>
+
+<h3>प्रश्न 4 — निश्चयकों के मान</h3>
+<table>
+<tr><th>निश्चयक</th><th>मान</th></tr>
+<tr><td>|4 3; 2 7|</td><td>28−6 = <b>22</b></td></tr>
+<tr><td>|5 −2; −3 1|</td><td>5−6 = <b>−1</b></td></tr>
+<tr><td>|3 −1; 1 4|</td><td>12+1 = <b>13</b></td></tr>
+</table>
+
+<h3>प्रश्न 5 — क्रेमर की पद्धति</h3>
+<table>
+<tr><th>क्रमांक</th><th>समीकरण</th><th>उत्तर</th></tr>
+<tr><td>1</td><td>6x−3y=−10; 3x+5y−8=0</td><td>x = −2/3, y = 2</td></tr>
+<tr><td>2</td><td>4m−2n=−4; 4m+3n=16</td><td>m = 1, n = 4</td></tr>
+<tr><td>3</td><td>3x−2y=5/2; x/3+3y=−4/3</td><td>x = 1/2, y = −1/2</td></tr>
+<tr><td>4</td><td>7x+3y=15; 12y−5x=39</td><td>x = 7/11, y = 116/33</td></tr>
+<tr><td>5</td><td>(x+y−8)/2 = (x+2y−14)/3 = (3x−y)/4</td><td>x = 2, y = 6</td></tr>
+</table>
+
+<h3>प्रश्न 6 — रूपांतरित युगपत समीकरण</h3>
+<table>
+<tr><th>क्रमांक</th><th>उत्तर</th></tr>
+<tr><td>1</td><td>x = 6, y = −4</td></tr>
+<tr><td>2</td><td>x = −1/4, y = −1</td></tr>
+<tr><td>3</td><td>x = 1, y = 2</td></tr>
+<tr><td>4</td><td>x = 1, y = 1</td></tr>
+<tr><td>5</td><td>x = 1406/1275, y = 874/3825</td></tr>
+</table>
+
+<div class="question">
+<div class="qtitle">प्रश्न 7(1): दो अंकों वाली संख्या</div>
+<p>इकाई अंक x और दहाई अंक y मानें। मूल संख्या = 10y+x और उलटी संख्या = 10x+y.</p>
+<div class="formula">(10y+x)+(10x+y)=143 ⇒ x+y=13</div>
+<div class="formula">x=y+3 ⇒ x−y=3</div>
+<div class="formula">2x=16 ⇒ x=8, y=5</div>
+<p><b>उत्तर: 58</b></p>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 7(2): चायपत्ती और शक्कर की कीमत</div>
+<p>चाय की दर x ₹/kg और शक्कर की दर y ₹/kg.</p>
+<div class="formula">1.5x + 5y + 50 = 700 ⇒ 1.5x + 5y = 650</div>
+<div class="formula">2x + 7y = 880</div>
+<p>हल:</p>
+<div class="formula">x = 300, &nbsp; y = 40</div>
+<p><b>चायपत्ती = ₹300/kg; शक्कर = ₹40/kg</b></p>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 7(3): ₹100 और ₹50 के नोट</div>
+<p>100 रुपये के नोट x और 50 रुपये के नोट y.</p>
+<div class="formula">100x + 50y = 2500 ⇒ 2x+y=50</div>
+<p>नोटों की संख्या बदलने पर राशि ₹500 कम:</p>
+<div class="formula">50x + 100y = 2000 ⇒ x+2y=40</div>
+<div class="formula">x=20, y=10</div>
+<p><b>उत्तर: ₹100 के 20 नोट और ₹50 के 10 नोट</b></p>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 7(4): मनीषा और सविता की आयु</div>
+<div class="formula">M + S = 31</div>
+<div class="formula">(M−3)=4(S−3)</div>
+<div class="formula">M = 23, S = 8</div>
+<p><b>उत्तर: मनीषा 23 वर्ष, सविता 8 वर्ष</b></p>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 7(5): कुशल और अकुशल मजदूर</div>
+<p>मजदूरी का अनुपात 5:3 और कुल ₹720.</p>
+<div class="formula">कुशल = 5k, अकुशल = 3k</div>
+<div class="formula">8k = 720 ⇒ k = 90</div>
+<p><b>कुशल मजदूर = ₹450/दिन; अकुशल मजदूर = ₹270/दिन</b></p>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 7(6): A और B के बीच मोटरसाइकिल की गति</div>
+<p>A और B के बीच दूरी 30 km है। पहली स्थिति में दोनों 20 मिनट में मिलते हैं।</p>
+<div class="formula">u+v = 30/(1/3) = 90</div>
+<p>दूसरी स्थिति में जोसेफ विपरीत दिशा में जाकर 3 घंटे बाद मिलता है; इसलिए
+पाठ्यपुस्तक की दिशा-व्याख्या के अनुसार:</p>
+<div class="formula">u−v = 30/3 = 10</div>
+<div class="formula">u+v=90; u−v=10 ⇒ u=50, v=40</div>
+<p><b>उत्तर: हमीद = 50 km/h; जोसेफ = 40 km/h</b></p>
+</div>
+
+<h2>17. महत्वपूर्ण सूत्र</h2>
+<table>
+<tr><th>विषय</th><th>सूत्र</th></tr>
+<tr><td>दो चरांकों वाला रेखीय समीकरण</td><td>ax + by + c = 0</td></tr>
+<tr><td>निश्चयक</td><td>|a b; c d| = ad − bc</td></tr>
+<tr><td>क्रेमर</td><td>x = D<sub>x</sub>/D, y = D<sub>y</sub>/D</td></tr>
+<tr><td>आयत की परिमिति</td><td>2(l+b)</td></tr>
+<tr><td>दो अंकों की संख्या</td><td>10 × दहाई अंक + इकाई अंक</td></tr>
+<tr><td>तीन अंकों की संख्या</td><td>100 × सैकड़ा + 10 × दहाई + इकाई</td></tr>
+<tr><td>चाल</td><td>चाल = दूरी/समय</td></tr>
+</table>
+
+<h2>18. परीक्षा के लिए Quick Revision</h2>
+<ul>
+<li>रेखीय समीकरण में चर की घात 1 होती है।</li>
+<li>युगपत समीकरण का हल दोनों समीकरणों को एक साथ संतुष्ट करता है।</li>
+<li>आलेख में दो प्रतिच्छेदित रेखाएँ → एक हल।</li>
+<li>समान रेखाएँ → अनंत हल।</li>
+<li>अलग समानांतर रेखाएँ → कोई हल नहीं।</li>
+<li>निश्चयक का मान = ad − bc.</li>
+<li>क्रेमर में D ≠ 0 होने पर x = D<sub>x</sub>/D और y = D<sub>y</sub>/D.</li>
+<li>भिन्नों वाले समीकरणों में 1/x, 1/y, 1/(x+y) आदि को नए चर मानकर समीकरण रेखीय बनाए जा सकते हैं।</li>
+<li>इबारती प्रश्नों में पहले अज्ञात राशियों को x और y मानें, फिर प्रत्येक शर्त से एक समीकरण बनाएं।</li>
+</ul>
+
+<div class="warning">
+<b>महत्वपूर्ण स्रोत-नोट:</b> प्रश्नसंग्रह 1.5 के आयत वाले प्रश्न में PDF की
+आकृति पर दी गई चार भुजाओं के व्यंजकों को सीधे बराबर करने पर x = −4, y = 0
+मिलता है, जो वास्तविक आयत नहीं बनाता। इसलिए यहाँ उस डेटा को चुपचाप बदलकर
+कोई काल्पनिक उत्तर नहीं दिया गया है। मूल PDF में यह प्रश्न पुनः जाँचने योग्य है।
+</div>
+
+<div class="source">
+<b>PDF संदर्भ:</b> अध्याय में प्रश्नसंग्रह 1.1 में युगपत समीकरणों के अभ्यास,
+1.2 में आलेख विधि, 1.3 में निश्चयक/क्रेमर, 1.4 में रूपांतरित समीकरण और
+1.5 में अनुप्रयोग/इबारती प्रश्न दिए गए हैं। अंतिम प्रकीर्ण प्रश्नसंग्रह में
+MCQ, आलेख, निश्चयक, क्रेमर, रूपांतरित समीकरण और अनुप्रयोग प्रश्न शामिल हैं।
+</div>
+
+<div class="footer">
+कक्षा 10 गणित — अध्याय 1: दो चरांकों वाले रेखीय समीकरण<br>
+Prepared from the supplied C10HHganit1Ch01.pdf and the supplied chapter solution HTML.
+</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,544 @@
+﻿<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Chapter 2 - पायथागोरस का प्रमेय - संपूर्ण समाधान</title>
+<style>
+:root{
+  --primary:#17365d;--secondary:#244f7a;--accent:#d89b00;
+  --bg:#f3f5f7;--card:#fff;--text:#222;--muted:#667085;
+  --border:#dfe3e8;--soft:#eef4fb;--green:#eaf7ef;--red:#fff1f0;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);font-family:'Noto Sans Devanagari','Nirmala UI',Arial,Helvetica,sans-serif;color:var(--text);line-height:1.8}
+.container{max-width:1100px;margin:28px auto;background:var(--card);padding:34px 42px;border-radius:16px;box-shadow:0 6px 28px rgba(0,0,0,.08)}
+.cover{background:linear-gradient(135deg,#17365d,#244f7a);color:#fff;padding:28px;border-radius:14px;margin-bottom:28px}
+.cover h1{margin:0 0 8px;font-size:32px;border:0;color:#fff}
+.cover p{margin:5px 0;opacity:.95}
+h1{color:var(--primary);border-bottom:3px solid var(--primary);padding-bottom:9px;margin-top:38px}
+h2{color:var(--secondary);margin-top:30px;border-bottom:1px solid var(--border);padding-bottom:7px}
+h3{color:#345f82;margin-top:24px}
+p{margin:10px 0}
+ul,ol{padding-left:28px}
+li{margin:6px 0}
+.formula{background:var(--soft);border-left:4px solid var(--secondary);padding:12px 16px;margin:12px 0;border-radius:8px;font-size:18px;font-weight:600}
+.step{background:#fafafa;border:1px solid var(--border);padding:14px 16px;border-radius:10px;margin:10px 0}
+.answer{background:var(--green);border-left:4px solid #318451;padding:12px 16px;margin:12px 0;border-radius:8px}
+.note{background:#fff8e7;border-left:4px solid var(--accent);padding:12px 16px;border-radius:8px;margin:12px 0}
+.warning{background:var(--red);border-left:4px solid #c43d35;padding:12px 16px;border-radius:8px;margin:12px 0}
+.q{font-weight:700;color:var(--primary)}
+.option{display:inline-block;background:#f5f6f8;border:1px solid var(--border);padding:3px 9px;border-radius:6px;margin:3px}
+table{width:100%;border-collapse:collapse;margin:15px 0}
+th,td{border:1px solid var(--border);padding:9px;text-align:left;vertical-align:top}
+th{background:var(--soft);color:var(--primary)}
+.small{color:var(--muted);font-size:14px}
+.footer{margin-top:50px;border-top:1px solid var(--border);padding-top:18px;color:#777;font-size:13px}
+.toc a{color:var(--secondary);text-decoration:none}
+@media(max-width:700px){
+ .container{margin:0;padding:18px;border-radius:0}
+ .cover h1{font-size:25px}
+ h1{font-size:24px}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="cover">
+<h1>कक्षा 10वीं गणित भाग-II</h1>
+<p><strong>अध्याय 2 — पायथागोरस का प्रमेय</strong></p>
+<p>संपूर्ण अवधारणा, प्रमेय, उपपत्तियाँ, उदाहरण और प्रश्नसंग्रह समाधान</p>
+</div>
+
+<div class="note">
+<strong>स्रोत-आधारित समाधान:</strong> यह अध्याय 2 के उपलब्ध पाठ्यपुस्तक PDF के क्रम और प्रश्नों के आधार पर तैयार किया गया है। जहाँ मूल प्रश्न में पर्याप्त जानकारी नहीं है, वहाँ अनुमान लगाकर उत्तर देने के बजाय उसे स्पष्टपणे नमूद केले आहे.
+</div>
+
+<h1>1. अध्याय का अवलोकन</h1>
+<p>इस अध्याय में समकोण त्रिभुजों से संबंधित पायथागोरस का प्रमेय, पायथागोरस के त्रिक, समकोण त्रिभुजों की समरूपता, ज्यामितीय माध्य का प्रमेय, पायथागोरस के प्रमेय का विलोम, पायथागोरस के प्रमेय का उपयोजन और अपोलोनियस का प्रमेय शामिल हैं।</p>
+
+<h1>2. सीखने के उद्देश्य</h1>
+<ul>
+<li>पायथागोरस के त्रिक पहचानना और बनाना।</li>
+<li>समकोण त्रिभुजों की समरूपता समझना।</li>
+<li>ज्यामितीय माध्य के प्रमेय का उपयोग करना।</li>
+<li>पायथागोरस के प्रमेय और उसके विलोम को सिद्ध करना और लागू करना।</li>
+<li>30°–60°–90° तथा 45°–45°–90° त्रिभुजों के गुणों का उपयोग करना।</li>
+<li>अपोलोनियस के प्रमेय से माध्यिका संबंधी प्रश्न हल करना।</li>
+</ul>
+
+<h1>3. मूल अवधारणाएँ और प्रमेय</h1>
+
+<h2>3.1 पायथागोरस का प्रमेय</h2>
+<p>समकोण त्रिभुज में कर्ण का वर्ग, शेष दो भुजाओं के वर्गों के योगफल के बराबर होता है।</p>
+<div class="formula">कर्ण² = पहली लम्ब भुजा² + दूसरी लम्ब भुजा²<br>c² = a² + b²</div>
+
+<h2>3.2 पायथागोरस के त्रिक</h2>
+<p>प्राकृत संख्याओं के त्रिक (a, b, c) में यदि सबसे बड़ी संख्या का वर्ग अन्य दो संख्याओं के वर्गों के योगफल के बराबर हो, तो वह पायथागोरस का त्रिक है।</p>
+<div class="formula">a² + b² = c²</div>
+<p>उदाहरण: (3, 4, 5), क्योंकि 3² + 4² = 9 + 16 = 25 = 5²।</p>
+<p>पाठ्यपुस्तक में (11, 60, 61), (5, 12, 13), (8, 15, 17), (24, 70, 74) आदि उदाहरण दिए गए हैं।</p>
+
+<h2>3.3 पायथागोरस त्रिक प्राप्त करने का सूत्र</h2>
+<div class="formula">(a² + b²), (a² − b²), (2ab)</div>
+<p>जहाँ a और b प्राकृत संख्याएँ हैं तथा a &gt; b।</p>
+<p>उदाहरण: a = 5, b = 3 लेने पर 34, 16, 30 प्राप्त होते हैं और 16² + 30² = 34²।</p>
+
+<h2>3.4 30°–60°–90° त्रिभुज</h2>
+<div class="formula">
+30° के सामने की भुजा = ½ × कर्ण<br>
+60° के सामने की भुजा = √3/2 × कर्ण
+</div>
+
+<h2>3.5 45°–45°–90° त्रिभुज</h2>
+<div class="formula">प्रत्येक लम्ब भुजा = कर्ण / √2 = (√2/2) × कर्ण</div>
+
+<h2>3.6 समकोण त्रिभुजों की समरूपता</h2>
+<p>समकोण त्रिभुज में कर्ण पर खींचे गए शीर्षलंब से बने दोनों छोटे त्रिभुज तथा मूल त्रिभुज परस्पर समरूप होते हैं।</p>
+
+<h2>3.7 ज्यामितीय माध्य का प्रमेय</h2>
+<p>यदि समकोण त्रिभुज में शीर्ष से कर्ण पर लंब QS खींचा गया है, तो:</p>
+<div class="formula">QS² = PS × SR</div>
+<p>अर्थात QS, PS और SR का ज्यामितीय माध्य है।</p>
+
+<h2>3.8 पायथागोरस के प्रमेय का विलोम</h2>
+<p>यदि किसी त्रिभुज में किसी एक भुजा का वर्ग शेष दो भुजाओं के वर्गों के योगफल के बराबर हो, तो वह त्रिभुज समकोण त्रिभुज होता है।</p>
+
+<h2>3.9 अपोलोनियस का प्रमेय</h2>
+<p>यदि ΔABC में M, BC का मध्यबिंदु है, तो:</p>
+<div class="formula">AB² + AC² = 2AM² + 2BM²</div>
+
+<h1>4. महत्वपूर्ण सूत्र</h1>
+<table>
+<tr><th>विषय</th><th>सूत्र</th></tr>
+<tr><td>पायथागोरस</td><td>c² = a² + b²</td></tr>
+<tr><td>ज्यामितीय माध्य</td><td>QS² = PS × SR</td></tr>
+<tr><td>अपोलोनियस</td><td>AB² + AC² = 2AM² + 2BM²</td></tr>
+<tr><td>30°–60°–90°</td><td>30° के सामने = c/2, 60° के सामने = √3c/2</td></tr>
+<tr><td>45°–45°–90°</td><td>प्रत्येक लम्ब भुजा = c/√2</td></tr>
+</table>
+
+<h1>5. सिद्धांतों की उपपत्तियाँ</h1>
+
+<h2>5.1 समकोण त्रिभुजों की समरूपता</h2>
+<p>ΔABC में ∠B = 90° और BD ⟂ AC, जहाँ A–D–C हैं। तब:</p>
+<div class="step">
+ΔADB और ΔABC में एक कोण समान तथा दोनों में एक-एक समकोण है। अतः AA/को-को कसौटी से ΔADB ~ ΔABC।
+</div>
+<div class="step">
+इसी प्रकार ΔBDC ~ ΔABC। इसलिए ΔADB ~ ΔBDC ~ ΔABC।
+</div>
+
+<h2>5.2 ज्यामितीय माध्य का प्रमेय</h2>
+<div class="step">
+ΔPSQ ~ ΔQSR होने से संगत भुजाओं के अनुपात:
+QS/PS = SR/QS
+</div>
+<div class="formula">QS² = PS × SR</div>
+
+<h2>5.3 पायथागोरस का प्रमेय — समरूप त्रिभुज द्वारा</h2>
+<p>समकोण ΔABC में ∠B = 90° और BD ⟂ AC। समरूपता से:</p>
+<div class="step">AB² = AD × AC</div>
+<div class="step">BC² = DC × AC</div>
+<p>दोनों समीकरण जोड़ने पर:</p>
+<div class="formula">
+AB² + BC² = AC(AD + DC) = AC × AC = AC²
+</div>
+<p>अतः <strong>AC² = AB² + BC²</strong> सिद्ध हुआ।</p>
+
+<h2>5.4 पायथागोरस के प्रमेय का विलोम</h2>
+<p>मान लें ΔABC में AC² = AB² + BC²। ऐसा समकोण त्रिभुज ΔPQR बनाइए जिसमें PQ = AB, QR = BC और ∠PQR = 90°।</p>
+<div class="step">
+PR² = PQ² + QR² = AB² + BC² = AC²
+</div>
+<div class="step">
+PR = AC। इसलिए तीनों संगत भुजाएँ बराबर हैं और ΔABC ≅ ΔPQR (SSS)।
+</div>
+<div class="answer">अतः ∠ABC = ∠PQR = 90°। इसलिए ΔABC समकोण त्रिभुज है।</div>
+
+<h1>6. हल किए हुए उदाहरण</h1>
+
+<h2>उदाहरण 1 — 30°–60°–90°</h2>
+<p>ΔABC में ∠B = 90°, ∠A = 30°, AC = 14 सेमी। AB और BC ज्ञात कीजिए।</p>
+<div class="step">BC = ½ × AC = ½ × 14 = <strong>7 सेमी</strong></div>
+<div class="step">AB = √3/2 × AC = √3/2 × 14 = <strong>7√3 सेमी</strong></div>
+
+<h2>उदाहरण 2 — 45°–45°–90°</h2>
+<p>यदि समकोण त्रिभुज में कर्ण 8√2 सेमी है और दोनों न्यून कोण 45° हैं, तो दोनों लम्ब भुजाएँ:</p>
+<div class="answer">प्रत्येक भुजा = (8√2)/√2 = <strong>8 सेमी</strong></div>
+
+<h2>उदाहरण 3 — ज्यामितीय माध्य</h2>
+<p>यदि PS = 9 और SR = 16 हो, तो QS ज्ञात कीजिए।</p>
+<div class="formula">QS² = PS × SR = 9 × 16 = 144</div>
+<div class="answer">QS = <strong>12</strong></div>
+
+<h2>उदाहरण 4 — कर्ण</h2>
+<p>समकोण त्रिभुज की लम्ब भुजाएँ 9 सेमी और 12 सेमी हैं।</p>
+<div class="step">c² = 9² + 12² = 81 + 144 = 225</div>
+<div class="answer">c = <strong>15 सेमी</strong></div>
+
+<h2>उदाहरण 5 — विलोम से जाँच</h2>
+<p>भुजाएँ 5, 12, 13 हैं।</p>
+<div class="step">13² = 169 और 5² + 12² = 25 + 144 = 169</div>
+<div class="answer">अतः 5–12–13 वाला त्रिभुज <strong>समकोण त्रिभुज</strong> है।</div>
+
+<h2>उदाहरण 6 — अपोलोनियस</h2>
+<p>ΔPQR में PM माध्यिका है, PM = 9 और PQ² + PR² = 290। QR ज्ञात कीजिए।</p>
+<div class="step">290 = 2(9²) + 2QM²</div>
+<div class="step">290 = 162 + 2QM²</div>
+<div class="step">2QM² = 128 ⇒ QM² = 64 ⇒ QM = 8</div>
+<div class="answer">QR = 2QM = <strong>16</strong></div>
+
+<h1>7. प्रश्नसंग्रह 2.1 — संपूर्ण समाधान</h1>
+
+<h2>प्रश्न 1 — पायथागोरस के त्रिक पहचानिए</h2>
+<table>
+<tr><th>त्रिक</th><th>जाँच</th><th>निष्कर्ष</th></tr>
+<tr><td>(3, 5, 4)</td><td>3² + 4² = 9 + 16 = 25 = 5²</td><td>पायथागोरस त्रिक</td></tr>
+<tr><td>(4, 9, 12)</td><td>4² + 9² = 97 ≠ 144</td><td>नहीं</td></tr>
+<tr><td>(5, 12, 13)</td><td>25 + 144 = 169 = 13²</td><td>पायथागोरस त्रिक</td></tr>
+<tr><td>(24, 70, 74)</td><td>576 + 4900 = 5476 = 74²</td><td>पायथागोरस त्रिक</td></tr>
+<tr><td>(10, 24, 27)</td><td>100 + 576 = 676 ≠ 729</td><td>नहीं</td></tr>
+<tr><td>(11, 60, 61)</td><td>121 + 3600 = 3721 = 61²</td><td>पायथागोरस त्रिक</td></tr>
+</table>
+
+<h2>प्रश्न 2</h2>
+<p>MQ = 9, QP = 4 और ∠MNP = 90°। NQ ज्ञात कीजिए।</p>
+<div class="formula">NQ² = MQ × QP = 9 × 4 = 36</div>
+<div class="answer">NQ = <strong>6</strong></div>
+
+<h2>प्रश्न 3</h2>
+<p>∠QPR = 90°, PM ⟂ QR, QM = 8, PM = 10। QR ज्ञात कीजिए।</p>
+<div class="step">PM² = QM × MR</div>
+<div class="step">100 = 8 × MR ⇒ MR = 25/2 = 12.5</div>
+<div class="answer">QR = QM + MR = 8 + 12.5 = <strong>20.5</strong></div>
+
+<h2>प्रश्न 4</h2>
+<p>आकृति 2.19 में ∠P = 30° और SR = 6 है। RP तथा PS ज्ञात कीजिए।</p>
+<div class="step">30° के सामने की भुजा SR = ½ × RP</div>
+<div class="step">6 = RP/2 ⇒ <strong>RP = 12</strong></div>
+<div class="step">PS = √3/2 × RP = √3/2 × 12</div>
+<div class="answer"><strong>PS = 6√3, RP = 12</strong></div>
+
+<h2>प्रश्न 5</h2>
+<p>आकृति 2.20 में AB = BC है और ∠B = 90°। AC = √8 है।</p>
+<div class="step">AB = BC ⇒ विपरीत कोण भी बराबर। अतः ∠A = ∠C = 45°।</div>
+<div class="step">45°–45°–90° त्रिभुज में AB = BC = AC/√2.</div>
+<div class="step">AB = BC = √8/√2 = √4 = 2.</div>
+<div class="answer">रिक्त स्थान: <strong>AB = BC</strong>; <strong>∠BAC = 45°</strong>; <strong>AB = BC = 1/√2 × AC = 1/√2 × √8 = 1/√2 × 2√2 = 2</strong></div>
+
+<h2>प्रश्न 6</h2>
+<p>किसी वर्ग के विकर्ण की लंबाई 10 सेमी है। भुजा और परिमिति ज्ञात कीजिए।</p>
+<div class="step">d = a√2 ⇒ a = 10/√2 = <strong>5√2 सेमी</strong></div>
+<div class="answer">परिमिति = 4a = <strong>20√2 सेमी</strong></div>
+
+<h2>प्रश्न 7</h2>
+<p>आकृति 2.21 में ∠DFE = 90°, FG ⟂ ED, GD = 8 और FG = 12। EG, FD और EF ज्ञात कीजिए।</p>
+<div class="step">FG² = EG × GD ⇒ 144 = EG × 8 ⇒ <strong>EG = 18</strong></div>
+<div class="step">ED = EG + GD = 18 + 8 = 26</div>
+<div class="step">FD² = GD × ED = 8 × 26 = 208</div>
+<div class="step">EF² = EG × ED = 18 × 26 = 468</div>
+<div class="answer"><strong>EG = 18, FD = 4√13, EF = 6√13</strong></div>
+
+<h2>प्रश्न 8</h2>
+<p>आयत की लंबाई 35 सेमी और चौड़ाई 12 सेमी है। विकर्ण:</p>
+<div class="formula">d² = 35² + 12² = 1225 + 144 = 1369 = 37²</div>
+<div class="answer">विकर्ण = <strong>37 सेमी</strong></div>
+
+<h2>प्रश्न 9 — सिद्ध कीजिए</h2>
+<p>आकृति 2.22 में M, RQ का मध्यबिंदु है और ∠PRQ = 90°। सिद्ध कीजिए: PQ² = 4PM² − 3PR².</p>
+<div class="step">मान लें RM = MQ = x.</div>
+<div class="step">समकोण ΔPRM में: PM² = PR² + x² ⇒ x² = PM² − PR².</div>
+<div class="step">ΔPRQ में PQ² = PR² + (2x)² = PR² + 4x².</div>
+<div class="step">= PR² + 4(PM² − PR²) = <strong>4PM² − 3PR²</strong>.</div>
+
+<h2>प्रश्न 10</h2>
+<p>5.8 मीटर की सीढ़ी एक ओर 4 मीटर ऊँचाई तक पहुँचती है और दूसरी ओर 4.2 मीटर ऊँचाई तक पहुँचती है। सड़क की चौड़ाई:</p>
+<div class="step">पहली क्षैतिज दूरी = √(5.8² − 4²) = √17.64 = 4.2 मीटर</div>
+<div class="step">दूसरी क्षैतिज दूरी = √(5.8² − 4.2²) = √16 = 4 मीटर</div>
+<div class="answer">सड़क की चौड़ाई = 4.2 + 4 = <strong>8.2 मीटर</strong></div>
+
+<h1>8. पायथागोरस के प्रमेय का उपयोजन</h1>
+<p>पाठ्यपुस्तक में न्यून कोण, अधिक कोण और लम्ब से जुड़े संबंधों को पायथागोरस प्रमेय से स्थापित किया गया है।</p>
+<div class="formula">
+यदि D, BC पर है और AD ⟂ BC तथा BD = a − x, तो<br>
+AB² = BC² + AC² − 2(BC)(DC) प्रकार का संबंध प्राप्त किया जा सकता है।
+</div>
+<p>इसी प्रकार अधिक कोण की स्थिति में + चिन्ह वाला संबंध प्राप्त होता है।</p>
+
+<h1>9. अपोलोनियस का प्रमेय</h1>
+<p>यदि M, BC का मध्यबिंदु है:</p>
+<div class="formula">AB² + AC² = 2AM² + 2BM²</div>
+<p>यह त्रिभुज की भुजाओं और माध्यिका के बीच महत्वपूर्ण संबंध देता है।</p>
+
+<h2>समचतुर्भुज के विकर्णों से संबंधित परिणाम</h2>
+<p>समचतुर्भुज में विकर्ण एक-दूसरे को समद्विभाजित करते हैं। अपोलोनियस के प्रमेय को दोनों त्रिभुजों पर लगाने और जोड़ने से:</p>
+<div class="formula">PQ² + QR² + RS² + SP² = PR² + QS²</div>
+
+<h1>10. प्रश्नसंग्रह 2.2 — संपूर्ण समाधान</h1>
+
+<h2>प्रश्न 1</h2>
+<p>ΔPQR में S, QR का मध्यबिंदु है; PQ = 11, PR = 17, PS = 13। QR ज्ञात कीजिए।</p>
+<div class="step">11² + 17² = 2(13²) + 2(QR/2)²</div>
+<div class="step">121 + 289 = 338 + QR²/2</div>
+<div class="step">410 − 338 = QR²/2 ⇒ QR² = 144</div>
+<div class="answer">QR = <strong>12</strong></div>
+
+<h2>प्रश्न 2</h2>
+<p>ΔABC में AB = 10, AC = 7, BC = 9। C से AB पर खींची गई माध्यिका की लंबाई ज्ञात कीजिए।</p>
+<div class="step">माध्यिका को m मानें।</div>
+<div class="step">7² + 9² = 2m² + 2(10/2)²</div>
+<div class="step">49 + 81 = 2m² + 50</div>
+<div class="step">2m² = 80 ⇒ m² = 40</div>
+<div class="answer">माध्यिका = <strong>2√10 सेमी</strong></div>
+
+<h2>प्रश्न 3 — सिद्ध कीजिए</h2>
+<p>आकृति 2.28 में PS, ΔPQR की माध्यिका है और PT ⟂ QR। सिद्ध कीजिए:</p>
+<div class="formula">
+(1) PR² = PS² + QR × ST + (QR/2)²
+</div>
+<div class="formula">
+(2) PQ² = PS² − QR × ST + (QR/2)²
+</div>
+<div class="step">
+मान लें QS = SR = QR/2 और ST = t। तब PT² + ST² = PS²।
+</div>
+<div class="step">
+PR² = PT² + TR² = PT² + (QR/2 + ST)² = PS² + QR×ST + (QR/2)².
+</div>
+<div class="step">
+PQ² = PT² + QT² = PT² + (QR/2 − ST)² = PS² − QR×ST + (QR/2)².
+</div>
+
+<h2>प्रश्न 4</h2>
+<p>AB² + AC² = 290 सेमी² और AM = 8 सेमी, जहाँ M, BC का मध्यबिंदु है। BC ज्ञात कीजिए।</p>
+<div class="step">290 = 2(8²) + 2(BM²)</div>
+<div class="step">290 = 128 + 2BM² ⇒ BM² = 81 ⇒ BM = 9</div>
+<div class="answer">BC = 2BM = <strong>18 सेमी</strong></div>
+
+<h2>प्रश्न 5 — आयत</h2>
+<p>आकृति 2.30 में T आयत PQRS के अंदर स्थित है। सिद्ध कीजिए TS² + TQ² = TP² + TR².</p>
+<div class="step">
+आयत की भुजाओं को x और y मानें तथा T से क्रमशः क्षैतिज और ऊर्ध्वाधर दूरियाँ p और q मानें।
+</div>
+<div class="step">
+TS² + TQ² = (p² + q²) + ((x−p)² + (y−q)²).
+</div>
+<div class="step">
+TP² + TR² = (p² + (y−q)²) + ((x−p)² + q²).
+</div>
+<div class="answer">दोनों में समान पद हैं। अतः <strong>TS² + TQ² = TP² + TR²</strong> सिद्ध।</div>
+
+<h1>11. प्रकीर्ण प्रश्नसंग्रह 2 — MCQ समाधान</h1>
+
+<h2>प्रश्न 1(1)</h2>
+<p>पायथागोरस का त्रिक कौन-सा है?</p>
+<div class="answer"><strong>(B) (3, 4, 5)</strong>, क्योंकि 3² + 4² = 5².</div>
+
+<h2>प्रश्न 1(2)</h2>
+<p>समकोण बनाने वाली भुजाओं के वर्गों का योग 169 है। कर्ण:</p>
+<div class="answer">c = √169 = <strong>13</strong> ⇒ <strong>(B)</strong></div>
+
+<h2>प्रश्न 1(3)</h2>
+<p>दिए गए दिनांक-जैसे त्रिकों में पायथागोरस त्रिक:</p>
+<div class="answer"><strong>(A) 15/08/17</strong>, क्योंकि 15² + 8² = 17².</div>
+
+<h2>प्रश्न 1(4)</h2>
+<p>a² + b² = c² होने पर त्रिभुज:</p>
+<div class="answer"><strong>(C) समकोण त्रिभुज</strong></div>
+
+<h2>प्रश्न 1(5)</h2>
+<p>वर्ग का विकर्ण 10√2 सेमी हो तो भुजा 10 सेमी और परिमिति:</p>
+<div class="answer"><strong>(D) 40 सेमी</strong></div>
+
+<h2>प्रश्न 1(6)</h2>
+<p>कर्ण पर लंब द्वारा बने दो भाग 4 सेमी और 9 सेमी हैं। शीर्षलंब:</p>
+<div class="formula">h² = 4 × 9 = 36 ⇒ h = 6</div>
+<div class="answer"><strong>(C) 6 सेमी</strong></div>
+
+<h2>प्रश्न 1(7)</h2>
+<p>लम्ब भुजाएँ 24 सेमी और 18 सेमी:</p>
+<div class="formula">c² = 24² + 18² = 576 + 324 = 900</div>
+<div class="answer"><strong>(B) 30 सेमी</strong></div>
+
+<h2>प्रश्न 1(8)</h2>
+<p>AB = 6√3, AC = 12, BC = 6।</p>
+<div class="step">AB² + BC² = 108 + 36 = 144 = AC².</div>
+<div class="answer">∠B = 90°, इसलिए ∠A = <strong>30°</strong> ⇒ <strong>(A)</strong></div>
+
+<h1>12. प्रकीर्ण प्रश्नसंग्रह 2 — उपप्रश्न समाधान</h1>
+
+<h2>प्रश्न 2(1)</h2>
+<p>समबाहु त्रिभुज की भुजा 2a है। ऊँचाई:</p>
+<div class="formula">h = (√3/2)(2a) = <strong>√3a</strong></div>
+
+<h2>प्रश्न 2(2)</h2>
+<p>भुजाएँ 7, 24, 25 सेमी।</p>
+<div class="step">7² + 24² = 49 + 576 = 625 = 25².</div>
+<div class="answer">हाँ, यह <strong>समकोण त्रिभुज</strong> है।</div>
+
+<h2>प्रश्न 2(3)</h2>
+<p>आयत की भुजाएँ 11 सेमी और 60 सेमी।</p>
+<div class="formula">d² = 11² + 60² = 121 + 3600 = 3721 = 61²</div>
+<div class="answer">विकर्ण = <strong>61 सेमी</strong></div>
+
+<h2>प्रश्न 2(4)</h2>
+<p>लम्ब भुजाएँ 9 और 12 सेमी।</p>
+<div class="answer">कर्ण = √(9² + 12²) = √225 = <strong>15 सेमी</strong></div>
+
+<h2>प्रश्न 2(5)</h2>
+<p>समद्विबाहु समकोण त्रिभुज की प्रत्येक लम्ब भुजा x है।</p>
+<div class="formula">कर्ण² = x² + x² = 2x²</div>
+<div class="answer">कर्ण = <strong>x√2</strong></div>
+
+<h2>प्रश्न 2(6)</h2>
+<p>ΔPQR में PQ = 8, QR = 5, PR = 3।</p>
+<div class="step">सबसे बड़ी भुजा PQ = 8 है।</div>
+<div class="step">PR² + QR² = 3² + 5² = 34 ≠ 64 = PQ².</div>
+<div class="answer">अतः ΔPQR <strong>समकोण त्रिभुज नहीं है</strong>।</div>
+
+<h2>प्रश्न 3</h2>
+<p>ΔRST में ∠S = 90°, ∠T = 30°, RT = 12 सेमी।</p>
+<div class="step">RS = ½ × RT = 6 सेमी.</div>
+<div class="step">ST = √3/2 × 12 = 6√3 सेमी.</div>
+<div class="answer"><strong>RS = 6 सेमी, ST = 6√3 सेमी</strong></div>
+
+<h2>प्रश्न 4</h2>
+<p>आयत का क्षेत्रफल 192 वर्गसेमी और लंबाई 16 सेमी।</p>
+<div class="step">चौड़ाई = 192/16 = 12 सेमी.</div>
+<div class="step">d² = 16² + 12² = 256 + 144 = 400.</div>
+<div class="answer">विकर्ण = <strong>20 सेमी</strong></div>
+
+<h2>प्रश्न 5</h2>
+<p>समबाहु त्रिभुज की ऊँचाई 3 सेमी।</p>
+<div class="step">h = √3/2 × a ⇒ a = 2h/√3 = 6/√3 = <strong>2√3 सेमी</strong>.</div>
+<div class="answer">परिमिति = 3a = <strong>6√3 सेमी</strong></div>
+
+<h2>प्रश्न 6</h2>
+<p>BC = 18 और AB² + AC² = 260। AP माध्यिका है।</p>
+<div class="step">260 = 2AP² + 2(9²) = 2AP² + 162.</div>
+<div class="step">2AP² = 98 ⇒ AP² = 49.</div>
+<div class="answer">AP = <strong>7</strong></div>
+
+<h2>प्रश्न 7 — स्रोत में पर्याप्त जानकारी नहीं</h2>
+<p>प्रश्न में समकोण ΔABC में P, BC पर है, PC = ⅓ BC और AB = 6 सेमी दिया है तथा AP पूछा गया है।</p>
+<div class="warning">
+<strong>महत्वपूर्ण:</strong> उपलब्ध PDF में AP निर्धारित करने के लिए BC या AC जैसी एक अतिरिक्त स्वतंत्र जानकारी नहीं दी गई है। केवल AB = 6 और PC = BC/3 से AP का एक निश्चित संख्यात्मक मान नहीं निकलता। इसलिए यहाँ अनुमानित उत्तर देना उचित नहीं है।
+</div>
+
+<h2>प्रश्न 8 — आकृति 2.31</h2>
+<p>MQ = QR = RN = a, तथा PQ = PR = a; S, QR का मध्यबिंदु है। सिद्ध कीजिए PM = PN = √3 × a.</p>
+<div class="step">QS = SR = a/2 और PS² = PQ² − QS² = a² − a²/4 = 3a²/4.</div>
+<div class="step">MS = MQ + QS = a + a/2 = 3a/2.</div>
+<div class="step">PM² = PS² + MS² = 3a²/4 + 9a²/4 = 3a².</div>
+<div class="answer">PM = <strong>√3a</strong>. इसी प्रकार PN = <strong>√3a</strong>.</div>
+
+<h2>प्रश्न 9</h2>
+<p>सिद्ध कीजिए कि समांतर चतुर्भुज के विकर्णों के वर्गों का योग उसकी भुजाओं के वर्गों के योग के बराबर है।</p>
+<div class="formula">यदि भुजाएँ a,b और विकर्ण d₁,d₂ हैं, तो d₁² + d₂² = 2a² + 2b².</div>
+<div class="step">यह अपोलोनियस के प्रमेय से भी सीधे प्राप्त होता है।</div>
+
+<h2>प्रश्न 10</h2>
+<p>सीमा और नेहा एक ही स्थान से पूर्व और उत्तर दिशा में समान गति से चलती हैं। 2 घंटे बाद दूरी 15√2 किमी है।</p>
+<div class="step">मान लें प्रति घंटे गति v है। प्रत्येक 2 घंटे में दूरी = 2v.</div>
+<div class="step">(2v)² + (2v)² = (15√2)²</div>
+<div class="step">8v² = 450 ⇒ v² = 56.25 ⇒ v = 7.5.</div>
+<div class="answer">प्रत्येक की गति = <strong>7.5 किमी/घंटा</strong></div>
+
+<h2>प्रश्न 11</h2>
+<p>∠BAC = 90° और BL, CM माध्यिकाएँ हैं। सिद्ध कीजिए: 4(BL² + CM²) = 5BC².</p>
+<div class="step">
+मान लें AB = b और AC = c। M, AB का मध्यबिंदु है और L, AC का मध्यबिंदु है।
+</div>
+<div class="step">BL² = b² + (c/2)² = b² + c²/4.</div>
+<div class="step">CM² = c² + (b/2)² = c² + b²/4.</div>
+<div class="step">BL² + CM² = 5/4(b²+c²).</div>
+<div class="step">क्योंकि ∠A = 90°, BC² = b²+c².</div>
+<div class="answer">अतः <strong>4(BL² + CM²) = 5BC²</strong>.</div>
+
+<h2>प्रश्न 12</h2>
+<p>समांतर चतुर्भुज की दो संलग्न भुजाओं के वर्गों का योग 130 है और एक विकर्ण 14 सेमी है। दूसरा विकर्ण:</p>
+<div class="formula">d₁² + d₂² = 2(130) = 260</div>
+<div class="step">14² + d₂² = 260 ⇒ 196 + d₂² = 260 ⇒ d₂² = 64.</div>
+<div class="answer">दूसरा विकर्ण = <strong>8 सेमी</strong></div>
+
+<h2>प्रश्न 13</h2>
+<p>AD ⟂ BC और DB = 3DC। सिद्ध कीजिए 2AB² = 2AC² + BC².</p>
+<div class="step">मान लें DC = x, इसलिए DB = 3x और BC = 4x.</div>
+<div class="step">AB² = AD² + 9x² तथा AC² = AD² + x².</div>
+<div class="step">2AB² = 2AD² + 18x².</div>
+<div class="step">2AC² + BC² = 2(AD²+x²) + 16x² = 2AD² + 18x².</div>
+<div class="answer">अतः <strong>2AB² = 2AC² + BC²</strong> सिद्ध।</div>
+
+<h2>प्रश्न 14</h2>
+<p>समद्विबाहु त्रिभुज की बराबर भुजाएँ 13 सेमी और आधार 10 सेमी है। माध्यिकाओं के संगमन बिंदु से शीर्ष तक दूरी ज्ञात कीजिए।</p>
+<div class="step">आधार का आधा = 5 सेमी.</div>
+<div class="step">ऊँचाई = √(13² − 5²) = √144 = 12 सेमी.</div>
+<div class="step">Centroid शीर्ष से माध्यिका की 2/3 दूरी पर होता है.</div>
+<div class="answer">दूरी = 2/3 × 12 = <strong>8 सेमी</strong></div>
+
+<h2>प्रश्न 15</h2>
+<p>समलंब ABCD में AB ∥ DC, BD ⟂ AD, AC ⟂ BC, AD = BC = 15 सेमी और AB = 25 सेमी। क्षेत्रफल ज्ञात कीजिए।</p>
+<div class="step">समकोण BD ⟂ AD से AD की क्षैतिज प्रक्षेप लंबाई = AB ×? निर्देशांक विधि से D का क्षैतिज स्थान 9 सेमी और ऊँचाई 12 सेमी प्राप्त होती है।</div>
+<div class="step">इसी प्रकार BC की क्षैतिज प्रक्षेप लंबाई 9 सेमी, इसलिए DC = 25 − 9 − 9 = 7 सेमी.</div>
+<div class="step">ऊँचाई = 12 सेमी.</div>
+<div class="formula">क्षेत्रफल = ½(AB + DC) × h = ½(25+7)×12</div>
+<div class="answer">क्षेत्रफल = <strong>192 वर्गसेमी</strong></div>
+
+<h2>प्रश्न 16</h2>
+<p>समबाहु ΔPQR में QS = ⅓QR। सिद्ध कीजिए 9PS² = 7PQ².</p>
+<div class="step">मान लें PQ = QR = a. तब QS = a/3 और S से P तक ऊँचाई घटक √3a/2 है।</div>
+<div class="step">PS² = (a/3 − a/2)² + (√3a/2)² = a²/36 + 3a²/4 = 7a²/9.</div>
+<div class="answer">अतः <strong>9PS² = 7a² = 7PQ²</strong>.</div>
+
+<h2>प्रश्न 17</h2>
+<p>ΔPQR में PM माध्यिका है। PQ = 40, PR = 42, PM = 29। QR ज्ञात कीजिए।</p>
+<div class="step">40² + 42² = 2(29²) + 2(QR/2)²</div>
+<div class="step">3364 = 1682 + QR²/2</div>
+<div class="step">QR²/2 = 1682 ⇒ QR² = 3364.</div>
+<div class="answer">QR = <strong>58</strong></div>
+
+<h2>प्रश्न 18</h2>
+<p>ΔABC में AM माध्यिका है। AB = 22, AC = 34, BC = 24। AM ज्ञात कीजिए।</p>
+<div class="step">AB² + AC² = 2AM² + 2(BC/2)²</div>
+<div class="step">22² + 34² = 2AM² + 24²/2</div>
+<div class="step">484 + 1156 = 2AM² + 288</div>
+<div class="step">2AM² = 1352 ⇒ AM² = 676.</div>
+<div class="answer">AM = <strong>26 सेमी</strong></div>
+
+<h1>13. त्वरित पुनरीक्षण</h1>
+<ul>
+<li><strong>पायथागोरस:</strong> c² = a² + b²</li>
+<li><strong>विलोम:</strong> c² = a² + b² ⇒ त्रिभुज समकोण</li>
+<li><strong>ज्यामितीय माध्य:</strong> QS² = PS × SR</li>
+<li><strong>अपोलोनियस:</strong> AB² + AC² = 2AM² + 2BM²</li>
+<li><strong>30°–60°–90°:</strong> सामने की भुजाएँ c/2 और √3c/2</li>
+<li><strong>45°–45°–90°:</strong> प्रत्येक लम्ब भुजा c/√2</li>
+<li><strong>समकोण त्रिभुज:</strong> कर्ण हमेशा 90° के सामने होता है और सबसे बड़ी भुजा होती है।</li>
+</ul>
+
+<h1>14. सामान्य गलतियाँ</h1>
+<ul>
+<li>कर्ण को गलत भुजा मान लेना।</li>
+<li>ज्यामितीय माध्य में QS² = PS × SR के बजाय गलत गुणनफल लिखना।</li>
+<li>अपोलोनियस के प्रमेय में माध्यिका के सामने वाली भुजा का आधा लेना भूल जाना।</li>
+<li>पायथागोरस के विलोम में सबसे बड़ी भुजा को c मानना भूल जाना।</li>
+<li>30°–60°–90° और 45°–45°–90° के अनुपातों को उलट देना।</li>
+</ul>
+
+<h1>15. परीक्षा के लिए महत्वपूर्ण प्रश्न</h1>
+<ol>
+<li>पायथागोरस के प्रमेय की उपपत्ति।</li>
+<li>पायथागोरस के प्रमेय का विलोम।</li>
+<li>समकोण त्रिभुजों की समरूपता।</li>
+<li>ज्यामितीय माध्य का प्रमेय।</li>
+<li>अपोलोनियस का प्रमेय और उसके संख्यात्मक प्रश्न।</li>
+<li>पायथागोरस त्रिक पहचानना।</li>
+<li>30°–60°–90° तथा 45°–45°–90° आधारित प्रश्न।</li>
+</ol>
+ 
+
+</div>
+</body>
+</html>

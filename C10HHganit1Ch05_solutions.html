@@ -1,0 +1,709 @@
+﻿<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>कक्षा 10 गणित — अध्याय 5 — संभाव्यता — संपूर्ण समाधान</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#f3f5f7;color:#222;font-family:"Noto Sans Devanagari","Nirmala UI",Arial,sans-serif;line-height:1.75}
+.container{max-width:1180px;margin:24px auto;background:#fff;padding:34px;border-radius:14px;box-shadow:0 4px 24px rgba(0,0,0,.08)}
+h1{color:#17365d;border-bottom:3px solid #17365d;padding-bottom:12px}
+h2{color:#244f7a;margin-top:42px;border-bottom:1px solid #ddd;padding-bottom:8px}
+h3{color:#345f82;margin-top:28px}
+h4{color:#466b86;margin-top:22px}
+p,li,td,th{font-size:16px}
+.question{border:1px solid #d9e0e7;border-radius:10px;margin:18px 0;padding:17px;background:#fff}
+.qtitle{font-weight:700;color:#17365d}
+.answer{margin-top:10px;background:#f8fbfd;padding:14px;border-radius:7px}
+.formula{font-family:"Times New Roman","Noto Sans Devanagari",serif;background:#f5f7f9;border:1px solid #ddd;border-radius:7px;padding:9px 14px;margin:9px 0;font-size:18px;text-align:center}
+.frac{display:inline-block;vertical-align:middle;text-align:center;line-height:1.15;margin:0 3px}
+.frac .top{display:block;border-bottom:1px solid #333;padding:0 5px}
+.frac .bottom{display:block;padding:0 5px}
+.note{background:#fff8e8;border-left:5px solid #d6a100;padding:12px 16px;border-radius:7px;margin:14px 0}
+.source{background:#eef6ff;border-left:5px solid #3c78b5;padding:12px 16px;border-radius:7px;margin:14px 0}
+.warning{background:#fff1f1;border-left:5px solid #b64b4b;padding:12px 16px;border-radius:7px;margin:14px 0}
+.success{background:#eff9f1;border-left:5px solid #4c8a59;padding:12px 16px;border-radius:7px;margin:14px 0}
+table{width:100%;border-collapse:collapse;margin:14px 0}
+th,td{border:1px solid #ddd;padding:9px;text-align:left;vertical-align:top}
+th{background:#eef3f7}
+.small{font-size:14px;color:#666}
+.footer{margin-top:45px;border-top:1px solid #ddd;padding-top:18px;color:#777;font-size:13px}
+.badge{display:inline-block;background:#17365d;color:#fff;padding:3px 9px;border-radius:20px;font-size:13px}
+.toc a{color:#244f7a;text-decoration:none}
+.toc li{margin:5px 0}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.set{font-family:"Times New Roman","Noto Sans Devanagari",serif;background:#fafafa;border:1px solid #ddd;padding:10px;border-radius:6px;overflow:auto}
+@media(max-width:800px){
+ .container{margin:0;padding:18px;border-radius:0}
+ .two{grid-template-columns:1fr}
+ p,li,td,th{font-size:15px}
+ table{display:block;overflow-x:auto}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<h1>अध्याय 5 : संभाव्यता</h1>
+<p><b>कक्षा 10वीं — गणित — संपूर्ण अध्ययन एवं प्रश्नसंग्रह समाधान</b></p>
+
+<div class="source">
+<b>आधार:</b> यह HTML आपके द्वारा अपलोड किए गए <b>C10HHganit1Ch05.pdf</b>
+और आपके मौजूदा <b>chapter_5_solutions(3).html</b> के आधार पर तैयार किया गया है।
+पुस्तक के अध्याय में संभाव्यता, यादृच्छिक प्रयोग, फल, समान संभाव्यता फल, नमूना
+अवकाश, घटना और घटना की संभाव्यता मुख्य विषय हैं। मौजूदा HTML में केवल मूल
+परिभाषाएँ, एक-दो उदाहरण और कुछ अभ्यास प्रश्न थे; इसलिए यहाँ पुस्तक के
+प्रश्नसंग्रहों और प्रकीर्ण प्रश्नों को भी जोड़ा गया है।
+</div>
+
+<div class="warning">
+<b>पुस्तक-आधारित समाधान:</b> जहाँ PDF/OCR में अक्षर या चिन्ह अस्पष्ट थे, वहाँ
+मूल पृष्ठ के संदर्भ और गणितीय संरचना के अनुसार notation को साफ किया गया है।
+पुस्तक के प्रश्न की शर्त को बदलकर कोई नया प्रश्न नहीं बनाया गया है।
+</div>
+
+<div class="toc">
+<h2>विषय-सूची</h2>
+<ol>
+<li><a href="#intro">अध्याय परिचय</a></li>
+<li><a href="#random">यादृच्छिक प्रयोग और फल</a></li>
+<li><a href="#sample">समान संभाव्यता और नमूना अवकाश</a></li>
+<li><a href="#events">घटना</a></li>
+<li><a href="#qs51">प्रश्नसंग्रह 5.1</a></li>
+<li><a href="#examples">हल किए गए उदाहरण</a></li>
+<li><a href="#qs52">प्रश्नसंग्रह 5.2</a></li>
+<li><a href="#prob">घटना की संभाव्यता</a></li>
+<li><a href="#qs53">प्रश्नसंग्रह 5.3</a></li>
+<li><a href="#qs54">प्रश्नसंग्रह 5.4</a></li>
+<li><a href="#misc">प्रकीर्ण प्रश्नसंग्रह 5</a></li>
+<li><a href="#revision">Quick Revision</a></li>
+</ol>
+</div>
+
+<h2 id="intro">1. अध्याय परिचय</h2>
+<p>संभाव्यता (Probability) किसी घटना के घटित होने की संभावना को गणितीय रूप
+में व्यक्त करने का तरीका है। अध्याय की शुरुआत दैनिक जीवन में उपयोग होने वाले
+शब्दों जैसे <b>संभवतः, अधिकतर, असंभव, निश्चित, पास-दूर, 50-50</b> से होती है।</p>
+
+<div class="two">
+<div class="note"><b>संभाव्यता अधिक:</b> किसी घटना के होने की संभावना तुलनात्मक रूप से अधिक है।</div>
+<div class="note"><b>असंभव:</b> घटना का होना संभव नहीं है।</div>
+</div>
+
+<p>पुस्तक की प्रारंभिक गतिविधि में समान संख्या की पर्चियों में अलग-अलग नाम रखकर
+यह समझाया गया है कि किसी एक पर्ची के मिलने की संभावना प्रत्येक विद्यार्थी के
+लिए समान हो सकती है।</p>
+
+<h2 id="random">2. यादृच्छिक प्रयोग (Random Experiment)</h2>
+<p>ऐसा प्रयोग जिसमें सभी संभावित परिणाम पहले से ज्ञात हों, लेकिन इनमें से
+कौन-सा परिणाम प्राप्त होगा यह निश्चित रूप से पहले नहीं बताया जा सके और
+परिणाम समान संभाव्यता वाले माने जाएँ, उसे <b>यादृच्छिक प्रयोग</b> कहते हैं।</p>
+
+<h3>उदाहरण</h3>
+<ul>
+<li>सिक्का उछालना</li>
+<li>पाँसा फेंकना</li>
+<li>1 से 50 अंक वाले कार्डों में से एक कार्ड निकालना</li>
+<li>52 ताश के पत्तों में से एक पत्ता निकालना</li>
+</ul>
+
+<h2>3. फल / Outcome</h2>
+<p>यादृच्छिक प्रयोग के किसी एक परिणाम को <b>फल (Outcome)</b> कहते हैं।</p>
+
+<table>
+<tr><th>यादृच्छिक प्रयोग</th><th>संभावित फल</th></tr>
+<tr><td>एक सिक्का</td><td>H (चित), T (पट)</td></tr>
+<tr><td>एक पाँसा</td><td>1, 2, 3, 4, 5, 6</td></tr>
+<tr><td>1–50 कार्ड में से एक कार्ड</td><td>1 से 50 तक कोई एक संख्या</td></tr>
+<tr><td>52 ताश के पत्तों में से एक पत्ता</td><td>52 में से कोई एक पत्ता</td></tr>
+</table>
+
+<h3>ताश के पत्तों की मूल जानकारी</h3>
+<ul>
+<li>कुल पत्ते = 52</li>
+<li>लाल पत्ते = 26</li>
+<li>काले पत्ते = 26</li>
+<li>चार समूह: पान, ईंट, चिड़ी, हुकुम</li>
+<li>प्रत्येक समूह में 13 पत्ते</li>
+<li>राजा, रानी और गुलाम = चित्रयुक्त (Face) पत्ते</li>
+<li>कुल चित्रयुक्त पत्ते = 12</li>
+</ul>
+
+<h2 id="sample">4. समान संभाव्यता फल और नमूना अवकाश</h2>
+<p><b>समान संभाव्यता फल (Equally Likely Outcomes):</b> ऐसे फल जिनके प्राप्त
+होने की संभावना समान हो। एक संतुलित पाँसे में 1 से 6 तक प्रत्येक संख्या की
+संभाव्यता समान होती है।</p>
+
+<p><b>नमूना अवकाश (Sample Space):</b> किसी यादृच्छिक प्रयोग के सभी संभावित
+फलों के समूह को नमूना अवकाश कहते हैं। इसे <b>S</b> या <b>Ω</b> से दर्शाते हैं।
+इसके प्रत्येक घटक को नमूना घटक (Sample Point) कहते हैं।</p>
+
+<table>
+<tr><th>प्रयोग</th><th>नमूना अवकाश</th><th>n(S)</th></tr>
+<tr><td>एक सिक्का</td><td>{H, T}</td><td>2</td></tr>
+<tr><td>दो सिक्के</td><td>{HH, HT, TH, TT}</td><td>4</td></tr>
+<tr><td>तीन सिक्के</td><td>{HHH, HHT, HTH, THH, HTT, THT, TTH, TTT}</td><td>8</td></tr>
+<tr><td>एक पाँसा</td><td>{1,2,3,4,5,6}</td><td>6</td></tr>
+<tr><td>दो पाँसे</td><td>सभी ordered pairs (1,1) से (6,6) तक</td><td>36</td></tr>
+<tr><td>1–25 कार्ड</td><td>{1,2,3,...,25}</td><td>25</td></tr>
+<tr><td>52 ताश</td><td>52 सभी पत्ते</td><td>52</td></tr>
+</table>
+
+<div class="success">
+<b>महत्त्वपूर्ण:</b> एक सिक्का दो बार उछालना और दो सिक्के एक-एक बार उछालना
+का sample space समान प्रकार का होता है। इसी तरह एक पाँसा दो बार फेंकना और
+दो पाँसे एक-एक बार फेंकना — दोनों में 36 ordered outcomes होते हैं।
+</div>
+
+<h2 id="events">5. घटना (Event)</h2>
+<p>नमूना अवकाश में दी गई शर्त पूरी करने वाले फल का समूह <b>घटना (Event)</b>
+कहलाता है। घटना को सामान्यतः A, B, C, D आदि से दर्शाते हैं।</p>
+
+<p>उदाहरण: दो सिक्के उछालने पर कम-से-कम एक पट मिलने की घटना:</p>
+<div class="set">A = {TT, TH, HT}, &nbsp; n(A) = 3</div>
+
+<h3>घटनाओं के प्रकार</h3>
+<ul>
+<li>निश्चित घटना (Certain Event)</li>
+<li>असंभव घटना (Impossible Event)</li>
+<li>एक घटक वाली घटना (Simple Event)</li>
+<li>पूरक घटना (Complementary Event)</li>
+<li>परस्पर असमावेशी घटना (Mutually Exclusive Events)</li>
+<li>सर्वसमावेशी/परिपूर्ण घटना (Exhaustive Event)</li>
+</ul>
+
+<h2 id="qs51">6. प्रश्नसंग्रह 5.1</h2>
+
+<div class="question">
+<div class="qtitle">प्रश्न: 1 पाँसा फेंकने पर 1 मिलना और सिक्का उछालने पर चित मिलना — किसकी संभावना अधिक?</div>
+<div class="answer">
+<div class="formula">P(1 on die) = 1/6</div>
+<div class="formula">P(H on coin) = 1/2</div>
+<p>क्योंकि 1/2 &gt; 1/6, इसलिए <b>सिक्का उछालने पर चित मिलने की संभावना अधिक है।</b></p>
+</div>
+</div>
+
+<h3>Sample Space की संभावना वाले छोटे प्रश्न</h3>
+<table>
+<tr><th>स्थिति</th><th>n(S)</th></tr>
+<tr><td>महाराष्ट्र के दिए गए 8 पर्यटन स्थलों में से एक चुनना</td><td><b>8</b></td></tr>
+<tr><td>सप्ताह का एक दिन चुनना</td><td><b>7</b></td></tr>
+<tr><td>52 ताश के पत्तों में से एक चुनना</td><td><b>52</b></td></tr>
+<tr><td>10 से 20 तक संख्या वाले कार्ड में से एक चुनना</td><td><b>11</b></td></tr>
+</table>
+
+<h2 id="examples">7. हल किए गए उदाहरण</h2>
+
+<div class="question">
+<div class="qtitle">उदाहरण 1 — दो सिक्के</div>
+<p>दो सिक्के एक साथ उछालने पर sample space और चार घटनाएँ लिखिए।</p>
+<div class="answer">
+<div class="set">S = {HH, HT, TH, TT}, &nbsp; n(S) = 4</div>
+<p><b>(i) कम-से-कम एक चित:</b></p>
+<div class="set">A = {HH, HT, TH}, n(A)=3</div>
+<p><b>(ii) ठीक एक चित:</b></p>
+<div class="set">B = {HT, TH}, n(B)=2</div>
+<p><b>(iii) अधिक-से-अधिक एक पट:</b></p>
+<div class="set">C = {HH, HT, TH}, n(C)=3</div>
+<p><b>(iv) चित न मिले:</b></p>
+<div class="set">D = {TT}, n(D)=1</div>
+</div>
+</div>
+
+<div class="question">
+<div class="qtitle">उदाहरण 2 — 1 से 50 कार्ड</div>
+<p>एक कार्ड चुना जाता है। 6 से विभाज्य संख्या और पूर्णवर्ग संख्या की घटनाएँ लिखिए।</p>
+<div class="answer">
+<div class="set">S = {1,2,3,...,49,50}, n(S)=50</div>
+<div class="set">A = {6,12,18,24,30,36,42,48}, n(A)=8</div>
+<div class="set">B = {1,4,9,16,25,36,49}, n(B)=7</div>
+</div>
+</div>
+
+<div class="question">
+<div class="qtitle">उदाहरण 3 — 3 लड़के और 2 लड़कियाँ</div>
+<p>तीन लड़कों B1, B2, B3 और दो लड़कियों G1, G2 में से दो सदस्य चुनकर
+समिति बनानी है।</p>
+<div class="answer">
+<div class="set">S = {B1B2, B1B3, B2B3, B1G1, B1G2, B2G1, B2G2, B3G1, B3G2, G1G2}</div>
+<p>n(S)=10</p>
+<div class="set">A (कम-से-कम एक लड़की) = {B1G1,B1G2,B2G1,B2G2,B3G1,B3G2,G1G2}; n(A)=7</div>
+<div class="set">B (एक लड़का और एक लड़की) = {B1G1,B1G2,B2G1,B2G2,B3G1,B3G2}; n(B)=6</div>
+<div class="set">C (केवल लड़के) = {B1B2,B1B3,B2B3}; n(C)=3</div>
+<div class="set">D (अधिक-से-अधिक एक लड़की) = {B1B2,B1B3,B2B3,B1G1,B1G2,B2G1,B2G2,B3G1,B3G2}; n(D)=9</div>
+</div>
+</div>
+
+<div class="question">
+<div class="qtitle">उदाहरण 4 — दो पाँसे</div>
+<div class="answer">
+<p>दो पाँसों के लिए n(S)=36.</p>
+<p><b>(i) योगफल अभाज्य:</b> 2,3,5,7,11 वाले ordered pairs की संख्या 15.</p>
+<div class="formula">n(E)=15</div>
+<p><b>(ii) योगफल 5 का गुणज:</b> 5 या 10 का योग, कुल 7 outcomes.</p>
+<div class="formula">n(F)=7</div>
+<p><b>(iii) योगफल 25:</b> दो पाँसों का अधिकतम योग 12 है, इसलिए</p>
+<div class="formula">G = ∅, n(G)=0</div>
+<p><b>(iv) पहले पाँसे की संख्या दूसरे से छोटी:</b> 15 outcomes.</p>
+<div class="formula">n(H)=15</div>
+</div>
+</div>
+
+<h2 id="qs52">8. प्रश्नसंग्रह 5.2 — Sample Space</h2>
+
+<div class="question">
+<div class="qtitle">प्रश्न 1(i) — एक पाँसा और एक सिक्का</div>
+<div class="answer">
+<div class="set">S = {(1,H),(1,T),(2,H),(2,T),(3,H),(3,T),(4,H),(4,T),(5,H),(5,T),(6,H),(6,T)}</div>
+<div class="formula">n(S)=6×2=<b>12</b></div>
+</div>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 1(ii) — 2, 3, 5 से बिना पुनरावृत्ति दो अंकों की संख्या</div>
+<div class="answer">
+<div class="set">S = {23,25,32,35,52,53}</div>
+<div class="formula">n(S)=<b>6</b></div>
+</div>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 2 — छह रंगों वाली घिरनी</div>
+<div class="answer">
+<p>छह संभावित रंग: लाल, केसरिया, पीला, नीला, हरा, जामुनी.</p>
+<div class="formula">n(S)=<b>6</b></div>
+</div>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 3 — मार्च 2019 में 5 के गुणज तारीख का वार</div>
+<div class="answer">
+<table>
+<tr><th>तारीख</th><th>वार</th></tr>
+<tr><td>5</td><td>मंगलवार</td></tr>
+<tr><td>10</td><td>रविवार</td></tr>
+<tr><td>15</td><td>शुक्रवार</td></tr>
+<tr><td>20</td><td>बुधवार</td></tr>
+<tr><td>25</td><td>सोमवार</td></tr>
+<tr><td>30</td><td>शनिवार</td></tr>
+</table>
+<div class="formula">संभावित वारों का sample space = {मंगलवार, रविवार, शुक्रवार, बुधवार, सोमवार, शनिवार}</div>
+</div>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 4 — B1, B2 तथा G1, G2 में से दो सदस्य</div>
+<div class="answer">
+<div class="set">S = {B1B2, G1G2, B1G1, B1G2, B2G1, B2G2}</div>
+<div class="formula">n(S)=<b>6</b></div>
+</div>
+</div>
+
+<h2 id="prob">9. घटना की संभाव्यता</h2>
+
+<div class="formula">
+P(A) =
+<span class="frac"><span class="top">n(A)</span><span class="bottom">n(S)</span></span>
+</div>
+
+<p>जहाँ:</p>
+<ul>
+<li><b>P(A)</b> = घटना A की संभाव्यता</li>
+<li><b>n(A)</b> = घटना A के अनुकूल नमूना घटकों की संख्या</li>
+<li><b>n(S)</b> = sample space के कुल नमूना घटकों की संख्या</li>
+</ul>
+
+<div class="success">
+<b>सीमा:</b> 0 ≤ P(A) ≤ 1 तथा प्रतिशत के रूप में 0% ≤ P(A) ≤ 100%.
+</div>
+
+<h3>मूल उदाहरण — 4 गेंदें</h3>
+<p>तीन सफेद और एक काली गेंद में से एक गेंद निकाली जाती है।</p>
+<div class="formula">P(सफेद) = 3/4</div>
+<div class="formula">P(काली) = 1/4</div>
+
+<h3>पुस्तक के अन्य हल किए गए उदाहरण</h3>
+
+<div class="question">
+<div class="qtitle">उदाहरण — एक सिक्का</div>
+<div class="answer">
+<div class="formula">S={H,T}, n(S)=2</div>
+<div class="formula">P(H)=1/2</div>
+<div class="formula">P(T)=1/2</div>
+</div>
+</div>
+
+<div class="question">
+<div class="qtitle">उदाहरण — एक पाँसा</div>
+<div class="answer">
+<div class="formula">S={1,2,3,4,5,6}, n(S)=6</div>
+<div class="formula">P(अभाज्य) = 3/6 = <b>1/2</b>, क्योंकि {2,3,5}</div>
+<div class="formula">P(सम) = 3/6 = <b>1/2</b>, क्योंकि {2,4,6}</div>
+</div>
+</div>
+
+<div class="question">
+<div class="qtitle">उदाहरण — 52 ताश के पत्ते</div>
+<div class="answer">
+<div class="formula">P(लाल पत्ता) = 26/52 = <b>1/2</b></div>
+<div class="formula">P(चित्रयुक्त पत्ता) = 12/52 = <b>3/13</b></div>
+</div>
+</div>
+
+<div class="question">
+<div class="qtitle">उदाहरण — 5 Strawberry, 6 Coffee, 2 Peppermint chocolates</div>
+<div class="answer">
+<div class="formula">कुल = 5+6+2 = 13</div>
+<div class="formula">P(Coffee)=6/13</div>
+<div class="formula">P(Peppermint)=2/13</div>
+</div>
+</div>
+
+<h2 id="qs53">10. प्रश्नसंग्रह 5.3 — घटनाएँ</h2>
+
+<div class="question">
+<div class="qtitle">प्रश्न 1 — एक पाँसा</div>
+<div class="answer">
+<div class="set">S={1,2,3,4,5,6}, n(S)=6</div>
+<div class="set">A (सम)={2,4,6}, n(A)=3</div>
+<div class="set">B (विषम)={1,3,5}, n(B)=3</div>
+<div class="set">C (अभाज्य)={2,3,5}, n(C)=3</div>
+</div>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 2 — दो पाँसे</div>
+<div class="answer">
+<div class="set">S = {(1,1),(1,2),...,(6,6)}, n(S)=36</div>
+<p><b>(A) योगफल 6 का गुणज:</b> योग 6 या 12.</p>
+<div class="set">A={(1,5),(2,4),(3,3),(4,2),(5,1),(6,6)}, n(A)=6</div>
+<p><b>(B) योगफल कम-से-कम 10:</b></p>
+<div class="set">B={(4,6),(5,5),(5,6),(6,4),(6,5),(6,6)}, n(B)=6</div>
+<p><b>(C) दोनों संख्याएँ समान:</b></p>
+<div class="set">C={(1,1),(2,2),(3,3),(4,4),(5,5),(6,6)}, n(C)=6</div>
+</div>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 3 — तीन सिक्के</div>
+<div class="answer">
+<div class="set">S={HHH,HHT,HTH,THH,HTT,THT,TTH,TTT}, n(S)=8</div>
+<div class="set">A (कम-से-कम दो चित)={HHH,HHT,HTH,THH}, n(A)=4</div>
+<div class="set">B (एक भी चित नहीं)={TTT}, n(B)=1</div>
+<div class="set">C (दूसरे सिक्के पर चित)={HTH,HHT,T HH, THT}</div>
+<p>अर्थात दूसरे स्थान पर H वाले फल: <b>HHH, HHT, THH, THT</b>; इसलिए n(C)=4.</p>
+</div>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 4 — 0,1,2,3,4,5 से बिना पुनरावृत्ति दो अंकों की संख्या</div>
+<div class="answer">
+<p>दहाई का अंक 0 नहीं हो सकता। कुल 25 संख्याएँ:</p>
+<div class="set">S={10,12,13,14,15,20,21,23,24,25,30,31,32,34,35,40,41,42,43,45,50,51,52,53,54}</div>
+<div class="formula">n(S)=25</div>
+<p><b>A: सम संख्या</b></p>
+<div class="set">A={10,12,14,20,24,30,32,34,40,42,50,52,54}; n(A)=13</div>
+<div class="formula">P(A)=13/25</div>
+<p><b>B: 3 से विभाज्य</b></p>
+<div class="set">B={12,15,21,24,30,42,45,51,54}; n(B)=9</div>
+<div class="formula">P(B)=9/25</div>
+<p><b>C: 50 से बड़ी</b></p>
+<div class="set">C={51,52,53,54}; n(C)=4</div>
+<div class="formula">P(C)=4/25</div>
+</div>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 5 — 3 पुरुष और 2 स्त्रियों की समिति</div>
+<div class="answer">
+<div class="set">S={M1M2,M1M3,M2M3,M1G1,M1G2,M2G1,M2G2,M3G1,M3G2,G1G2}, n(S)=10</div>
+<div class="set">A (कम-से-कम एक स्त्री): 7 outcomes ⇒ P(A)=7/10</div>
+<div class="set">B (एक पुरुष और एक स्त्री): 6 outcomes ⇒ P(B)=6/10=3/5</div>
+<div class="set">C (कोई स्त्री नहीं): 3 outcomes ⇒ P(C)=3/10</div>
+</div>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 6 — एक सिक्का और एक पाँसा</div>
+<div class="answer">
+<div class="set">S={(H,1),(H,2),...,(H,6),(T,1),...,(T,6)}, n(S)=12</div>
+<div class="set">A (चित और विषम संख्या)={(H,1),(H,3),(H,5)}, n(A)=3</div>
+<div class="formula">P(A)=3/12=<b>1/4</b></div>
+<div class="set">B (H या T तथा सम संख्या)={(H,2),(H,4),(H,6),(T,2),(T,4),(T,6)}, n(B)=6</div>
+<div class="formula">P(B)=6/12=<b>1/2</b></div>
+<div class="set">C (पाँसे पर 7 से बड़ी संख्या और पट) = ∅</div>
+<div class="formula">P(C)=<b>0</b></div>
+</div>
+</div>
+
+<h2 id="qs54">11. प्रश्नसंग्रह 5.4 — संभाव्यता</h2>
+
+<div class="question">
+<div class="qtitle">प्रश्न 1 — दो सिक्के</div>
+<div class="answer">
+<div class="formula">कम-से-कम एक चित = 3/4</div>
+<div class="formula">एक भी चित नहीं = 1/4</div>
+</div>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 2 — दो पाँसे</div>
+<div class="answer">
+<p><b>(i) योगफल कम-से-कम 10:</b> 6 favourable outcomes.</p>
+<div class="formula">P=6/36=<b>1/6</b></div>
+<p><b>(ii) योगफल 33:</b> दो पाँसों का अधिकतम योग 12.</p>
+<div class="formula">P=<b>0</b></div>
+<p><b>(iii) पहले पाँसे की संख्या दूसरे से बड़ी:</b> 15 outcomes.</p>
+<div class="formula">P=15/36=<b>5/12</b></div>
+</div>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 3 — 1 से 15 टिकट</div>
+<div class="answer">
+<p>कुल 15 टिकट.</p>
+<div class="formula">सम संख्याएँ = 2,4,6,8,10,12,14 ⇒ P=7/15</div>
+<div class="formula">5 के गुणज = 5,10,15 ⇒ P=3/15=<b>1/5</b></div>
+</div>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 4 — 2,3,5,7,9 से बिना पुनरावृत्ति दो अंकों की संख्या</div>
+<div class="answer">
+<p>सभी पाँच अंक विषम हैं। इसलिए बनी प्रत्येक दो-अंकीय संख्या विषम होगी।</p>
+<div class="formula">कुल संख्याएँ = 5×4 = 20</div>
+<div class="formula">P(विषम)=20/20=<b>1</b></div>
+<p>5 का गुणज बनने के लिए इकाई अंक 5 होना चाहिए। दहाई के लिए 4 विकल्प.</p>
+<div class="formula">P(5 का गुणज)=4/20=<b>1/5</b></div>
+</div>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 5 — 52 ताश के पत्ते</div>
+<div class="answer">
+<div class="formula">P(इक्का)=4/52=<b>1/13</b></div>
+<div class="formula">P(हुकुम)=13/52=<b>1/4</b></div>
+</div>
+</div>
+
+<h2 id="misc">12. प्रकीर्ण प्रश्नसंग्रह — 5</h2>
+
+<h3>प्रश्न 1 — MCQ</h3>
+<table>
+<tr><th>प्रश्न</th><th>सही उत्तर</th><th>समाधान</th></tr>
+<tr><td>1. कौन-सी संभाव्यता नहीं हो सकती?</td><td><b>(B) 1.5</b></td><td>संभाव्यता 0 से 1 के बीच होती है।</td></tr>
+<tr><td>2. पाँसा फेंकने पर 3 से कम संख्या</td><td><b>(B) 1/3</b></td><td>{1,2} ⇒ 2/6=1/3.</td></tr>
+<tr><td>3. 1 से 100 में अभाज्य संख्या</td><td><b>(C) 1/4</b></td><td>1–100 में 25 अभाज्य संख्याएँ ⇒ 25/100=1/4.</td></tr>
+<tr><td>4. 1–40 में 5 का गुणज</td><td><b>(A) 1/5</b></td><td>5,10,...,40 = 8 ⇒ 8/40=1/5.</td></tr>
+<tr><td>5. n(A)=2, P(A)=1/5, n(S)?</td><td><b>(A) 10</b></td><td>2/n(S)=1/5 ⇒ n(S)=10.</td></tr>
+</table>
+
+<div class="question">
+<div class="qtitle">प्रश्न 2 — Basketball probabilities</div>
+<div class="answer">
+<div class="formula">John = 4/5 = 0.80</div>
+<div class="formula">Wasim = 0.83</div>
+<div class="formula">Akash = 58% = 0.58</div>
+<p>0.83 सबसे अधिक है। इसलिए <b>Wasim</b> की संभावना अधिक है।</p>
+</div>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 3 — Hockey team captain</div>
+<div class="answer">
+<p>कुल खिलाड़ी = 6 बचाव + 4 आक्रमक + 1 गोलरक्षक = 11.</p>
+<div class="formula">P(गोलरक्षक)=1/11</div>
+<div class="formula">P(बचाव करने वाला)=6/11</div>
+</div>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 4 — English alphabet card</div>
+<div class="answer">
+<p>अंग्रेजी वर्णमाला में 5 vowels (A,E,I,O,U) हैं।</p>
+<div class="formula">P(स्वर)=5/26</div>
+</div>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 5 — रंगीन गुब्बारे</div>
+<div class="answer">
+<p>2 लाल + 3 नीले + 4 हरे = 9.</p>
+<div class="formula">P(लाल)=2/9</div>
+<div class="formula">P(नीला)=3/9=<b>1/3</b></div>
+<div class="formula">P(हरा)=4/9</div>
+</div>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 6 — 5 लाल, 8 नीले, 3 हरे पेन</div>
+<div class="answer">
+<div class="formula">कुल पेन = 5+8+3=16</div>
+<div class="formula">P(नीला)=8/16=<b>1/2</b></div>
+</div>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 7 — A B C D E A वाला पाँसा</div>
+<div class="answer">
+<p>कुल 6 पृष्ठभाग; A दो बार और D एक बार है।</p>
+<div class="formula">P(A)=2/6=<b>1/3</b></div>
+<div class="formula">P(D)=1/6</div>
+</div>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 8 — 1 से 30 टिकट</div>
+<div class="answer">
+<p><b>(i) विषम संख्या:</b> 15 विषम संख्याएँ.</p>
+<div class="formula">P(विषम)=15/30=<b>1/2</b></div>
+<p><b>(ii) पूर्ण वर्ग:</b> 1,4,9,16,25.</p>
+<div class="formula">P(पूर्ण वर्ग)=5/30=<b>1/6</b></div>
+</div>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 9 — बगीचा और तालाब</div>
+<div class="answer">
+<p>बगीचे की लंबाई 77 m, चौड़ाई 50 m और तालाब का व्यास 14 m है।</p>
+<div class="formula">बगीचे का क्षेत्रफल = 77×50 = 3850 m²</div>
+<div class="formula">तालाब की त्रिज्या = 14/2 = 7 m</div>
+<div class="formula">तालाब का क्षेत्रफल = πr² = (22/7)×7×7 = 154 m²</div>
+<div class="formula">P(तालाब में गिरना) = 154/3850 = <b>1/25</b></div>
+<div class="note">यह उत्तर इस मान्यता पर है कि बगीचे के क्षेत्रफल में तौलिया के गिरने का स्थान समान रूप से संभाव्य है, जैसा प्रश्न के प्रायिकता मॉडल में अपेक्षित है।</div>
+</div>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 10 — 1 से 8 तक spinner</div>
+<div class="answer">
+<div class="formula">कुल परिणाम = 8</div>
+<div class="formula">(1) P(8)=1/8</div>
+<div class="formula">(2) विषम = {1,3,5,7} ⇒ P=4/8=<b>1/2</b></div>
+<div class="formula">(3) संख्या 2 से बड़ी = {3,4,5,6,7,8} ⇒ P=6/8=<b>3/4</b></div>
+<div class="formula">(4) संख्या 9 से छोटी = सभी 8 ⇒ P=8/8=<b>1</b></div>
+</div>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 11 — 0 से 5 वाले छह कार्ड</div>
+<div class="answer">
+<p>Sample space S={0,1,2,3,4,5}, इसलिए n(S)=6.</p>
+<div class="formula">(i) प्राकृतिक संख्या (1,2,3,4,5): P=5/6</div>
+<div class="formula">(ii) 1 से छोटी संख्या: केवल 0 ⇒ P=1/6</div>
+<div class="formula">(iii) पूर्ण संख्या/Whole number: 0,1,2,3,4,5 ⇒ P=6/6=<b>1</b></div>
+<div class="formula">(iv) 5 से बड़ी संख्या: कोई नहीं ⇒ P=<b>0</b></div>
+<div class="note">प्रश्न के विद्यालयी संदर्भ में प्राकृतिक संख्याएँ 1,2,3,... मानी गई हैं।</div>
+</div>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 12 — 3 लाल, 3 सफेद, 3 हरी गेंदें</div>
+<div class="answer">
+<div class="formula">कुल गेंदें = 9</div>
+<div class="formula">(i) P(लाल)=3/9=<b>1/3</b></div>
+<div class="formula">(ii) P(लाल नहीं)=6/9=<b>2/3</b></div>
+<div class="formula">(iii) P(लाल या सफेद)=6/9=<b>2/3</b></div>
+</div>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 13 — “mathematics” के अक्षर</div>
+<div class="answer">
+<p>mathematics में कुल 11 अक्षर हैं और <b>m</b> दो बार आता है।</p>
+<div class="formula">P(m)=2/11</div>
+</div>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 14 — 200 विद्यार्थियों में कबड्डी पसंद</div>
+<div class="answer">
+<p>135 विद्यार्थियों को कबड्डी पसंद है।</p>
+<div class="formula">कबड्डी पसंद नहीं = 200−135 = 65</div>
+<div class="formula">P(पसंद नहीं)=65/200=<b>13/40</b></div>
+</div>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 15 — 0,1,2,3,4 से पुनरावृत्ति सहित दो अंकों की संख्या</div>
+<div class="answer">
+<p>दहाई का अंक 0 नहीं हो सकता। इसलिए कुल 4×5=20 दो-अंकीय संख्याएँ.</p>
+<div class="formula">S={10,11,12,13,14,20,21,22,23,24,30,31,32,33,34,40,41,42,43,44}</div>
+<p><b>(i) अभाज्य:</b> 11,13,23,31,41,43.</p>
+<div class="formula">P(अभाज्य)=6/20=<b>3/10</b></div>
+<p><b>(ii) 4 का गुणज:</b> 12,20,24,32,40,44.</p>
+<div class="formula">P(4 का गुणज)=6/20=<b>3/10</b></div>
+<p><b>(iii) 11 का गुणज:</b> 11,22,33,44.</p>
+<div class="formula">P(11 का गुणज)=4/20=<b>1/5</b></div>
+</div>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 16 — 0 से 5 अंक वाले पाँसे को दो बार फेंकना</div>
+<div class="answer">
+<p>कुल ordered outcomes = 6×6=36.</p>
+<p>गुणनफल शून्य तभी होगा जब कम-से-कम एक बार 0 आए।</p>
+<div class="formula">0 न आने वाले outcomes = 5×5=25</div>
+<div class="formula">अनुकूल outcomes = 36−25=11</div>
+<div class="formula">P(गुणनफल 0)=11/36</div>
+</div>
+</div>
+
+<div class="question">
+<div class="qtitle">प्रश्न 17 — कक्षा की गतिविधि</div>
+<div class="answer">
+<p>इस गतिविधि में विद्यार्थियों की वास्तविक संख्या और चश्मा लगाने वाले विद्यार्थियों
+की वास्तविक संख्या कक्षा में भरायची आहे। इसलिए सामान्य संख्यात्मक उत्तर निश्चित
+नहीं है।</p>
+<div class="formula">n(S) = कक्षा के कुल विद्यार्थी</div>
+<div class="formula">n(A) = चश्मा लगाने वाले विद्यार्थी</div>
+<div class="formula">P(A)=n(A)/n(S)</div>
+<p>यदि कक्षा में उदाहरण के लिए 40 विद्यार्थी और 5 चश्मा लगाने वाले विद्यार्थी हों,
+तो P(A)=5/40=1/8 होगा; यह केवल <b>उदाहरण</b> है, पुस्तक का निश्चित उत्तर नहीं।</p>
+</div>
+</div>
+
+<h2 id="revision">13. Quick Revision — परीक्षा के लिए</h2>
+
+<table>
+<tr><th>संकल्पना</th><th>मुख्य बात</th></tr>
+<tr><td>Random Experiment</td><td>संभावित परिणाम ज्ञात, लेकिन कौन-सा परिणाम आएगा यह निश्चित नहीं।</td></tr>
+<tr><td>Outcome / फल</td><td>यादृच्छिक प्रयोग का एक परिणाम।</td></tr>
+<tr><td>Sample Space S</td><td>सभी संभावित outcomes का समूह।</td></tr>
+<tr><td>n(S)</td><td>Sample space में कुल outcomes.</td></tr>
+<tr><td>Event A</td><td>दी गई शर्त पूरी करने वाले outcomes का समूह।</td></tr>
+<tr><td>n(A)</td><td>घटना A के अनुकूल outcomes की संख्या।</td></tr>
+<tr><td>Probability</td><td>P(A)=n(A)/n(S), जब outcomes समान संभाव्य हों।</td></tr>
+<tr><td>Probability सीमा</td><td>0 ≤ P(A) ≤ 1.</td></tr>
+<tr><td>Certain Event</td><td>P(A)=1.</td></tr>
+<tr><td>Impossible Event</td><td>P(A)=0.</td></tr>
+</table>
+
+<h3>Common exam patterns</h3>
+<ul>
+<li><b>कम-से-कम</b> = given minimum या उससे अधिक।</li>
+<li><b>अधिक-से-अधिक</b> = given maximum या उससे कम।</li>
+<li><b>से बड़ी</b> = strictly greater.</li>
+<li><b>से छोटी</b> = strictly less.</li>
+<li>दो पाँसों में ordered pair का ध्यान रखें: (1,2) और (2,1) अलग outcomes हैं।</li>
+<li>दो अंकों की संख्या बनाते समय यदि 0 उपलब्ध है तो दहाई का अंक 0 नहीं हो सकता।</li>
+<li>Probability को अंतिम उत्तर में सरलतम भिन्न या आवश्यक होने पर प्रतिशत में दें।</li>
+</ul>
+
+<div class="source">
+<b>स्रोत-सत्यापन:</b> अध्याय की मूल PDF में pages 113–128 पर ऊपर के concepts,
+sample spaces, events, probability examples तथा प्रश्नसंग्रह 5.1–5.4 और
+प्रकीर्ण प्रश्नसंग्रह दिए गए हैं। Page 126 पर MCQs और page 127–128 पर प्रकीर्ण
+प्रश्न 6–17 दिए गए हैं। यह HTML उसी क्रम को बनाए रखते हुए solutions जोड़ता है।
+</div>
+
+<div class="footer">
+कक्षा 10 गणित — अध्याय 5 : संभाव्यता<br>
+Prepared from the supplied C10HHganit1Ch05.pdf and chapter_5_solutions(3).html.<br>
+<b>Note:</b> यह शैक्षणिक, पाठ्यपुस्तक-आधारित समाधान है।
+</div>
+
+</div>
+</body>
+</html>

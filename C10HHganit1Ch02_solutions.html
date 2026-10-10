@@ -1,0 +1,642 @@
+﻿<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>कक्षा 10 गणित — अध्याय 2 — वर्गसमीकरण — संपूर्ण समाधान</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#f3f5f7;color:#222;font-family:"Noto Sans Devanagari","Nirmala UI",Arial,sans-serif;line-height:1.75}
+.container{max-width:1180px;margin:24px auto;background:#fff;padding:34px;border-radius:14px;box-shadow:0 4px 24px rgba(0,0,0,.08)}
+h1{color:#17365d;border-bottom:3px solid #17365d;padding-bottom:10px}
+h2{color:#244f7a;margin-top:42px;border-bottom:1px solid #ddd;padding-bottom:8px}
+h3{color:#345f82;margin-top:28px}
+h4{color:#466b86;margin-top:22px}
+p,li,td,th{font-size:16px}
+.question{border:1px solid #d9e0e7;border-radius:10px;margin:18px 0;padding:17px;background:#fff}
+.qtitle{font-weight:700;color:#17365d}
+.answer{margin-top:10px;background:#f8fbfd;padding:14px;border-radius:7px}
+.formula{font-family:"Times New Roman","Noto Sans Devanagari",serif;background:#f5f7f9;border:1px solid #ddd;border-radius:7px;padding:10px 14px;margin:10px 0;font-size:19px;text-align:center}
+.eq{font-family:"Times New Roman",serif;font-size:19px;text-align:center;margin:12px 0}
+.note{background:#fff8e8;border-left:5px solid #d6a100;padding:12px 16px;border-radius:7px;margin:14px 0}
+.source{background:#eef6ff;border-left:5px solid #3c78b5;padding:12px 16px;border-radius:7px;margin:14px 0}
+.warning{background:#fff1f1;border-left:5px solid #b64b4b;padding:12px 16px;border-radius:7px;margin:14px 0}
+table{width:100%;border-collapse:collapse;margin:14px 0}
+th,td{border:1px solid #ddd;padding:9px;text-align:left;vertical-align:top}
+th{background:#eef3f7}
+.small{font-size:14px;color:#666}
+.footer{margin-top:45px;border-top:1px solid #ddd;padding-top:18px;color:#777;font-size:13px}
+.badge{display:inline-block;background:#17365d;color:#fff;padding:3px 9px;border-radius:20px;font-size:13px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+ol li{margin:7px 0}
+@media(max-width:800px){.container{margin:0;padding:18px;border-radius:0}.two{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="container">
+
+<h1>अध्याय 2: वर्गसमीकरण</h1>
+<p><b>कक्षा 10वीं — गणित — संपूर्ण समाधान</b></p>
+
+<div class="source">
+<b>स्रोत:</b> आपके द्वारा अपलोड किया गया <b>C10HHganit1Ch02.pdf</b> (25 पृष्ठ)
+और मौजूदा <b>chapter_2_solutions(3).html</b>। यह संस्करण PDF के अध्याय क्रम,
+उदाहरणों, प्रश्नसंग्रह 2.1–2.6 और प्रकीर्ण प्रश्नसंग्रह 2 को आधार बनाकर तैयार
+किया गया है। जहाँ PDF में OCR/मुद्रण अस्पष्ट है, वहाँ उसे अनुमान से बदलने के
+बजाय नोट किया गया है।
+</div>
+
+<h2>1. अध्याय परिचय</h2>
+<p>वर्ग बहुपद की कोटि 2 होती है। जब ऐसे बहुपद का मान शून्य के बराबर रखा जाता
+है, तब प्राप्त समीकरण को <b>वर्गसमीकरण</b> कहते हैं। PDF के पहले पृष्ठ पर
+200 वर्ग मीटर क्षेत्रफल वाले आयताकार भूखंड का उदाहरण देकर
+x² + 10x − 200 = 0 प्राप्त किया गया है।</p>
+
+<h2>2. वर्गसमीकरण का मानक रूप</h2>
+<div class="formula">ax² + bx + c = 0, &nbsp; जहाँ a, b, c वास्तविक संख्याएँ और a ≠ 0</div>
+
+<h3>मानक रूप के उदाहरण</h3>
+<table>
+<tr><th>समीकरण</th><th>मानक रूप</th><th>a</th><th>b</th><th>c</th></tr>
+<tr><td>x² − 4 = 0</td><td>x² + 0x − 4 = 0</td><td>1</td><td>0</td><td>−4</td></tr>
+<tr><td>y² = 2y − 7</td><td>y² − 2y + 7 = 0</td><td>1</td><td>−2</td><td>7</td></tr>
+<tr><td>x² + 2x = 0</td><td>x² + 2x + 0 = 0</td><td>1</td><td>2</td><td>0</td></tr>
+</table>
+
+<h3>वर्गसमीकरण पहचानने के उदाहरण</h3>
+<ul>
+<li>3x² − 5x + 3 = 0 → वर्गसमीकरण।</li>
+<li>9y² + 5 = 0 → वर्गसमीकरण।</li>
+<li>m³ − 5m² + 4 = 0 → वर्गसमीकरण नहीं; अधिकतम घात 3 है।</li>
+<li>(l + 2)(l − 5) = 0 → विस्तार करने पर l² − 3l − 10 = 0, अतः वर्गसमीकरण।</li>
+</ul>
+
+<h2>3. वर्गसमीकरण के मूल</h2>
+<p>वह चर का मान जो वर्गसमीकरण को संतुष्ट करता है, उसका <b>मूल/हल</b> कहलाता है।</p>
+
+<h3>उदाहरण: 2x² − 7x + 6 = 0</h3>
+<div class="answer">
+<p>x = 3/2 रखने पर:</p>
+<div class="formula">2(3/2)² − 7(3/2) + 6 = 9/2 − 21/2 + 12/2 = 0</div>
+<p>अतः x = 3/2 एक मूल है।</p>
+<p>x = −2 रखने पर:</p>
+<div class="formula">2(−2)² − 7(−2) + 6 = 8 + 14 + 6 = 28 ≠ 0</div>
+<p>अतः x = −2 मूल नहीं है।</p>
+</div>
+
+<h3>यदि x = 5, समीकरण kx² − 14x − 5 = 0 का एक मूल हो</h3>
+<div class="formula">25k − 70 − 5 = 0</div>
+<div class="formula">25k = 75 ⇒ k = 3</div>
+
+<h2>4. प्रश्नसंग्रह 2.1</h2>
+
+<div class="question">
+<div class="qtitle">1) कोई भी दो वर्गसमीकरण लिखिए।</div>
+<div class="answer">
+<p>उदाहरण: x² − 5x + 6 = 0 और 2x² + 3x − 4 = 0.</p>
+</div>
+</div>
+
+<div class="question">
+<div class="qtitle">2) निम्न में से कौन-कौन से वर्गसमीकरण हैं?</div>
+<div class="answer">
+<table>
+<tr><th>प्रश्न</th><th>निष्कर्ष</th></tr>
+<tr><td>1. x² + 5x − 2 = 0</td><td>वर्गसमीकरण</td></tr>
+<tr><td>2. y² = 5y − 10</td><td>वर्गसमीकरण; y² − 5y + 10 = 0</td></tr>
+<tr><td>3. y² + 1/y = 2</td><td>वर्गसमीकरण नहीं</td></tr>
+<tr><td>4. x + 1/x = −2</td><td>x ≠ 0 पर x² + 2x + 1 = 0, अतः वर्गसमीकरण</td></tr>
+<tr><td>5. (m + 2)(m − 5) = 0</td><td>वर्गसमीकरण</td></tr>
+<tr><td>6. m³ + 3m² − 2 = 3m³</td><td>घात 3 बचती है; वर्गसमीकरण नहीं</td></tr>
+</table>
+<p><b>उत्तर: 1, 2, 4 और 5.</b></p>
+</div>
+</div>
+
+<div class="question">
+<div class="qtitle">3) ax² + bx + c = 0 के रूप में लिखिए और a,b,c ज्ञात कीजिए।</div>
+<div class="answer">
+<table>
+<tr><th>दिया गया</th><th>मानक रूप</th><th>a,b,c</th></tr>
+<tr><td>2y = 10 − y²</td><td>y² + 2y − 10 = 0</td><td>1, 2, −10</td></tr>
+<tr><td>(x − 1)² = 2x + 3</td><td>x² − 4x − 2 = 0</td><td>1, −4, −2</td></tr>
+<tr><td>x² + 5x = −(3 − x)</td><td>x² + 4x + 3 = 0</td><td>1, 4, 3</td></tr>
+<tr><td>3m² = 2m² − 9</td><td>m² + 9 = 0</td><td>1, 0, 9</td></tr>
+<tr><td>p(3 + 6p) = −5</td><td>6p² + 3p + 5 = 0</td><td>6, 3, 5</td></tr>
+<tr><td>x² − 9 = 13</td><td>x² − 22 = 0</td><td>1, 0, −22</td></tr>
+</table>
+</div>
+</div>
+
+<div class="question">
+<div class="qtitle">4) दिए गए मान मूल हैं या नहीं?</div>
+<div class="answer">
+<p>(1) x² + 4x − 5 = 0: x=1 पर 0 मिलता है, x=−1 पर −8 मिलता है। इसलिए <b>1 मूल है, −1 मूल नहीं है</b>.</p>
+<p>(2) 2m² − 5m = 0: m=2 पर −2 मिलता है; m=5/2 पर 0 मिलता है। इसलिए <b>2 मूल नहीं, 5/2 मूल है</b>.</p>
+</div>
+</div>
+
+<div class="question">
+<div class="qtitle">5) यदि x = 3, kx² − 10x + 3 = 0 का एक मूल है, k ज्ञात कीजिए।</div>
+<div class="answer">
+<div class="formula">9k − 30 + 3 = 0 ⇒ 9k = 27 ⇒ <b>k = 3</b></div>
+</div>
+</div>
+
+<div class="question">
+<div class="qtitle">6) 5m² + 2m + k = 0 का एक मूल −7/5 है। k ज्ञात कीजिए।</div>
+<div class="answer">
+<div class="formula">5(49/25) + 2(−7/5) + k = 0</div>
+<div class="formula">49/5 − 14/5 + k = 0 ⇒ 7 + k = 0</div>
+<p><b>k = −7</b></p>
+</div>
+</div>
+
+<h2>5. गुणनखंड विधि</h2>
+<p>यदि वर्गसमीकरण को दो रेखीय गुणनखंडों के गुणनफल के रूप में लिखा जा सके,
+तो प्रत्येक गुणनखंड को शून्य रखकर मूल प्राप्त किए जाते हैं।</p>
+
+<div class="formula">x² − 4x − 5 = (x − 5)(x + 1)</div>
+<div class="formula">(x − 5)(x + 1) = 0 ⇒ x = 5 या x = −1</div>
+
+<h2>6. प्रश्नसंग्रह 2.2 — गुणनखंड विधि</h2>
+<table>
+<tr><th>क्रमांक</th><th>समीकरण</th><th>गुणनखंड</th><th>मूल</th></tr>
+<tr><td>1</td><td>x² − 15x + 54 = 0</td><td>(x−9)(x−6)=0</td><td>6, 9</td></tr>
+<tr><td>2</td><td>x² + x − 20 = 0</td><td>(x+5)(x−4)=0</td><td>−5, 4</td></tr>
+<tr><td>3</td><td>2y² + 27y + 13 = 0</td><td>(y+13)(2y+1)=0</td><td>−13, −1/2</td></tr>
+<tr><td>4</td><td>5m² = 22m + 15</td><td>(5m+3)(m−5)=0</td><td>−3/5, 5</td></tr>
+<tr><td>5</td><td>2x² − 2x + 1/2 = 0</td><td>(2x−1)²/2=0</td><td>1/2, 1/2</td></tr>
+<tr><td>6</td><td>6x − 2/x = 1</td><td>6x² − x − 2 = (3x−2)(2x+1)</td><td>2/3, −1/2</td></tr>
+<tr><td>7</td><td>√2x² + 7x + 5√2 = 0</td><td>(√2x+5)(x+√2)=0</td><td>−5√2/2, −√2</td></tr>
+<tr><td>8</td><td>3x² − 2√6x + 2 = 0</td><td>यह पूर्ण वर्ग है: 3(x−√6/3)²</td><td>√6/3, समान मूल</td></tr>
+<tr><td>9</td><td>2m(m−24)=50</td><td>2(m−25)(m+1)=0</td><td>25, −1</td></tr>
+<tr><td>10</td><td>25m²=9</td><td>(5m−3)(5m+3)=0</td><td>3/5, −3/5</td></tr>
+<tr><td>11</td><td>7m²=21m</td><td>7m(m−3)=0</td><td>0, 3</td></tr>
+<tr><td>12</td><td>m²−11=0</td><td>(m−√11)(m+√11)=0</td><td>±√11</td></tr>
+</table>
+
+<h2>7. पूर्ण वर्ग विधि</h2>
+<p>पूर्ण वर्ग विधि में x² + bx वाले भाग में (b/2)² जोड़कर और घटाकर
+पूर्ण वर्ग बनाया जाता है।</p>
+
+<div class="question">
+<div class="qtitle">उदाहरण: x² + 10x + 2 = 0</div>
+<div class="answer">
+<div class="formula">x² + 10x + 25 − 25 + 2 = 0</div>
+<div class="formula">(x + 5)² = 23</div>
+<div class="formula">x + 5 = ±√23</div>
+<p><b>x = −5 ± √23</b></p>
+</div>
+</div>
+
+<div class="question">
+<div class="qtitle">उदाहरण: 5x² − 4x − 3 = 0</div>
+<div class="answer">
+<div class="formula">x² − (4/5)x − 3/5 = 0</div>
+<div class="formula">x² − (4/5)x + 4/25 − 4/25 − 3/5 = 0</div>
+<div class="formula">(x − 2/5)² = 19/25</div>
+<div class="formula">x = 2/5 ± √19/5 = (2 ± √19)/5</div>
+</div>
+</div>
+
+<h3>प्रश्नसंग्रह 2.3 — पूर्ण वर्ग विधि</h3>
+<table>
+<tr><th>प्रश्न</th><th>समीकरण</th><th>मूल</th></tr>
+<tr><td>1</td><td>x²+x−20=0</td><td>4, −5</td></tr>
+<tr><td>2</td><td>x²+2x−5=0</td><td>−1±√6</td></tr>
+<tr><td>3</td><td>m²−5m=−3</td><td>(5±√13)/2</td></tr>
+<tr><td>4</td><td>9y²−12y+2=0</td><td>(2±√2)/3</td></tr>
+<tr><td>5</td><td>2y²+9y+10=0</td><td>−5/2, −2</td></tr>
+<tr><td>6</td><td>5x²=4x+7</td><td>(2±√39)/5</td></tr>
+</table>
+
+<h2>8. वर्गसमीकरण हल करने का सूत्र</h2>
+<div class="formula">x = (−b ± √(b² − 4ac)) / (2a)</div>
+<p>यहाँ <b>a ≠ 0</b> और <b>Δ = b² − 4ac</b> को विवेचक कहते हैं।</p>
+
+<h3>सूत्र की मुख्य प्रक्रिया</h3>
+<ol>
+<li>समीकरण को ax² + bx + c = 0 में लिखें।</li>
+<li>a, b, c पहचानें।</li>
+<li>Δ = b² − 4ac निकालें।</li>
+<li>सूत्र x = (−b ± √Δ)/(2a) में मान रखें।</li>
+<li>दोनों मूल प्राप्त करें और मूल समीकरण में जाँच करें।</li>
+</ol>
+
+<h2>9. प्रश्नसंग्रह 2.4 — सूत्र विधि</h2>
+<table>
+<tr><th>क्रमांक</th><th>समीकरण</th><th>मूल</th></tr>
+<tr><td>1</td><td>x²+6x+5=0</td><td>−1, −5</td></tr>
+<tr><td>2</td><td>x²−3x−2=0</td><td>(3±√17)/2</td></tr>
+<tr><td>3</td><td>3m²+2m−7=0</td><td>(−1±√22)/3</td></tr>
+<tr><td>4</td><td>5m²−4m−2=0</td><td>(2±√14)/5</td></tr>
+<tr><td>5</td><td>y²+(1/3)y=2</td><td>(−1±√73)/6</td></tr>
+<tr><td>6</td><td>5x²+13x+8=0</td><td>−1, −8/5</td></tr>
+</table>
+
+<div class="question">
+<div class="qtitle">कृति: 2x² + 13x + 15 = 0 को तीन विधियों से हल करें।</div>
+<div class="answer">
+<p><b>गुणनखंड:</b> (2x+3)(x+5)=0 ⇒ x=−3/2, −5.</p>
+<p><b>सूत्र:</b> Δ=169−120=49 ⇒ x=(−13±7)/4 ⇒ x=−3/2, −5.</p>
+<p><b>पूर्ण वर्ग:</b> दोनों पक्षों को उपयुक्त रूप से पूर्ण वर्ग में बदलने पर वही
+दो मूल प्राप्त होते हैं।</p>
+<p><b>निष्कर्ष:</b> तीनों विधियों से समान उत्तर मिलता है।</p>
+</div>
+</div>
+
+<h2>10. मूलों का स्वरूप — विवेचक</h2>
+<table>
+<tr><th>Δ = b²−4ac</th><th>मूलों का स्वरूप</th></tr>
+<tr><td>Δ = 0</td><td>दो समान वास्तविक मूल</td></tr>
+<tr><td>Δ &gt; 0</td><td>दो असमान वास्तविक मूल</td></tr>
+<tr><td>Δ &lt; 0</td><td>वास्तविक मूल नहीं</td></tr>
+</table>
+
+<div class="question">
+<div class="qtitle">उदाहरण: 2x²−5x+7=0</div>
+<div class="answer">
+<div class="formula">Δ = (−5)² − 4(2)(7) = 25−56 = −31</div>
+<p>Δ&lt;0 इसलिए <b>वास्तविक मूल नहीं हैं</b>.</p>
+</div>
+</div>
+
+<div class="question">
+<div class="qtitle">उदाहरण: x²+2x−9=0</div>
+<div class="answer">
+<div class="formula">Δ = 2² − 4(1)(−9) = 4+36 = 40</div>
+<p>Δ&gt;0 इसलिए <b>वास्तविक तथा असमान मूल</b>.</p>
+</div>
+</div>
+
+<div class="question">
+<div class="qtitle">उदाहरण: 3x²+2√3x+3=0</div>
+<div class="answer">
+<div class="formula">Δ=(2√3)²−4(√3)(√3)=12−12=0</div>
+<p>अतः <b>वास्तविक तथा समान मूल</b>.</p>
+</div>
+</div>
+
+<h2>11. प्रश्नसंग्रह 2.5</h2>
+
+<h3>1) रिक्त चौखट भरिए</h3>
+<table>
+<tr><th>स्थिति</th><th>उत्तर</th></tr>
+<tr><td>Δ = 5</td><td>मूल वास्तविक तथा असमान</td></tr>
+<tr><td>Δ = −5</td><td>मूल वास्तविक नहीं</td></tr>
+<tr><td>मूलों का योगफल −7 और गुणनफल 5</td><td>x² + 7x + 5 = 0</td></tr>
+<tr><td>2x²−4x−3=0 के मूल α,β</td><td>α+β=2, αβ=−3/2</td></tr>
+</table>
+
+<h3>2) विवेचक ज्ञात कीजिए</h3>
+<table>
+<tr><th>समीकरण</th><th>Δ</th></tr>
+<tr><td>x²+7x−1=0</td><td>53</td></tr>
+<tr><td>2y²−5y+10=0</td><td>−55</td></tr>
+<tr><td>√2x²+4x+2√2=0</td><td>0</td></tr>
+</table>
+
+<h3>3) विवेचक के आधार पर मूलों का स्वरूप</h3>
+<table>
+<tr><th>समीकरण</th><th>Δ</th><th>स्वरूप</th></tr>
+<tr><td>x²−4x+4=0</td><td>0</td><td>समान वास्तविक मूल</td></tr>
+<tr><td>2y²−7y+2=0</td><td>33</td><td>असमान वास्तविक मूल</td></tr>
+<tr><td>m²+2m+9=0</td><td>−32</td><td>वास्तविक मूल नहीं</td></tr>
+</table>
+
+<h3>4) दिए गए मूलों वाला वर्गसमीकरण</h3>
+<table>
+<tr><th>मूल</th><th>वर्गसमीकरण</th></tr>
+<tr><td>0, 4</td><td>x²−4x=0</td></tr>
+<tr><td>3, −10</td><td>x²+7x−30=0</td></tr>
+<tr><td>1/2, −1/2</td><td>x²−1/4=0</td></tr>
+<tr><td>−2/5, 2/5</td><td>x²−4/25=0</td></tr>
+</table>
+
+<h3>5) x²−4kx+k+3=0 के मूलों का योगफल उसके गुणनफल का दोगुना है</h3>
+<div class="answer">
+<div class="formula">योगफल = 4k, &nbsp; गुणनफल = k+3</div>
+<div class="formula">4k = 2(k+3) ⇒ 2k=6 ⇒ <b>k=3</b></div>
+</div>
+
+<h3>6) y²−2y−7=0 के मूल α,β हैं</h3>
+<div class="answer">
+<div class="formula">α+β=2, &nbsp; αβ=−7</div>
+<div class="formula">α²+β²=(α+β)²−2αβ=4+14=<b>18</b></div>
+<div class="formula">α³+β³=(α+β)³−3αβ(α+β)=8+42=<b>50</b></div>
+</div>
+
+<h3>7) मूल वास्तविक तथा समान हों तो k</h3>
+<div class="question">
+<p><b>(1) 3y²+ky+12=0</b></p>
+<div class="formula">k²−4(3)(12)=0 ⇒ k²=144 ⇒ <b>k=±12</b></div>
+</div>
+<div class="question">
+<p><b>(2) kx(x−2)+6=0</b></p>
+<div class="formula">kx²−2kx+6=0</div>
+<p>विवेचक: 4k²−24k=0 ⇒ 4k(k−6)=0. लेकिन k=0 होने पर समीकरण
+वर्गसमीकरण नहीं रहता। इसलिए <b>k=6</b>.</p>
+</div>
+
+<h2>12. मूल और गुणांकों में संबंध</h2>
+<p>यदि ax²+bx+c=0 के मूल α और β हैं, तो:</p>
+<div class="formula">α + β = −b/a</div>
+<div class="formula">αβ = c/a</div>
+
+<h3>उदाहरण: 2x²+6x−5=0</h3>
+<div class="formula">α+β = −6/2 = −3</div>
+<div class="formula">αβ = −5/2</div>
+
+<h3>उदाहरण: x²−13x+k=0 के मूलों का अंतर 7</h3>
+<div class="formula">α+β=13</div>
+<div class="formula">α−β=7</div>
+<div class="formula">2α=20 ⇒ α=10, β=3</div>
+<div class="formula">k=αβ=30</div>
+
+<h3>उदाहरण: x²+5x−1=0</h3>
+<div class="formula">α+β=−5, αβ=−1</div>
+<div class="formula">α²+β²=(−5)²−2(−1)=27</div>
+<div class="formula">α³+β³=(−5)³−3(−1)(−5)=−140</div>
+
+<h2>13. दिए गए मूलों से वर्गसमीकरण बनाना</h2>
+<p>यदि मूल α और β हैं, तो:</p>
+<div class="formula">x² − (α+β)x + αβ = 0</div>
+
+<table>
+<tr><th>मूल</th><th>योग</th><th>गुणनफल</th><th>समीकरण</th></tr>
+<tr><td>−3, −7</td><td>−10</td><td>21</td><td>x²+10x+21=0</td></tr>
+<tr><td>10, −10</td><td>0</td><td>−100</td><td>x²−100=0</td></tr>
+<tr><td>0, 7</td><td>7</td><td>0</td><td>x²−7x=0</td></tr>
+</table>
+
+<h2>14. अनुप्रयोग — वर्गसमीकरण</h2>
+
+<div class="question">
+<div class="qtitle">उदाहरण 1: आयताकार प्याज की जाली</div>
+<p>चौड़ाई x, लंबाई x+7 और विकर्ण x+8.</p>
+<div class="formula">x²+(x+7)²=(x+8)²</div>
+<div class="formula">x²−2x−15=0=(x−5)(x+3)</div>
+<p>x=5 या −3. लंबाई/चौड़ाई ऋणात्मक नहीं हो सकती, इसलिए x=5.</p>
+<p><b>चौड़ाई = 5 m, लंबाई = 12 m.</b></p>
+</div>
+
+<div class="question">
+<div class="qtitle">उदाहरण 2: रेलगाड़ी</div>
+<p>360 km दूरी, चाल 5 km/h बढ़ाने पर समय 48 मिनट कम।</p>
+<div class="formula">360/x − 360/(x+5) = 48/60</div>
+<div class="formula">x²+5x−2250=0=(x+50)(x−45)</div>
+<p>ऋणात्मक चाल स्वीकार्य नहीं, इसलिए <b>x=45 km/h</b>.</p>
+</div>
+
+<h2>15. प्रश्नसंग्रह 2.6 — अनुप्रयोग</h2>
+
+<div class="question">
+<div class="qtitle">1) प्रगति की वर्तमान आयु</div>
+<p>2 वर्ष पूर्व और 3 वर्ष बाद की आयु का गुणनफल 84 है।</p>
+<div class="formula">(x−2)(x+3)=84</div>
+<div class="formula">x²+x−90=0=(x−9)(x+10)</div>
+<p>आयु धनात्मक होने से <b>वर्तमान आयु = 9 वर्ष</b>.</p>
+</div>
+
+<div class="question">
+<div class="qtitle">2) दो क्रमिक सम प्राकृतिक संख्याएँ</div>
+<p>मानें संख्याएँ x और x+2 हैं।</p>
+<div class="formula">x²+(x+2)²=244</div>
+<div class="formula">2x²+4x−240=0 ⇒ x²+2x−120=0</div>
+<div class="formula">(x−10)(x+12)=0</div>
+<p>प्राकृतिक संख्या x=10.</p>
+<p><b>उत्तर: 10 और 12.</b></p>
+</div>
+
+<div class="question">
+<div class="qtitle">3) संतरे के बगीचे में कतारें</div>
+<p>आड़ी कतार में पेड़ों की संख्या, खड़ी कतार से 5 अधिक है और कुल 150 पेड़ हैं।
+आकृति के अनुसार कुल पेड़ = दोनों दिशाओं की कतारों का गुणनफल।</p>
+<div class="formula">x(x+5)=150</div>
+<div class="formula">x²+5x−150=0=(x−10)(x+15)</div>
+<p><b>खड़ी कतार = 10, आड़ी कतार = 15.</b></p>
+</div>
+
+<div class="question">
+<div class="qtitle">4) विवेक और किशोर की आयु</div>
+<p>विवेक किशोर से 5 वर्ष बड़ा है और दोनों की आयु के गुणात्मक प्रतिलोमों का योग 1/6 है।</p>
+<div class="formula">1/x + 1/(x−5) = 1/6</div>
+<div class="formula">6(2x−5)=x(x−5)</div>
+<div class="formula">x²−17x+30=0=(x−15)(x−2)</div>
+<p>बड़े की आयु 15 और छोटे की 10 वर्ष होगी।</p>
+</div>
+
+<div class="question">
+<div class="qtitle">5) सुयश के परीक्षा अंक</div>
+<p>दूसरी परीक्षा के अंक पहली से 10 अधिक हैं और दूसरी परीक्षा के अंकों का 5 गुना
+पहली परीक्षा के अंकों के वर्ग के बराबर है।</p>
+<div class="formula">5(x+10)=x²</div>
+<div class="formula">x²−5x−50=0=(x−10)(x+5)</div>
+<p>अंक ऋणात्मक नहीं हो सकते, इसलिए <b>पहली परीक्षा = 10 अंक</b> और दूसरी = 20 अंक।</p>
+</div>
+
+<div class="question">
+<div class="qtitle">6) मिट्टी के बर्तन का लागत मूल्य</div>
+<p>n बर्तन प्रतिदिन बनते हैं और एक बर्तन का मूल्य 10n+40 रुपये है। कुल लागत 600 रुपये है।</p>
+<div class="formula">n(10n+40)=600</div>
+<div class="formula">n²+4n−60=0=(n−6)(n+10)</div>
+<p><b>बर्तन = 6 प्रतिदिन; प्रत्येक बर्तन की लागत = 10(6)+40 = ₹100.</b></p>
+</div>
+
+<div class="question">
+<div class="qtitle">7) नाव और नदी का प्रवाह</div>
+<p>प्रवाह के विपरीत 36 km और वापस 36 km, कुल समय 8 घंटे। शांत पानी में नाव की चाल 12 km/h.</p>
+<div class="formula">36/(12−v)+36/(12+v)=8</div>
+<div class="formula">864 = 288−8v² ⇒ v²=36</div>
+<p>प्रवाह की चाल धनात्मक: <b>v=6 km/h.</b></p>
+</div>
+
+<div class="question">
+<div class="qtitle">8) काम पूरा करने का समय</div>
+<p>पिंटू को निशू से 6 दिन अधिक लगते हैं। दोनों मिलकर 4 दिन में काम करते हैं।</p>
+<p>निशू = x दिन, पिंटू = x+6 दिन.</p>
+<div class="formula">1/x + 1/(x+6) = 1/4</div>
+<div class="formula">x²−2x−24=0=(x−6)(x+4)</div>
+<p><b>निशू = 6 दिन; पिंटू = 12 दिन.</b></p>
+</div>
+
+<div class="question">
+<div class="qtitle">9) 460 को भाग देने वाला भाजक</div>
+<p>भाजक d, भागफल 5d+6 और शेषफल 1.</p>
+<div class="formula">460=d(5d+6)+1</div>
+<div class="formula">5d²+6d−459=0=(5d−45)(d+? )</div>
+<p>प्रत्यक्ष हल से d=9 (दूसरा मूल ऋणात्मक है)।</p>
+<div class="formula">भागफल = 5(9)+6 = 51</div>
+<p><b>भाजक = 9, भागफल = 51, शेषफल = 1.</b></p>
+</div>
+
+<div class="question">
+<div class="qtitle">10) समलंब ABCD</div>
+<p>आकृति में AB=x, CD=2x+1, ऊँचाई=x−4 और AD=BC=x−2. क्षेत्रफल 33 cm².</p>
+<div class="formula">33 = 1/2 (x+2x+1)(x−4)</div>
+<div class="formula">66=(3x+1)(x−4)=3x²−11x−4</div>
+<div class="formula">3x²−11x−70=0=(3x+10)(x−7)</div>
+<p>ऋणात्मक मूल x=−10/3 अस्वीकार्य; इसलिए x=7.</p>
+<div class="formula">AB=7 cm, CD=15 cm, ऊँचाई=3 cm, AD=BC=5 cm</div>
+<p><b>उत्तर: चारों भुजाएँ 7 cm, 15 cm, 5 cm, 5 cm.</b></p>
+</div>
+
+<h2>16. प्रकीर्ण प्रश्नसंग्रह 2 — MCQ</h2>
+<table>
+<tr><th>क्रमांक</th><th>संक्षिप्त समाधान</th><th>उत्तर</th></tr>
+<tr><td>1</td><td>समीकरणों को मानक रूप में बदलने पर (B) x(x+5)=2 वर्गसमीकरण बनता है; (D) को x²+2x=x³ रूप में पढ़ने पर नहीं।</td><td><b>B</b> (PDF में D की OCR/मुद्रण संरचना को सावधानी से पढ़ें)</td></tr>
+<tr><td>2</td><td>x²+4x=11+x² ⇒ 4x=11, रैखिक। बाकी में द्विघात पद बचता है।</td><td><b>A</b></td></tr>
+<tr><td>3</td><td>समान वास्तविक मूल के लिए Δ=k²−4k=0 ⇒ k=0 या 4.</td><td><b>C</b></td></tr>
+<tr><td>4</td><td>√2x²−5x+√2: Δ=25−8=17.</td><td><b>B</b></td></tr>
+<tr><td>5</td><td>मूल 3,5 ⇒ x²−(8)x+15=0.</td><td><b>B</b></td></tr>
+<tr><td>6</td><td>मूलों का योग −b/a है; विकल्प D में −15/3=−5.</td><td><b>D</b></td></tr>
+<tr><td>7</td><td>√5m²−√5m+√5: Δ=5−20=−15&lt;0.</td><td><b>C</b></td></tr>
+<tr><td>8</td><td>मूल 2 रखने पर 4+2m−5=0 ⇒ 2m=1.</td><td><b>C: 1/2</b></td></tr>
+</table>
+
+<div class="warning">
+<b>MCQ 1 पर स्रोत-नोट:</b> PDF की आकृति में विकल्प (D) का भिन्न/घात विन्यास
+OCR text से अस्पष्ट है। इसलिए उसे बिना दृश्य स्रोत के सामान्यीकृत नहीं किया गया है।
+पृष्ठ 24 की आकृति में प्रश्न को देखकर विकल्प B का स्पष्ट रूप x(x+5)=2 है।
+</div>
+
+<h2>17. प्रकीर्ण प्रश्नसंग्रह 2 — प्रश्न 2 से 15</h2>
+
+<h3>प्रश्न 2: कौन-से वर्गसमीकरण हैं?</h3>
+<table>
+<tr><th>समीकरण</th><th>उत्तर</th></tr>
+<tr><td>m²+2m+11=0</td><td>हाँ</td></tr>
+<tr><td>x²−2x+5=x²</td><td>नहीं; यह रैखिक बनता है</td></tr>
+<tr><td>(x+2)²=2x²</td><td>हाँ</td></tr>
+</table>
+
+<h3>प्रश्न 3: विवेचक</h3>
+<table>
+<tr><th>समीकरण</th><th>Δ</th></tr>
+<tr><td>2y²−y+2=0</td><td>1−16 = <b>−15</b></td></tr>
+<tr><td>5m²−m=0</td><td>1</td></tr>
+<tr><td>√5x²−x−√5=0</td><td>1+20 = <b>21</b></td></tr>
+</table>
+
+<h3>प्रश्न 4: 2x²+kx−2=0 का एक मूल −2 है</h3>
+<div class="formula">2(4)−2k−2=0 ⇒ 6−2k=0 ⇒ <b>k=3</b></div>
+
+<h3>प्रश्न 5: दिए गए मूलों के वर्गसमीकरण</h3>
+<table>
+<tr><th>मूल</th><th>समीकरण</th></tr>
+<tr><td>10, −10</td><td>x²−100=0</td></tr>
+<tr><td>1−3√5, 1+3√5</td><td>x²−2x−44=0</td></tr>
+<tr><td>0, 7</td><td>x²−7x=0</td></tr>
+</table>
+
+<h3>प्रश्न 6: मूलों का स्वरूप</h3>
+<table>
+<tr><th>समीकरण</th><th>Δ</th><th>स्वरूप</th></tr>
+<tr><td>3x²−5x+7=0</td><td>−59</td><td>वास्तविक मूल नहीं</td></tr>
+<tr><td>√3x²+√2x−2√3=0</td><td>26</td><td>वास्तविक तथा असमान</td></tr>
+<tr><td>m²−2m+1=0</td><td>0</td><td>वास्तविक तथा समान</td></tr>
+</table>
+
+<h3>प्रश्न 7: वर्गसमीकरण हल कीजिए</h3>
+<table>
+<tr><th>क्रमांक</th><th>समीकरण</th><th>उत्तर</th></tr>
+<tr><td>1</td><td>1/(x+5)=1/(2x), x≠0, x+5≠0</td><td>x=5</td></tr>
+<tr><td>2</td><td>x²−(3/10)x−1/10=0</td><td>x=1/2, −1/5</td></tr>
+<tr><td>3</td><td>(2x+3)²=25</td><td>x=1, −4</td></tr>
+<tr><td>4</td><td>m²+5m+5=0</td><td>m=(−5±√5)/2</td></tr>
+<tr><td>5</td><td>5m²+2m+1=0</td><td>वास्तविक मूल नहीं (Δ=−16)</td></tr>
+<tr><td>6</td><td>x²−4x−3=0</td><td>x=2±√7</td></tr>
+</table>
+
+<h3>प्रश्न 8: (m−12)x²+2(m−12)x+2=0 के समान वास्तविक मूल</h3>
+<div class="formula">Δ=[2(m−12)]²−8(m−12)=4(m−12)(m−14)</div>
+<p>Δ=0 से m=12 या 14. लेकिन m=12 पर x² का गुणांक 0 हो जाता है,
+इसलिए समीकरण वर्गसमीकरण नहीं रहता।</p>
+<p><b>उत्तर: m=14.</b></p>
+
+<h3>प्रश्न 9: मूलों का योग 5 और घनों का योग 35</h3>
+<div class="formula">α+β=5</div>
+<div class="formula">α³+β³=(α+β)³−3αβ(α+β)</div>
+<div class="formula">35=125−15αβ ⇒ αβ=6</div>
+<div class="formula"><b>x²−5x+6=0</b></div>
+
+<h3>प्रश्न 10: मूलों के योगफल के वर्ग और अंतर के वर्ग</h3>
+<p>दिया गया समीकरण: 2x²+2(p+q)x+p²+q²=0.</p>
+<p>इसके मूल α,β के लिए:</p>
+<div class="formula">α+β=−(p+q)</div>
+<div class="formula">αβ=(p²+q²)/2</div>
+<div class="formula">(α−β)²=(α+β)²−4αβ=−(p−q)²</div>
+<p>चाहे गए नए मूल (α+β)² और (α−β)² हैं। उनका योग 4pq और गुणनफल
+−(p²−q²)² है।</p>
+<div class="formula"><b>x²−4pqx−(p²−q²)²=0</b></div>
+
+<h3>प्रश्न 11: मुकुंद और सागर की राशियाँ</h3>
+<div class="formula">x(x+50)=15000</div>
+<div class="formula">x²+50x−15000=0=(x−100)(x+150)</div>
+<p>धनात्मक राशियाँ: <b>₹100 और ₹150.</b></p>
+
+<h3>प्रश्न 12: दो संख्याएँ</h3>
+<p>बड़ी संख्या x और छोटी y मानें।</p>
+<div class="formula">x²−y²=120</div>
+<div class="formula">y²=2x</div>
+<p>दूसरे समीकरण से x=y²/2. प्रतिस्थापन पर y²=24, इसलिए y=2√6
+(धनात्मक संख्या के संदर्भ में) और x=12.</p>
+<p><b>उत्तर: 12 और 2√6.</b></p>
+
+<h3>प्रश्न 13: 540 संतरे</h3>
+<p>विद्यार्थियों की संख्या x मानें।</p>
+<div class="formula">540/x − 540/(x+30)=3</div>
+<div class="formula">5400 = 3x(x+30)</div>
+<div class="formula">x²+30x−1800=0=(x−60)(x+30)</div>
+<p><b>विद्यार्थियों की संख्या = 60.</b></p>
+
+<h3>प्रश्न 14: आयताकार खेत और तालाब</h3>
+<p>चौड़ाई x, लंबाई 2x+10 और तालाब की वर्गाकार भुजा x/3.</p>
+<div class="formula">x(2x+10)=20(x/3)²</div>
+<div class="formula">18x²+90x=10x² ⇒ 8x²+90x=0</div>
+<div class="formula">x(8x+90)=0</div>
+<p>सकारात्मक लंबाई के लिए x=45.</p>
+<div class="formula">चौड़ाई=45 m, लंबाई=100 m, तालाब की भुजा=15 m</div>
+
+<h3>प्रश्न 15: दो नल</h3>
+<p>बड़ा नल अकेले t घंटे में और छोटा नल t+3 घंटे में टंकी भरता है।</p>
+<div class="formula">1/t + 1/(t+3) = 1/2</div>
+<div class="formula">t²−t−6=0=(t−3)(t+2)</div>
+<p>धनात्मक समय: <b>बड़ा नल = 3 घंटे; छोटा नल = 6 घंटे.</b></p>
+
+<h2>18. Quick Revision — परीक्षा के लिए</h2>
+<ul>
+<li>मानक रूप: <b>ax²+bx+c=0, a≠0</b>.</li>
+<li>सूत्र: <b>x=(−b±√(b²−4ac))/(2a)</b>.</li>
+<li>विवेचक: <b>Δ=b²−4ac</b>.</li>
+<li>Δ=0 → समान वास्तविक मूल.</li>
+<li>Δ&gt;0 → असमान वास्तविक मूल.</li>
+<li>Δ&lt;0 → वास्तविक मूल नहीं.</li>
+<li>यदि मूल α,β हैं: <b>α+β=−b/a</b> और <b>αβ=c/a</b>.</li>
+<li>दिए गए मूल α,β से समीकरण: <b>x²−(α+β)x+αβ=0</b>.</li>
+<li>शब्द-प्रश्न में ऋणात्मक लंबाई, आयु, चाल, विद्यार्थियों की संख्या आदि स्वीकार नहीं करनी चाहिए।</li>
+<li>यदि किसी parameter के कारण a=0 हो जाए, तो उस स्थिति में समीकरण वर्गसमीकरण नहीं रहता; parameter वाले प्रश्नों में यह जाँच आवश्यक है।</li>
+</ul>
+
+<h2>19. स्रोत-आधारित महत्वपूर्ण नोट्स</h2>
+<div class="source">
+PDF के पृष्ठ 13 पर x²−2x−3=0 को y=x² और y=2x+3 के आलेखों के
+प्रतिच्छेद से हल करने का तरीका भी दिखाया गया है; प्रतिच्छेद x=−1 और x=3
+देता है। यह विधि इस अध्याय में सूत्र/गुणनखंड विधि के साथ वैकल्पिक दृश्य
+समझ के रूप में उपयोगी है।
+</div>
+<div class="warning">
+PDF के कुछ स्थानों पर OCR में √, भिन्न और घातों की संरचना बिगड़ी हुई है।
+इस HTML में जहाँ पृष्ठ की छवि से स्पष्ट रूप मिला, उसे उसी रूप में रखा गया है।
+जहाँ स्रोत-छवि भी अस्पष्ट थी, वहाँ उत्तर को बिना मनगढ़ंत संशोधन के नोट किया गया है।
+</div>
+
+<div class="footer">
+कक्षा 10 गणित — अध्याय 2: वर्गसमीकरण<br>
+Prepared from the supplied C10HHganit1Ch02.pdf and chapter_2_solutions(3).html.
+</div>
+
+</div>
+</body>
+</html>
