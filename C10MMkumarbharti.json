@@ -1,85 +1,130 @@
-﻿{
+{
   "total_chapters": 20,
   "chapters": [
     {
       "number": "1",
-      "title": "जय जय हे भारत देशा"
+      "title": "जय जय हे भारत देशा",
+      "pdf_files":"C10MMkumarbhartiCh01.pdf",
+      "html_files": "C10MMkumarbhartiCh01_solutions.html" 
     },
     {
       "number": "2",
-      "title": "बोलतो मराठी..."
+      "title": "बोलतो मराठी...",
+      "pdf_files": "C10MMkumarbhartiCh02.pdf" ,
+      "html_files":  "C10MMkumarbhartiCh02_solutions.html"
     },
     {
       "number": "3",
-      "title": "आजी : कुटुंबाचं आगळ"
+      "title": "आजी : कुटुंबाचं आगळ",
+      "pdf_files":  "C10MMkumarbhartiCh03.pdf",
+      "html_files": "C10MMkumarbhartiCh03_solutions.html"
     },
     {
       "number": "4",
-      "title": "उत्तमलक्षण"
+      "title": "उत्तमलक्षण",
+      "pdf_files": "C10MMkumarbhartiCh04.pdf",
+      "html_files": "C10MMkumarbhartiCh04_solutions.html"
     },
     {
       "number": "5",
-      "title": "वसंतहृदय चैत्र"
+      "title": "वसंतहृदय चैत्र",
+      "pdf_files": "C10MMkumarbhartiCh05.pdf",
+      "html_files":"C10MMkumarbhartiCh05_solutions.html"
     },
     {
       "number": "6",
-      "title": "वस्तू"
+      "title": "वस्तू",
+      "pdf_files": "C10MMkumarbhartiCh06.pdf",
+      "html_files": "C10MMkumarbhartiCh06_solutions.html"
     },
     {
       "number": "7",
-      "title": "गवताचे पाते"
+      "title": "गवताचे पाते",
+      "pdf_files":  "C10MMkumarbhartiCh07.pdf",
+      "html_files": "C10MMkumarbhartiCh07_solutions.html"
     },
     {
       "number": "8",
-      "title": "वाट पाहताना"
+      "title": "वाट पाहताना",
+      "pdf_files": "C10MMkumarbhartiCh08.pdf",
+      "html_files": "C10MMkumarbhartiCh08_solutions.html"
     },
     {
       "number": "9",
-      "title": "आश्वासक चित्र"
+      "title": "आश्वासक चित्र",
+      "pdf_files": "C10MMkumarbhartiCh09.pdf",
+      "html_files":  "C10MMkumarbhartiCh09_solutions.html"
     },
     {
       "number": "10",
-      "title": "आप्पांचे पत्र"
+      "title": "आप्पांचे पत्र",
+      "pdf_files":    "C10MMkumarbhartiCh10.pdf",
+      "html_files":  "C10MMkumarbhartiCh10_solutions.html"
     },
     {
       "number": "11",
-      "title": "गोष्ट अरुणिमाची"
+      "title": "गोष्ट अरुणिमाची",
+      "pdf_files": "C10MMkumarbhartiCh11.pdf" ,
+      "html_files":  "C10MMkumarbhartiCh11_solutions.html"
     },
     {
       "number": "12",
-      "title": "भरतवाक्य"
+      "title": "भरतवाक्य",
+      "pdf_files": "C10MMkumarbhartiCh12.pdf",
+      "html_files":  "C10MMkumarbhartiCh12_solutions.html" 
     },
     {
       "number": "13",
-      "title": "कर्ते सुधारक कर्वे"
+      "title": "कर्ते सुधारक कर्वे",
+      "pdf_files":  "C10MMkumarbhartiCh13.pdf" ,
+      "html_files":   "C10MMkumarbhartiCh13_solutions.html" 
     },
     {
       "number": "14",
-      "title": "काळे केस"
+      "title": "काळे केस",
+      "pdf_files":   "C10MMkumarbhartiCh14.pdf",
+      "html_files": "C10MMkumarbhartiCh14_solutions.html"
     },
     {
       "number": "15",
-      "title": "खोद आणखी थोडेसे"
+      "title": "खोद आणखी थोडेसे",
+      "pdf_files":  "C10MMkumarbhartiCh15.pdf" ,
+      "html_files":  "C10MMkumarbhartiCh15_solutions.html" 
     },
     {
       "number": "16",
-      "title": "आकाशी झेप घे रे"
+      "title": "आकाशी झेप घे रे",
+      "pdf_files":   "C10MMkumarbhartiCh16.pdf",
+      "html_files":  "C10MMkumarbhartiCh16_solutions.html" 
     },
     {
       "number": "17",
-      "title": "सोनाली"
+      "title": "सोनाली",
+      "pdf_files":  "C10MMkumarbhartiCh17.pdf" ,
+      "html_files":  "C10MMkumarbhartiCh17_solutions.html" 
     },
     {
       "number": "18",
-      "title": "निर्णय"
+      "title": "निर्णय",
+      "pdf_files":  "C10MMkumarbhartiCh18.pdf" ,
+      "html_files":  
+        "C10MMkumarbhartiCh18_solutions.html" 
     },
     {
       "number": "19",
-      "title": "तू झालास मूक समाजाचा नायक"
+      "title": "तू झालास मूक समाजाचा नायक",
+      "pdf_files":  
+        "C10MMkumarbhartiCh19.pdf",
+      "html_files": 
+        "C10MMkumarbhartiCh19_solutions.html" 
     },
     {
       "number": "20",
-      "title": "सर्व विश्वचि व्हावे सुखी"
+      "title": "सर्व विश्वचि व्हावे सुखी",
+      "pdf_files": 
+        "C10MMkumarbhartiCh20.pdf" ,
+      "html_files":  
+        "C10MMkumarbhartiCh20_solutions.html" 
     }
   ]
 }
