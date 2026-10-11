@@ -3,67 +3,99 @@
   "chapters": [
     {
       "number": "1",
-      "title": "तू बुद्धी दे"
+      "title": "तू बुद्धी दे",
+      "pdf_files":        "C10HHaksharMarathiCh01.pdf",
+      "html_files": "C10HHaksharMarathiCh01_solutions.html"
     },
     {
       "number": "2",
-      "title": "संतवाणी"
+      "title": "संतवाणी",
+      "pdf_files":         "C10HHaksharMarathiCh02.pdf",
+      "html_files": "C10HHaksharMarathiCh02_solutions.html"
     },
     {
       "number": "3",
-      "title": "शाल"
+      "title": "शाल",
+      "pdf_files":    "C10HHaksharMarathiCh03.pdf",
+      "html_files":  "C10HHaksharMarathiCh03_solutions.html" 
     },
     {
       "number": "4",
-      "title": "उपास"
+      "title": "उपास",
+      "pdf_files": "C10HHaksharMarathiCh04.pdf",
+      "html_files": "C10HHaksharMarathiCh04_solutions.html"
     },
     {
       "number": "5",
-      "title": "दोन दिवस"
+      "title": "दोन दिवस",
+      "pdf_files":  "C10HHaksharMarathiCh05.pdf",
+      "html_files": "C10HHaksharMarathiCh05_solutions.html"
     },
     {
       "number": "6",
-      "title": "चुडीवाला"
+      "title": "चुडीवाला",
+      "pdf_files": "C10HHaksharMarathiCh06.pdf",
+      "html_files":  "C10HHaksharMarathiCh06_solutions.html"
     },
     {
       "number": "7",
-      "title": "फूटप्रिन्टस"
+      "title": "फूटप्रिन्टस",
+      "pdf_files": "C10HHaksharMarathiCh07.pdf",
+      "html_files": "C10HHaksharMarathiCh07_solutions.html"
     },
     {
       "number": "8",
-      "title": "ऊर्जाशक्तीचा जागर"
+      "title": "ऊर्जाशक्तीचा जागर",
+      "pdf_files": "C10HHaksharMarathiCh08.pdf",
+      "html_files": "C10HHaksharMarathiCh08_solutions.html"
     },
     {
       "number": "9",
-      "title": "औक्षण"
+      "title": "औक्षण",
+      "pdf_files": "C10HHaksharMarathiCh09.pdf",
+      "html_files":  "C10HHaksharMarathiCh09_solutions.html"
     },
     {
       "number": "10",
-      "title": "रंग साहित्याचे"
+      "title": "रंग साहित्याचे",
+      "pdf_files": "C10HHaksharMarathiCh10.pdf",
+      "html_files":  "C10HHaksharMarathiCh10_solutions.html"
     },
     {
       "number": "11",
-      "title": "जंगल डायरी"
+      "title": "जंगल डायरी",
+      "pdf_files": "C10HHaksharMarathiCh11.pdf",
+      "html_files": "C10HHaksharMarathiCh11_solutions.html"
     },
     {
       "number": "12",
-      "title": "रंग मजेचे रंग उदयाचे"
+      "title": "रंग मजेचे रंग उदयाचे",
+      "pdf_files":  "C10HHaksharMarathiCh12.pdf",
+      "html_files":  "C10HHaksharMarathiCh12_solutions.html"
     },
     {
       "number": "13",
-      "title": "हिरवंगार झाडासारखं"
+      "title": "हिरवंगार झाडासारखं",
+      "pdf_files":  "C10HHaksharMarathiCh13.pdf",
+      "html_files":  "C10HHaksharMarathiCh13_solutions.html"
     },
     {
       "number": "14",
-      "title": "बीज पेरले गेले"
+      "title": "बीज पेरले गेले",
+      "pdf_files": "C10HHaksharMarathiCh14.pdf",
+      "html_files": "C10HHaksharMarathiCh14_solutions.html"
     },
     {
       "number": "15",
-      "title": "खरा नागरिक"
+      "title": "खरा नागरिक",
+      "pdf_files":   "C10HHaksharMarathiCh15.pdf",
+      "html_files": "C10HHaksharMarathiCh15_solutions.html"
     },
     {
       "number": "16",
-      "title": "स्वप्न करू साकार"
+      "title": "स्वप्न करू साकार",
+      "pdf_files":  "C10HHaksharMarathiCh16.pdf",
+      "html_files": "C10HHaksharMarathiCh16_solutions.html"
     }
   ]
 }
