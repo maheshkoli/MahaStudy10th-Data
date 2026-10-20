@@ -1,0 +1,45 @@
+﻿{
+  "total_chapters": 10,
+  "chapters": [
+    {
+      "number": "1",
+      "title": "Gravitation"
+    },
+    {
+      "number": "2",
+      "title": "Periodic Classication of Element"
+    },
+    {
+      "number": "3",
+      "title": "Chemical reactions and equations"
+    },
+    {
+      "number": "4",
+      "title": "Effects of electric current"
+    },
+    {
+      "number": "5",
+      "title": "Heat"
+    },
+    {
+      "number": "6",
+      "title": "Refraction of light"
+    },
+    {
+      "number": "7",
+      "title": "Lenses"
+    },
+    {
+      "number": "8",
+      "title": "Metallugy"
+    },
+    {
+      "number": "9",
+      "title": "Carbon compounds"
+    },
+    {
+      "number": "10",
+      "title": "Space Missions"
+    }
+  ]
+}
