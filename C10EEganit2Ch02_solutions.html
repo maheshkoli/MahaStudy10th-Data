@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Class 10 Mathematics Part I Chapter 2 Pythagoras Theorem: Pythagorean triplets, right triangles, geometric mean, applications and Apollonius theorem with selected solutions.">
+<title>Class 10 Maths Chapter 2 — Pythagoras Theorem</title>
+<style>
+:root{--navy:#17365d;--blue:#244f7a;--teal:#28657a;--pink:#b32668;--ink:#202a33;--muted:#5d6b78;--line:#dce4ea;--paper:#fff;--bg:#f1f4f8}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:16px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.7 Arial,Helvetica,sans-serif}
+header{background:linear-gradient(135deg,var(--navy),var(--teal));color:#fff;padding:30px 20px}
+.header-inner{max-width:1150px;margin:auto}
+.eyebrow{display:inline-block;background:var(--pink);color:#fff;padding:3px 10px;border-radius:99px;font-size:.78rem;font-weight:700;letter-spacing:.04em}
+header h1{margin:12px 0 4px;color:#ffe58f;font-size:clamp(1.8rem,4vw,2.7rem);line-height:1.2}
+header p{margin:0;color:#edf5fb}
+.layout{max-width:1150px;margin:22px auto;padding:0 14px;display:grid;grid-template-columns:255px minmax(0,1fr);gap:18px;align-items:start}
+nav,.study-card{background:var(--paper);border:1px solid var(--line);border-radius:13px;box-shadow:0 3px 14px rgba(25,50,70,.05)}
+nav{padding:16px;position:sticky;top:12px;max-height:calc(100vh - 24px);overflow:auto}
+nav strong{display:block;color:var(--navy);margin-bottom:8px}
+nav a{display:block;text-decoration:none;color:var(--blue);padding:5px 7px;border-radius:6px;font-size:.9rem}
+nav a:hover{background:#edf4f8;color:var(--pink)}
+main{min-width:0}.study-card{padding:22px;margin-bottom:16px}
+h1,h2,h3{line-height:1.3}
+h2{color:var(--blue);border-bottom:2px solid #e7edf2;padding-bottom:8px;margin:0 0 14px;font-size:1.35rem}
+h3{color:var(--teal);margin:20px 0 6px;font-size:1.05rem}
+p{margin:7px 0 12px}li{margin:5px 0}ul,ol{padding-left:25px}
+code{background:#edf1f4;padding:2px 5px;border-radius:4px}
+pre{background:#202124;color:white;padding:18px;overflow:auto;border-radius:8px}
+table{border-collapse:collapse;width:100%;margin:10px 0;display:block;overflow-x:auto}
+th,td{border:1px solid var(--line);padding:8px;text-align:left;min-width:80px}
+th{background:#eef4f8;color:var(--navy)}
+.note{background:#fff8e8;border-left:4px solid #c78b1a;padding:12px;border-radius:5px}
+.toolbar{display:flex;gap:10px;justify-content:flex-end;margin-bottom:12px}
+button{border:0;border-radius:7px;background:var(--pink);color:white;padding:9px 13px;font-weight:700;cursor:pointer}
+button:hover{filter:brightness(.94)}
+.footer{max-width:1150px;margin:0 auto;padding:5px 16px 28px;color:var(--muted);font-size:.88rem}
+mjx-container{max-width:100%;overflow-x:auto;overflow-y:hidden}
+mjx-container[display="true"]{margin:1em 0!important;padding:.25em 0}
+@media(max-width:850px){.layout{grid-template-columns:1fr}nav{position:static;max-height:none}nav .links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px}}
+@media(max-width:520px){body{font-size:15px}.study-card{padding:15px}header{padding:24px 16px}nav .links{grid-template-columns:1fr}.toolbar{justify-content:flex-start}}
+@media print{body{background:#fff;font-size:10.5pt}header{padding:14px;background:#fff!important;color:#111;border-bottom:2px solid var(--navy)}header h1,header p{color:#111}.layout{display:block;max-width:none;margin:0;padding:0}nav,.toolbar{display:none}.study-card{box-shadow:none;border:0;padding:8px 0;margin:0;break-inside:auto}h2,h3{break-after:avoid}.footer{padding:12px 0}}
+</style>
+
+<script>
+window.MathJax = {
+  tex: {inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$', '$$'], ['\\[', '\\]']], processEscapes: true},
+  options: {skipHtmlTags: ['script','noscript','style','textarea','pre','code']},
+  chtml: {scale: 1.05, mtextInheritFont: true}
+};
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+<body>
+<header><div class="header-inner">
+<span class="eyebrow">CLASS 10 · MATHEMATICS PART I · CHAPTER 2</span>
+<h1>Pythagoras Theorem</h1>
+<p>English study notes, geometry formulas, worked examples and textbook practice-set solutions</p>
+</div></header>
+<div class="layout">
+<nav aria-label="Table of contents">
+<strong>On this page</strong>
+<div class="links"><a href="#section-1">1. Chapter at a Glance</a><a href="#section-2">2. Important Concepts Explained</a><a href="#section-3">3. Definitions and Key Terms</a><a href="#section-4">4. Formulas, Rules, and Properties</a><a href="#section-5">5. Worked Examples — Step by Step</a><a href="#section-6">6. Exercise / Practice Set Solutions</a><a href="#section-7">7. Important Questions and Answers</a><a href="#section-8">8. Common Errors and How to Avoid Them</a><a href="#section-9">9. Quick Revision Sheet</a></div>
+<hr><button type="button" onclick="window.print()">Print / Save as PDF</button>
+</nav>
+<main id="notes">
+<div class="toolbar"><button type="button" onclick="window.print()">Print / Save as PDF</button></div>
+<section class="study-card">
+<div class="note"><strong>Source note:</strong> Built from your uploaded Chapter 2 textbook PDF (17 pages) and matching solutions HTML. The notes include selected worked examples and answers to some Practice Set 2.1 and 2.2 questions. Other exercises are shown as fully solved only where the supplied notes provide a solution. Mathematical notation uses MathJax when an internet connection is available.</div>
+
+<h1>Chapter 2: Pythagoras Theorem</h1>
+<h2 id="section-1">1. Chapter at a Glance</h2>
+<p>This chapter introduces the fundamental concepts of the Pythagoras Theorem and its applications in geometry. Students will learn about Pythagorean triplets, the properties of right-angled triangles, the theorem of geometric mean, the application of the Pythagoras theorem, and the Apollonius theorem.</p>
+<h2 id="section-2">2. Important Concepts Explained</h2>
+<h3>Pythagoras Theorem</h3>
+<p>In a right-angled triangle, the square of the hypotenuse is equal to the sum of the squares of the remaining two sides.</p>
+<p>For $\triangle PQR$ where $\angle PQR = 90^\circ$:</p>
+<p>$PR^2 = PQ^2 + QR^2$</p>
+<h3>Pythagorean Triplet</h3>
+<p>In a triplet of natural numbers, if the square of the largest number is equal to the sum of the squares of the remaining two numbers, the triplet is called a Pythagorean triplet.</p>
+<p>Example: $(11, 60, 61)$</p>
+<p>$11^2 = 121$, $60^2 = 3600$, $61^2 = 3721$</p>
+<p>$121 + 3600 = 3721$. Since $11^2 + 60^2 = 61^2$, it is a Pythagorean triplet.</p>
+<h3>Properties of Special Right-Angled Triangles</h3>
+<ol>
+<li><strong>30°-60°-90° Triangle:</strong></li>
+</ol>
+<ul>
+<li>  Side opposite to 30° angle = $\frac{1}{2} \times$ hypotenuse</li>
+<li>  Side opposite to 60° angle = $\frac{\sqrt{3}}{2} \times$ hypotenuse</li>
+</ul>
+<ol>
+<li><strong>45°-45°-90° Triangle:</strong></li>
+</ol>
+<ul>
+<li>  Each perpendicular side = $\frac{1}{\sqrt{2}} \times$ hypotenuse</li>
+</ul>
+<h3>Similarity and Right-Angled Triangles</h3>
+<p>If an altitude is drawn to the hypotenuse of a right-angled triangle, the two triangles formed are similar to the original triangle and to each other.</p>
+<h3>Theorem of Geometric Mean</h3>
+<p>In a right-angled triangle, the perpendicular segment to the hypotenuse from the opposite vertex is the geometric mean of the segments into which the hypotenuse is divided.</p>
+<p>If $QS \perp PR$, then $QS^2 = PS \times SR$.</p>
+<h3>Converse of Pythagoras Theorem</h3>
+<p>In a triangle, if the square of one side is equal to the sum of the squares of the other two sides, then the triangle is a right-angled triangle.</p>
+<h3>Application of Pythagoras Theorem</h3>
+<ul>
+<li> <strong>Acute Angle:</strong> $AB^2 = BC^2 + AC^2 - 2BC \times DC$ (where $AD \perp BC$)</li>
+<li> <strong>Obtuse Angle:</strong> $AB^2 = BC^2 + AC^2 + 2BC \times CD$ (where $AD \perp BC$)</li>
+</ul>
+<h3>Apollonius Theorem</h3>
+<p>In $\triangle ABC$, if $M$ is the midpoint of side $BC$, then:</p>
+<p>$AB^2 + AC^2 = 2AM^2 + 2BM^2$</p>
+<h2 id="section-3">3. Definitions and Key Terms</h2>
+<ul>
+<li> <strong>Hypotenuse:</strong> The side opposite the right angle in a right-angled triangle.</li>
+<li> <strong>Geometric Mean:</strong> The square root of the product of two segments of the hypotenuse created by an altitude.</li>
+<li> <strong>Median:</strong> A segment joining a vertex to the midpoint of the opposite side.</li>
+<li> <strong>Centroid:</strong> The point of concurrence of the medians of a triangle.</li>
+</ul>
+<h2 id="section-4">4. Formulas, Rules, and Properties</h2>
+<ul>
+<li> <strong>Pythagoras Theorem:</strong> $c^2 = a^2 + b^2$ (for hypotenuse $c$)</li>
+<li> <strong>Pythagorean Triplet Formula:</strong> For $a &gt; b$, $(a^2 + b^2), (a^2 - b^2), (2ab)$ form a triplet.</li>
+<li> <strong>Geometric Mean Theorem:</strong> $QS^2 = PS \times SR$</li>
+<li> <strong>Apollonius Theorem:</strong> $AB^2 + AC^2 = 2AM^2 + 2BM^2$</li>
+</ul>
+<h2 id="section-5">5. Worked Examples — Step by Step</h2>
+<h3>Ex. (1) (Page 45)</h3>
+<p><strong>Given:</strong> $\triangle ABC$, $\angle B = 90^\circ$, $\angle A = 30^\circ$, $AC = 14$.</p>
+<p><strong>Find:</strong> $AB$ and $BC$.</p>
+<p><strong>Solution:</strong></p>
+<ol>
+<li>Since $\angle B = 90^\circ$ and $\angle A = 30^\circ$, then $\angle C = 60^\circ$.</li>
+<li>By 30°-60°-90° theorem:</li>
+</ol>
+<ul>
+<li>  $BC = \frac{1}{2} \times AC = \frac{1}{2} \times 14 = 7$</li>
+<li>  $AB = \frac{\sqrt{3}}{2} \times AC = \frac{\sqrt{3}}{2} \times 14 = 7\sqrt{3}$</li>
+</ul>
+<h3>Ex. (3) (Page 45)</h3>
+<p><strong>Given:</strong> $\triangle PQR$, $\angle PQR = 90^\circ$, $QN \perp PR$, $PN = 9$, $NR = 16$.</p>
+<p><strong>Find:</strong> $QN$.</p>
+<p><strong>Solution:</strong></p>
+<ol>
+<li>By theorem of geometric mean: $QN^2 = PN \times NR$</li>
+<li>$QN^2 = 9 \times 16 = 144$</li>
+<li>$QN = \sqrt{144} = 12$</li>
+</ol>
+<h2 id="section-6">6. Exercise / Practice Set Solutions</h2>
+<h3>Practice Set 2.1 (Page 47)</h3>
+<p><strong>1. Identify Pythagorean triplets:</strong></p>
+<p>(i) $(3, 5, 4)$: $3^2+4^2 = 9+16 = 25 = 5^2$. <strong>Yes.</strong></p>
+<p>(ii) $(4, 9, 12)$: $4^2+9^2 = 16+81 = 97 \neq 144$. <strong>No.</strong></p>
+<p>(iii) $(5, 12, 13)$: $5^2+12^2 = 25+144 = 169 = 13^2$. <strong>Yes.</strong></p>
+<p>(iv) $(24, 70, 74)$: $24^2+70^2 = 576+4900 = 5476 = 74^2$. <strong>Yes.</strong></p>
+<p>(v) $(10, 24, 27)$: $10^2+24^2 = 100+576 = 676 \neq 729$. <strong>No.</strong></p>
+<p>(vi) $(11, 60, 61)$: $11^2+60^2 = 121+3600 = 3721 = 61^2$. <strong>Yes.</strong></p>
+<p><strong>2. In $\triangle MNP$, $\angle MNP = 90^\circ$, $NQ \perp MP$, $MQ = 9$, $QP = 4$, find $NQ$.</strong></p>
+<ul>
+<li>  By geometric mean theorem: $NQ^2 = MQ \times QP$</li>
+<li>  $NQ^2 = 9 \times 4 = 36$</li>
+<li>  $NQ = 6$</li>
+</ul>
+<p><strong>3. In $\triangle QPR$, $\angle QPR = 90^\circ$, $PM \perp QR$, $PM = 10$, $QM = 8$, find $QR$.</strong></p>
+<ul>
+<li>  By geometric mean theorem: $PM^2 = QM \times MR$</li>
+<li>  $10^2 = 8 \times MR \Rightarrow 100 = 8 \times MR \Rightarrow MR = 12.5$</li>
+<li>  $QR = QM + MR = 8 + 12.5 = 20.5$</li>
+</ul>
+<h3>Practice Set 2.2 (Page 52)</h3>
+<p><strong>1. In $\triangle PQR$, $S$ is midpoint of $QR$. $PQ = 11, PR = 17, PS = 13$, find $QR$.</strong></p>
+<ul>
+<li>  By Apollonius theorem: $PQ^2 + PR^2 = 2PS^2 + 2QS^2$</li>
+<li>  $11^2 + 17^2 = 2(13^2) + 2QS^2$</li>
+<li>  $121 + 289 = 2(169) + 2QS^2$</li>
+<li>  $410 = 338 + 2QS^2 \Rightarrow 72 = 2QS^2 \Rightarrow QS^2 = 36 \Rightarrow QS = 6$</li>
+<li>  $QR = 2 \times QS = 2 \times 6 = 12$</li>
+</ul>
+<h2 id="section-7">7. Important Questions and Answers</h2>
+<ul>
+<li> <strong>Q: What is the converse of the 30°-60°-90° theorem?</strong></li>
+</ul>
+<p>A: In a right-angled triangle, if one side is half of the hypotenuse, then the angle opposite to that side is 30°.</p>
+<ul>
+<li> <strong>Q: Can a triangle with sides 7, 24, 25 be a right-angled triangle?</strong></li>
+</ul>
+<p>A: Yes, because $7^2 + 24^2 = 49 + 576 = 625 = 25^2$.</p>
+<h2 id="section-8">8. Common Errors and How to Avoid Them</h2>
+<ul>
+<li> <strong>Error:</strong> Misidentifying the hypotenuse in the Pythagoras theorem.</li>
+<li> <strong>Correction:</strong> Always identify the side opposite the 90° angle as the hypotenuse.</li>
+<li> <strong>Error:</strong> Forgetting to square the lengths in the Apollonius theorem.</li>
+<li> <strong>Correction:</strong> Ensure every length term in the formula $AB^2 + AC^2 = 2AM^2 + 2BM^2$ is squared.</li>
+</ul>
+<h2 id="section-9">9. Quick Revision Sheet</h2>
+<ul>
+<li> <strong>Pythagoras Theorem:</strong> $a^2 + b^2 = c^2$</li>
+<li> <strong>Geometric Mean:</strong> $h^2 = p \times q$</li>
+<li> <strong>Apollonius Theorem:</strong> $AB^2 + AC^2 = 2(AM^2 + BM^2)$</li>
+<li> <strong>30-60-90:</strong> Sides are $x, x\sqrt{3}, 2x$.</li>
+<li> <strong>45-45-90:</strong> Sides are $x, x, x\sqrt{2}$.</li>
+</ul>
+
+
+</section>
+</main>
+</div>
+<footer class="footer">Class 10 Mathematics Part I · Chapter 2: Pythagoras Theorem</footer>
+</body>
+</html>

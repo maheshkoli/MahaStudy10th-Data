@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Class 10 Mathematics Part II Chapter 4 Geometric Constructions: similar triangles and tangents to circles, construction steps and practice-set solutions.">
+<title>Class 10 Maths Chapter 4 — Geometric Constructions</title>
+<style>
+:root{--navy:#17365d;--blue:#244f7a;--teal:#28657a;--pink:#b32668;--ink:#202a33;--muted:#5d6b78;--line:#dce4ea;--paper:#fff;--bg:#f1f4f8}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:16px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.7 Arial,Helvetica,sans-serif}
+header{background:linear-gradient(135deg,var(--navy),var(--teal));color:#fff;padding:30px 20px}
+.header-inner{max-width:1150px;margin:auto}.eyebrow{display:inline-block;background:var(--pink);color:#fff;padding:3px 10px;border-radius:99px;font-size:.78rem;font-weight:700;letter-spacing:.04em}
+header h1{margin:12px 0 4px;color:#ffe58f;font-size:clamp(1.8rem,4vw,2.7rem);line-height:1.2}header p{margin:0;color:#edf5fb}
+.layout{max-width:1150px;margin:22px auto;padding:0 14px;display:grid;grid-template-columns:255px minmax(0,1fr);gap:18px;align-items:start}
+nav,.study-card{background:var(--paper);border:1px solid var(--line);border-radius:13px;box-shadow:0 3px 14px rgba(25,50,70,.05)}
+nav{padding:16px;position:sticky;top:12px;max-height:calc(100vh - 24px);overflow:auto}nav strong{display:block;color:var(--navy);margin-bottom:8px}
+nav a{display:block;text-decoration:none;color:var(--blue);padding:5px 7px;border-radius:6px;font-size:.9rem}nav a:hover{background:#edf4f8;color:var(--pink)}
+main{min-width:0}.study-card{padding:22px;margin-bottom:16px}h1,h2,h3{line-height:1.3}
+h2{color:var(--blue);border-bottom:2px solid #e7edf2;padding-bottom:8px;margin:0 0 14px;font-size:1.35rem}
+h3{color:var(--teal);margin:20px 0 6px;font-size:1.05rem}p{margin:7px 0 12px}li{margin:5px 0}ul,ol{padding-left:25px}
+code{background:#edf1f4;padding:2px 5px;border-radius:4px}pre{background:#202124;color:white;padding:18px;overflow:auto;border-radius:8px}
+table{border-collapse:collapse;width:100%;margin:10px 0;display:block;overflow-x:auto}th,td{border:1px solid var(--line);padding:8px;text-align:left;min-width:80px}th{background:#eef4f8;color:var(--navy)}
+.note{background:#fff8e8;border-left:4px solid #c78b1a;padding:12px;border-radius:5px}
+.toolbar{display:flex;gap:10px;justify-content:flex-end;margin-bottom:12px}button{border:0;border-radius:7px;background:var(--pink);color:white;padding:9px 13px;font-weight:700;cursor:pointer}button:hover{filter:brightness(.94)}
+.footer{max-width:1150px;margin:0 auto;padding:5px 16px 28px;color:var(--muted);font-size:.88rem}
+mjx-container{max-width:100%;overflow-x:auto;overflow-y:hidden}mjx-container[display="true"]{margin:1em 0!important;padding:.25em 0}
+@media(max-width:850px){.layout{grid-template-columns:1fr}nav{position:static;max-height:none}nav .links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px}}
+@media(max-width:520px){body{font-size:15px}.study-card{padding:15px}header{padding:24px 16px}nav .links{grid-template-columns:1fr}.toolbar{justify-content:flex-start}}
+@media print{body{background:#fff;font-size:10.5pt}header{padding:14px;background:#fff!important;color:#111;border-bottom:2px solid var(--navy)}header h1,header p{color:#111}.layout{display:block;max-width:none;margin:0;padding:0}nav,.toolbar{display:none}.study-card{box-shadow:none;border:0;padding:8px 0;margin:0;break-inside:auto}h2,h3{break-after:avoid}.footer{padding:12px 0}}
+</style>
+<script>
+window.MathJax = {
+ tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['$$','$$'],['\\[','\\]']],processEscapes:true},
+ options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']},
+ chtml:{scale:1.05,mtextInheritFont:true}
+};
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head><body>
+<header><div class="header-inner">
+<span class="eyebrow">CLASS 10 · MATHEMATICS PART II · CHAPTER 4</span>
+<h1>Geometric Constructions</h1>
+<p>English study notes, step-by-step constructions, worked examples and practice-set answers</p>
+</div></header>
+<div class="layout">
+<nav aria-label="Table of contents"><strong>On this page</strong>
+<div class="links"><a href="#section-1">1. Chapter at a Glance</a><a href="#section-2">2. Important Concepts Explained</a><a href="#section-3">3. Definitions and Key Terms</a><a href="#section-4">4. Formulas, Rules, and Properties</a><a href="#section-5">5. Worked Examples — Step by Step</a><a href="#section-6">6. Exercise / Practice Set Solutions</a><a href="#section-7">7. Important Questions and Answers</a><a href="#section-8">8. Common Errors and How to Avoid Them</a><a href="#section-9">9. Quick Revision Sheet</a></div><hr><button type="button" onclick="window.print()">Print / Save as PDF</button>
+</nav>
+<main id="notes"><div class="toolbar"><button type="button" onclick="window.print()">Print / Save as PDF</button></div>
+<section class="study-card">
+<div class="note"><strong>Source note:</strong> Built from your uploaded Chapter 4 textbook PDF (9 pages) and matching solutions HTML. The solutions file includes selected examples and representative exercise answers; questions not solved in that source are not presented as fully solved. MathJax requires an internet connection to render formulas.</div>
+
+<h1>Chapter 4: Geometric Constructions</h1>
+<h2 id="section-1">1. Chapter at a Glance</h2>
+<p>This chapter focuses on the practical application of geometry through construction. Students will learn to:</p>
+<ul>
+<li>  Construct a triangle similar to a given triangle (when vertices are distinct or when one vertex is common).</li>
+<li>  Construct a tangent to a circle at a point on the circle (using the centre or without using the centre).</li>
+<li>  Construct tangents to a circle from a point outside the circle.</li>
+</ul>
+<h2 id="section-2">2. Important Concepts Explained</h2>
+<ul>
+<li> <strong>Similar Triangles:</strong> Similar triangles have corresponding sides in the same proportion and corresponding angles that are congruent. By using these properties, we can construct a triangle similar to a given one.</li>
+<li> <strong>Tangent to a Circle:</strong> A tangent is a line that touches a circle at exactly one point.</li>
+<li> <strong>Tangent Theorem:</strong> A tangent at any point of a circle is perpendicular to the radius at the point of contact.</li>
+<li> <strong>Converse of Tangent Theorem:</strong> A line perpendicular to a radius at its point on the circle is a tangent to the circle.</li>
+<li> <strong>Tangent-Secant Angle Theorem:</strong> The angle between a tangent and a chord drawn from the point of contact is congruent to the angle inscribed in the arc opposite to the arc intercepted by that angle. This is used to construct tangents without using the centre of the circle.</li>
+</ul>
+<h2 id="section-3">3. Definitions and Key Terms</h2>
+<ul>
+<li> <strong>Similar Triangles:</strong> Triangles whose corresponding angles are congruent and corresponding sides are in the same ratio.</li>
+<li> <strong>Tangent:</strong> A line that intersects a circle at exactly one point.</li>
+<li> <strong>Point of Contact:</strong> The single point where a tangent touches a circle.</li>
+<li> <strong>Secant:</strong> A line that intersects a circle at two distinct points.</li>
+<li> <strong>Trisection:</strong> Dividing a line segment into three equal parts.</li>
+</ul>
+<h2 id="section-4">4. Formulas, Rules, and Properties</h2>
+<ul>
+<li> <strong>Basic Proportionality Theorem:</strong> If a line parallel to a side of a triangle intersects the remaining sides in two distinct points, then the line divides the sides in the same proportion.</li>
+<li> <strong>Tangent Theorem:</strong> Tangent $\perp$ Radius at the point of contact.</li>
+<li> <strong>Tangent-Secant Angle Theorem:</strong> Angle between tangent and chord = Angle inscribed in the opposite arc.</li>
+</ul>
+<h2 id="section-5">5. Worked Examples — Step by Step</h2>
+<h3>Ex. (1) Construct $\triangle ABC \sim \triangle PQR$</h3>
+<ul>
+<li> <strong>Given:</strong> $\triangle ABC$ with $AB = 5.4$ cm, $BC = 4.2$ cm, $AC = 6.0$ cm. Ratio $AB:PQ = 3:2$.</li>
+<li> <strong>Analysis:</strong> Since $\triangle ABC \sim \triangle PQR$, sides are proportional: $\frac{AB}{PQ} = \frac{BC}{QR} = \frac{AC}{PR} = \frac{3}{2}$.</li>
+<li> <strong>Calculation:</strong></li>
+<li>  $\frac{5.4}{PQ} = \frac{3}{2} \implies PQ = \frac{5.4 \times 2}{3} = 3.6$ cm.</li>
+<li>  $\frac{4.2}{QR} = \frac{3}{2} \implies QR = \frac{4.2 \times 2}{3} = 2.8$ cm.</li>
+<li>  $\frac{6.0}{PR} = \frac{3}{2} \implies PR = \frac{6.0 \times 2}{3} = 4.0$ cm.</li>
+<li> <strong>Construction:</strong> Construct $\triangle ABC$ first, then construct $\triangle PQR$ using the calculated side lengths.</li>
+</ul>
+<h3>Ex. (2) Construct $\triangle A'BC'$ similar to $\triangle ABC$</h3>
+<ul>
+<li> <strong>Given:</strong> $\triangle ABC$, $AB:A'B = 5:3$, $\triangle ABC \sim \triangle A'BC'$.</li>
+<li> <strong>Steps:</strong></li>
+</ul>
+<ol>
+<li>Construct any $\triangle ABC$.</li>
+<li>Divide segment $BC$ into 5 equal parts.</li>
+<li>Mark point $C'$ at the 3rd part from $B$ (since $BC'/BC = 3/5$).</li>
+<li>Draw a line parallel to $AC$ through $C'$ to intersect $AB$ at $A'$.</li>
+<li>$\triangle A'BC'$ is the required triangle.</li>
+</ol>
+<h3>Ex. (3) Construct $\triangle A'BC'$ similar to $\triangle ABC$</h3>
+<ul>
+<li> <strong>Given:</strong> $AB:A'B = 5:7$, $\triangle ABC \sim \triangle A'BC'$.</li>
+<li> <strong>Analysis:</strong> Since $5:7$, the new triangle is larger. $BC'/BC = 7/5$.</li>
+<li> <strong>Steps:</strong></li>
+</ul>
+<ol>
+<li>Construct $\triangle ABC$.</li>
+<li>Divide $BC$ into 5 equal parts.</li>
+<li>Extend $BC$ to point $C'$ such that $BC'$ is 7 parts long.</li>
+<li>Draw a line parallel to $AC$ through $C'$ to intersect the extended $BA$ at $A'$.</li>
+</ol>
+<h2 id="section-6">6. Exercise / Practice Set Solutions</h2>
+<h3>Practice set 4.1</h3>
+<ol>
+<li><strong>Construct $\triangle ABC \sim \triangle LMN$</strong></li>
+</ol>
+<ul>
+<li>  Given: $AB=5.5, BC=6, CA=4.5$, $BC/MN = 5/4$.</li>
+<li>  Calculation: $MN = (BC \times 4) / 5 = (6 \times 4) / 5 = 4.8$ cm. Similarly calculate $LM$ and $LN$ using the ratio $5/4$.</li>
+<li>  Construct $\triangle ABC$ and then $\triangle LMN$ using the calculated sides.</li>
+</ul>
+<ol>
+<li><strong>Construct $\triangle PQR \sim \triangle LTR$</strong></li>
+</ol>
+<ul>
+<li>  Given: $PQ=4.2, QR=5.4, PR=4.8$, $PQ/LT = 3/4$.</li>
+<li>  Calculation: $LT = (PQ \times 4) / 3 = (4.2 \times 4) / 3 = 5.6$ cm. Calculate $TR$ and $LR$ similarly.</li>
+<li>  Construct the triangles.</li>
+</ul>
+<ol>
+<li><strong>Construct $\triangle RST \sim \triangle XYZ$</strong></li>
+</ol>
+<ul>
+<li>  Given: $RS=4.5, \angle RST=40^\circ, ST=5.7$, $RS/XY = 3/5$.</li>
+<li>  Calculation: $XY = (RS \times 5) / 3 = (4.5 \times 5) / 3 = 7.5$ cm.</li>
+<li>  Construct $\triangle RST$ and $\triangle XYZ$ using SAS similarity.</li>
+</ul>
+<ol>
+<li><strong>Construct $\triangle AMT \sim \triangle AHE$</strong></li>
+</ol>
+<ul>
+<li>  Given: $AM=6.3, \angle TAM=50^\circ, AT=5.6$, $AM/AH = 7/5$.</li>
+<li>  Calculation: $AH = (AM \times 5) / 7 = (6.3 \times 5) / 7 = 4.5$ cm.</li>
+<li>  Construct the triangles.</li>
+</ul>
+<h3>Practice set 4.2</h3>
+<ol>
+<li><strong>Tangent to circle (centre P, radius 3.2 cm) at point M.</strong></li>
+</ol>
+<ul>
+<li>  Draw circle with centre P, radius 3.2 cm. Mark point M on it.</li>
+<li>  Draw ray PM.</li>
+<li>  Construct a line perpendicular to ray PM at point M. This is the tangent.</li>
+</ul>
+<ol>
+<li><strong>Tangent to circle (radius 2.7 cm) at any point.</strong></li>
+</ol>
+<ul>
+<li>  Draw circle, mark point P. Draw radius OP. Construct perpendicular at P.</li>
+</ul>
+<ol>
+<li><strong>Tangent without using centre.</strong></li>
+</ol>
+<ul>
+<li>  Draw circle, mark point C. Draw chord CB and inscribed $\angle CAB$.</li>
+<li>  Construct $\angle BCD = \angle CAB$. Line CD is the tangent.</li>
+</ul>
+<ol>
+<li><strong>Chord PQ = 6.6 cm, radius 3.3 cm.</strong></li>
+</ol>
+<ul>
+<li>  Since diameter = $2 \times 3.3 = 6.6$ cm, PQ is a diameter.</li>
+<li>  Construct tangents at P and Q. They will be parallel.</li>
+</ul>
+<h2 id="section-7">7. Important Questions and Answers</h2>
+<ul>
+<li> <strong>Q: How many tangents can be drawn to a circle at a point on the circle?</strong></li>
+<li>  A: Only one.</li>
+<li> <strong>Q: What is the maximum number of tangents that can be drawn to a circle from a point outside it?</strong></li>
+<li>  A: Two.</li>
+</ul>
+<h2 id="section-8">8. Common Errors and How to Avoid Them</h2>
+<ul>
+<li> <strong>Error:</strong> Not using a sharp pencil, leading to inaccurate constructions.</li>
+<li> <strong>Correction:</strong> Always use a well-sharpened pencil and ensure the compass is tight.</li>
+<li> <strong>Error:</strong> Miscalculating side lengths for similar triangles.</li>
+<li> <strong>Correction:</strong> Double-check the ratio and ensure the proportion is applied correctly to all sides.</li>
+</ul>
+<h2 id="section-9">9. Quick Revision Sheet</h2>
+<ul>
+<li> <strong>Similar Triangles:</strong> Sides are proportional.</li>
+<li> <strong>Tangent:</strong> Perpendicular to the radius at the point of contact.</li>
+<li> <strong>Construction Steps:</strong> Always draw a rough figure first to visualize the final construction.</li>
+</ul>
+
+
+</section></main></div>
+<footer class="footer">Class 10 Mathematics Part II · Chapter 4: Geometric Constructions</footer>
+</body></html>

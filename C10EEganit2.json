@@ -1,0 +1,33 @@
+﻿{
+  "total_chapters": 7,
+  "chapters": [
+    {
+      "number": "1",
+      "title": "Similarity"
+    },
+    {
+      "number": "2",
+      "title": "Pythagoras Theorem"
+    },
+    {
+      "number": "3",
+      "title": "Circle"
+    },
+    {
+      "number": "4",
+      "title": "Geometric Constructions"
+    },
+    {
+      "number": "5",
+      "title": "Co-ordinate Geometry"
+    },
+    {
+      "number": "6",
+      "title": "Trigonometry"
+    },
+    {
+      "number": "7",
+      "title": "Mensuration"
+    }
+  ]
+}
