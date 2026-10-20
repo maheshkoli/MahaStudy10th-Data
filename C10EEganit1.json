@@ -1,0 +1,29 @@
+﻿{
+  "total_chapters": 6,
+  "chapters": [
+    {
+      "number": "1",
+      "title": "Linear Equations in Two Variables"
+    },
+    {
+      "number": "2",
+      "title": "Quadratic Equations"
+    },
+    {
+      "number": "3",
+      "title": "Arithmetic Progression"
+    },
+    {
+      "number": "4",
+      "title": "Financial Planning"
+    },
+    {
+      "number": "5",
+      "title": "Probability"
+    },
+    {
+      "number": "6",
+      "title": "Statistics"
+    }
+  ]
+}

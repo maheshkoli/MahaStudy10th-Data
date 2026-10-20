@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Class 10 Mathematics Part I, Chapter 3 Arithmetic Progression: concepts, formulas, worked examples and supplied practice-set solutions.">
+<title>Class 10 Maths Chapter 3 — Arithmetic Progression</title>
+<style>
+:root{--navy:#17365d;--blue:#244f7a;--teal:#28657a;--pink:#b32668;--ink:#202a33;--muted:#5d6b78;--line:#dce4ea;--paper:#fff;--bg:#f1f4f8}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.7 Arial,Helvetica,sans-serif}
+header{background:linear-gradient(135deg,var(--navy),var(--teal));color:#fff;padding:30px 20px}
+.header-inner{max-width:1080px;margin:auto}
+.eyebrow{display:inline-block;background:var(--pink);color:#fff;padding:3px 10px;border-radius:99px;font-size:.78rem;font-weight:700;letter-spacing:.04em}
+header h1{margin:12px 0 4px;color:#ffe58f;font-size:clamp(1.8rem,4vw,2.6rem);line-height:1.2}
+header p{margin:0;color:#edf5fb}
+.layout{max-width:1080px;margin:22px auto;padding:0 14px;display:grid;grid-template-columns:245px minmax(0,1fr);gap:18px;align-items:start}
+nav,.content-card{background:var(--paper);border:1px solid var(--line);border-radius:13px;box-shadow:0 3px 14px rgba(25,50,70,.05)}
+nav{padding:16px;position:sticky;top:12px}
+nav strong{display:block;color:var(--navy);margin-bottom:8px}
+nav a{display:block;text-decoration:none;color:var(--blue);padding:5px 7px;border-radius:6px;font-size:.92rem}
+nav a:hover{background:#edf4f8;color:var(--pink)}
+main{min-width:0}
+.content-card{padding:22px;margin-bottom:16px}
+h1,h2,h3{line-height:1.3}
+h2{color:var(--blue);border-bottom:2px solid #e7edf2;padding-bottom:8px;margin:0 0 14px;font-size:1.35rem}
+h3{color:var(--teal);margin:20px 0 6px;font-size:1.05rem}
+p{margin:7px 0 12px}
+li{margin:5px 0}
+code,pre{font-family:Consolas,monospace}
+.math,.formula{background:#f5f8fb;border-left:4px solid var(--pink);padding:10px 13px;border-radius:5px;overflow-wrap:anywhere}
+.formula{font-weight:700;text-align:center;font-size:1.05rem}
+table{border-collapse:collapse;width:100%;margin:10px 0}
+th,td{border:1px solid var(--line);padding:8px;text-align:left}
+th{background:#eef4f8;color:var(--navy)}
+.note{background:#fff8e8;border-left:4px solid #c78b1a;padding:12px;border-radius:5px}
+footer{max-width:1080px;margin:0 auto;padding:5px 16px 28px;color:var(--muted);font-size:.88rem}
+button{border:0;border-radius:7px;background:var(--pink);color:white;padding:9px 13px;font-weight:700;cursor:pointer}
+.toolbar{display:flex;gap:10px;justify-content:flex-end;margin-bottom:12px}
+@media(max-width:800px){.layout{grid-template-columns:1fr}nav{position:static}nav .links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px}}
+@media(max-width:520px){body{font-size:15px}.content-card{padding:15px}header{padding:24px 16px}nav .links{grid-template-columns:1fr}}
+@media print{body{background:#fff;font-size:10.5pt}header{padding:14px;background:#fff!important;color:#111;border-bottom:2px solid #17365d}header h1,header p{color:#111}.layout{display:block;max-width:none;margin:0;padding:0}nav,.toolbar{display:none}.content-card{box-shadow:none;border:0;padding:8px 0;margin:0;break-inside:auto}h2,h3{break-after:avoid}footer{padding:12px 0}}
+</style>
+</head>
+<body>
+<header><div class="header-inner">
+<span class="eyebrow">CLASS 10 · MATHEMATICS PART I · CHAPTER 3</span>
+<h1>Arithmetic Progression</h1>
+<p>English study notes, key formulas, worked examples and textbook exercise solutions</p>
+</div></header>
+<div class="layout">
+<nav aria-label="Table of contents">
+<strong>On this page</strong>
+<div class="links"><a href="#section-1">1. Chapter at a Glance</a><a href="#section-2">2. Important Concepts Explained</a><a href="#section-3">3. Definitions and Key Terms</a><a href="#section-4">4. Formulas, Rules, and Properties</a><a href="#section-5">5. Worked Examples — Step by Step</a><a href="#section-6">6. Exercise / Practice Set Solutions</a><a href="#section-7">7. Important Questions and Answers</a><a href="#section-8">8. Common Errors and How to Avoid Them</a><a href="#section-9">9. Quick Revision Sheet</a></div>
+<hr>
+<button type="button" onclick="window.print()">Print / Save as PDF</button>
+</nav>
+<main id="notes">
+<div class="toolbar"><button type="button" onclick="window.print()">Print / Save as PDF</button></div>
+<section class="content-card">
+<div class="note"><strong>Study note:</strong> This page is based on the Chapter 3 HTML notes you supplied. It preserves their selected examples and exercise solutions; it does not claim to contain every textbook answer.</div>
+
+<h1>Chapter 3: Arithmetic Progression</h1>
+<h2 id="section-1">1. Chapter at a Glance</h2>
+<p>This chapter introduces the concept of sequences and specifically focuses on Arithmetic Progressions (A.P.). Students will learn to identify sequences, determine if a sequence is an A.P., find the $n^{th}$ term of an A.P., and calculate the sum of the first $n$ terms of an A.P. The chapter also covers applications of A.P. in real-life scenarios.</p>
+<h2 id="section-2">2. Important Concepts Explained</h2>
+<h3>Sequence</h3>
+<p>A set of numbers arranged in a definite order is called a sequence. If the numbers are written as $t_1, t_2, t_3, \dots, t_n, \dots$, then $t_n$ represents the term at the $n^{th}$ position.</p>
+<h3>Arithmetic Progression (A.P.)</h3>
+<p>An A.P. is a sequence where the difference between two consecutive terms is constant. This constant difference is called the <strong>common difference</strong> and is denoted by '$d$'.</p>
+<ul>
+<li>  If the difference $t_{n+1} - t_n = d$ is constant, the sequence is an A.P.</li>
+<li>  The first term is denoted by '$a$'.</li>
+<li>  The terms of an A.P. are: $a, (a+d), (a+2d), (a+3d), \dots$</li>
+</ul>
+<h3>$n^{th}$ Term of an A.P.</h3>
+<p>The formula to find the $n^{th}$ term ($t_n$) of an A.P. is:</p>
+<p>$$t_n = a + (n - 1)d$$</p>
+<p>Where:</p>
+<ul>
+<li>  $a$ = first term</li>
+<li>  $d$ = common difference</li>
+<li>  $n$ = position of the term</li>
+</ul>
+<h3>Sum of First $n$ Terms of an A.P. ($S_n$)</h3>
+<p>The sum of the first $n$ terms is denoted by $S_n$.</p>
+<ul>
+<li>  Formula 1: $S_n = \frac{n}{2} [2a + (n - 1)d]$</li>
+<li>  Formula 2: $S_n = \frac{n}{2} [t_1 + t_n]$ (where $t_1$ is the first term and $t_n$ is the last term)</li>
+</ul>
+<h2 id="section-3">3. Definitions and Key Terms</h2>
+<ul>
+<li> <strong>Sequence:</strong> A set of numbers arranged in a definite order.</li>
+<li> <strong>Arithmetic Progression (A.P.):</strong> A sequence where the difference between consecutive terms is constant.</li>
+<li> <strong>Common Difference ($d$):</strong> The constant difference between consecutive terms in an A.P. ($d = t_{n+1} - t_n$).</li>
+<li> <strong>First Term ($a$):</strong> The first number in the sequence ($t_1$).</li>
+<li> <strong>Finite A.P.:</strong> An A.P. with a limited number of terms.</li>
+<li> <strong>Infinite A.P.:</strong> An A.P. with an unlimited number of terms.</li>
+</ul>
+<h2 id="section-4">4. Formulas, Rules, and Properties</h2>
+<ol>
+<li><strong>Common Difference:</strong> $d = t_{n+1} - t_n$</li>
+<li><strong>$n^{th}$ Term:</strong> $t_n = a + (n - 1)d$</li>
+<li><strong>Sum of $n$ terms:</strong> $S_n = \frac{n}{2} [2a + (n - 1)d]$</li>
+<li><strong>Sum using first and last term:</strong> $S_n = \frac{n}{2} [t_1 + t_n]$</li>
+<li><strong>Sum of first $n$ natural numbers:</strong> $S_n = \frac{n(n+1)}{2}$</li>
+<li><strong>Sum of first $n$ even natural numbers:</strong> $S_n = n(n+1)$</li>
+<li><strong>Sum of first $n$ odd natural numbers:</strong> $S_n = n^2$</li>
+</ol>
+<h2 id="section-5">5. Worked Examples — Step by Step</h2>
+<p><em>(Note: Due to the extensive nature of the textbook, selected key examples are provided here. Please refer to the PDF for the full list of examples.)</em></p>
+<p><strong>Ex (1) from page 68:</strong> Which of the following sequences are A.P.? If it is an A.P., find the next two terms.</p>
+<p>(i) 5, 12, 19, 26, ...</p>
+<ul>
+<li> <strong>Solution:</strong></li>
+<li>  $t_1 = 5, t_2 = 12, t_3 = 19, t_4 = 26$</li>
+<li>  $t_2 - t_1 = 12 - 5 = 7$</li>
+<li>  $t_3 - t_2 = 19 - 12 = 7$</li>
+<li>  Since the difference is constant ($d = 7$), it is an A.P.</li>
+<li>  Next two terms: $26 + 7 = 33$ and $33 + 7 = 40$.</li>
+</ul>
+<p><strong>Ex (1) from page 78:</strong> Find the sum of first 100 terms of A.P. 14, 16, 18, ...</p>
+<ul>
+<li> <strong>Solution:</strong></li>
+<li>  $a = 14, d = 2, n = 100$</li>
+<li>  $S_n = \frac{n}{2} [2a + (n - 1)d]$</li>
+<li>  $S_{100} = \frac{100}{2} [2(14) + (100 - 1)2]$</li>
+<li>  $S_{100} = 50 [28 + 99 \times 2] = 50 [28 + 198] = 50 \times 226 = 11300$.</li>
+</ul>
+<h2 id="section-6">6. Exercise / Practice Set Solutions</h2>
+<h3>Practice Set 3.1 (Page 70)</h3>
+<p><strong>1. Which of the following sequences are A.P.? If they are A.P. find the common difference.</strong></p>
+<p><em>(Selected solutions)</em></p>
+<p>(1) 2, 4, 6, 8, ...</p>
+<ul>
+<li>  $t_2 - t_1 = 4 - 2 = 2$</li>
+<li>  $t_3 - t_2 = 6 - 4 = 2$</li>
+<li> <strong>Answer:</strong> Yes, A.P., $d = 2$.</li>
+</ul>
+<p>(4) 0.3, 0.33, .0333, ...</p>
+<ul>
+<li>  $t_2 - t_1 = 0.33 - 0.3 = 0.03$</li>
+<li>  $t_3 - t_2 = 0.0333 - 0.33 = -0.2967$</li>
+<li> <strong>Answer:</strong> No.</li>
+</ul>
+<p><strong>2. Write an A.P. whose first term is $a$ and common difference is $d$.</strong></p>
+<p>(1) $a = 10, d = 5$</p>
+<ul>
+<li>  $t_1 = 10$</li>
+<li>  $t_2 = 10 + 5 = 15$</li>
+<li>  $t_3 = 15 + 5 = 20$</li>
+<li>  $t_4 = 20 + 5 = 25$</li>
+<li> <strong>Answer:</strong> 10, 15, 20, 25, ...</li>
+</ul>
+<h3>Practice Set 3.2 (Page 75)</h3>
+<p><strong>2. Decide whether following sequence is an A.P., if so find the 20th term.</strong></p>
+<p>-12, -5, 2, 9, 16, 23, 30, ...</p>
+<ul>
+<li>  $a = -12, d = -5 - (-12) = 7$</li>
+<li>  $t_n = a + (n - 1)d$</li>
+<li>  $t_{20} = -12 + (20 - 1)7 = -12 + 19 \times 7 = -12 + 133 = 121$.</li>
+<li> <strong>Answer:</strong> Yes, 20th term is 121.</li>
+</ul>
+<h3>Practice Set 3.3 (Page 81)</h3>
+<p><strong>1. First term and common difference are 6 and 3; find $S_{27}$.</strong></p>
+<ul>
+<li>  $a = 6, d = 3, n = 27$</li>
+<li>  $S_n = \frac{n}{2} [2a + (n - 1)d]$</li>
+<li>  $S_{27} = \frac{27}{2} [2(6) + (27 - 1)3] = \frac{27}{2} [12 + 26 \times 3] = \frac{27}{2} [12 + 78] = \frac{27}{2} \times 90 = 27 \times 45 = 1215$.</li>
+<li> <strong>Answer:</strong> 1215.</li>
+</ul>
+<p><em>(Note: For remaining exercises, follow the same logical steps using the formulas provided in Section 4.)</em></p>
+<h2 id="section-7">7. Important Questions and Answers</h2>
+<ul>
+<li> <strong>Q: Can the common difference of an A.P. be negative?</strong></li>
+<li> <strong>A:</strong> Yes, for example in the sequence 10, 8, 6, 4, ..., $d = -2$.</li>
+<li> <strong>Q: What is the difference between a sequence and an A.P.?</strong></li>
+<li> <strong>A:</strong> A sequence is any ordered set of numbers. An A.P. is a specific type of sequence where the difference between consecutive terms is constant.</li>
+</ul>
+<h2 id="section-8">8. Common Errors and How to Avoid Them</h2>
+<ul>
+<li> <strong>Error:</strong> Forgetting to subtract 1 from $n$ in the $t_n$ formula.</li>
+<li> <strong>Correction:</strong> Always use $(n-1)$ because the first term does not have $d$ added to it.</li>
+<li> <strong>Error:</strong> Incorrectly calculating $d$ when terms are negative.</li>
+<li> <strong>Correction:</strong> Always calculate $d = t_2 - t_1$ carefully using brackets, e.g., $-5 - (-12) = -5 + 12 = 7$.</li>
+</ul>
+<h2 id="section-9">9. Quick Revision Sheet</h2>
+<ul>
+<li> <strong>A.P. Condition:</strong> $t_{n+1} - t_n = d$ (constant)</li>
+<li> <strong>$n^{th}$ Term:</strong> $t_n = a + (n - 1)d$</li>
+<li> <strong>Sum of $n$ terms:</strong> $S_n = \frac{n}{2} [2a + (n - 1)d]$</li>
+<li> <strong>Sum of first $n$ natural numbers:</strong> $\frac{n(n+1)}{2}$</li>
+</ul>
+<div class="footer">Generated using Google Gemini API.</div>
+
+</section>
+</main>
+</div>
+<footer>Class 10 Mathematics Part I · Chapter 3: Arithmetic Progression</footer>
+</body>
+</html>

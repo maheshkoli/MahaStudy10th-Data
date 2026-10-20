@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Class 10 Mathematics Part I Chapter 5 Probability: random experiments, outcomes, sample spaces, events, formulas and textbook practice solutions.">
+<title>Class 10 Maths Chapter 5 — Probability</title>
+<style>
+:root{--navy:#17365d;--blue:#244f7a;--teal:#28657a;--pink:#b32668;--ink:#202a33;--muted:#5d6b78;--line:#dce4ea;--paper:#fff;--bg:#f1f4f8}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:16px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.7 Arial,Helvetica,sans-serif}
+header{background:linear-gradient(135deg,var(--navy),var(--teal));color:#fff;padding:30px 20px}
+.header-inner{max-width:1150px;margin:auto}.eyebrow{display:inline-block;background:var(--pink);color:#fff;padding:3px 10px;border-radius:99px;font-size:.78rem;font-weight:700;letter-spacing:.04em}
+header h1{margin:12px 0 4px;color:#ffe58f;font-size:clamp(1.8rem,4vw,2.7rem);line-height:1.2}
+header p{margin:0;color:#edf5fb}.layout{max-width:1150px;margin:22px auto;padding:0 14px;display:grid;grid-template-columns:255px minmax(0,1fr);gap:18px;align-items:start}
+nav,.study-card{background:var(--paper);border:1px solid var(--line);border-radius:13px;box-shadow:0 3px 14px rgba(25,50,70,.05)}
+nav{padding:16px;position:sticky;top:12px;max-height:calc(100vh - 24px);overflow:auto}nav strong{display:block;color:var(--navy);margin-bottom:8px}
+nav a{display:block;text-decoration:none;color:var(--blue);padding:5px 7px;border-radius:6px;font-size:.9rem}nav a:hover{background:#edf4f8;color:var(--pink)}
+main{min-width:0}.study-card{padding:22px;margin-bottom:16px}h1,h2,h3{line-height:1.3}
+h2{color:var(--blue);border-bottom:2px solid #e7edf2;padding-bottom:8px;margin:0 0 14px;font-size:1.35rem}
+h3{color:var(--teal);margin:20px 0 6px;font-size:1.05rem}p{margin:7px 0 12px}li{margin:5px 0}ul,ol{padding-left:25px}
+code{background:#edf1f4;padding:2px 5px;border-radius:4px}pre{background:#202124;color:white;padding:18px;overflow:auto;border-radius:8px}
+table{border-collapse:collapse;width:100%;margin:10px 0;display:block;overflow-x:auto}th,td{border:1px solid var(--line);padding:8px;text-align:left;min-width:80px}th{background:#eef4f8;color:var(--navy)}
+.note{background:#fff8e8;border-left:4px solid #c78b1a;padding:12px;border-radius:5px}.toolbar{display:flex;gap:10px;justify-content:flex-end;margin-bottom:12px}
+button{border:0;border-radius:7px;background:var(--pink);color:white;padding:9px 13px;font-weight:700;cursor:pointer}button:hover{filter:brightness(.94)}
+.footer{max-width:1150px;margin:0 auto;padding:5px 16px 28px;color:var(--muted);font-size:.88rem}
+@media(max-width:850px){.layout{grid-template-columns:1fr}nav{position:static;max-height:none}nav .links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px}}
+@media(max-width:520px){body{font-size:15px}.study-card{padding:15px}header{padding:24px 16px}nav .links{grid-template-columns:1fr}.toolbar{justify-content:flex-start}}
+@media print{body{background:#fff;font-size:10.5pt}header{padding:14px;background:#fff!important;color:#111;border-bottom:2px solid var(--navy)}header h1,header p{color:#111}.layout{display:block;max-width:none;margin:0;padding:0}nav,.toolbar{display:none}.study-card{box-shadow:none;border:0;padding:8px 0;margin:0;break-inside:auto}h2,h3{break-after:avoid}.footer{padding:12px 0}}
+
+/* Mathematical notation */
+mjx-container { max-width: 100%; overflow-x: auto; overflow-y: hidden; }
+mjx-container[display="true"] { margin: 1em 0 !important; padding: .25em 0; }
+p mjx-container { vertical-align: middle; }
+
+</style>
+
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
+      processEscapes: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    chtml: {
+      scale: 1.05,
+      mtextInheritFont: true
+    }
+  };
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+<body>
+<header><div class="header-inner">
+<span class="eyebrow">CLASS 10 · MATHEMATICS PART I · CHAPTER 5</span>
+<h1>Probability</h1>
+<p>English study notes, key definitions, formulas, worked examples and practice-set solutions</p>
+</div></header>
+<div class="layout">
+<nav aria-label="Table of contents">
+<strong>On this page</strong>
+<div class="links"><a href="#section-1">1. Chapter at a Glance</a><a href="#section-2">2. Important Concepts Explained</a><a href="#section-3">3. Definitions and Key Terms</a><a href="#section-4">4. Formulas, Rules, and Properties</a><a href="#section-5">5. Worked Examples — Step by Step</a><a href="#section-6">6. Exercise / Practice Set Solutions</a><a href="#section-7">7. Important Questions and Answers</a><a href="#section-8">8. Common Errors and How to Avoid Them</a><a href="#section-9">9. Quick Revision Sheet</a></div>
+<hr>
+<button type="button" onclick="window.print()">Print / Save as PDF</button>
+</nav>
+<main id="notes">
+<div class="toolbar"><button type="button" onclick="window.print()">Print / Save as PDF</button></div>
+<section class="study-card">
+<div class="note"><strong>Source note:</strong> These notes use the supplied Chapter 5 PDF and solutions HTML as their basis. The supplied HTML contains representative solutions for some practice sets rather than answers to every question; omitted solutions have not been invented here.</div>
+
+<h1>Chapter 5: Probability</h1>
+<h2 id="section-1">1. Chapter at a Glance</h2>
+<p>This chapter introduces the concept of probability, which is a mathematical way to express the possibility of an event occurring. The main topics covered are:</p>
+<ul>
+<li>  Random experiments and their outcomes.</li>
+<li>  Sample space and events.</li>
+<li>  Probability of an event.</li>
+</ul>
+<p>Students will learn how to identify random experiments, list all possible outcomes in a sample space, define specific events as subsets of a sample space, and calculate the probability of those events using a mathematical formula.</p>
+<h2 id="section-2">2. Important Concepts Explained</h2>
+<h3>Random Experiment</h3>
+<p>An experiment in which all possible results are known in advance, but none of them can be predicted with certainty, and there is an equal possibility for each result, is called a 'Random experiment'.</p>
+<ul>
+<li> <strong>Examples:</strong> Tossing a coin, throwing a die, picking a card from a pack of well-shuffled playing cards.</li>
+</ul>
+<h3>Outcome</h3>
+<p>The result of a random experiment is known as an 'Outcome'.</p>
+<ul>
+<li> <strong>Example:</strong> When tossing a coin, the outcomes are Head (H) or Tail (T).</li>
+</ul>
+<h3>Equally Likely Outcomes</h3>
+<p>A given number of outcomes are said to be equally likely if none of them occurs in preference to others. We assume that objects used for random experiments (like coins or dice) are fair or unbiased.</p>
+<h3>Sample Space</h3>
+<p>The set of all possible outcomes of a random experiment is called the sample space.</p>
+<ul>
+<li>  It is denoted by 'S' or '$\Omega$'.</li>
+<li>  Each element of the sample space is called a 'sample point'.</li>
+<li>  The number of elements in the set 'S' is denoted by $n(S)$.</li>
+<li>  If $n(S)$ is finite, it is a finite sample space.</li>
+</ul>
+<h3>Event</h3>
+<p>The outcomes satisfying a particular condition are called favourable outcomes. A set of favourable outcomes of a given sample space is an 'event'. An event is a subset of the sample space.</p>
+<ul>
+<li>  Events are denoted by capital letters like A, B, C, etc.</li>
+<li>  The number of elements in event A is denoted by $n(A)$.</li>
+</ul>
+<h2 id="section-3">3. Definitions and Key Terms</h2>
+<ul>
+<li> <strong>Probability:</strong> A mathematical measure of the possibility of an expected event.</li>
+<li> <strong>Sample Point:</strong> Each individual element within a sample space.</li>
+<li> <strong>Median Class:</strong> (Note: This term appears in the Statistics chapter, not Probability).</li>
+<li> <strong>Modal Class:</strong> (Note: This term appears in the Statistics chapter, not Probability).</li>
+</ul>
+<h2 id="section-4">4. Formulas, Rules, and Properties</h2>
+<h3>Probability of an Event</h3>
+<p>If 'S' is the sample space and 'A' is an expected event, the probability of event A, denoted by $P(A)$, is given by:</p>
+<p>$$P(A) = \frac{\text{Number of sample points in event A}}{\text{Number of sample points in sample space}} = \frac{n(A)}{n(S)}$$</p>
+<h3>Properties of Probability</h3>
+<ul>
+<li>  Probability is expressed as a fraction or a percentage.</li>
+<li>  The probability of any event is between 0 and 1 (inclusive), or 0% to 100%.</li>
+<li>  If E is any event, $0 \le P(E) \le 1$ or $0\% \le P(E) \le 100\%$.</li>
+</ul>
+<h2 id="section-5">5. Worked Examples — Step by Step</h2>
+<h3>Ex. (1) Find the probability of the following, when one coin is tossed.</h3>
+<p>(i) getting head (ii) getting tail</p>
+<p><strong>Solution:</strong></p>
+<ul>
+<li>  Let 'S' be the sample space. $S = \{H, T\}$, so $n(S) = 2$.</li>
+<li>  (i) Let event A be getting head. $A = \{H\}$, so $n(A) = 1$.</li>
+</ul>
+<p>$P(A) = \frac{n(A)}{n(S)} = \frac{1}{2}$</p>
+<ul>
+<li>  (ii) Let event B be getting tail. $B = \{T\}$, so $n(B) = 1$.</li>
+</ul>
+<p>$P(B) = \frac{n(B)}{n(S)} = \frac{1}{2}$</p>
+<h3>Ex. (2) If one die is rolled then find the probability of each of the following events.</h3>
+<p>(i) Number on the upper face is prime (ii) Number on the upper face is even.</p>
+<p><strong>Solution:</strong></p>
+<ul>
+<li>  'S' is the sample space. $S = \{1, 2, 3, 4, 5, 6\}$, so $n(S) = 6$.</li>
+<li>  (i) Event A: Prime number on the upper face. $A = \{2, 3, 5\}$, so $n(A) = 3$.</li>
+</ul>
+<p>$P(A) = \frac{n(A)}{n(S)} = \frac{3}{6} = \frac{1}{2}$</p>
+<ul>
+<li>  (ii) Event B: Even number on the upper face. $B = \{2, 4, 6\}$, so $n(B) = 3$.</li>
+</ul>
+<p>$P(B) = \frac{n(B)}{n(S)} = \frac{3}{6} = \frac{1}{2}$</p>
+<h3>Ex. (3) A card is drawn from a well-shuffled pack of 52 playing cards. Find the probability of each event. The card drawn is (i) a red card (ii) a face card.</h3>
+<p><strong>Solution:</strong></p>
+<ul>
+<li>  $n(S) = 52$.</li>
+<li>  (i) Event A: Card drawn is a red card. Total red cards = 13 hearts + 13 diamonds = 26. $n(A) = 26$.</li>
+</ul>
+<p>$P(A) = \frac{n(A)}{n(S)} = \frac{26}{52} = \frac{1}{2}$</p>
+<ul>
+<li>  (ii) Event B: Card drawn is a face card. Total face cards = 12. $n(B) = 12$.</li>
+</ul>
+<p>$P(B) = \frac{n(B)}{n(S)} = \frac{12}{52} = \frac{3}{13}$</p>
+<h3>Ex. (4) A box contains 5 strawberry chocolates, 6 coffee chocolates and 2 peppermint chocolates. Find the probability of each of the following events, if one of the chocolates is picked at random. (i) it is a coffee chocolate (ii) it is a peppermint chocolate.</h3>
+<p><strong>Solution:</strong></p>
+<ul>
+<li>  $n(S) = 5 + 6 + 2 = 13$.</li>
+<li>  (i) Event A: it is a coffee chocolate. $n(A) = 6$.</li>
+</ul>
+<p>$P(A) = \frac{n(A)}{n(S)} = \frac{6}{13}$</p>
+<ul>
+<li>  (ii) Event B: it is a peppermint chocolate. $n(B) = 2$.</li>
+</ul>
+<p>$P(B) = \frac{n(B)}{n(S)} = \frac{2}{13}$</p>
+<h2 id="section-6">6. Exercise / Practice Set Solutions</h2>
+<p><em>(Note: Due to the volume of exercises, representative solutions are provided. Please refer to the PDF for full problem statements.)</em></p>
+<h3>Practice Set 5.1</h3>
+<ol>
+<li>(1) Sites: Ajintha, Mahabaleshwar, Lonar Sarovar, Tadoba, Amboli, Raigad, Matheran, Anandavan. Total = 8.</li>
+<li>(2) Days of a week: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday. Total = 7.</li>
+<li>(3) Pack of 52 cards. Total = 52.</li>
+<li>(4) Numbers from 10 to 20: 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20. Total = 11.</li>
+</ol>
+<h3>Practice Set 5.2</h3>
+<ol>
+<li>(1) One coin and one die: $S = \{H1, H2, H3, H4, H5, H6, T1, T2, T3, T4, T5, T6\}$, $n(S) = 12$.</li>
+<li>(2) Two digit numbers from 2, 3, 5 without repetition: $S = \{23, 25, 32, 35, 52, 53\}$, $n(S) = 6$.</li>
+</ol>
+<h3>Practice Set 5.3</h3>
+<ol>
+<li>(1) One die rolled: $S = \{1, 2, 3, 4, 5, 6\}$, $n(S) = 6$.</li>
+</ol>
+<p>Event A (Even): $\{2, 4, 6\}$, $n(A) = 3$.</p>
+<p>Event B (Odd): $\{1, 3, 5\}$, $n(B) = 3$.</p>
+<p>Event C (Prime): $\{2, 3, 5\}$, $n(C) = 3$.</p>
+<h3>Practice Set 5.4</h3>
+<ol>
+<li>(1) Two coins tossed: $S = \{HH, HT, TH, TT\}$, $n(S) = 4$.</li>
+</ol>
+<p>Event A (at least one head): $\{HH, HT, TH\}$, $n(A) = 3$. $P(A) = 3/4$.</p>
+<p>Event B (no head): $\{TT\}$, $n(B) = 1$. $P(B) = 1/4$.</p>
+<h2 id="section-7">7. Important Questions and Answers</h2>
+<ul>
+<li> <strong>Q: Can the probability of an event be 1.5?</strong></li>
+</ul>
+<p>A: No, probability must be between 0 and 1.</p>
+<ul>
+<li> <strong>Q: What is the probability of an impossible event?</strong></li>
+</ul>
+<p>A: 0.</p>
+<ul>
+<li> <strong>Q: What is the probability of a sure event?</strong></li>
+</ul>
+<p>A: 1.</p>
+<h2 id="section-8">8. Common Errors and How to Avoid Them</h2>
+<ul>
+<li> <strong>Counting Errors:</strong> Always double-check the total number of outcomes in the sample space $n(S)$ before calculating probability.</li>
+<li> <strong>Misinterpreting "At least/At most":</strong> "At least one head" means one or more heads. "At most one head" means zero or one head.</li>
+<li> <strong>Simplifying Fractions:</strong> Always simplify the final probability fraction to its lowest terms.</li>
+</ul>
+<h2 id="section-9">9. Quick Revision Sheet</h2>
+<ul>
+<li> <strong>Sample Space (S):</strong> Set of all possible outcomes.</li>
+<li> <strong>Event (A):</strong> Subset of sample space satisfying a condition.</li>
+<li> <strong>Probability Formula:</strong> $P(A) = \frac{n(A)}{n(S)}$.</li>
+<li> <strong>Range:</strong> $0 \le P(A) \le 1$.</li>
+</ul>
+
+
+</section>
+</main>
+</div>
+<footer class="footer">Class 10 Mathematics Part I · Chapter 5: Probability</footer>
+</body>
+</html>
