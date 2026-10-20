@@ -1,0 +1,41 @@
+﻿{
+  "total_chapters": 9,
+  "chapters": [
+    {
+      "number": "1",
+      "title": "FIELD VISIT"
+    },
+    {
+      "number": "2",
+      "title": "LOCATION AND EXTENT"
+    },
+    {
+      "number": "3",
+      "title": "PHYSIOGRAPHY AND DRAINAGE"
+    },
+    {
+      "number": "4",
+      "title": "CLIMATE"
+    },
+    {
+      "number": "5",
+      "title": "NATURAL VEGETATION AND WILDLIFE"
+    },
+    {
+      "number": "6",
+      "title": "POPULATION"
+    },
+    {
+      "number": "7",
+      "title": "HUMAN SETTLEMENTS"
+    },
+    {
+      "number": "8",
+      "title": "ECONOMY AND OCCUPATIONS"
+    },
+    {
+      "number": "9",
+      "title": "TOURISM, TRANSPORT AND COMMUNICATION"
+    }
+  ]
+}
